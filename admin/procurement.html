@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Tenders & suppliers — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="procurement">
+<div data-page>
+
+  <!-- ===================== TENDERS ===================== -->
+  <section data-view="tenders">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Tenders</h1><p data-i18n="p.d">Publish tenders, sell their documents through K-Net, manage addenda and clarifications, receive sealed bids and award each tender to the winning bidder.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../tenders.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.live">Public portal</span></a>
+        <button class="btn btn-ghost sm" type="button" data-toast="Export started (Excel) — design preview" data-toast-ar="بدأ التصدير (Excel) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button>
+        <button class="btn btn-primary sm" type="button" data-drawer="d-tnew"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.new">New tender</span></button>
+      </div>
+    </div>
+    <nav class="tabs">
+      <a href="#tenders"><span data-i18n="p.t1">Tenders</span><span class="cnt">7</span></a>
+      <a href="#payments"><span data-i18n="p.t4">Payments · K-Net</span></a>
+    </nav>
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.k1">Open tenders</small><b data-count="4">4</b><em data-i18n="p.k1d">Next closing: 30 · 11 · 2026</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Document purchases · 2026</small><b data-count="87">87</b><em data-i18n="p.k2d">KD 12,950 collected via K-Net</em><svg class="spark" data-chart="spark" data-values="4,6,5,9,8,12,11,14,13,15" data-colors="green"></svg></div>
+      <div class="kpi"><small data-i18n="p.k3">Registered suppliers</small><b data-count="142">142</b><em class="warn" data-i18n="p.k3d">3 applications awaiting review</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Pending addendum acknowledgements</small><b data-count="4">4</b><em class="down" data-i18n="p.k4d">KADA/T/2026/014 · reminder suggested</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="t">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="open"><span data-i18n="p.f1">Open</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="eval"><span data-i18n="p.f2">Under evaluation</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="award"><span data-i18n="p.f3">Awarded</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="draft"><span data-i18n="p.f4">Draft</span><span class="cnt"></span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="t"><table class="tbl">
+        <thead><tr><th data-i18n="p.c1">Reference</th><th data-i18n="p.c2">Title</th><th data-i18n="p.c3">Category</th><th data-i18n="p.c4">Closing</th><th class="c" data-i18n="p.c5">Purchases</th><th class="c" data-i18n="p.c6">Bids</th><th data-i18n="p.c7">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="open" data-sel><td class="num nw"><b>KADA/T/2026/014</b></td><td><b data-i18n="p.r1">Supply of sample collection kits & cold-chain logistics</b><span class="sub" data-i18n="p.r1d">Published 01 · 10 · 2026 · AR + EN · 2 addenda</span></td><td data-i18n="p.cat1">Medical supplies</td><td class="num nw">30 · 11 · 2026 · 13:00</td><td class="c num">9</td><td class="c num">2</td><td><span class="st ok" data-i18n="p.s1">Open</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td class="num nw"><b>KADA/T/2026/015</b></td><td><b data-i18n="p.r2">Laboratory analysis services — WADA-accredited</b><span class="sub" data-i18n="p.r2d">Published 10 · 10 · 2026 · AR + EN</span></td><td data-i18n="p.cat2">Laboratory</td><td class="num nw">15 · 12 · 2026 · 13:00</td><td class="c num">3</td><td class="c num">0</td><td><span class="st ok" data-i18n="p.s1">Open</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td class="num nw"><b>KADA/T/2026/016</b></td><td><b data-i18n="p.r3">Education campaign production 2027</b><span class="sub" data-i18n="p.r3d">Published 18 · 10 · 2026 · AR + EN</span></td><td data-i18n="p.cat3">Media & events</td><td class="num nw">20 · 12 · 2026 · 13:00</td><td class="c num">5</td><td class="c num">0</td><td><span class="st ok" data-i18n="p.s1">Open</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td class="num nw"><b>KADA/T/2026/017</b></td><td><b data-i18n="p.r4">Courier & international shipping of samples to WADA-accredited laboratories</b><span class="sub" data-i18n="p.r4d">Published 20 · 10 · 2026 · AR + EN</span></td><td data-i18n="p.cat4">Logistics</td><td class="num nw">05 · 01 · 2027 · 13:00</td><td class="c num">1</td><td class="c num">0</td><td><span class="st ok" data-i18n="p.s1">Open</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="eval" data-sel><td class="num nw"><b>KADA/T/2026/011</b></td><td><b data-i18n="p.r5">Doping control officers' field equipment</b><span class="sub" data-i18n="p.r5d">Closed 30 · 09 · 2026 · 4 bids opened</span></td><td data-i18n="p.cat1">Medical supplies</td><td class="num nw">30 · 09 · 2026</td><td class="c num">12</td><td class="c num">4</td><td><span class="st warn" data-i18n="p.s2">Under evaluation</span></td><td class="r"><a class="lnk" href="#award" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="award" data-sel><td class="num nw"><b>KADA/T/2026/009</b></td><td><b data-i18n="p.r6">Translation & localisation services 2026-27</b><span class="sub" data-i18n="p.r6d">Awarded 15 · 09 · 2026 · contract signed</span></td><td data-i18n="p.cat5">Professional services</td><td class="num nw">31 · 08 · 2026</td><td class="c num">8</td><td class="c num">5</td><td><span class="st info" data-i18n="p.s3">Awarded</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="draft" data-sel><td class="num nw"><b>KADA/T/2027/001</b></td><td><b data-i18n="p.r7">Mobile testing unit vehicle</b><span class="sub" data-i18n="p.r7d">Draft · pending legal review of terms</span></td><td data-i18n="p.cat6">Vehicles</td><td class="num nw">—</td><td class="c num">—</td><td class="c num">—</td><td><span class="st" data-i18n="p.s4">Draft</span></td><td class="r"><a class="lnk" href="#tender" data-i18n="p.manage">Manage</a></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.foot">7 current and recent tenders · archive: 41 · public portal shows open and awarded tenders only</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== TENDER DETAIL ===================== -->
+  <section data-view="tender">
+    <a class="pe-back mb-1" href="#tenders"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.t1">Tenders</span></a>
+    <div class="card navy">
+      <div class="row between">
+        <div><span class="st plain" style="background:rgba(255,255,255,.14);color:#fff" data-i18n="p.s1">Open</span><h2 style="font:800 1.35rem var(--display);margin-top:8px"><span class="num">KADA/T/2026/014</span> · <span data-i18n="p.r1">Supply of sample collection kits & cold-chain logistics</span></h2><p class="small" style="color:rgba(255,255,255,.7);margin-top:4px" data-i18n="p.td.sub">Published 01 · 10 · 2026 in Arabic and English · document price KD 150 · bid security 2% · closes 30 · 11 · 2026 at 13:00 Kuwait time</p></div>
+        <div class="acts">
+          <button class="btn btn-outline sm" type="button" data-toast="Public tender page opened — design preview" data-toast-ar="فُتحت صفحة المناقصة العامة — معاينة تصميم"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="p.td.view">View public page</span></button>
+          <button class="btn btn-outline sm" type="button" data-drawer="d-tedit"><svg class="ico"><use href="#i-edit"/></svg><span data-i18n="p.td.edit">Edit tender</span></button>
+          <button class="btn btn-white sm" type="button" data-drawer="d-addendum"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.td.newadd">New addendum</span></button>
+        </div>
+      </div>
+      <div class="kpis mt-2" style="gap:10px">
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.td.k1">Days to closing</small><b style="color:#fff;font-size:1.6rem">38</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.td.k2">Documents purchased</small><b style="color:#fff;font-size:1.6rem">9</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.td.k3">Open clarifications</small><b style="color:#fff;font-size:1.6rem">2</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.td.k4">Sealed bids received</small><b style="color:#fff;font-size:1.6rem">2</b></div>
+      </div>
+    </div>
+
+    <div class="tabs pills mt-2" data-tabs="td">
+      <button type="button" class="is-on" data-tab="ov" data-i18n="p.td.t1">Overview</button>
+      <button type="button" data-tab="docs" data-i18n="p.td.t2">Documents & pricing</button>
+      <button type="button" data-tab="add"><span data-i18n="p.td.t3">Addenda & acknowledgements</span></button>
+      <button type="button" data-tab="buy"><span data-i18n="p.td.t4">Purchases & payments</span></button>
+      <button type="button" data-tab="qa"><span data-i18n="p.td.t5">Clarifications</span> <span class="pill-num red">2</span></button>
+      <button type="button" data-tab="bids" data-i18n="p.td.t6">Bids</button>
+    </div>
+
+    <div data-pane-group="td" data-pane="ov">
+      <div class="grid g-main">
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.td.det">Tender details</h2><button class="btn btn-ghost xs" type="button" data-drawer="d-tedit"><svg class="ico"><use href="#i-edit"/></svg><span data-i18n="p.edit">Edit</span></button></div>
+            <div class="split">
+              <dl class="kv">
+                <dt data-i18n="p.td.d1">Procuring unit</dt><dd data-i18n="p.td.d1v">Testing & Operations</dd>
+                <dt data-i18n="p.td.d2">Procedure</dt><dd data-i18n="p.td.d2v">Open public tender · two envelopes</dd>
+                <dt data-i18n="p.td.d3">Estimated value</dt><dd class="num">KD 180,000 – 220,000</dd>
+                <dt data-i18n="p.td.d4">Contract term</dt><dd data-i18n="p.td.d4v">24 months + 12 optional</dd>
+              </dl>
+              <dl class="kv">
+                <dt data-i18n="p.td.d5">Eligibility</dt><dd data-i18n="p.td.d5v">Registered supplier · medical supplies category · ISO 13485</dd>
+                <dt data-i18n="p.td.d6">Pre-bid meeting</dt><dd class="num">20 · 10 · 2026 · 10:00 · KADA HQ <span data-i18n="p.td.held">(held)</span></dd>
+                <dt data-i18n="p.td.d7">Bid opening</dt><dd class="num">30 · 11 · 2026 · 14:00</dd>
+                <dt data-i18n="p.td.d8">Evaluation committee</dt><dd data-i18n="p.td.d8v">5 members · appointed</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.td.tl">Timeline</h2></div>
+            <div class="steps"><div class="done"><b data-i18n="p.td.s1">Drafted</b><small>22 · 09</small></div><div class="done"><b data-i18n="p.td.s2">Legal review</b><small>28 · 09</small></div><div class="done"><b data-i18n="p.td.s3">Published AR + EN</b><small>01 · 10</small></div><div class="cur"><b data-i18n="p.td.s4">Open · selling documents</b><small data-i18n="p.td.s4d">until 30 · 11</small></div><div><b data-i18n="p.td.s5">Bid opening</b><small>30 · 11</small></div><div><b data-i18n="p.td.s6">Evaluation</b><small>—</small></div><div><b data-i18n="p.td.s7">Award</b><small>—</small></div></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.td.act">Recent activity</h2></div>
+            <div class="tl">
+              <div><i></i><div><b data-i18n="p.td.a1">Addendum 2 published — 9 purchasers notified by email + SMS</b><small>Huda Al-Otaibi · <span class="num">22 · 10 · 09:41</span></small></div></div>
+              <div><i class="warn"></i><div><b data-i18n="p.td.a2">Clarification Q-07 received from Gulf Express Couriers</b><small><span class="num">21 · 10 · 15:12</span></small></div></div>
+              <div><i></i><div><b data-i18n="p.td.a3">Document purchase · Al-Saqr Medical Supplies · K-Net KD 150</b><small><span class="num">19 · 10 · 11:08</span></small></div></div>
+              <div><i></i><div><b data-i18n="p.td.a4">Pre-bid meeting held · minutes uploaded</b><small>Huda Al-Otaibi · <span class="num">20 · 10 · 12:30</span></small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.td.pubst">Publication</h2></div>
+            <div class="health">
+              <div><span data-i18n="p.td.p1">Arabic notice</span><b class="st ok plain" data-i18n="p.td.live">Live</b></div>
+              <div><span data-i18n="p.td.p2">English notice</span><b class="st ok plain" data-i18n="p.td.live">Live</b></div>
+              <div><span data-i18n="p.td.p3">Official Gazette reference</span><b class="num">KG-2026-1587</b></div>
+              <div><span data-i18n="p.td.p4">Supplier alert</span><b data-i18n="p.td.sent">Emailed · 142 suppliers</b></div>
+            </div>
+          </div>
+          <div class="ai">
+            <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.td.ai">AI · tender health</span></h2>
+            <ul>
+              <li><span data-i18n="p.td.ai1"><b>4 purchasers have not acknowledged Addendum 2.</b> They cannot submit bids until they do; consider sending a reminder today.</span></li>
+              <li><span data-i18n="p.td.ai2"><b>Clarification Q-07 affects delivery terms.</b> Similar questions in 2025 led to an extension; consider a 7-day extension.</span></li>
+              <li><span data-i18n="p.td.ai3"><b>Purchases are 30% higher than the 2025 kits tender</b> at the same stage — 5–6 bids are likely.</span></li>
+            </ul>
+          </div>
+          <div class="card soft">
+            <div class="card-head"><h2 data-i18n="p.td.quick">Quick actions</h2></div>
+            <div class="stack" style="gap:8px">
+              <button class="btn btn-ghost sm" type="button" data-toast="Reminder sent to 4 suppliers (email + SMS)" data-toast-ar="أُرسل التذكير إلى 4 مورّدين (بريد إلكتروني + رسالة نصية)"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.td.q1">Send acknowledgement reminder</span></button>
+              <button class="btn btn-ghost sm" type="button" data-drawer="d-extend"><svg class="ico"><use href="#i-cal"/></svg><span data-i18n="p.td.q2">Extend closing date</span></button>
+              <button class="btn btn-ghost sm" type="button" data-toast="Tender pack downloaded (ZIP) — design preview" data-toast-ar="نُزّلت حزمة المناقصة (ZIP) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.td.q3">Download full pack</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-pane-group="td" data-pane="docs" hidden>
+      <div class="grid g-main">
+        <div class="card flush">
+          <div class="card-head"><div><h2 data-i18n="p.dc.h">Tender documents</h2><small data-i18n="p.dc.d">Visible to purchasers after K-Net payment · watermarked with supplier ID</small></div><button class="btn btn-ghost xs" type="button" data-toast="Upload — design preview" data-toast-ar="رفع — معاينة تصميم"><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="p.dc.up">Upload</span></button></div>
+          <div class="pad" style="padding-top:0">
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.dc.1">Instructions to bidders (AR + EN)</b><small>v2 · 1.8 MB · <span data-i18n="p.dc.pub">public preview</span></small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.dc.2">Technical specifications — kits & cold chain</b><small>v3 · 4.2 MB · <span data-i18n="p.dc.paid">purchasers only</span></small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+            <div class="doc-row"><span class="ty">XLSX</span><div><b data-i18n="p.dc.3">Bill of quantities</b><small>v1 · 120 KB · <span data-i18n="p.dc.paid">purchasers only</span></small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.dc.4">Draft contract & general conditions</b><small>v1 · 2.6 MB · <span data-i18n="p.dc.paid">purchasers only</span></small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.dc.5">Pre-bid meeting minutes</b><small>v1 · 310 KB · <span data-i18n="p.dc.paid">purchasers only</span></small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.dc.price">Pricing</h2></div>
+            <div class="form">
+              <div class="field"><label data-i18n="p.dc.fee">Document fee (KD)</label><input class="num" value="150"></div>
+              <div class="field"><label data-i18n="p.dc.sec">Bid security</label><input value="2% of bid value · bank guarantee"></div>
+              <div class="field"><label data-i18n="p.dc.pay">Payment method</label><input value="K-Net (debit) · KADA merchant account" disabled></div>
+              <button class="btn btn-primary sm" type="button" data-toast="Pricing saved" data-toast-ar="حُفظ التسعير" data-i18n="p.save">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-pane-group="td" data-pane="add" hidden>
+      <div class="grid g-main">
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><div><h2 data-i18n="p.ad.h">Addenda</h2><small data-i18n="p.ad.d">Every addendum is sent to all purchasers; a bid is only accepted when all addenda are acknowledged</small></div><button class="btn btn-primary xs" type="button" data-drawer="d-addendum"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.td.newadd">New addendum</span></button></div>
+            <div class="doc-row"><span class="ty">#2</span><div><b data-i18n="p.ad.2">Addendum 2 — revised delivery schedule & cold-chain SLA</b><small><span data-i18n="p.ad.pubd">Published</span> <span class="num">22 · 10 · 2026</span> · <span data-i18n="p.ad.ack">acknowledged 5 / 9</span></small></div><span class="st warn" data-i18n="p.ad.pend">4 pending</span></div>
+            <div class="doc-row"><span class="ty">#1</span><div><b data-i18n="p.ad.1">Addendum 1 — answers to clarifications Q-01 to Q-05</b><small><span data-i18n="p.ad.pubd">Published</span> <span class="num">12 · 10 · 2026</span> · <span data-i18n="p.ad.ack9">acknowledged 9 / 9</span></small></div><span class="st ok" data-i18n="p.ad.full">Complete</span></div>
+          </div>
+          <div class="card flush">
+            <div class="card-head"><h2 data-i18n="p.ad.mat">Acknowledgement matrix</h2><button class="btn btn-ghost xs" type="button" data-toast="Reminder sent to 4 suppliers (email + SMS)" data-toast-ar="أُرسل التذكير إلى 4 مورّدين (بريد إلكتروني + رسالة نصية)"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.ad.remind">Remind pending</span></button></div>
+            <div class="tbl-wrap"><table class="tbl compact">
+              <thead><tr><th data-i18n="p.ad.c1">Supplier</th><th data-i18n="p.ad.c2">Purchased</th><th class="c" data-i18n="p.ad.a1">Add. 1</th><th class="c" data-i18n="p.ad.a2">Add. 2</th><th data-i18n="p.ad.c3">Last reminder</th></tr></thead>
+              <tbody>
+                <tr><td><b>Al-Saqr Medical Supplies W.L.L.</b><span class="sub num">SUP-2024-0117</span></td><td class="num">19 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick no">—</span></td><td class="num">23 · 10 · 08:00</td></tr>
+                <tr><td><b>Gulf Express Couriers</b><span class="sub num">SUP-2023-0154</span></td><td class="num">15 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="muted">—</td></tr>
+                <tr><td><b>Kuwait Medical Trading Co.</b><span class="sub num">SUP-2021-0042</span></td><td class="num">03 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="muted">—</td></tr>
+                <tr><td><b>Arabian Cold Chain Services</b><span class="sub num">SUP-2023-0088</span></td><td class="num">05 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick no">—</span></td><td class="num">23 · 10 · 08:00</td></tr>
+                <tr><td><b>BioSample Gulf</b><span class="sub num">SUP-2022-0130</span></td><td class="num">06 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="muted">—</td></tr>
+                <tr><td><b>Al-Dhow Scientific</b><span class="sub num">SUP-2020-0019</span></td><td class="num">08 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick no">—</span></td><td class="num">23 · 10 · 08:00</td></tr>
+                <tr><td><b>MedEquip International</b><span class="sub num">SUP-2025-0301</span></td><td class="num">11 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="muted">—</td></tr>
+                <tr><td><b>Sahara Logistics K.S.C.</b><span class="sub num">SUP-2019-0007</span></td><td class="num">14 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick no">—</span></td><td class="num">23 · 10 · 08:00</td></tr>
+                <tr><td><b>Northern Gulf Pharma</b><span class="sub num">SUP-2024-0210</span></td><td class="num">18 · 10</td><td class="c"><span class="tick">✓</span></td><td class="c"><span class="tick">✓</span></td><td class="muted">—</td></tr>
+              </tbody></table></div>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><h2 data-i18n="p.ad.rule">Rule enforced by the portal</h2></div>
+          <p class="small muted" data-i18n="p.ad.ruled">A supplier cannot upload a bid until every addendum is acknowledged in their dashboard. Acknowledgements are time-stamped and visible in the audit log. Reminders go out automatically at 7, 3 and 1 day before closing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-pane-group="td" data-pane="buy" hidden>
+      <div class="grid g-main">
+        <div class="card flush">
+          <div class="card-head"><div><h2 data-i18n="p.py.h">Document purchases</h2><small data-i18n="p.py.d">K-Net transactions reconciled nightly with the finance system</small></div><button class="btn btn-ghost xs" type="button" data-toast="Receipts exported — design preview" data-toast-ar="صُدّرت الإيصالات — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="p.py.c1">Receipt</th><th data-i18n="p.ad.c1">Supplier</th><th data-i18n="p.py.c2">Date</th><th class="r" data-i18n="p.py.c3">Amount</th><th data-i18n="p.py.c4">K-Net ref</th><th data-i18n="p.c7">Status</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><b>RCP-26-0912</b></td><td>Al-Saqr Medical Supplies</td><td class="num">19 · 10 · 11:08</td><td class="r num">KD 150.000</td><td class="num">KNT-8841-2210</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+              <tr><td class="num"><b>RCP-26-0908</b></td><td>Northern Gulf Pharma</td><td class="num">18 · 10 · 09:52</td><td class="r num">KD 150.000</td><td class="num">KNT-8811-1810</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+              <tr><td class="num"><b>RCP-26-0901</b></td><td>Gulf Express Couriers</td><td class="num">15 · 10 · 14:20</td><td class="r num">KD 150.000</td><td class="num">KNT-8790-1510</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+              <tr><td class="num"><b>RCP-26-0897</b></td><td>Sahara Logistics K.S.C.</td><td class="num">14 · 10 · 10:05</td><td class="r num">KD 150.000</td><td class="num">KNT-8771-1410</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+              <tr><td class="num"><b>RCP-26-0890</b></td><td>MedEquip International</td><td class="num">11 · 10 · 16:44</td><td class="r num">KD 150.000</td><td class="num">KNT-8740-1110</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+              <tr><td class="num"><b>—</b></td><td>MedEquip International</td><td class="num">11 · 10 · 16:02</td><td class="r num">KD 150.000</td><td class="num">KNT-8738-1110</td><td><span class="st red" data-i18n="p.py.fail">Declined by bank</span></td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.py.foot">9 captured · 1 declined · total KD 1,350.000 · settlement T+1</span></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.py.chart">Purchases by week</h2></div>
+          <svg class="chart" data-chart="bars" data-h="180" data-values="1,4,3,1" data-labels="W40,W41,W42,W43" data-labels-ar="الأسبوع 40,الأسبوع 41,الأسبوع 42,الأسبوع 43" data-colors="green"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div data-pane-group="td" data-pane="qa" hidden>
+      <div class="grid g-main">
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><div><h2 data-i18n="p.qa.h">Clarification requests</h2><small data-i18n="p.qa.d">Questions are anonymised and answered to all purchasers through an addendum</small></div></div>
+            <div class="stack">
+              <div class="card soft" style="padding:16px 18px">
+                <div class="row between"><b class="num">Q-07 · <span data-i18n="p.qa.rec">received</span> 21 · 10 · 15:12</b><span class="st red" data-i18n="p.qa.open">Awaiting answer</span></div>
+                <p class="small mt-1" data-i18n="p.qa.q7">"Section 4.3 requires delivery within 48 hours to all governorates. Does this apply to the Failaka Island venue listed in Annex B?"</p>
+                <div class="field mt-1"><label data-i18n="p.qa.ans">Answer (AR + EN · published in Addendum 3)</label><textarea data-i18n-ph="p.qa.ph" placeholder="Write the official answer…"></textarea></div>
+                <div class="row mt-1"><button class="btn btn-primary xs" type="button" data-toast="Answer saved to draft Addendum 3" data-toast-ar="حُفظت الإجابة في مسودة الملحق 3"><span data-i18n="p.qa.save">Save to Addendum 3</span></button><button class="btn btn-ghost xs" type="button" data-toast="Sent to Legal for an opinion" data-toast-ar="أُحيل إلى الشؤون القانونية لإبداء الرأي"><span data-i18n="p.qa.legal">Ask Legal</span></button></div>
+              </div>
+              <div class="card soft" style="padding:16px 18px">
+                <div class="row between"><b class="num">Q-06 · <span data-i18n="p.qa.rec">received</span> 20 · 10 · 17:40</b><span class="st red" data-i18n="p.qa.open">Awaiting answer</span></div>
+                <p class="small mt-1" data-i18n="p.qa.q6">"Can the bid security be issued by a GCC bank with a Kuwaiti correspondent?"</p>
+                <div class="row mt-1"><button class="btn btn-ghost xs" type="button" data-toast="Answer editor — design preview" data-toast-ar="محرر الإجابة — معاينة تصميم"><span data-i18n="p.qa.answer">Answer</span></button></div>
+              </div>
+              <div class="doc-row"><span class="ty">Q-05</span><div><b data-i18n="p.qa.q5">Shelf-life requirement for collection kits</b><small data-i18n="p.qa.a5">Answered in Addendum 1 · 12 · 10</small></div><span class="st ok" data-i18n="p.qa.done">Answered</span></div>
+              <div class="doc-row"><span class="ty">Q-04</span><div><b data-i18n="p.qa.q4">Temperature logger data format</b><small data-i18n="p.qa.a5">Answered in Addendum 1 · 12 · 10</small></div><span class="st ok" data-i18n="p.qa.done">Answered</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><h2 data-i18n="p.qa.rule">Deadline</h2></div>
+          <p class="small muted" data-i18n="p.qa.ruled">Clarifications close 10 days before bid closing (20 · 11 · 2026). Answers must be published at least 7 days before closing; the portal blocks publishing an addendum later than that without a closing-date extension.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-pane-group="td" data-pane="bids" hidden>
+      <div class="grid g-main">
+        <div class="card flush">
+          <div class="card-head"><div><h2 data-i18n="p.bd.h">Sealed bids</h2><small data-i18n="p.bd.d">Encrypted on upload · openable only by the committee quorum after 30 · 11 · 2026 14:00</small></div></div>
+          <div class="restricted" style="margin:0 20px 16px"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.bd.lock">Bid contents are sealed. The system records the time of receipt and file hash only. Opening requires 3 of 5 committee members with MFA.</span></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="p.bd.c1">Bid ref</th><th data-i18n="p.ad.c1">Supplier</th><th data-i18n="p.bd.c2">Received</th><th data-i18n="p.bd.c3">Envelopes</th><th data-i18n="p.bd.c4">Addenda ack.</th><th data-i18n="p.bd.c5">Hash</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><b>BID-014-001</b></td><td>Kuwait Medical Trading Co.</td><td class="num">22 · 10 · 10:30</td><td data-i18n="p.bd.env">Technical + financial</td><td><span class="tick">✓</span></td><td class="num muted">sha256 · 9f3a…c21e</td></tr>
+              <tr><td class="num"><b>BID-014-002</b></td><td>BioSample Gulf</td><td class="num">22 · 10 · 16:05</td><td data-i18n="p.bd.env">Technical + financial</td><td><span class="tick">✓</span></td><td class="num muted">sha256 · 44b0…7d9a</td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.bd.aw">Bids open on 30 · 11 · 2026 at 14:00. After the evaluation, the comparison appears here and the tender can be awarded to any compliant bidder.</span></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.bd.com">Evaluation committee</h2></div>
+          <div class="feed">
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px">H</span><div><b>Huda Al-Otaibi</b><small data-i18n="p.bd.chair">Chair · Finance & Procurement</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">S</span><div><b>Dr. Salem Al-Enezi</b><small data-i18n="p.bd.m1">Testing & Operations</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">R</span><div><b>Reem Al-Sabti</b><small data-i18n="p.bd.m2">Legal & Compliance</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">A</span><div><b>Abdullah Al-Mutairi</b><small data-i18n="p.bd.m3">IT & Digital Services</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">J</span><div><b>Jassim Al-Roumi</b><small data-i18n="p.bd.m4">Internal Audit (observer)</small></div><span class="tick">✓</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVALUATION & AWARD ===================== -->
+  <section data-view="award">
+    <a class="pe-back mb-1" href="#tenders"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.t1">Tenders</span></a>
+    <div class="card navy">
+      <div class="row between">
+        <div><span class="st warn" id="st-award" data-i18n="p.s2">Under evaluation</span><h2 style="font:800 1.35rem var(--display);margin-top:8px"><span class="num">KADA/T/2026/011</span> · <span data-i18n="p.r5">Doping control officers' field equipment</span></h2><p class="small" style="color:rgba(255,255,255,.7);margin-top:4px" data-i18n="p.aw.sub">Closed 30 · 09 · 2026 · 4 bids opened 30 · 09 · 2026 at 14:00 · two-envelope procedure · weighting technical 70 / financial 30 · minimum technical score 49 / 70</p></div>
+        <div class="acts">
+          <button class="btn btn-outline sm" type="button" data-toast="Evaluation report downloaded (PDF) — design preview" data-toast-ar="نُزّل تقرير التقييم (PDF) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.aw.rep">Evaluation report</span></button>
+        </div>
+      </div>
+      <div class="kpis mt-2" style="gap:10px">
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.aw.k1">Bids received</small><b style="color:#fff;font-size:1.6rem">4</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.aw.k2">Technically compliant</small><b style="color:#fff;font-size:1.6rem">3</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.aw.k3">Lowest compliant price (KD)</small><b class="num" style="color:#fff;font-size:1.6rem">84,600</b></div>
+        <div class="kpi" style="background:rgba(255,255,255,.08);border:0;padding:14px 16px"><small style="color:rgba(255,255,255,.7)" data-i18n="p.aw.k4">Estimated value (KD)</small><b class="num" style="color:#fff;font-size:1.6rem">85,000–100,000</b></div>
+      </div>
+    </div>
+
+    <div class="card mt-2">
+      <div class="card-head"><h2 data-i18n="p.aw.cyc">Evaluation & award cycle</h2></div>
+      <div class="steps"><div class="done"><b data-i18n="p.td.s5">Bid opening</b><small>30 · 09</small></div><div class="done"><b data-i18n="p.aw.s2">Technical evaluation</b><small>12 · 10</small></div><div class="done"><b data-i18n="p.aw.s3">Financial opening</b><small>15 · 10</small></div><div class="done"><b data-i18n="p.aw.s4">Committee recommendation</b><small>20 · 10</small></div><div class="done"><b data-i18n="p.aw.s5">Approval</b><small>01 · 11</small></div><div class="cur"><b data-i18n="p.aw.s6">Award & notification</b><small>—</small></div><div><b data-i18n="p.aw.s7">Contract & close</b><small>—</small></div></div>
+    </div>
+
+    <div class="card flush mt-2">
+      <div class="card-head"><div><h2 data-i18n="p.aw.cmp">Bid comparison</h2><small data-i18n="p.aw.cmpd">Two-envelope evaluation · technical 70 / financial 30 · ranked by total score</small></div></div>
+      <div class="tbl-wrap"><table class="tbl">
+        <thead><tr><th data-i18n="p.aw.c1">Bidder</th><th class="c" data-i18n="p.aw.c2">Technical / 70</th><th class="r" data-i18n="p.aw.c3">Price (KD)</th><th class="c" data-i18n="p.aw.c4">Financial / 30</th><th class="c" data-i18n="p.aw.c5">Total / 100</th><th class="c" data-i18n="p.aw.c6">Rank</th><th data-i18n="p.aw.c7">Result</th><th class="r"></th></tr></thead>
+        <tbody>
+          <tr data-sel class="is-sel"><td><div class="pg"><div><b>Kuwait Medical Trading Co.</b><span class="sub num">SUP-2021-0042 · BID-011-002</span></div></div></td><td class="c num">64.0</td><td class="r num">91,200</td><td class="c num">27.83</td><td class="c num"><b>91.83</b></td><td class="c num"><b>1</b></td><td><span class="st ok" data-i18n="p.aw.rec">Recommended</span></td><td class="r"><button class="btn btn-primary xs" type="button" data-drawer="d-award" data-aw-btn><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.aw.btn">Award</span></button></td></tr>
+          <tr data-sel><td><div class="pg"><div><b>Al-Saqr Medical Supplies W.L.L.</b><span class="sub num">SUP-2024-0117 · BID-011-001</span></div></div></td><td class="c num">58.5</td><td class="r num">84,600<span class="sub" data-i18n="p.aw.low">lowest compliant</span></td><td class="c num">30.00</td><td class="c num"><b>88.50</b></td><td class="c num">2</td><td><span class="st" data-i18n="p.aw.comp">Compliant</span></td><td class="r"><button class="btn btn-ghost xs" type="button" data-drawer="d-award2" data-aw-btn><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.aw.btn">Award</span></button></td></tr>
+          <tr data-sel><td><div class="pg"><div><b>MedEquip International</b><span class="sub num">SUP-2025-0301 · BID-011-004</span></div></div></td><td class="c num">61.0</td><td class="r num">96,750</td><td class="c num">26.23</td><td class="c num"><b>87.23</b></td><td class="c num">3</td><td><span class="st" data-i18n="p.aw.comp">Compliant</span></td><td class="r"><button class="btn btn-ghost xs" type="button" data-drawer="d-award3" data-aw-btn><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.aw.btn">Award</span></button></td></tr>
+          <tr data-sel><td><div class="pg"><div><b>Northern Gulf Pharma</b><span class="sub num">SUP-2024-0210 · BID-011-003</span><span class="sub" data-i18n="p.aw.ncd">Below the technical minimum (49) · financial envelope returned unopened</span></div></div></td><td class="c num">44.0</td><td class="r num muted">—</td><td class="c num muted">—</td><td class="c num muted">—</td><td class="c num muted">—</td><td><span class="st red" data-i18n="p.aw.nc">Not compliant</span></td><td class="r"><span class="small muted nw" data-i18n="p.aw.nel">Not eligible</span></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.aw.foot">Financial score = 30 × lowest compliant price ÷ bidder's price · total = technical + financial · financial envelopes are opened only for bids scoring at least 49 / 70</span></div>
+    </div>
+
+    <div class="grid g-main mt-2">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2 data-i18n="p.aw.s4">Committee recommendation</h2><small data-i18n="p.aw.rhd">Signed electronically · 20 · 10 · 2026</small></div><span class="st ok" data-i18n="p.aw.mns">Signed</span></div>
+          <p class="small" data-i18n="p.aw.rtxt"><b>Award to Kuwait Medical Trading Co. for KD 91,200.</b> Highest combined score (91.83 / 100); price within the approved estimate of KD 85,000–100,000.</p>
+          <div class="feed mt-1">
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px">H</span><div><b>Huda Al-Otaibi</b><small><span data-i18n="p.bd.chair">Chair · Finance & Procurement</span> · <span data-i18n="p.aw.vote">voted in favour</span> · <span class="num">20 · 10</span></small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">S</span><div><b>Dr. Salem Al-Enezi</b><small><span data-i18n="p.bd.m1">Testing & Operations</span> · <span data-i18n="p.aw.vote">voted in favour</span> · <span class="num">20 · 10</span></small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">R</span><div><b>Reem Al-Sabti</b><small><span data-i18n="p.bd.m2">Legal & Compliance</span> · <span data-i18n="p.aw.vote">voted in favour</span> · <span class="num">20 · 10</span></small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">A</span><div><b>Abdullah Al-Mutairi</b><small><span data-i18n="p.bd.m3">IT & Digital Services</span> · <span data-i18n="p.aw.vote">voted in favour</span> · <span class="num">20 · 10</span></small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">J</span><div><b>Jassim Al-Roumi</b><small><span data-i18n="p.aw.obs">Internal Audit · observer, no vote · no remarks</span> · <span class="num">20 · 10</span></small></div><span class="tick">✓</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.aw.dh">Decision & award</h2><span class="st ok" id="st-appr" data-i18n="p.aw.apd">Approved — Director General</span></div>
+          <div class="split">
+            <dl class="kv">
+              <dt data-i18n="p.aw.d1">Recommended bidder</dt><dd>Kuwait Medical Trading Co.</dd>
+              <dt data-i18n="p.aw.d2">Award value</dt><dd class="num">KD 91,200.000</dd>
+            </dl>
+            <dl class="kv">
+              <dt data-i18n="p.aw.d3">Approving authority</dt><dd data-i18n="p.aw.dg">Director General</dd>
+              <dt data-i18n="p.aw.d4">Submitted for approval</dt><dd class="num">21 · 10 · 2026</dd>
+              <dt data-i18n="p.aw.d5">Approved by</dt><dd><span data-i18n="p.aw.d5v">Hessa Al-Failakawi</span> · <span class="num">01 · 11 · 2026</span></dd>
+            </dl>
+          </div>
+          <div class="row mt-2" id="aw-acts">
+            <button class="btn btn-primary sm" type="button" data-drawer="d-award"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.aw.award">Award tender</span></button>
+          </div>
+        </div>
+
+        <div class="card" id="aw-close" hidden>
+          <div class="card-head"><h2 data-i18n="p.aw.ch">Contract & closure</h2><span class="st warn" data-i18n="p.aw.objs">Objection period running</span></div>
+          <dl class="kv">
+            <dt data-i18n="p.aw.e0">Awarded to</dt><dd><span id="aw-w1" hidden>Kuwait Medical Trading Co. · <span class="num">KD 91,200</span></span><span id="aw-w2" hidden>Al-Saqr Medical Supplies W.L.L. · <span class="num">KD 84,600</span></span><span id="aw-w3" hidden>MedEquip International · <span class="num">KD 96,750</span></span></dd>
+            <dt data-i18n="p.aw.e1">Objection period</dt><dd data-i18n="p.aw.e1v">Per applicable procurement regulations · the contract is signed only after it ends</dd>
+            <dt data-i18n="p.aw.e2">Performance bond</dt><dd data-i18n="p.aw.e2v">Required from the winning bidder before contract signing</dd>
+            <dt data-i18n="p.aw.e3">Contract record</dt><dd><span class="num">CTR-2026-011</span> · <span data-i18n="p.aw.e3v">created from the tender terms</span></dd>
+            <dt data-i18n="p.aw.e4">Bid securities</dt><dd data-i18n="p.aw.e4v">3 to be released to unsuccessful bidders after the objection period</dd>
+          </dl>
+          <div class="row mt-2">
+            <button class="btn btn-primary sm" type="button" data-toast="Tender closed · file archived to the document management system · removed from open tenders" data-toast-ar="أُقفلت المناقصة · أُرشف ملفها في نظام إدارة الوثائق · أُزيلت من المناقصات المفتوحة" data-set-status="#st-award" data-st-class="" data-st-en="Closed" data-st-ar="مُقفلة" data-hide-after=""><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.aw.close">Close tender & archive</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.td.det">Tender details</h2><span class="st" data-i18n="p.aw.lockd">Locked</span></div>
+          <dl class="kv">
+            <dt data-i18n="p.td.d1">Procuring unit</dt><dd data-i18n="p.td.d1v">Testing & Operations</dd>
+            <dt data-i18n="p.c3">Category</dt><dd data-i18n="p.cat1">Medical supplies</dd>
+            <dt data-i18n="p.td.d2">Procedure</dt><dd data-i18n="p.td.d2v">Open public tender · two envelopes</dd>
+            <dt data-i18n="p.td.d3">Estimated value</dt><dd class="num">KD 85,000 – 100,000</dd>
+            <dt data-i18n="p.c4">Closing</dt><dd class="num">30 · 09 · 2026</dd>
+          </dl>
+          <p class="small muted mt-1" data-i18n="p.aw.lock">Bids have closed, so the terms can no longer be changed. A change now means cancelling the tender and re-tendering.</p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.aw.mn">Bid opening minutes</h2><span class="st ok" data-i18n="p.aw.mns">Signed</span></div>
+          <dl class="kv">
+            <dt data-i18n="p.aw.m1">Opened</dt><dd class="num">30 · 09 · 2026 · 14:02</dd>
+            <dt data-i18n="p.aw.m2">Quorum</dt><dd data-i18n="p.aw.m2v">4 of 5 members present · each verified with MFA</dd>
+            <dt data-i18n="p.aw.m3">Bid integrity</dt><dd data-i18n="p.aw.m3v">4 / 4 file hashes match the receipt records</dd>
+            <dt data-i18n="p.aw.m4">Envelopes</dt><dd data-i18n="p.aw.m4v">Technical opened · financial kept sealed until 15 · 10</dd>
+            <dt data-i18n="p.aw.m5">Minutes</dt><dd data-i18n="p.aw.m5v">Signed electronically (DocuSign) by all members present</dd>
+          </dl>
+          <button class="btn btn-ghost sm mt-2" type="button" data-toast="Bid opening minutes downloaded (PDF) — design preview" data-toast-ar="نُزّل محضر فتح المظاريف (PDF) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.aw.mdl">Download minutes (PDF)</span></button>
+        </div>
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.aw.ai">AI · evaluation check</span></h2>
+          <p data-i18n="p.aw.aid">Advisory only — the decision rests with the committee and the approving authority.</p>
+          <ul>
+            <li><span data-i18n="p.aw.ai1"><b>Rank 1 is 7.8% above the lowest compliant price</b> (KD 6,600 more), justified by +5.5 technical points over Al-Saqr Medical Supplies under the 70 / 30 weighting.</span></li>
+            <li><span data-i18n="p.aw.ai2"><b>No conflict-of-interest flags</b> between the committee members' declarations and the bidders' owners and signatories.</span></li>
+            <li><span data-i18n="p.aw.ai3"><b>Score arithmetic re-checked</b> for the 3 compliant bids with no discrepancies; the lowest price is 0.5% below the estimate and not abnormally low.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPLIERS ===================== -->
+  <section data-view="suppliers">
+    <div class="page-head">
+      <div><h1 data-i18n="p.sp.h">Suppliers</h1><p data-i18n="p.sp.d">The register of approved suppliers and new registration requests: review documents, approve, renew or suspend. Only approved suppliers can buy tender documents and submit bids.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../supplier.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.sp.pub">Registration page</span></a>
+        <button class="btn btn-ghost sm" type="button" data-toast="Export started (Excel) — design preview" data-toast-ar="بدأ التصدير (Excel) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.sp.k1">Approved suppliers</small><b data-count="142">142</b><em data-i18n="p.sp.k1d">Across 6 categories</em></div>
+      <div class="kpi"><small data-i18n="p.sp.k2">Applications to review</small><b data-count="3">3</b><em class="warn" data-i18n="p.sp.k2d">Oldest 20 · 10 · 2026 · 3-working-day SLA</em></div>
+      <div class="kpi"><small data-i18n="p.sp.k3">Expiring within 60 days</small><b data-count="6">6</b><em data-i18n="p.sp.k3d">Renewal notices go out automatically</em></div>
+      <div class="kpi"><small data-i18n="p.sp.k4">Suspended</small><b data-count="1">1</b><em class="down" data-i18n="p.sp.k4d">Falcon Supplies Est. · unpaid penalty</em></div>
+    </div>
+    <div class="card flush mt-2">
+        <div class="card-head">
+          <div class="filters" data-filter-group="s">
+            <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="pend"><span data-i18n="p.sp.f1">Pending review</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="ok"><span data-i18n="p.sp.f2">Approved</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="exp"><span data-i18n="p.sp.f3">Expiring</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="sus"><span data-i18n="p.sp.f4">Suspended</span><span class="cnt"></span></button>
+          </div>
+        </div>
+        <div class="tbl-wrap" data-filter-rows="s"><table class="tbl">
+          <thead><tr><th data-i18n="p.ad.c1">Supplier</th><th data-i18n="p.sp.c2">Categories</th><th data-i18n="p.sp.c3">Signatory</th><th data-i18n="p.sp.c4">Valid until</th><th data-i18n="p.c7">Status</th><th></th></tr></thead>
+          <tbody>
+            <tr data-f="pend" data-sel><td><div class="pg"><div><b>Gulf Lab Logistics</b><span class="sub num">SUP-2026-0419 · <span data-i18n="p.sp.appl">applied</span> 20 · 10 · 2026</span></div></div></td><td data-i18n="p.sp.cat1">Laboratory · logistics</td><td class="nw">Fahad Al-Harbi</td><td class="num">—</td><td><span class="st warn" id="st-sup" data-i18n="p.sp.s1">Pending review</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-sup" data-i18n="p.sp.review">Review</button></td></tr>
+            <tr data-f="pend" data-sel><td><div class="pg"><div><b>Desert Med Supplies</b><span class="sub num">SUP-2026-0420 · <span data-i18n="p.sp.appl">applied</span> 21 · 10 · 2026</span></div></div></td><td data-i18n="p.cat1">Medical supplies</td><td class="nw">Lulwa Al-Qattan</td><td class="num">—</td><td><span class="st warn" data-i18n="p.sp.s1">Pending review</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded for review — design preview" data-toast-ar="حُمّل للمراجعة — معاينة تصميم" data-i18n="p.sp.review">Review</button></td></tr>
+            <tr data-f="pend" data-sel><td><div class="pg"><div><b>Horizon Events Co.</b><span class="sub num">SUP-2026-0421 · <span data-i18n="p.sp.appl">applied</span> 22 · 10 · 2026 · <span data-i18n="p.sp.miss">2 documents missing</span></span></div></div></td><td data-i18n="p.cat3">Media & events</td><td class="nw">Omar Al-Failakawi</td><td class="num">—</td><td><span class="st" data-i18n="p.sp.s5">Incomplete</span></td><td class="r"><button class="lnk" type="button" data-toast="Reminder sent to the supplier" data-toast-ar="أُرسل تذكير للمورّد" data-i18n="p.sp.remind">Remind</button></td></tr>
+            <tr data-f="ok" data-sel><td><div class="pg"><div><b>Al-Saqr Medical Supplies W.L.L.</b><span class="sub num">SUP-2024-0117</span></div></div></td><td data-i18n="p.cat1">Medical supplies</td><td class="nw">Nasser Al-Saqr</td><td class="num">14 · 03 · 2027</td><td><span class="st ok" data-i18n="p.sp.s2">Approved</span></td><td class="r"><button class="lnk" type="button" data-toast="Profile — design preview" data-toast-ar="الملف — معاينة تصميم" data-i18n="p.sp.open">Open</button></td></tr>
+            <tr data-f="ok" data-sel><td><div class="pg"><div><b>Kuwait Medical Trading Co.</b><span class="sub num">SUP-2021-0042</span></div></div></td><td data-i18n="p.cat1">Medical supplies</td><td class="nw">Bader Al-Mutawa</td><td class="num">30 · 06 · 2027</td><td><span class="st ok" data-i18n="p.sp.s2">Approved</span></td><td class="r"><button class="lnk" type="button" data-toast="Profile — design preview" data-toast-ar="الملف — معاينة تصميم" data-i18n="p.sp.open">Open</button></td></tr>
+            <tr data-f="exp" data-sel><td><div class="pg"><div><b>Al-Dhow Scientific</b><span class="sub num">SUP-2020-0019</span></div></div></td><td data-i18n="p.cat2">Laboratory</td><td class="nw">Hessa Al-Awadhi</td><td class="num">15 · 11 · 2026</td><td><span class="st warn" data-i18n="p.sp.s3">Expires in 23 days</span></td><td class="r"><button class="lnk" type="button" data-toast="Renewal notice sent" data-toast-ar="أُرسل إشعار التجديد" data-i18n="p.sp.notify">Notify</button></td></tr>
+            <tr data-f="sus" data-sel><td><div class="pg"><div><b>Falcon Supplies Est.</b><span class="sub num">SUP-2022-0098</span></div></div></td><td data-i18n="p.cat5">Professional services</td><td class="nw">—</td><td class="num">—</td><td><span class="st red" data-i18n="p.sp.s4">Suspended · unpaid penalty</span></td><td class="r"><button class="lnk" type="button" data-toast="Case file — design preview" data-toast-ar="ملف الحالة — معاينة تصميم" data-i18n="p.sp.open">Open</button></td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.sp.foot">142 approved suppliers · 3 pending · 6 expiring within 60 days · renewals are self-service in the supplier dashboard</span></div>
+      </div>
+  </section>
+
+  <!-- ===================== PAYMENTS ===================== -->
+  <section data-view="payments">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Tenders</h1><p data-i18n="p.d">Publish tenders, sell their documents through K-Net, manage addenda and clarifications, receive sealed bids and award each tender to the winning bidder.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../tenders.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.live">Public portal</span></a>
+        <button class="btn btn-ghost sm" type="button" data-toast="Export started (Excel) — design preview" data-toast-ar="بدأ التصدير (Excel) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button>
+        <button class="btn btn-primary sm" type="button" data-drawer="d-tnew"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.new">New tender</span></button>
+      </div>
+    </div>
+    <nav class="tabs">
+      <a href="#tenders"><span data-i18n="p.t1">Tenders</span><span class="cnt">7</span></a>
+      <a href="#payments"><span data-i18n="p.t4">Payments · K-Net</span></a>
+    </nav>
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.pm.k1">Collected · 2026</small><b data-count="12950">12,950</b><em data-i18n="p.pm.k1d">KD · 87 transactions</em></div>
+      <div class="kpi"><small data-i18n="p.pm.k2">Success rate</small><b data-count="96.6" data-suffix="%">96.6%</b><em data-i18n="p.pm.k2d">3 declines · 0 chargebacks</em></div>
+      <div class="kpi"><small data-i18n="p.pm.k3">Awaiting settlement</small><b data-count="350">350</b><em data-i18n="p.pm.k3d">KD · settles tomorrow (T+1)</em></div>
+      <div class="kpi"><small data-i18n="p.pm.k4">Reconciliation</small><b data-count="100" data-suffix="%">100%</b><em data-i18n="p.pm.k4d">Matched with finance system · 02:00</em></div>
+    </div>
+    <div class="grid g-32 mt-2">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.pm.h">Transactions</h2><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="Statement exported (CSV) — design preview" data-toast-ar="صُدّر الكشف (CSV) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button></div></div>
+        <div class="tbl-wrap"><table class="tbl compact">
+          <thead><tr><th data-i18n="p.py.c2">Date</th><th data-i18n="p.pm.c2">Tender</th><th data-i18n="p.ad.c1">Supplier</th><th class="r" data-i18n="p.py.c3">Amount</th><th data-i18n="p.c7">Status</th></tr></thead>
+          <tbody>
+            <tr><td class="num">23 · 10 · 09:14</td><td class="num">KADA/T/2026/016</td><td>Bayan Media Production Co.</td><td class="r num">KD 100.000</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+            <tr><td class="num">22 · 10 · 15:40</td><td class="num">KADA/T/2026/017</td><td>Gulf Express Couriers</td><td class="r num">KD 100.000</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+            <tr><td class="num">22 · 10 · 11:02</td><td class="num">KADA/T/2026/015</td><td>BioSample Gulf</td><td class="r num">KD 150.000</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+            <tr><td class="num">19 · 10 · 11:08</td><td class="num">KADA/T/2026/014</td><td>Al-Saqr Medical Supplies</td><td class="r num">KD 150.000</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+            <tr><td class="num">18 · 10 · 09:52</td><td class="num">KADA/T/2026/014</td><td>Northern Gulf Pharma</td><td class="r num">KD 150.000</td><td><span class="st ok" data-i18n="p.py.ok">Captured</span></td></tr>
+            <tr><td class="num">11 · 10 · 16:02</td><td class="num">KADA/T/2026/014</td><td>MedEquip International</td><td class="r num">KD 150.000</td><td><span class="st red" data-i18n="p.py.fail">Declined by bank</span></td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.pm.chart">Monthly collections (KD)</h2></div><svg class="chart" data-chart="bars" data-h="180" data-values="900,1350,1200,1800,1650,2250,1400,2400" data-labels="Mar,Apr,May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="مارس,أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر" data-colors="navy"></svg></div>
+        <div class="card"><div class="card-head"><h2 data-i18n="p.pm.gw">Gateway</h2><span class="st ok" data-i18n="p.pm.on">Online</span></div><div class="health"><div><span data-i18n="p.pm.g1">Merchant</span><b class="num">KADA · 60412xxx</b></div><div><span data-i18n="p.pm.g2">Mode</span><b data-i18n="p.pm.g2v">Production · 3-D Secure</b></div><div><span data-i18n="p.pm.g3">Last callback</span><b class="num">09:14:22</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- drawers -->
+  <div class="drawer" id="d-sup"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.sp.ap">Application review</h3>
+    <small class="muted">Gulf Lab Logistics · <span class="num">SUP-2026-0419</span></small>
+    <dl class="kv">
+      <dt data-i18n="p.sp.a1">Legal form</dt><dd data-i18n="p.sp.a1v">W.L.L. · Kuwait</dd>
+      <dt data-i18n="p.sp.a2">Commercial licence</dt><dd class="num">CL-2019-77012 · <span data-i18n="p.sp.a2v">valid to</span> 2028</dd>
+      <dt data-i18n="p.sp.a3">Signatory identity</dt><dd data-i18n="p.sp.a3v">Verified via Kuwait Mobile ID</dd>
+      <dt data-i18n="p.sp.a4">Requested categories</dt><dd data-i18n="p.sp.cat1">Laboratory · logistics</dd>
+    </dl>
+    <div class="check-list mt-2">
+      <label><input type="checkbox" checked><span data-i18n="p.sp.d1">Commercial licence</span><small>PDF · 1.1 MB</small></label>
+      <label><input type="checkbox" checked><span data-i18n="p.sp.d2">Articles of association</span><small>PDF · 3.4 MB</small></label>
+      <label><input type="checkbox" checked><span data-i18n="p.sp.d3">Chamber of Commerce certificate</span><small>PDF · 420 KB</small></label>
+      <label><input type="checkbox" checked><span data-i18n="p.sp.d4">Authorised signatory letter</span><small>PDF · 210 KB</small></label>
+      <label><input type="checkbox" checked><span data-i18n="p.sp.d5">ISO 9001 / 13485</span><small>PDF · 880 KB</small></label>
+      <label><input type="checkbox"><span data-i18n="p.sp.d6">Sanctions & conflict-of-interest declaration</span><small data-i18n="p.sp.d6v">signed · to confirm</small></label>
+    </div>
+    <div class="row mt-2">
+      <button class="btn btn-primary sm" type="button" data-close data-toast="Supplier approved · certificate issued · supplier notified" data-toast-ar="اعتُمد المورّد · صدرت الشهادة · أُخطر المورّد" data-set-status="#st-sup" data-st-class="ok" data-st-en="Approved" data-st-ar="معتمد"><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.sp.approve">Approve</span></button>
+      <button class="btn btn-ghost sm" type="button" data-close data-toast="Request sent for missing information" data-toast-ar="أُرسل طلب استكمال المعلومات" data-i18n="p.sp.more">Request information</button>
+      <button class="btn btn-ghost sm" type="button" style="color:var(--red)" data-close data-toast="Application rejected with reason — design preview" data-toast-ar="رُفض الطلب مع السبب — معاينة تصميم" data-set-status="#st-sup" data-st-class="red" data-st-en="Rejected" data-st-ar="مرفوض" data-i18n="p.sp.reject">Reject</button>
+    </div>
+  </div></div>
+  <div class="drawer" id="d-addendum"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.da.h">New addendum · KADA/T/2026/014</h3>
+    <div class="field"><label data-i18n="p.da.t">Title (AR / EN)</label><input dir="rtl" placeholder="عنوان الملحق"><input data-i18n-ph="p.da.ph" placeholder="Addendum title"></div>
+    <div class="field"><label data-i18n="p.da.f">Attach PDF (AR + EN)</label><div class="upload"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.da.drop">Drop files or browse</b></div></div>
+    <div class="switches"><div><div><b data-i18n="p.da.n1">Notify all purchasers (email + SMS)</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.da.n2">Require acknowledgement before bidding</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.da.n3">Extend closing date</b></div><span class="switch"></span></div></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Addendum 3 published · 9 purchasers notified" data-toast-ar="نُشر الملحق 3 · أُخطر 9 مشترين"><span data-i18n="p.da.pub">Publish addendum</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+  <div class="drawer" id="d-extend"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.de.h">Extend closing date</h3>
+    <p class="small muted" data-i18n="p.de.d">The new date is published in both languages, purchasers are notified and the Official Gazette notice is regenerated.</p>
+    <div class="field"><label data-i18n="p.de.new">New closing</label><input class="num" value="07 · 12 · 2026 · 13:00"></div>
+    <div class="field"><label data-i18n="p.de.reason">Reason (public)</label><select><option data-i18n="p.de.r1">Clarifications affecting delivery terms</option><option data-i18n="p.de.r2">Request from multiple purchasers</option><option data-i18n="p.de.r3">Public holiday</option></select></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Closing extended to 07 · 12 · 2026 · notices updated" data-toast-ar="مُدّد الإغلاق إلى 07 · 12 · 2026 · حُدّثت الإعلانات"><span data-i18n="p.de.ok">Confirm extension</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+  <div class="drawer" id="d-award"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.dw.h">Award tender · KADA/T/2026/011</h3>
+    <p class="small muted" data-i18n="p.dw.d">Award to Kuwait Medical Trading Co. · KD 91,200 · total score 91.83 / 100. The decision, letters and notices are recorded in the audit log.</p>
+    <div class="switches">
+      <div><div><b data-i18n="p.dw.n1">Notify the winning bidder — letter of award</b><small data-i18n="p.dw.n1d">Kuwait Medical Trading Co. · email + supplier dashboard</small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n2">Notify the 3 other bidders with their scores and reasons</b><small>Al-Saqr Medical Supplies · MedEquip International · Northern Gulf Pharma</small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n3">Publish the award notice on the public portal (AR + EN)</b></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n4">Release unsuccessful bidders' bid securities after the objection period</b></div><span class="switch on"></span></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Tender awarded to Kuwait Medical Trading Co. · 4 bidders notified · award notice published" data-toast-ar="أُرسيت المناقصة على Kuwait Medical Trading Co. · أُخطر 4 مقدّمي عطاءات · نُشر إعلان الإرساء" data-set-status="#st-award" data-st-class="info" data-st-en="Awarded" data-st-ar="مُرساة" data-hide-after="#aw-acts, [data-aw-btn]" data-show-after="#aw-close, #aw-w1"><span data-i18n="p.dw.ok">Confirm award</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+  <div class="drawer" id="d-award2"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.dw.h">Award tender · KADA/T/2026/011</h3>
+    <p class="small muted" data-i18n="p.dw2.d">Award to Al-Saqr Medical Supplies W.L.L. · KD 84,600 · total score 88.50 / 100 · rank 2.</p>
+    <p class="notice"><svg class="ico"><use href="#i-warn"/></svg><span data-i18n="p.dw.alt">This bidder is not the committee's recommendation. A written justification is required; it is recorded with the decision in the audit log.</span></p>
+    <div class="field"><label data-i18n="p.dw.why">Justification (required)</label><textarea data-i18n-ph="p.dw.whyph" placeholder="Why is the tender awarded to this bidder rather than the first-ranked one?"></textarea></div>
+    <div class="switches">
+      <div><div><b data-i18n="p.dw.n1">Notify the winning bidder — letter of award</b><small>Al-Saqr Medical Supplies W.L.L. · <span data-i18n="p.dw.ch">email + supplier dashboard</span></small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n2">Notify the 3 other bidders with their scores and reasons</b><small>Kuwait Medical Trading Co. · MedEquip International · Northern Gulf Pharma</small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n3">Publish the award notice on the public portal (AR + EN)</b></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n4">Release unsuccessful bidders' bid securities after the objection period</b></div><span class="switch on"></span></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Tender awarded to Al-Saqr Medical Supplies W.L.L. · justification recorded · 4 bidders notified" data-toast-ar="أُرسيت المناقصة على شركة الصقر للمستلزمات الطبية · سُجّل المبرر · أُخطر 4 مقدّمي عطاءات" data-set-status="#st-award" data-st-class="info" data-st-en="Awarded" data-st-ar="مُرساة" data-hide-after="#aw-acts, [data-aw-btn]" data-show-after="#aw-close, #aw-w2"><span data-i18n="p.dw.ok">Confirm award</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+  <div class="drawer" id="d-award3"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.dw.h">Award tender · KADA/T/2026/011</h3>
+    <p class="small muted" data-i18n="p.dw3.d">Award to MedEquip International · KD 96,750 · total score 87.23 / 100 · rank 3.</p>
+    <p class="notice"><svg class="ico"><use href="#i-warn"/></svg><span data-i18n="p.dw.alt">This bidder is not the committee's recommendation. A written justification is required; it is recorded with the decision in the audit log.</span></p>
+    <div class="field"><label data-i18n="p.dw.why">Justification (required)</label><textarea data-i18n-ph="p.dw.whyph" placeholder="Why is the tender awarded to this bidder rather than the first-ranked one?"></textarea></div>
+    <div class="switches">
+      <div><div><b data-i18n="p.dw.n1">Notify the winning bidder — letter of award</b><small>MedEquip International · <span data-i18n="p.dw.ch">email + supplier dashboard</span></small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n2">Notify the 3 other bidders with their scores and reasons</b><small>Kuwait Medical Trading Co. · Al-Saqr Medical Supplies · Northern Gulf Pharma</small></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n3">Publish the award notice on the public portal (AR + EN)</b></div><span class="switch on"></span></div>
+      <div><div><b data-i18n="p.dw.n4">Release unsuccessful bidders' bid securities after the objection period</b></div><span class="switch on"></span></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Tender awarded to MedEquip International · justification recorded · 4 bidders notified" data-toast-ar="أُرسيت المناقصة على MedEquip International · سُجّل المبرر · أُخطر 4 مقدّمي عطاءات" data-set-status="#st-award" data-st-class="info" data-st-en="Awarded" data-st-ar="مُرساة" data-hide-after="#aw-acts, [data-aw-btn]" data-show-after="#aw-close, #aw-w3"><span data-i18n="p.dw.ok">Confirm award</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+  <div class="drawer" id="d-tnew"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.nt.h">New tender</h3>
+    <p class="small muted" data-i18n="p.nt.d">Saved with the next reference number. After legal review it is published on the public portal in Arabic and English, and suppliers in the category are alerted.</p>
+    <div class="form">
+      <div class="field"><label data-i18n="p.nt.ref">Reference</label><input class="num" dir="ltr" value="KADA/T/2026/018" readonly></div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.nt.title">Title</span></label><input dir="rtl" data-i18n-ph="p.nt.tar" placeholder="Tender title in Arabic"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.nt.title">Title</span></label><input dir="ltr" data-i18n-ph="p.nt.ten" placeholder="Tender title in English"></div>
+      </div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="p.c3">Category</label><select><option data-i18n="p.cat1">Medical supplies</option><option data-i18n="p.cat2">Laboratory</option><option data-i18n="p.cat3">Media & events</option><option data-i18n="p.cat4">Logistics</option><option data-i18n="p.cat5">Professional services</option><option data-i18n="p.cat6">Vehicles</option></select></div>
+        <div class="field"><label data-i18n="p.td.d1">Procuring unit</label><select><option data-i18n="p.td.d1v">Testing & Operations</option><option data-i18n="p.u2">Education & Awareness</option><option data-i18n="p.u3">Media & Communications</option><option data-i18n="p.u4">IT & Digital Services</option><option data-i18n="p.u5">Finance & Procurement</option></select></div>
+        <div class="field"><label data-i18n="p.td.d2">Procedure</label><select><option data-i18n="p.td.d2v">Open public tender · two envelopes</option><option data-i18n="p.pr2">Open public tender · one envelope</option><option data-i18n="p.pr3">Limited tender · invited suppliers</option></select></div>
+        <div class="field"><label data-i18n="p.nt.est">Estimated value (KD)</label><input class="num" dir="ltr" placeholder="0.000"></div>
+        <div class="field"><label data-i18n="p.td.d4">Contract term</label><select><option data-i18n="p.tm1">12 months</option><option data-i18n="p.tm2">24 months</option><option data-i18n="p.td.d4v">24 months + 12 optional</option><option data-i18n="p.tm3">36 months</option></select></div>
+        <div class="field"><label data-i18n="p.nt.close">Closing date & time</label><input class="num" dir="ltr" data-i18n-ph="p.nt.dph" placeholder="DD · MM · YYYY · 13:00"></div>
+        <div class="field"><label data-i18n="p.dc.fee">Document fee (KD)</label><input class="num" dir="ltr" placeholder="150"></div>
+        <div class="field"><label data-i18n="p.dc.sec">Bid security</label><select><option data-i18n="p.sec1">2% of the bid value · bank guarantee</option><option data-i18n="p.sec2">Fixed amount · bank guarantee</option><option data-i18n="p.sec3">Not required</option></select></div>
+      </div>
+      <div class="field"><label data-i18n="p.nt.cert">Required certificates</label><input dir="ltr" placeholder="ISO 9001"></div>
+      <div class="field"><label data-i18n="p.dc.h">Tender documents</label><div class="upload sm"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.da.drop">Drop files or browse</b></div></div>
+      <div class="switches">
+        <div><div><b data-i18n="p.nt.s1">Publish in Arabic and English</b></div><span class="switch on"></span></div>
+        <div><div><b data-i18n="p.nt.s2">Alert registered suppliers in this category</b></div><span class="switch on"></span></div>
+      </div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Saved as KADA/T/2026/018 and sent to Legal & Compliance for review — published after approval" data-toast-ar="حُفظت برقم KADA/T/2026/018 وأُرسلت إلى الشؤون القانونية للمراجعة — تُنشر بعد الموافقة"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.nt.send">Send for legal review</span></button><button class="btn btn-ghost sm" type="button" data-close data-toast="Saved as a draft" data-toast-ar="حُفظت كمسودة"><span data-i18n="p.nt.draft">Save as draft</span></button></div>
+  </div></div>
+  <div class="drawer" id="d-tedit"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.et.h">Edit tender · KADA/T/2026/014</h3>
+    <p class="notice"><svg class="ico"><use href="#i-warn"/></svg><span data-i18n="p.et.d">This tender is published and 9 suppliers have bought its documents. Your changes are issued as Addendum 3 and every purchaser is notified.</span></p>
+    <div class="form">
+      <div class="field"><label data-i18n="p.nt.ref">Reference</label><input class="num" dir="ltr" value="KADA/T/2026/014" readonly></div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.nt.title">Title</span></label><input dir="rtl" value="توريد أطقم جمع العينات وخدمات سلسلة التبريد"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.nt.title">Title</span></label><input dir="ltr" value="Supply of sample collection kits &amp; cold-chain logistics"></div>
+      </div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="p.c3">Category</label><select><option data-i18n="p.cat1" selected>Medical supplies</option><option data-i18n="p.cat2">Laboratory</option><option data-i18n="p.cat3">Media & events</option><option data-i18n="p.cat4">Logistics</option><option data-i18n="p.cat5">Professional services</option><option data-i18n="p.cat6">Vehicles</option></select></div>
+        <div class="field"><label data-i18n="p.td.d1">Procuring unit</label><select><option data-i18n="p.td.d1v" selected>Testing & Operations</option><option data-i18n="p.u2">Education & Awareness</option><option data-i18n="p.u3">Media & Communications</option><option data-i18n="p.u4">IT & Digital Services</option><option data-i18n="p.u5">Finance & Procurement</option></select></div>
+        <div class="field"><label data-i18n="p.td.d2">Procedure</label><select><option data-i18n="p.td.d2v" selected>Open public tender · two envelopes</option><option data-i18n="p.pr2">Open public tender · one envelope</option><option data-i18n="p.pr3">Limited tender · invited suppliers</option></select></div>
+        <div class="field"><label data-i18n="p.nt.est">Estimated value (KD)</label><input class="num" dir="ltr" value="180,000 – 220,000"></div>
+        <div class="field"><label data-i18n="p.td.d4">Contract term</label><select><option data-i18n="p.tm1">12 months</option><option data-i18n="p.tm2">24 months</option><option data-i18n="p.td.d4v" selected>24 months + 12 optional</option><option data-i18n="p.tm3">36 months</option></select></div>
+        <div class="field"><label data-i18n="p.nt.close">Closing date & time</label><input class="num" dir="ltr" value="30 · 11 · 2026 · 13:00" readonly><small class="muted" data-i18n="p.nt.closed">Use “Extend closing date” to change it — purchasers are notified.</small></div>
+        <div class="field"><label data-i18n="p.dc.fee">Document fee (KD)</label><input class="num" dir="ltr" value="150"></div>
+        <div class="field"><label data-i18n="p.dc.sec">Bid security</label><select><option data-i18n="p.sec1" selected>2% of the bid value · bank guarantee</option><option data-i18n="p.sec2">Fixed amount · bank guarantee</option><option data-i18n="p.sec3">Not required</option></select></div>
+      </div>
+      <div class="field"><label data-i18n="p.nt.cert">Required certificates</label><input dir="ltr" value="ISO 13485"></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Changes saved to draft Addendum 3 — review and publish it from Addenda" data-toast-ar="حُفظت التعديلات في مسودة الملحق 3 — راجعه وانشره من «الملاحق»"><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.et.save">Save and prepare Addendum 3</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "المناقصات والمورّدون — إدارة كادا",
+  "p.h": "المناقصات", "p.d": "نشر المناقصات، وبيع وثائقها عبر كي-نت، وإدارة الملاحق والاستفسارات، واستلام العطاءات المختومة، وإرساء كل مناقصة على مقدّم العطاء الفائز.",
+  "p.live": "البوابة العامة", "p.export": "تصدير", "p.new": "مناقصة جديدة", "p.edit": "تعديل", "p.save": "حفظ", "p.cancel": "إلغاء", "p.manage": "إدارة",
+  "p.t1": "المناقصات", "p.t4": "المدفوعات · كي-نت",   "p.k1": "مناقصات مفتوحة", "p.k1d": "أقرب إغلاق: 30 · 11 · 2026", "p.k2": "عمليات شراء وثائق المناقصات · 2026", "p.k2d": "12,950 د.ك محصّلة عبر كي-نت", "p.k3": "مورّدون مسجّلون", "p.k3d": "3 طلبات بانتظار المراجعة", "p.k4": "إقرارات ملاحق معلّقة", "p.k4d": "KADA/T/2026/014 · يُقترح إرسال تذكير",
+  "p.f0": "الكل", "p.f1": "مفتوحة", "p.f2": "قيد التقييم", "p.f3": "مُرساة", "p.f4": "مسودة",
+  "p.c1": "المرجع", "p.c2": "العنوان", "p.c3": "الفئة", "p.c4": "الإغلاق", "p.c5": "مشتريات", "p.c6": "عطاءات", "p.c7": "الحالة",
+  "p.r1": "توريد أطقم جمع العينات وخدمات سلسلة التبريد", "p.r1d": "نُشرت 01 · 10 · 2026 · عربي + إنجليزي · ملحقان", "p.r2": "خدمات التحليل المخبري — مختبر معتمد من وادا", "p.r2d": "نُشرت 10 · 10 · 2026 · عربي + إنجليزي", "p.r3": "إنتاج حملة التثقيف 2027", "p.r3d": "نُشرت 18 · 10 · 2026 · عربي + إنجليزي",
+  "p.r4": "خدمات الشحن الدولي للعينات إلى المختبرات المعتمدة من وادا", "p.r4d": "نُشرت 20 · 10 · 2026 · عربي + إنجليزي", "p.r5": "معدات ميدانية لمسؤولي مراقبة المنشطات", "p.r5d": "أُغلقت 30 · 09 · 2026 · فُتحت 4 عطاءات", "p.r6": "خدمات الترجمة والتعريب 2026-27", "p.r6d": "أُرسيت 15 · 09 · 2026 · وُقّع العقد", "p.r7": "مركبة وحدة فحص متنقلة", "p.r7d": "مسودة · بانتظار المراجعة القانونية للشروط",
+  "p.cat1": "مستلزمات طبية", "p.cat2": "مختبرات", "p.cat3": "إعلام وفعاليات", "p.cat4": "خدمات لوجستية", "p.cat5": "خدمات مهنية", "p.cat6": "مركبات",
+  "p.s1": "مفتوحة", "p.s2": "قيد التقييم", "p.s3": "مُرساة", "p.s4": "مسودة", "p.foot": "7 مناقصات جارية وحديثة · الأرشيف: 41 · البوابة العامة تعرض المفتوحة والمُرساة فقط",
+  "p.td.sub": "نُشرت 01 · 10 · 2026 بالعربية والإنجليزية · ثمن الوثائق 150 د.ك · الكفالة الأولية 2% · تُغلق 30 · 11 · 2026 الساعة 13:00 بتوقيت الكويت", "p.td.view": "الصفحة العامة", "p.td.newadd": "ملحق جديد",
+  "p.td.k1": "أيام حتى الإغلاق", "p.td.k2": "وثائق مشتراة", "p.td.k3": "استفسارات مفتوحة", "p.td.k4": "عطاءات مختومة مستلمة",
+  "p.td.t1": "نظرة عامة", "p.td.t2": "الوثائق والتسعير", "p.td.t3": "الملاحق والإقرارات", "p.td.t4": "المشتريات والمدفوعات", "p.td.t5": "الاستفسارات", "p.td.t6": "العطاءات",
+  "p.td.det": "تفاصيل المناقصة", "p.td.d1": "الجهة الطالبة", "p.td.d1v": "الفحص والعمليات", "p.td.d2": "الإجراء", "p.td.d2v": "مناقصة عامة مفتوحة · مظروفان", "p.td.d3": "القيمة التقديرية", "p.td.d4": "مدة العقد", "p.td.d4v": "24 شهراً + 12 شهراً اختيارية",
+  "p.td.d5": "الأهلية", "p.td.d5v": "مورّد مسجّل · فئة المستلزمات الطبية · ISO 13485", "p.td.d6": "الاجتماع التمهيدي", "p.td.held": "(عُقد)", "p.td.d7": "فتح المظاريف", "p.td.d8": "لجنة التقييم", "p.td.d8v": "5 أعضاء · مُشكَّلة",
+  "p.td.tl": "الجدول الزمني", "p.td.s1": "الصياغة", "p.td.s2": "المراجعة القانونية", "p.td.s3": "النشر بالعربية والإنجليزية", "p.td.s4": "مفتوحة · بيع الوثائق", "p.td.s4d": "حتى 30 · 11", "p.td.s5": "فتح المظاريف", "p.td.s6": "التقييم", "p.td.s7": "الإرساء",
+  "p.td.act": "آخر النشاط", "p.td.a1": "نُشر الملحق 2 — أُخطر 9 مشترين بالبريد الإلكتروني والرسائل النصية", "p.td.a2": "ورد الاستفسار Q-07 من Gulf Express Couriers", "p.td.a3": "شراء وثائق · شركة الصقر للمستلزمات الطبية · كي-نت 150 د.ك", "p.td.a4": "عُقد الاجتماع التمهيدي · رُفع المحضر",
+  "p.td.pubst": "النشر", "p.td.p1": "الإعلان العربي", "p.td.p2": "الإعلان الإنجليزي", "p.td.live": "منشور", "p.td.p3": "مرجع الجريدة الرسمية", "p.td.p4": "تنبيه المورّدين", "p.td.sent": "أُرسل بالبريد · 142 مورّداً",
+  "p.td.ai": "AI · مؤشرات سلامة المناقصة", "p.td.ai1": "<b>4 مشترين لم يُقرّوا بالملحق 2.</b> لا يمكنهم تقديم عطاءاتهم قبل الإقرار؛ يُقترح إرسال تذكير اليوم.", "p.td.ai2": "<b>الاستفسار Q-07 يمسّ شروط التسليم.</b> أدّت أسئلة مماثلة في 2025 إلى تمديد؛ يُقترح تمديد الإغلاق 7 أيام.", "p.td.ai3": "<b>المشتريات أعلى بنسبة 30% من مناقصة الأطقم لعام 2025</b> في المرحلة نفسها — يُرجَّح ورود 5–6 عطاءات.",
+  "p.td.quick": "إجراءات سريعة", "p.td.q1": "إرسال تذكير بالإقرار", "p.td.q2": "تمديد موعد الإغلاق", "p.td.q3": "تنزيل الحزمة كاملة",
+  "p.dc.h": "وثائق المناقصة", "p.dc.d": "تظهر للمشترين بعد الدفع عبر كي-نت · تحمل علامة مائية برقم المورّد", "p.dc.up": "رفع", "p.dc.1": "تعليمات لمقدمي العطاءات (عربي + إنجليزي)", "p.dc.pub": "معاينة عامة", "p.dc.2": "المواصفات الفنية — الأطقم وسلسلة التبريد", "p.dc.paid": "للمشترين فقط", "p.dc.3": "جدول الكميات", "p.dc.4": "مسودة العقد والشروط العامة", "p.dc.5": "محضر الاجتماع التمهيدي",
+  "p.dc.price": "التسعير", "p.dc.fee": "ثمن الوثائق (د.ك)", "p.dc.sec": "الكفالة الأولية", "p.dc.pay": "طريقة الدفع",
+  "p.ad.h": "الملاحق", "p.ad.d": "يُرسل كل ملحق إلى جميع المشترين؛ ولا يُقبل العطاء إلا بعد الإقرار بكل الملاحق", "p.ad.2": "الملحق 2 — جدول تسليم معدّل ومستوى خدمة سلسلة التبريد", "p.ad.pubd": "نُشر", "p.ad.ack": "أقرّ به 5 / 9", "p.ad.pend": "4 بانتظار الإقرار", "p.ad.1": "الملحق 1 — إجابات الاستفسارات Q-01 إلى Q-05", "p.ad.ack9": "أقرّ به 9 / 9", "p.ad.full": "مكتمل",
+  "p.ad.mat": "مصفوفة الإقرارات", "p.ad.a1": "ملحق 1", "p.ad.a2": "ملحق 2", "p.ad.remind": "تذكير المعلّقين", "p.ad.c1": "المورّد", "p.ad.c2": "الشراء", "p.ad.c3": "آخر تذكير", "p.ad.rule": "قاعدة تفرضها البوابة", "p.ad.ruled": "لا يستطيع المورّد رفع عطائه قبل الإقرار بكل الملاحق من لوحته. تُوثَّق الإقرارات بختم زمني وتظهر في سجل التدقيق. تُرسل التذكيرات تلقائياً قبل الإغلاق بـ 7 و3 أيام ويوم واحد.",
+  "p.py.h": "عمليات شراء الوثائق", "p.py.d": "تُطابَق معاملات كي-نت ليلياً مع النظام المالي", "p.py.c1": "الإيصال", "p.py.c2": "التاريخ", "p.py.c3": "المبلغ", "p.py.c4": "مرجع كي-نت", "p.py.ok": "مُحصّل", "p.py.fail": "مرفوض من البنك", "p.py.foot": "9 مُحصّلة · 1 مرفوضة · الإجمالي 1,350.000 د.ك · التسوية T+1", "p.py.chart": "المشتريات حسب الأسبوع",
+  "p.qa.h": "طلبات الاستفسار", "p.qa.d": "تُحجب هوية السائل، وتُنشر الإجابات لجميع المشترين عبر ملحق", "p.qa.rec": "ورد", "p.qa.open": "بانتظار الإجابة", "p.qa.q7": "«يشترط البند 4.3 التسليم خلال 48 ساعة إلى جميع المحافظات. هل ينطبق ذلك على موقع جزيرة فيلكا الوارد في الملحق ب؟»", "p.qa.ans": "الإجابة (عربي + إنجليزي · تُنشر في الملحق 3)", "p.qa.ph": "اكتب الإجابة الرسمية…", "p.qa.save": "حفظ في الملحق 3", "p.qa.legal": "إحالة للشؤون القانونية",
+  "p.qa.q6": "«هل يمكن إصدار الكفالة الأولية من بنك خليجي له بنك مراسل في الكويت؟»", "p.qa.answer": "إجابة", "p.qa.q5": "اشتراط مدة صلاحية أطقم جمع العينات", "p.qa.a5": "أُجيب عنه في الملحق 1 · 12 · 10", "p.qa.q4": "صيغة بيانات مسجّل درجات الحرارة", "p.qa.done": "مُجاب", "p.qa.rule": "المهلة", "p.qa.ruled": "تُغلق الاستفسارات قبل الإغلاق بعشرة أيام (20 · 11 · 2026). ويجب نشر الإجابات قبل الإغلاق بسبعة أيام على الأقل؛ وتمنع البوابة نشر ملحق بعد ذلك دون تمديد موعد الإغلاق.",
+  "p.bd.h": "العطاءات المختومة", "p.bd.d": "مشفّرة عند الرفع · لا تُفتح إلا بنصاب اللجنة بعد 30 · 11 · 2026 الساعة 14:00", "p.bd.lock": "محتوى العطاءات مختوم. يسجّل النظام وقت الاستلام وبصمة الملف فقط. يتطلب الفتح حضور 3 من أعضاء اللجنة الخمسة مع التحقق متعدد العوامل.", "p.bd.c1": "مرجع العطاء", "p.bd.c2": "وقت الاستلام", "p.bd.c3": "المظاريف", "p.bd.c4": "إقرار الملاحق", "p.bd.c5": "البصمة الرقمية", "p.bd.env": "فني + مالي",
+  "p.bd.com": "لجنة التقييم", "p.bd.chair": "الرئيس · المالية والمشتريات", "p.bd.m1": "الفحص والعمليات", "p.bd.m2": "الشؤون القانونية والامتثال", "p.bd.m3": "تقنية المعلومات والخدمات الرقمية", "p.bd.m4": "التدقيق الداخلي (مراقب)",
+  "p.aw.sub": "أُغلقت 30 · 09 · 2026 · فُتحت 4 عطاءات في 30 · 09 · 2026 الساعة 14:00 · نظام المظروفين · الأوزان: فني 70 / مالي 30 · الحد الأدنى للدرجة الفنية 49 / 70", "p.aw.rep": "تقرير التقييم",
+  "p.aw.k1": "العطاءات المستلمة", "p.aw.k2": "مستوفية فنياً", "p.aw.k3": "أقل سعر مستوفٍ (د.ك)", "p.aw.k4": "القيمة التقديرية (د.ك)",
+  "p.aw.cyc": "دورة التقييم والإرساء", "p.aw.s2": "التقييم الفني", "p.aw.s3": "فتح المظاريف المالية", "p.aw.s4": "توصية اللجنة", "p.aw.s5": "الاعتماد", "p.aw.dg": "المدير العام", "p.aw.s6": "الإرساء والإخطار", "p.aw.s7": "العقد والإقفال",
+  "p.aw.cmp": "مقارنة العطاءات", "p.aw.cmpd": "تقييم بنظام المظروفين · فني 70 / مالي 30 · الترتيب حسب المجموع", "p.aw.c1": "مقدّم العطاء", "p.aw.c2": "الفني / 70", "p.aw.c3": "السعر (د.ك)", "p.aw.c4": "المالي / 30", "p.aw.c5": "المجموع / 100", "p.aw.c6": "الترتيب", "p.aw.c7": "النتيجة",
+  "p.aw.rec": "موصى بالإرساء عليه", "p.aw.comp": "مستوفٍ", "p.aw.nc": "غير مستوفٍ", "p.aw.low": "أقل سعر مستوفٍ", "p.aw.ncd": "دون الحد الأدنى الفني (49) · أُعيد المظروف المالي دون فتحه",
+  "p.aw.foot": "الدرجة المالية = 30 × أقل سعر مستوفٍ ÷ سعر مقدّم العطاء · المجموع = الفني + المالي · لا تُفتح المظاريف المالية إلا للعطاءات الحاصلة على 49 / 70 فنياً على الأقل",
+  "p.aw.rhd": "موقّعة إلكترونياً · 20 · 10 · 2026", "p.aw.mns": "موقّع", "p.aw.rtxt": "<b>الإرساء على Kuwait Medical Trading Co. بمبلغ 91,200 د.ك.</b> أعلى مجموع درجات (91.83 / 100)؛ والسعر ضمن القيمة التقديرية المعتمدة 85,000–100,000 د.ك.", "p.aw.vote": "صوّت بالموافقة", "p.aw.obs": "التدقيق الداخلي · مراقب دون حق التصويت · لا ملاحظات",
+  "p.aw.dh": "القرار والإرساء", "p.aw.apd": "معتمدة — المدير العام", "p.aw.d1": "مقدّم العطاء الموصى به", "p.aw.d2": "قيمة الإرساء", "p.aw.d3": "سلطة الاعتماد", "p.aw.d4": "تاريخ الإحالة للاعتماد", "p.aw.d5": "اعتمدها", "p.aw.d5v": "حصة الفيلكاوي", "p.aw.award": "إرساء المناقصة",
+  "p.aw.ch": "العقد والإقفال", "p.aw.objs": "فترة التظلم سارية", "p.aw.e1": "فترة التظلم", "p.aw.e1v": "وفق لوائح المشتريات المعمول بها · لا يُوقَّع العقد إلا بعد انتهائها", "p.aw.e2": "كفالة حسن التنفيذ", "p.aw.e2v": "مطلوبة من مقدّم العطاء الفائز قبل توقيع العقد", "p.aw.e3": "سجل العقد", "p.aw.e3v": "أُنشئ من شروط المناقصة", "p.aw.e4": "الكفالات الأولية", "p.aw.e4v": "تُفرج 3 كفالات لمقدّمي العطاءات غير الفائزين بعد انتهاء فترة التظلم", "p.aw.close": "إقفال المناقصة وأرشفتها",
+  "p.aw.mn": "محضر فتح المظاريف", "p.aw.m1": "وقت الفتح", "p.aw.m2": "النصاب", "p.aw.m2v": "حضور 4 من 5 أعضاء · تحقّق كل عضو بالتحقق متعدد العوامل", "p.aw.m3": "سلامة العطاءات", "p.aw.m3v": "تطابقت البصمات الرقمية للملفات 4 / 4 مع سجلات الاستلام", "p.aw.m4": "المظاريف", "p.aw.m4v": "فُتحت الفنية · وبقيت المالية مختومة حتى 15 · 10", "p.aw.m5": "المحضر", "p.aw.m5v": "موقّع إلكترونياً (DocuSign) من جميع الأعضاء الحاضرين", "p.aw.mdl": "تنزيل المحضر (PDF)",
+  "p.aw.ai": "AI · تدقيق التقييم", "p.aw.aid": "استرشادي فقط — القرار للجنة وللسلطة المختصة بالاعتماد.", "p.aw.ai1": "<b>سعر صاحب المرتبة الأولى أعلى بنسبة 7.8% من أقل سعر مستوفٍ</b> (بفارق 6,600 د.ك)، ويبرّره تفوّقه بـ 5.5 درجات فنية على Al-Saqr Medical Supplies وفق أوزان 70 / 30.", "p.aw.ai2": "<b>لا مؤشرات على تضارب المصالح</b> بين إقرارات أعضاء اللجنة وملّاك مقدّمي العطاءات والمفوّضين بالتوقيع عنهم.", "p.aw.ai3": "<b>أُعيد التحقق من حساب الدرجات</b> للعطاءات الثلاثة المستوفية دون أي فروقات؛ وأقل سعر أدنى من القيمة التقديرية بنسبة 0.5% فقط ولا يُعدّ منخفضاً بشكل غير طبيعي.",
+  "p.sp.f1": "بانتظار المراجعة", "p.sp.f2": "معتمد", "p.sp.f3": "توشك على الانتهاء", "p.sp.f4": "موقوف", "p.sp.c2": "الفئات", "p.sp.c3": "المفوض بالتوقيع", "p.sp.c4": "صالح حتى", "p.sp.cat1": "مختبرات · لوجستيات",
+  "p.sp.s1": "بانتظار المراجعة", "p.sp.s2": "معتمد", "p.sp.s3": "ينتهي خلال 23 يوماً", "p.sp.s4": "موقوف · غرامة غير مسددة", "p.sp.s5": "غير مكتمل", "p.sp.appl": "قُدّم الطلب", "p.sp.miss": "وثيقتان ناقصتان", "p.sp.review": "مراجعة", "p.sp.remind": "تذكير", "p.sp.open": "فتح", "p.sp.notify": "إشعار",
+  "p.sp.foot": "142 مورّداً معتمداً · 3 بانتظار المراجعة · 6 تنتهي خلال 60 يوماً · يُجدِّد المورّد تسجيله ذاتياً من لوحته",
+  "p.sp.ap": "مراجعة طلب التسجيل", "p.sp.a1": "الشكل القانوني", "p.sp.a1v": "ذ.م.م · الكويت", "p.sp.a2": "الرخصة التجارية", "p.sp.a2v": "سارية حتى", "p.sp.a3": "هوية المفوض", "p.sp.a3v": "موثّقة عبر هويتي", "p.sp.a4": "الفئات المطلوبة",
+  "p.sp.d1": "الرخصة التجارية", "p.sp.d2": "عقد التأسيس", "p.sp.d3": "شهادة غرفة تجارة وصناعة الكويت", "p.sp.d4": "خطاب تفويض بالتوقيع", "p.sp.d5": "ISO 9001 / 13485", "p.sp.d6": "إقرار بعدم وجود عقوبات أو تضارب مصالح", "p.sp.d6v": "موقّع · بانتظار التحقق",
+  "p.sp.approve": "اعتماد", "p.sp.more": "طلب استكمال", "p.sp.reject": "رفض",
+  "p.pm.k1": "المُحصّل · 2026", "p.pm.k1d": "د.ك · 87 معاملة", "p.pm.k2": "نسبة النجاح", "p.pm.k2d": "3 معاملات مرفوضة · لا مبالغ مستردة", "p.pm.k3": "بانتظار التسوية", "p.pm.k3d": "د.ك · تُسوّى غداً (T+1)", "p.pm.k4": "المطابقة", "p.pm.k4d": "مطابقة للنظام المالي · 02:00",
+  "p.pm.h": "المعاملات", "p.pm.c2": "المناقصة", "p.pm.chart": "التحصيل الشهري (د.ك)", "p.pm.gw": "البوابة", "p.pm.on": "متصلة", "p.pm.g1": "رقم التاجر", "p.pm.g2": "بيئة التشغيل", "p.pm.g2v": "الإنتاج · 3-D Secure", "p.pm.g3": "آخر رد من البوابة",
+  "p.da.h": "ملحق جديد · KADA/T/2026/014", "p.da.t": "العنوان (عربي / إنجليزي)", "p.da.ph": "عنوان الملحق بالإنجليزية", "p.da.f": "إرفاق PDF (عربي + إنجليزي)", "p.da.drop": "أفلت الملفات أو تصفّح", "p.da.n1": "إخطار جميع المشترين (بريد إلكتروني + رسالة نصية)", "p.da.n2": "اشتراط الإقرار قبل تقديم العطاء", "p.da.n3": "تمديد موعد الإغلاق", "p.da.pub": "نشر الملحق",
+  "p.de.h": "تمديد موعد الإغلاق", "p.de.d": "يُنشر الموعد الجديد باللغتين، ويُخطَر المشترون، ويُعاد إعداد إعلان الجريدة الرسمية.", "p.de.new": "موعد الإغلاق الجديد", "p.de.reason": "السبب (يُنشر للعموم)", "p.de.r1": "استفسارات تمسّ شروط التسليم", "p.de.r2": "طلب من عدة مشترين", "p.de.r3": "عطلة رسمية", "p.de.ok": "تأكيد التمديد",
+  "p.dw.h": "إرساء المناقصة · KADA/T/2026/011", "p.dw.d": "الإرساء على Kuwait Medical Trading Co. · 91,200 د.ك · المجموع 91.83 / 100. يُسجَّل القرار والخطابات والإعلانات في سجل التدقيق.", "p.dw.n1": "إخطار مقدّم العطاء الفائز — خطاب الإرساء", "p.dw.n1d": "Kuwait Medical Trading Co. · بريد إلكتروني + لوحة المورّد", "p.dw.n2": "إخطار مقدّمي العطاءات الثلاثة الآخرين بدرجاتهم وأسباب عدم الإرساء", "p.dw.n3": "نشر إعلان الإرساء على البوابة العامة (عربي + إنجليزي)", "p.dw.n4": "الإفراج عن الكفالات الأولية لمقدّمي العطاءات غير الفائزين بعد انتهاء فترة التظلم", "p.dw.ok": "تأكيد الإرساء",
+  "p.td.edit": "تعديل المناقصة",
+  "p.sp.h": "المورّدون",
+  "p.sp.d": "سجل المورّدين المعتمدين وطلبات التسجيل الجديدة: مراجعة الوثائق، والاعتماد، والتجديد، والإيقاف. لا يشتري وثائق المناقصات ويقدّم العطاءات إلا المورّد المعتمد.",
+  "p.sp.pub": "صفحة التسجيل",
+  "p.sp.k1": "مورّدون معتمدون",
+  "p.sp.k1d": "في 6 فئات",
+  "p.sp.k2": "طلبات بانتظار المراجعة",
+  "p.sp.k2d": "أقدمها 20 · 10 · 2026 · مهلة 3 أيام عمل",
+  "p.sp.k3": "تنتهي خلال 60 يوماً",
+  "p.sp.k3d": "تُرسل إشعارات التجديد تلقائياً",
+  "p.sp.k4": "موقوفون",
+  "p.sp.k4d": "Falcon Supplies Est. · غرامة غير مسددة",
+  "p.bd.aw": "تُفتح العطاءات في 30 · 11 · 2026 الساعة 14:00. بعد التقييم تظهر المقارنة هنا، ويمكن إرساء المناقصة على أي مقدّم عطاء مستوفٍ.",
+  "p.aw.btn": "إرساء",
+  "p.aw.nel": "غير مؤهل",
+  "p.aw.e0": "أُرسيت على",
+  "p.aw.lockd": "مقفلة",
+  "p.aw.lock": "أُغلق باب العطاءات، فلا يمكن تعديل الشروط الآن. أي تعديل يعني إلغاء المناقصة وإعادة طرحها.",
+  "p.dw2.d": "الإرساء على شركة الصقر للمستلزمات الطبية · 84,600 د.ك · المجموع 88.50 / 100 · المرتبة 2.",
+  "p.dw3.d": "الإرساء على MedEquip International · 96,750 د.ك · المجموع 87.23 / 100 · المرتبة 3.",
+  "p.dw.alt": "هذا العطاء ليس توصية اللجنة. يلزم مبرر مكتوب يُسجَّل مع القرار في سجل التدقيق.",
+  "p.dw.why": "المبرر (إلزامي)",
+  "p.dw.whyph": "لماذا تُرسى المناقصة على هذا العطاء بدلاً من صاحب المرتبة الأولى؟",
+  "p.dw.ch": "بريد إلكتروني + لوحة المورّد",
+  "p.nt.h": "مناقصة جديدة",
+  "p.nt.d": "تُحفظ برقم المرجع التالي، وبعد المراجعة القانونية تُنشر على البوابة العامة بالعربية والإنجليزية ويُنبَّه المورّدون في الفئة.",
+  "p.nt.ref": "المرجع",
+  "p.nt.title": "العنوان",
+  "p.nt.tar": "عنوان المناقصة بالعربية",
+  "p.nt.ten": "عنوان المناقصة بالإنجليزية",
+  "p.nt.est": "القيمة التقديرية (د.ك)",
+  "p.nt.close": "تاريخ الإغلاق ووقته",
+  "p.nt.dph": "يوم · شهر · سنة · 13:00",
+  "p.nt.closed": "لتغييره استخدم «تمديد موعد الإغلاق» — ويُخطَر المشترون.",
+  "p.nt.cert": "الشهادات المطلوبة",
+  "p.nt.s1": "النشر بالعربية والإنجليزية",
+  "p.nt.s2": "تنبيه المورّدين المسجّلين في هذه الفئة",
+  "p.nt.send": "إرسال للمراجعة القانونية",
+  "p.nt.draft": "حفظ كمسودة",
+  "p.u2": "التعليم والتوعية",
+  "p.u3": "الإعلام والاتصال",
+  "p.u4": "تقنية المعلومات والخدمات الرقمية",
+  "p.u5": "المالية والمشتريات",
+  "p.pr2": "مناقصة عامة مفتوحة · مظروف واحد",
+  "p.pr3": "مناقصة محدودة · مورّدون مدعوون",
+  "p.tm1": "12 شهراً",
+  "p.tm2": "24 شهراً",
+  "p.tm3": "36 شهراً",
+  "p.sec1": "2% من قيمة العطاء · كفالة بنكية",
+  "p.sec2": "مبلغ مقطوع · كفالة بنكية",
+  "p.sec3": "غير مطلوبة",
+  "p.et.h": "تعديل المناقصة · KADA/T/2026/014",
+  "p.et.d": "هذه المناقصة منشورة واشترى وثائقها 9 مورّدين. تصدر تعديلاتك في الملحق 3 ويُخطَر كل المشترين.",
+  "p.et.save": "حفظ وإعداد الملحق 3"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Audit log — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="audit">
+<div data-page>
+
+  <div class="page-head">
+    <div><h1 data-i18n="p.h">Audit log & security events</h1><p data-i18n="p.d">Every action in the admin application and every sensitive access is written to a tamper-evident log: who, what, when, from where, before/after. Retained 7 years. Exportable for WADA, internal audit and the regulator.</p></div>
+    <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Integrity verified · chain hash OK · 1,284,902 entries" data-toast-ar="تم التحقق من السلامة · تجزئة السلسلة سليمة · 1,284,902 إدخال"><svg class="ico"><use href="#i-shield"/></svg><span data-i18n="p.verify">Verify integrity</span></button><button class="btn btn-primary sm" type="button" data-drawer="d-export"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button></div>
+  </div>
+
+  <nav class="tabs">
+    <a href="#log"><span data-i18n="p.t1">Activity log</span></a>
+    <a href="#security"><span data-i18n="p.t2">Security events</span><span class="cnt">3</span></a>
+    <a href="#access" data-i18n="p.t3">Sensitive data access</a>
+    <a href="#reports" data-i18n="p.t4">Compliance reports</a>
+  </nav>
+
+  <!-- ===================== LOG ===================== -->
+  <section data-view="log">
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.k1">Entries · today</small><b data-count="1842">1,842</b><em data-i18n="p.k1d">Admin 612 · public site 980 · app sync 250</em><svg class="spark" data-chart="spark" data-values="60,80,140,210,260,240,300,280,190,120" data-colors="navy"></svg></div>
+      <div class="kpi"><small data-i18n="p.k2">Publishing actions · 7 days</small><b data-count="38">38</b><em data-i18n="p.k2d">All with approver ≠ author</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Permission changes · 30 days</small><b data-count="4">4</b><em data-i18n="p.k3d">All with two-admin approval</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Open security events</small><b data-count="3">3</b><em class="warn" data-i18n="p.k4d">1 medium · 2 low</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="a">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.all">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="pub"><span data-i18n="p.f.pub">Publishing</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="perm"><span data-i18n="p.f.perm">Permissions</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="data"><span data-i18n="p.f.data">Data access</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="cfg"><span data-i18n="p.f.cfg">Configuration</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="auth"><span data-i18n="p.f.auth">Sign-in</span><span class="cnt"></span></button>
+        </div>
+        <div class="row"><label class="tb-search" style="margin:0;height:36px"><svg class="ico"><use href="#i-search"/></svg><input type="search" placeholder="Search user, object or ID" data-i18n-ph="p.srch"></label><button class="chip" type="button" data-toast="Date range picker — design preview" data-toast-ar="منتقي نطاق التاريخ — معاينة تصميم"><svg class="ico"><use href="#i-cal"/></svg><span data-i18n="p.range">Last 24 h</span></button></div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="a"><table class="tbl">
+        <thead><tr><th data-i18n="p.l.c1">Time</th><th data-i18n="p.l.c2">Actor</th><th data-i18n="p.l.c3">Action</th><th data-i18n="p.l.c4">Object</th><th data-i18n="p.l.c5">Source</th><th data-i18n="p.l.c6">Result</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="pub" data-sel><td class="num">09:12:40</td><td><b>Salem Al-Dosari</b><span class="sub" data-i18n="r.approver">Content approver</span></td><td><span class="st ok plain" data-i18n="a.publish">content.publish</span></td><td><b data-i18n="o1">Announcement · Medicine checker updated for the 2027 Prohibited List (AR+EN)</b><span class="sub" data-i18n="o1d">page #1842 · v4 → live</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.26</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="pub" data-sel><td class="num">09:05:11</td><td><b>Dana Al-Kandari</b><span class="sub" data-i18n="r.editor">Content editor</span></td><td><span class="st info plain" data-i18n="a.submit">content.submit</span></td><td><b data-i18n="o1">Announcement · Medicine checker updated for the 2027 Prohibited List (AR+EN)</b><span class="sub" data-i18n="o2d">page #1842 · v4</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.31</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="data" data-sel><td class="num">08:58:03</td><td><b>Noura Al-Hajri</b><span class="sub" data-i18n="r.dpo">Data protection officer</span></td><td><span class="st warn plain" data-i18n="a.dar">data.export</span></td><td><b>DAR-2026-0402</b><span class="sub" data-i18n="o3">Received exports reviewed · 2 of 3 systems · redaction in progress</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.22</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="auth" data-sel><td class="num">08:44:19</td><td><b>Huda Al-Otaibi</b><span class="sub" data-i18n="r.procure">Procurement officer</span></td><td><span class="st plain" data-i18n="a.login">auth.signin</span></td><td><b data-i18n="o4">Admin application</b><span class="sub">SSO · MFA · Chrome · <span data-i18n="p.kw">Kuwait</span></span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.40</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="data" data-sel><td class="num">08:21:37</td><td><b>Khalid Al-Shammari</b><span class="sub" data-i18n="r.invest">Intelligence & investigations</span></td><td><span class="st red plain" data-i18n="a.case">speakup.case.open</span></td><td><b>SU-2026-0191</b><span class="sub" data-i18n="o6">Case content accessed · restricted module</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.55</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="auth" data-sel><td class="num">07:58:10</td><td><b>m.alharbi@…</b><span class="sub" data-i18n="p.pubacct">Public account</span></td><td><span class="st plain" data-i18n="a.login">auth.signin</span></td><td><b data-i18n="o7">Public website</b><span class="sub" data-i18n="o7d">5th failed attempt · account locked 20 min</span></td><td data-i18n="p.web">Website · 94.x.x.x</td><td><span class="st red" data-i18n="p.fail">Blocked</span></td><td class="r"><a class="lnk" href="#security" data-i18n="p.event">Event</a></td></tr>
+          <tr data-f="cfg" data-sel><td class="num">22 · 10 · 09:41</td><td><b>Huda Al-Otaibi</b><span class="sub" data-i18n="r.procure">Procurement officer</span></td><td><span class="st info plain" data-i18n="a.tender">tender.addendum</span></td><td><b>KADA/T/2026/014 · <span data-i18n="o5t">Addendum 2</span></b><span class="sub" data-i18n="o5">Revised delivery schedule & cold-chain SLA · 9 purchasers notified</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.40</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="perm" data-sel><td class="num">20 · 10 · 14:02</td><td><b>Abdullah Al-Mutairi</b><span class="sub" data-i18n="r.sysadmin">System administrator</span></td><td><span class="st warn plain" data-i18n="a.role">user.role.change</span></td><td><b>Salem Al-Dosari</b><span class="sub" data-i18n="o8">Content editor → Content approver · approved by 2nd admin</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.18</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="cfg" data-sel><td class="num">19 · 10 · 11:40</td><td><b>Abdullah Al-Mutairi</b><span class="sub" data-i18n="r.sysadmin">System administrator</span></td><td><span class="st info plain" data-i18n="a.cfg">settings.integration</span></td><td><b data-i18n="o9t">K-Net gateway</b><span class="sub" data-i18n="o9">Webhook secret rotated · test transaction OK</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.18</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+          <tr data-f="pub" data-sel><td class="num">18 · 10 · 16:25</td><td><b>Faisal Al-Anzi</b><span class="sub" data-i18n="r.training">Training coordinator</span></td><td><span class="st ok plain" data-i18n="a.course">training.course.open</span></td><td><b data-i18n="o10">Anti-Doping Essentials · 18 Nov session · registration opened</b><span class="sub" data-i18n="o10d">Website + app · 40 seats</span></td><td><span data-i18n="p.adm">Admin</span> · 10.4.2.27</td><td><span class="st ok" data-i18n="p.ok">Success</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-entry" data-i18n="p.detail">Detail</button></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.l.foot">10 of 1,842 today · entries are append-only and hash-chained · clock synced to NTP</span><div class="pager"><button class="is-on">1</button><button>2</button><button>3</button><button>…</button><button>185</button></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== SECURITY ===================== -->
+  <section data-view="security">
+    <div class="grid g-main">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.s.h">Open security events</h2><span class="st warn" data-i18n="p.s.badge">3 open · auto-triaged</span></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.s.c1">Severity</th><th data-i18n="p.s.c2">Event</th><th data-i18n="p.s.c3">Detected</th><th data-i18n="p.s.c4">Status</th><th></th></tr></thead>
+          <tbody>
+            <tr data-sel><td><span class="st warn" data-i18n="p.sev.med">Medium</span></td><td><b data-i18n="s1">Credential-stuffing pattern on public sign-in</b><span class="sub" data-i18n="s1d">214 attempts · 38 accounts · 3 IP ranges · WAF rate-limit applied automatically</span></td><td class="num">23 · 10 · 07:40</td><td><span class="st info" id="st-s1" data-i18n="p.s.inv">Investigating</span></td><td class="r"><button class="lnk" type="button" data-toast="IP ranges blocked for 24 h · affected users notified to reset" data-toast-ar="حُظرت نطاقات IP لمدة 24 ساعة · وأُبلغ المستخدمون المتأثرون بإعادة تعيين كلمات المرور" data-set-status="#st-s1" data-st-en="Mitigated" data-st-ar="تمت المعالجة" data-i18n="p.s.block">Block & notify</button></td></tr>
+            <tr data-sel><td><span class="st plain" data-i18n="p.sev.low">Low</span></td><td><b data-i18n="s2">Admin sign-in from new device</b><span class="sub" data-i18n="s2d">Dr. Mona Al-Ajmi · iPad · Kuwait · MFA passed</span></td><td class="num">22 · 10 · 21:15</td><td><span class="st info" id="st-s2" data-i18n="p.s.conf">Awaiting user confirmation</span></td><td class="r"><button class="lnk" type="button" data-toast="Marked as expected · device trusted" data-toast-ar="عُلّم بأنه متوقع · أُضيف الجهاز إلى الأجهزة الموثوقة" data-set-status="#st-s2" data-st-class="plain" data-st-en="Closed" data-st-ar="مغلق" data-i18n="p.s.ok">Mark expected</button></td></tr>
+            <tr data-sel><td><span class="st plain" data-i18n="p.sev.low">Low</span></td><td><b data-i18n="s3">Bulk media download by one editor</b><span class="sub" data-i18n="s3d">Rashed Al-Hamad · 184 files in 10 min · within role, above baseline</span></td><td class="num">22 · 10 · 15:02</td><td><span class="st info" id="st-s3" data-i18n="p.s.rev">Review</span></td><td class="r"><button class="lnk" type="button" data-toast="Reviewed · legitimate (event gallery export)" data-toast-ar="رُوجع · نشاط مشروع (تصدير معرض صور الفعالية)" data-set-status="#st-s3" data-st-class="plain" data-st-en="Closed" data-st-ar="مغلق" data-i18n="p.s.close">Close</button></td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.s.trend">Blocked attempts · 14 days</h2></div><svg class="chart" data-chart="bars" data-values="12,9,14,8,11,10,7,9,13,18,22,16,40,214" data-labels="10,11,12,13,14,15,16,17,18,19,20,21,22,23" data-labels-ar="10,11,12,13,14,15,16,17,18,19,20,21,22,23" data-colors="red" data-h="170"></svg></div>
+        <div class="card soft"><div class="card-head"><h2 data-i18n="p.s.ctl">Controls in force</h2></div><div class="check-list"><label><input type="checkbox" checked disabled><span data-i18n="c1">WAF + rate limiting on all public forms</span></label><label><input type="checkbox" checked disabled><span data-i18n="c2">MFA for all staff · SSO only</span></label><label><input type="checkbox" checked disabled><span data-i18n="c3">Admin reachable from KADA network / VPN only</span></label><label><input type="checkbox" checked disabled><span data-i18n="c4">Encryption at rest · TLS 1.3 in transit</span></label><label><input type="checkbox" checked disabled><span data-i18n="c5">Quarterly penetration test · last: Sep 2026</span></label></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SENSITIVE ACCESS ===================== -->
+  <section data-view="access">
+    <div class="notice"><svg class="ico"><use href="#i-lock"/></svg><div><b data-i18n="p.a.n">Why this view exists</b><p data-i18n="p.a.nd">Speak Up cases, data-request packages and TUE documents are personal and often medical data. Every read is logged separately and reviewed monthly by the DPO — a requirement of the International Standard for the Protection of Privacy and Personal Information (ISPPPI).</p></div></div>
+    <div class="grid g-main mt-2">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.a.h">Sensitive reads · last 7 days</h2><span class="st ok" data-i18n="p.a.badge">All within role</span></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.a.c1">When</th><th data-i18n="p.a.c2">Who</th><th data-i18n="p.a.c3">What</th><th data-i18n="p.a.c4">Purpose</th><th data-i18n="p.a.c5">Review</th></tr></thead>
+          <tbody>
+            <tr><td class="num">23 · 10 · 08:21</td><td>Khalid Al-Shammari</td><td><b>SU-2026-0191</b><span class="sub" data-i18n="w1">Case file · evidence · messages</span></td><td data-i18n="pu1">Triage decision</td><td><span class="tick"></span></td></tr>
+            <tr><td class="num">22 · 10 · 15:40</td><td>Noura Al-Hajri</td><td><b>DAR-2026-0402</b><span class="sub" data-i18n="w2">Testing history export (redacted)</span></td><td data-i18n="pu2">Fulfil data request</td><td><span class="tick"></span></td></tr>
+            <tr><td class="num">21 · 10 · 10:12</td><td>Khalid Al-Shammari</td><td><b>SU-2026-0181</b><span class="sub" data-i18n="w3">Case file</span></td><td data-i18n="pu3">Investigation</td><td><span class="tick"></span></td></tr>
+            <tr><td class="num">20 · 10 · 09:30</td><td>Noura Al-Hajri</td><td><b>DAR-2026-0399</b><span class="sub" data-i18n="w4">Consent records</span></td><td data-i18n="pu4">Erasure request</td><td><span class="tick"></span></td></tr>
+            <tr><td class="num">19 · 10 · 13:05</td><td>Abdullah Al-Mutairi</td><td><b>SU-2026-0185</b><span class="sub" data-i18n="w5">Metadata only (no content) · SLA check</span></td><td data-i18n="pu5">Support</td><td><span class="tick"></span></td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.a.foot">5 of 23 · monthly review by DPO due 01 · 11 · 2026</span></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.a.by">Reads by module · 30 days</h2></div><div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="48,31,12" data-labels="Speak Up,Data requests,TUE" data-labels-ar="Speak Up,طلبات البيانات,الإعفاء للاستعمال العلاجي" data-colors="red,navy,green" data-center="91" data-center-label="reads" data-center-label-ar="قراءة"></svg><div class="legend"><span><i style="background:var(--red)"></i>Speak Up<b>48</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.a.dar">Data requests</span><b>31</b></span><span><i style="background:var(--green)"></i><span data-i18n="p.a.tue">TUE</span><b>12</b></span></div></div></div>
+        <div class="card soft"><div class="health"><div><span data-i18n="p.a.h1">Out-of-role reads</span><b class="st ok plain">0</b></div><div><span data-i18n="p.a.h2">Reads after hours</span><b class="num">4</b></div><div><span data-i18n="p.a.h3">Exports</span><b class="num">2</b></div><div><span data-i18n="p.a.h4">Break-glass uses</span><b class="num">0</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REPORTS ===================== -->
+  <section data-view="reports">
+    <div class="grid g3">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.r.h1">Ready-made reports</h2></div>
+        <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="r1">Monthly publishing audit</b><small data-i18n="r1d">Author ≠ approver check · all pages</small></div><button class="lnk" type="button" data-toast="Generated · October 2026" data-toast-ar="أُنشئ · أكتوبر 2026" data-i18n="p.gen">Generate</button></div>
+        <div class="doc-row"><span class="ty">XLSX</span><div><b data-i18n="r2">Permission changes · quarter</b><small data-i18n="r2d">For the access review pack</small></div><button class="lnk" type="button" data-toast="Generated · Q4 2026" data-toast-ar="أُنشئ · الربع الرابع 2026" data-i18n="p.gen">Generate</button></div>
+        <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="r3">Sensitive-data access · DPO monthly</b><small data-i18n="r3d">ISPPPI evidence</small></div><button class="lnk" type="button" data-toast="Generated · October 2026" data-toast-ar="أُنشئ · أكتوبر 2026" data-i18n="p.gen">Generate</button></div>
+        <div class="doc-row"><span class="ty">CSV</span><div><b data-i18n="r4">Full log extract</b><small data-i18n="r4d">Filtered by date · signed archive</small></div><button class="lnk" type="button" data-drawer="d-export" data-i18n="p.export">Export</button></div>
+      </div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.r.h2">Retention & integrity</h2></div><div class="health"><div><span data-i18n="p.r.a1">Retention</span><b data-i18n="p.r.a1v">7 years · immutable storage</b></div><div><span data-i18n="p.r.a2">Hash chain</span><b data-i18n="p.r.a2v">SHA-256 · verified daily</b></div><div><span data-i18n="p.r.a3">Last verification</span><b class="num">23 · 10 · 03:00 · OK</b></div><div><span data-i18n="p.r.a4">Off-site copy</span><b data-i18n="p.r.a4v">Nightly · encrypted</b></div><div><span data-i18n="p.r.a5">SIEM forwarding</span><b data-i18n="p.r.a5v">Real-time · KADA SOC</b></div></div></div>
+      <div class="card navy"><div class="card-head"><h2 data-i18n="p.r.h3">Audit readiness</h2></div><div class="big-timer"><b>98%</b><span data-i18n="p.r.rd">controls evidenced</span></div><div class="check-list inv mt-2"><label><input type="checkbox" checked disabled><span data-i18n="rd1">WADA Code compliance evidence</span></label><label><input type="checkbox" checked disabled><span data-i18n="rd2">State Audit Bureau requirements</span></label><label><input type="checkbox" checked disabled><span data-i18n="rd3">National data protection requirements</span></label><label><input type="checkbox"><span data-i18n="rd4">ISO/IEC 27001 statement of applicability (in progress)</span></label></div></div>
+    </div>
+  </section>
+
+  <!-- drawers -->
+  <div class="drawer" id="d-entry"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.e.h">Audit entry · #1284902</h3>
+    <dl class="kv"><dt data-i18n="p.e.time">Time</dt><dd class="num">23 · 10 · 2026 · 09:12:40.218 (+03:00)</dd><dt data-i18n="p.e.actor">Actor</dt><dd>Salem Al-Dosari · <span data-i18n="r.approver">Content approver</span></dd><dt data-i18n="p.e.action">Action</dt><dd>content.publish</dd><dt data-i18n="p.e.obj">Object</dt><dd><span data-i18n="o2d">page #1842 · v4</span> · <span data-i18n="o1">Announcement · Medicine checker updated for the 2027 Prohibited List (AR+EN)</span></dd><dt data-i18n="p.e.src">Source</dt><dd><span data-i18n="o4">Admin application</span> · 10.4.2.26 · Chrome 130 · Windows</dd><dt data-i18n="p.e.sess">Session</dt><dd>SSO · MFA · sess_8f2…c1</dd><dt data-i18n="p.e.hash">Hash</dt><dd class="num">a9f1…3e7c (prev 77b2…04d9)</dd></dl>
+    <h4 data-i18n="p.e.diff">Before → after</h4>
+    <div class="split">
+      <div><small data-i18n="p.e.before">Before</small><pre class="code">status: "in_review"
+version: 4
+publish_at: null
+channels: [web]</pre></div>
+      <div><small data-i18n="p.e.after">After</small><pre class="code">status: "published"
+version: 4
+publish_at: "2026-10-23T09:12:40+03:00"
+channels: [web, app, social]</pre></div>
+    </div>
+    <div class="row"><button class="btn btn-ghost sm" type="button" data-close data-toast="Entry exported (JSON, signed)" data-toast-ar="صُدّر الإدخال (JSON موقّع)" data-i18n="p.e.exp">Export entry</button><a class="btn btn-ghost sm" href="content.html#approvals" data-i18n="p.e.open">Open object</a></div>
+  </div></div>
+  <div class="drawer" id="d-export"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.x.h">Export audit log</h3>
+    <div class="form">
+      <div class="form g2"><div class="field"><label data-i18n="p.x.from">From</label><input type="date" value="2026-10-01"></div><div class="field"><label data-i18n="p.x.to">To</label><input type="date" value="2026-10-23"></div></div>
+      <div class="field"><label data-i18n="p.x.scope">Scope</label><select><option data-i18n="p.all">All</option><option data-i18n="p.f.pub">Publishing</option><option data-i18n="p.f.perm">Permissions</option><option data-i18n="p.f.data">Data access</option></select></div>
+      <div class="field"><label data-i18n="p.x.fmt">Format</label><select><option>CSV</option><option data-i18n="p.x.json">JSON (signed)</option><option data-i18n="p.x.pdf">PDF (summary)</option></select></div>
+      <div class="field"><label data-i18n="p.x.reason">Reason (recorded)</label><input placeholder="e.g. WADA compliance audit 2026" data-i18n-ph="p.x.reasonph"></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Export prepared · download link valid 24 h · this export is itself logged" data-toast-ar="أُعدّ التصدير · رابط التنزيل صالح 24 ساعة · هذا التصدير مسجّل بدوره" data-i18n="p.export">Export</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "سجل التدقيق — إدارة كادا",
+  "p.h": "سجل التدقيق والأحداث الأمنية", "p.d": "يُدوَّن كل إجراء في تطبيق الإدارة وكل وصول إلى بيانات حساسة في سجل يكشف أي تلاعب: من، وماذا، ومتى، ومن أين، والقيم قبل التغيير وبعده. يُحتفظ به 7 سنوات، ويمكن تصديره لوادا والتدقيق الداخلي والجهة الرقابية.",
+  "p.verify": "التحقق من السلامة", "p.export": "تصدير", "p.t1": "سجل النشاط", "p.t2": "الأحداث الأمنية", "p.t3": "الوصول إلى البيانات الحساسة", "p.t4": "تقارير الامتثال",
+  "p.k1": "إدخالات · اليوم", "p.k1d": "الإدارة 612 · الموقع العام 980 · مزامنة التطبيق 250", "p.k2": "إجراءات النشر · 7 أيام", "p.k2d": "جميعها بمعتمِد ≠ الكاتب", "p.k3": "تغييرات الصلاحيات · 30 يوماً", "p.k3d": "جميعها بموافقة مسؤولَين", "p.k4": "أحداث أمنية مفتوحة", "p.k4d": "1 متوسط · 2 منخفض",
+  "p.all": "الكل", "p.f.pub": "النشر", "p.f.perm": "الصلاحيات", "p.f.data": "الوصول إلى البيانات", "p.f.cfg": "الإعدادات", "p.f.auth": "تسجيل الدخول", "p.srch": "ابحث بالمستخدم أو العنصر أو المعرّف", "p.range": "آخر 24 ساعة",
+  "p.l.c1": "الوقت", "p.l.c2": "المنفِّذ", "p.l.c3": "الإجراء", "p.l.c4": "العنصر", "p.l.c5": "المصدر", "p.l.c6": "النتيجة", "p.ok": "نجاح", "p.fail": "محظور", "p.detail": "تفاصيل", "p.event": "الحدث",
+  "r.approver": "معتمِد المحتوى", "r.editor": "محرر محتوى", "r.dpo": "مسؤول حماية البيانات", "r.procure": "مسؤول المشتريات", "r.invest": "الاستخبارات والتحقيقات", "r.sysadmin": "مدير النظام", "r.training": "منسق التدريب", "p.pubacct": "حساب عام", "p.web": "الموقع · 94.x.x.x", "p.adm": "تطبيق الإدارة", "p.kw": "الكويت",
+  "a.publish": "content.publish", "a.submit": "content.submit", "a.dar": "data.export", "a.login": "auth.signin", "a.tender": "tender.addendum", "a.case": "speakup.case.open", "a.role": "user.role.change", "a.cfg": "settings.integration", "a.course": "training.course.open",
+  "o1": "إعلان · تحديث فاحص الأدوية وفق قائمة المحظورات 2027 (عربي+إنجليزي)", "o1d": "الصفحة #1842 · v4 ← منشورة", "o2d": "الصفحة #1842 · v4", "o3": "مراجعة الصادرات المستلمة · 2 من 3 أنظمة · الحجب جارٍ", "o4": "تطبيق الإدارة", "o5t": "الملحق 2", "o5": "جدول تسليم معدّل ومستوى خدمة سلسلة التبريد · أُخطر 9 مشترين", "o9t": "بوابة كي-نت", "o6": "تم الوصول إلى محتوى البلاغ · وحدة مقيّدة", "o7": "الموقع العام", "o7d": "المحاولة الفاشلة الخامسة · قُفل الحساب لمدة 20 دقيقة", "o8": "محرر محتوى ← معتمِد المحتوى · بموافقة مسؤول ثانٍ", "o9": "دُوِّر المفتاح السري لـ Webhook · معاملة اختبار ناجحة", "o10": "أساسيات مكافحة المنشطات · جلسة 18 نوفمبر · فُتح التسجيل", "o10d": "الموقع + التطبيق · 40 مقعداً",
+  "p.l.foot": "10 من 1,842 اليوم · الإدخالات قابلة للإضافة فقط ومرتبطة بسلسلة تجزئة · الساعة متزامنة مع NTP",
+  "p.s.h": "أحداث أمنية مفتوحة", "p.s.badge": "3 مفتوحة · فرز تلقائي", "p.s.c1": "الخطورة", "p.s.c2": "الحدث", "p.s.c3": "رُصد", "p.s.c4": "الحالة", "p.sev.med": "متوسط", "p.sev.low": "منخفض",
+  "s1": "نمط هجوم «حشو بيانات الاعتماد» على دخول الجمهور", "s1d": "214 محاولة · 38 حساباً · 3 نطاقات IP · طبّق جدار الحماية تحديد المعدّل تلقائياً", "p.s.inv": "قيد التحقيق", "p.s.block": "حظر وإبلاغ",
+  "s2": "دخول مسؤول من جهاز جديد", "s2d": "د. منى العجمي · iPad · الكويت · اجتازت التحقق متعدد العوامل", "p.s.conf": "بانتظار تأكيد المستخدم", "p.s.ok": "تعليمه متوقعاً",
+  "s3": "تنزيل جماعي للوسائط من محرر واحد", "s3d": "راشد الحمد · 184 ملفاً خلال 10 دقائق · ضمن صلاحيات الدور، لكنه فوق المعدل المعتاد", "p.s.rev": "مراجعة", "p.s.close": "إغلاق",
+  "p.s.trend": "محاولات محظورة · 14 يوماً", "p.s.ctl": "الضوابط المفعّلة", "c1": "جدار حماية وتحديد المعدّل على جميع النماذج العامة", "c2": "تحقق متعدد العوامل لجميع الموظفين · الدخول الموحّد فقط", "c3": "تطبيق الإدارة متاح من شبكة كادا / VPN فقط", "c4": "تشفير البيانات المخزّنة · TLS 1.3 أثناء النقل", "c5": "اختبار اختراق ربع سنوي · الأخير: سبتمبر 2026",
+  "p.a.n": "سبب وجود هذا العرض", "p.a.nd": "بلاغات Speak Up وحزم طلبات البيانات ووثائق الإعفاء للاستعمال العلاجي بيانات شخصية، وكثيراً ما تكون طبية. تُسجَّل كل قراءة على حدة ويراجعها مسؤول حماية البيانات شهرياً، وهو من متطلبات المعيار الدولي لحماية الخصوصية والمعلومات الشخصية (ISPPPI).",
+  "p.a.h": "قراءات حساسة · آخر 7 أيام", "p.a.badge": "جميعها ضمن صلاحيات الدور", "p.a.c1": "متى", "p.a.c2": "من", "p.a.c3": "ماذا", "p.a.c4": "الغرض", "p.a.c5": "المراجعة",
+  "w1": "ملف البلاغ · الأدلة · الرسائل", "pu1": "قرار الفرز", "w2": "تصدير سجل الفحوصات (بعد الحجب)", "pu2": "تنفيذ طلب بيانات", "w3": "ملف البلاغ", "pu3": "تحقيق", "w4": "سجلات الموافقة", "pu4": "طلب حذف البيانات", "w5": "البيانات الوصفية فقط (بلا محتوى) · فحص المهلة", "pu5": "دعم",
+  "p.a.foot": "5 من 23 · المراجعة الشهرية لمسؤول حماية البيانات مستحقة في 01 · 11 · 2026", "p.a.by": "القراءات حسب الوحدة · 30 يوماً", "p.a.dar": "طلبات البيانات", "p.a.tue": "الإعفاء للاستعمال العلاجي", "p.a.h1": "قراءات خارج صلاحيات الدور", "p.a.h2": "قراءات خارج الدوام", "p.a.h3": "عمليات تصدير", "p.a.h4": "استخدامات صلاحية الطوارئ",
+  "p.r.h1": "تقارير جاهزة", "r1": "تدقيق النشر الشهري", "r1d": "فحص الكاتب ≠ المعتمِد · جميع الصفحات", "r2": "تغييرات الصلاحيات · ربع سنوي", "r2d": "لحزمة مراجعة الوصول", "r3": "الوصول إلى البيانات الحساسة · تقرير شهري لمسؤول حماية البيانات", "r3d": "أدلة الامتثال لمعيار ISPPPI", "r4": "مستخرج السجل الكامل", "r4d": "مصفّى حسب التاريخ · أرشيف موقّع", "p.gen": "إنشاء",
+  "p.r.h2": "الاحتفاظ والسلامة", "p.r.a1": "الاحتفاظ", "p.r.a1v": "7 سنوات · تخزين غير قابل للتغيير", "p.r.a2": "سلسلة التجزئة", "p.r.a2v": "SHA-256 · تحقق يومي", "p.r.a3": "آخر تحقق", "p.r.a4": "نسخة خارج الموقع", "p.r.a4v": "ليلياً · مشفّرة", "p.r.a5": "إرسال إلى SIEM", "p.r.a5v": "لحظي · مركز عمليات أمن كادا",
+  "p.r.h3": "الجاهزية للتدقيق", "p.r.rd": "ضوابط موثّقة بالأدلة", "rd1": "أدلة الامتثال لمدونة وادا", "rd2": "متطلبات ديوان المحاسبة", "rd3": "متطلبات حماية البيانات الوطنية", "rd4": "بيان قابلية التطبيق ISO/IEC 27001 (قيد الإعداد)",
+  "p.e.h": "إدخال تدقيق · #1284902", "p.e.time": "الوقت", "p.e.actor": "المنفِّذ", "p.e.action": "الإجراء", "p.e.obj": "العنصر", "p.e.src": "المصدر", "p.e.sess": "الجلسة", "p.e.hash": "التجزئة", "p.e.diff": "قبل ← بعد", "p.e.before": "قبل", "p.e.after": "بعد", "p.e.exp": "تصدير الإدخال", "p.e.open": "فتح العنصر",
+  "p.x.h": "تصدير سجل التدقيق", "p.x.from": "من", "p.x.to": "إلى", "p.x.scope": "النطاق", "p.x.fmt": "الصيغة", "p.x.json": "JSON (موقّع)", "p.x.pdf": "PDF (ملخص)", "p.x.reason": "السبب (يُسجَّل)", "p.x.reasonph": "مثال: تدقيق امتثال وادا 2026"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

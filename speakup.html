@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Speak Up — Confidential Reporting — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain red tall">
+      <div class="wrap split">
+        <div>
+          <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.speak">Speak Up</span></nav>
+          <h1 class="display" data-i18n="p.title">Speak Up. Safely. Anonymously.</h1>
+          <p class="lede" data-i18n="p.lede">Report doping, trafficking, tampering or misconduct in Kuwaiti sport. No account, no name, no IP address stored. You receive a secure reference code to follow your report and reply to investigators.</p>
+          <div class="cta"><a class="btn btn-primary lg" href="#report"><span data-i18n="p.c1">Submit a report</span></a><a class="btn btn-outline lg" href="#track"><span data-i18n="p.c2">Track a report</span></a></div>
+        </div>
+        <div class="hero-side reveal in">
+          <div class="grid-2" style="gap:12px">
+            <div class="card" style="padding:22px"><div class="icon-box red"><svg viewBox="0 0 24 24" class="ico"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3 style="font-size:1rem" data-i18n="p.t1">Fully encrypted</h3><p style="font-size:13.5px" data-i18n="p.t1d">Reports and attachments are encrypted at rest and in transit.</p></div>
+            <div class="card" style="padding:22px"><div class="icon-box red"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><h3 style="font-size:1rem" data-i18n="p.t2">No metadata</h3><p style="font-size:13.5px" data-i18n="p.t2d">We strip file metadata, never log IP addresses, and never link a report to a signed-in account.</p></div>
+            <div class="card" style="padding:22px"><div class="icon-box red"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3v18M5 8l7-5 7 5"/></svg></div><h3 style="font-size:1rem" data-i18n="p.t3">Protected from retaliation</h3><p style="font-size:13.5px" data-i18n="p.t3d">Retaliating against whistleblowers is a violation under Code Art. 2.11.</p></div>
+            <div class="card" style="padding:22px"><div class="icon-box red"><svg viewBox="0 0 24 24" class="ico"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></div><h3 style="font-size:1rem" data-i18n="p.t4">Two-way, still anonymous</h3><p style="font-size:13.5px" data-i18n="p.t4d">Investigators can ask follow-ups through your reference code.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="report">
+      <div class="wrap with-side">
+        <div>
+          <div class="form-card reveal" data-stepper>
+            <h3 data-i18n="p.f.t">Confidential report</h3>
+            <p class="hint" data-i18n="p.f.h">Four short steps. You can skip anything you don't know.</p>
+            <div class="notice mt-1" data-signed-only hidden><svg viewBox="0 0 24 24" class="ico"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><span data-i18n="p.f.sn1">You are signed in as</span> <b data-signed-text="short"></b><span data-i18n="p.f.sn2">, but this report is <b>not linked to your account</b>: it will not appear in My account and your session is not recorded with it. Only the identity choice in step 4 applies.</span></span></div>
+            <ol class="step-nav" style="--n:4"><li class="is-on" data-i18n="p.f.s1">What happened</li><li data-i18n="p.f.s2">Who &amp; where</li><li data-i18n="p.f.s3">Evidence</li><li data-i18n="p.f.s4">Review &amp; submit</li></ol>
+
+            <div data-step class="is-on">
+              <div class="field"><label data-i18n="p.f.q1">What type of concern are you reporting?</label>
+                <div class="radio-cards">
+                  <label><input type="radio" name="type" checked><b data-i18n="p.f.q1a">Use of prohibited substances</b><small data-i18n="p.f.q1ad">By an athlete</small></label>
+                  <label><input type="radio" name="type"><b data-i18n="p.f.q1b">Trafficking or supply</b><small data-i18n="p.f.q1bd">Coach, pharmacy, gym…</small></label>
+                  <label><input type="radio" name="type"><b data-i18n="p.f.q1c">Tampering or evasion</b><small data-i18n="p.f.q1cd">With testing or sample collection</small></label>
+                  <label><input type="radio" name="type"><b data-i18n="p.f.q1e">Other misconduct</b><small data-i18n="p.f.q1ed">Harassment, corruption, retaliation</small></label>
+                </div>
+              </div>
+              <div class="field mt-2"><label data-i18n="p.f.q2">Describe what you know <small data-i18n="c.optional">optional</small></label><textarea placeholder="What did you see or hear? When? Any names, places, substances…" data-i18n-ph="p.f.q2ph"></textarea></div>
+              <div class="form-foot"><span></span><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <div class="form-grid">
+                <div class="field"><label data-i18n="p.f.q3">Sport</label><select><option data-i18n="p.f.sel">Select…</option><option value="athletics" data-i18n="p.f.sp1">Athletics</option><option value="football" data-i18n="p.f.sp2">Football</option><option value="weightlifting" data-i18n="p.f.sp3">Weightlifting</option><option value="swimming" data-i18n="p.f.sp4">Swimming</option><option value="bodybuilding" data-i18n="p.f.sp5">Bodybuilding</option></select></div>
+                <div class="field"><label data-i18n="p.f.q4">Club / federation</label><input type="text" placeholder="e.g. Al-Qadsia SC" data-i18n-ph="p.f.q4ph"></div>
+                <div class="field"><label data-i18n="p.f.q5">Person(s) involved <small data-i18n="c.optional">optional</small></label><input type="text" placeholder="Name or description" data-i18n-ph="p.f.q5ph"></div>
+                <div class="field"><label data-i18n="p.f.q6">When did it happen?</label><input type="date"></div>
+                <div class="field full"><label data-i18n="p.f.q7">Where?</label><input type="text" placeholder="Venue, gym, city…" data-i18n-ph="p.f.q7ph"></div>
+              </div>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <div class="upload"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.up">Drop photos, documents, audio or video</b><span data-i18n="p.f.upd">Up to 10 files · 200 MB · metadata removed automatically</span></div>
+              <div class="notice mt-2"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span data-i18n="p.f.upn">Do not include your own name in files unless you want to. Attachments are visible only to the Legal &amp; Compliance investigation team.</span></div>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <form data-demo="#ok">
+                <div class="field"><label data-i18n="p.f.q8">How should we handle your identity?</label>
+                  <div class="radio-cards">
+                    <label><input type="radio" name="id" value="anon" checked><b data-i18n="p.f.q8a">Fully anonymous</b><small data-i18n="p.f.q8ad">Recommended · reference code and secure inbox only</small></label>
+                    <label><input type="radio" name="id" value="conf"><b data-i18n="p.f.q8b">Confidential contact</b><small data-i18n="p.f.q8bd">Leave an email or phone seen only by investigators</small></label>
+                    <label><input type="radio" name="id" value="named"><b data-i18n="p.f.q8c">Disclose my identity</b><small data-i18n="p.f.q8cd">Formal whistleblower protection · Substantial Assistance (Art. 10.7.1)</small></label>
+                  </div>
+                </div>
+                <div data-when="id=conf" hidden>
+                  <div class="form-grid mt-2">
+                    <div class="field"><label data-i18n="p.f.c1">Email</label><input type="email" placeholder="name@example.com"></div>
+                    <div class="field"><label data-i18n="p.f.c2">or mobile number</label><input type="tel" placeholder="+965 9xxx xxxx"></div>
+                  </div>
+                  <p class="hint mt-1" data-i18n="p.f.cn">Used only to notify you that a new investigator question is waiting. Report contents are never sent — you reply through your reference code.</p>
+                </div>
+                <div data-when="id=named" hidden>
+                  <p class="hint mt-2" data-signed-only hidden><a href="#" class="link-arrow" style="font-size:14px" data-prefill><span data-i18n="p.f.pf">Fill from my account</span><svg viewBox="0 0 24 24" class="ico" style="width:14px;height:14px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a> — <span data-i18n="p.f.pfd">fills the fields in your browser only; nothing is linked to the account.</span></p>
+                  <div class="form-grid mt-2">
+                    <div class="field"><label data-i18n="p.f.n1">Full name</label><input type="text" data-field="name"></div>
+                    <div class="field"><label data-i18n="p.f.n2">Mobile number</label><input type="tel" placeholder="+965 9xxx xxxx" data-field="phone"></div>
+                    <div class="field full"><label data-i18n="p.f.n3">Your role</label><select data-field="role"><option data-i18n="p.f.sel">Select…</option><option data-i18n="p.f.r1">Athlete</option><option data-i18n="p.f.r2">Coach / athlete support personnel</option><option data-i18n="p.f.r3">Club or federation official</option><option data-i18n="p.f.r4">Other</option></select></div>
+                  </div>
+                  <div class="notice mt-2"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3v18M5 8l7-5 7 5"/></svg><span data-i18n="p.f.nn">The investigations unit will contact you to sign a whistleblower protection agreement. If you were involved in the violation yourself, your cooperation may qualify for a reduced sanction under Code Art. 10.7.1 (Substantial Assistance).</span></div>
+                </div>
+                <label class="check mt-2"><input type="checkbox" required><span data-i18n="p.f.q9">I confirm this report is made in good faith. I understand that knowingly false reports may lead to legal or disciplinary action.</span></label>
+                <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary lg" type="submit"><svg viewBox="0 0 24 24" class="ico"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="p.f.submit">Submit securely</span></button></div>
+              </form>
+            </div>
+          </div>
+          <div class="success" id="ok">
+            <div class="tick"><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg></div>
+            <h3 data-i18n="p.ok.t">Your report has been received.</h3>
+            <p data-i18n="p.ok.d">Save this reference code. It is the only way to follow your report or answer investigators' questions. We cannot recover it for you.</p>
+            <div class="ref">KW-7F3Q-9A</div>
+            <p><button class="btn btn-ghost" type="button" data-copy=".ref"><span data-i18n="p.ok.copy">Copy code</span><span hidden data-i18n="p.ok.copied">Copied ✓</span></button> <a class="btn btn-primary" href="#track"><span data-i18n="p.c2">Track a report</span></a></p>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="side-box">
+            <h4 data-i18n="p.s.t">What happens next</h4>
+            <div class="timeline" style="margin-top:6px">
+              <div class="tl done" style="padding-bottom:18px"><i>1</i><div><b data-i18n="p.s.1">Triage within 2 working days</b><small data-i18n="p.s.1d">Legal &amp; Compliance — intelligence &amp; investigations unit</small></div></div>
+              <div class="tl todo" style="padding-bottom:18px"><i>2</i><div><b data-i18n="p.s.2">Assessment &amp; investigation</b><small data-i18n="p.s.2d">May lead to target testing</small></div></div>
+              <div class="tl todo" style="padding-bottom:0"><i>3</i><div><b data-i18n="p.s.3">Outcome recorded</b><small data-i18n="p.s.3d">Status visible via your code</small></div></div>
+            </div>
+          </div>
+          <div class="side-box navy">
+            <h4 data-i18n="p.alt">Prefer another channel?</h4>
+            <p data-i18n="p.altd">Call the confidential hotline or email the investigations unit. Both are handled by the same team.</p>
+            <a href="tel:+96522220099" class="num" style="color:#fff;border:0">+965 2222 0099</a>
+            <a href="mailto:speakup@kada.gov.kw" style="color:#fff;border:0">speakup@kada.gov.kw</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="track">
+      <div class="wrap two-col">
+        <div class="reveal">
+          <p class="kicker" data-i18n="p.tr.k">Track a report</p>
+          <h2 class="display" data-i18n="p.tr.t">Enter your reference code.</h2>
+          <p class="lede mt-1" data-i18n="p.tr.d">See the current status, read questions from investigators and reply — without revealing who you are.</p>
+          <form class="toolbar mt-2" onsubmit="return false"><div class="field grow"><input type="text" class="num" placeholder="KW-XXXX-XX" aria-label="Reference code" style="font-family:'Manrope',monospace;font-weight:700;letter-spacing:.12em"></div><button class="btn btn-primary" type="button" data-lookup="#trk"><span data-i18n="p.tr.btn">Check status</span></button></form>
+        </div>
+        <div class="result-card ok" id="trk"><i></i><div>
+          <h3><span class="num">KW-7F3Q-9A</span><span class="badge warn" data-i18n="p.tr.s">Under investigation</span></h3>
+          <div class="timeline mt-2">
+            <div class="tl done" style="padding-bottom:18px"><i>✓</i><div><b data-i18n="p.tr.1">Received</b><small class="num">02 · 10 · 2026</small></div></div>
+            <div class="tl done" style="padding-bottom:18px"><i>✓</i><div><b data-i18n="p.tr.2">Triaged — accepted for assessment</b><small class="num">04 · 10 · 2026</small></div></div>
+            <div class="tl now" style="padding-bottom:18px"><i>3</i><div><b data-i18n="p.tr.3">Investigator question</b><small class="num">11 · 10 · 2026</small><p data-i18n="p.tr.3d">"Can you tell us whether the supplements were sold inside the gym or ordered online?"</p><div class="field mt-1"><textarea placeholder="Reply anonymously…" data-i18n-ph="p.tr.ph" style="min-height:80px"></textarea></div><button class="btn btn-primary mt-1" type="button"><span data-i18n="p.tr.reply">Send reply</span></button></div></div>
+            <div class="tl todo" style="padding-bottom:0"><i>4</i><div><b data-i18n="p.tr.4">Outcome</b><small data-i18n="p.tr.4d">Pending</small></div></div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "Speak Up — البلاغات السرية — كادا",
+    "p.title": "Speak Up. بأمان. ودون كشف هويتك.", "p.lede": "أبلغ عن تعاطي المنشطات أو الاتجار بها أو التلاعب أو أي سوء سلوك في الرياضة الكويتية، دون حساب أو اسم ودون تخزين عنوان IP. ستحصل على رمز مرجعي آمن لمتابعة بلاغك والرد على المحققين.",
+    "p.c1": "قدّم بلاغاً", "p.c2": "تتبّع بلاغاً",
+    "p.t1": "تشفير كامل", "p.t1d": "البلاغات والمرفقات مشفّرة أثناء التخزين والنقل.", "p.t2": "بلا بيانات وصفية", "p.t2d": "نُزيل البيانات الوصفية من الملفات، ولا نسجّل عناوين IP، ولا نربط البلاغ بأي حساب مسجّل الدخول.", "p.t3": "حماية من الانتقام", "p.t3d": "الانتقام من المبلّغين انتهاك بموجب المادة 2.11 من المدونة.", "p.t4": "تواصل ثنائي دون كشف الهوية", "p.t4d": "يمكن للمحققين طرح أسئلة متابعة عبر رمزك المرجعي.",
+    "p.f.t": "بلاغ سري", "p.f.h": "أربع خطوات قصيرة. يمكنك تخطي ما لا تعرفه.",
+    "p.f.sn1": "أنت مسجّل الدخول باسم", "p.f.sn2": "، لكن هذا البلاغ <b>لا يُربط بحسابك</b>: لا يظهر في «حسابي» ولا تُسجَّل جلستك معه. ينطبق عليه فقط خيار الهوية الذي تختاره في الخطوة 4.",
+    "p.f.pf": "تعبئة من بياناتي", "p.f.pfd": "يملأ الحقول في متصفحك فقط، ولا يُربط شيء بالحساب.",
+    "p.f.s1": "ماذا حدث", "p.f.s2": "من وأين", "p.f.s3": "الأدلة", "p.f.s4": "المراجعة والإرسال",
+    "p.f.q1": "ما نوع المسألة التي تبلغ عنها؟", "p.f.q1a": "استخدام مواد محظورة", "p.f.q1ad": "من جانب رياضي", "p.f.q1b": "اتجار أو توريد", "p.f.q1bd": "مدرب، صيدلية، صالة رياضية…", "p.f.q1c": "تلاعب أو تهرّب", "p.f.q1cd": "في الفحص أو جمع العينات", "p.f.q1e": "سوء سلوك آخر", "p.f.q1ed": "تحرّش، فساد، أعمال انتقامية",
+    "p.f.q2": "صف ما تعرفه <small>(اختياري)</small>", "p.f.q2ph": "ماذا رأيت أو سمعت؟ متى؟ أي أسماء أو أماكن أو مواد…",
+    "p.f.q3": "الرياضة", "p.f.sel": "اختر…", "p.f.sp1": "ألعاب القوى", "p.f.sp2": "كرة القدم", "p.f.sp3": "رفع الأثقال", "p.f.sp4": "السباحة", "p.f.sp5": "كمال الأجسام", "p.f.q4": "النادي / الاتحاد", "p.f.q4ph": "مثال: نادي القادسية", "p.f.q5": "الأشخاص المعنيون <small>(اختياري)</small>", "p.f.q5ph": "اسم أو وصف", "p.f.q6": "متى حدث ذلك؟", "p.f.q7": "أين؟", "p.f.q7ph": "الملعب، الصالة، المدينة…",
+    "p.f.up": "اسحب الصور أو المستندات أو الملفات الصوتية أو المرئية وأفلتها هنا", "p.f.upd": "حتى 10 ملفات · 200 ميغابايت · تُزال البيانات الوصفية تلقائياً",
+    "p.f.upn": "لا تُدرج اسمك في الملفات إلا إذا رغبت في ذلك. لا يطّلع على المرفقات سوى فريق التحقيق في الشؤون القانونية والالتزام.",
+    "p.f.q8": "كيف نتعامل مع هويتك؟", "p.f.q8a": "دون كشف الهوية تماماً", "p.f.q8ad": "موصى به · رمز مرجعي وصندوق رسائل آمن فقط", "p.f.q8b": "تواصل سري", "p.f.q8bd": "اترك بريداً أو هاتفاً لا يطّلع عليه سوى المحققين", "p.f.q8c": "أكشف هويتي", "p.f.q8cd": "حماية رسمية للمبلّغين · مساعدة جوهرية (م. 10.7.1)",
+    "p.f.c1": "البريد الإلكتروني", "p.f.c2": "أو رقم الهاتف", "p.f.cn": "يُستخدم فقط لإشعارك بوجود سؤال جديد من المحققين. لا يُرسل مضمون البلاغ أبداً — وتردّ عبر رمزك المرجعي.",
+    "p.f.n1": "الاسم الكامل", "p.f.n2": "رقم الهاتف", "p.f.n3": "صفتك", "p.f.r1": "رياضي", "p.f.r2": "مدرب / طاقم مساند للرياضي", "p.f.r3": "مسؤول في نادٍ أو اتحاد", "p.f.r4": "أخرى",
+    "p.f.nn": "ستتواصل معك وحدة التحقيقات لتوقيع اتفاق حماية المبلّغين. وإن كنت طرفاً في المخالفة نفسها، فقد يؤهّلك تعاونك لتخفيف العقوبة وفق المادة 10.7.1 من المدونة (المساعدة الجوهرية).",
+    "p.f.q9": "أؤكد أن هذا البلاغ مقدَّم بحسن نية، وأدرك أن تقديم بلاغات كاذبة عن علم قد يعرّض صاحبها للمساءلة القانونية أو التأديبية.",
+    "p.f.submit": "إرسال آمن",
+    "p.ok.t": "تم استلام بلاغك.", "p.ok.d": "احفظ هذا الرمز المرجعي. فهو الطريقة الوحيدة لمتابعة بلاغك أو الرد على أسئلة المحققين. ولا يمكننا استعادته لك.", "p.ok.copy": "نسخ الرمز", "p.ok.copied": "تم النسخ ✓",
+    "p.s.t": "ماذا يحدث بعد ذلك", "p.s.1": "الفرز خلال يومي عمل", "p.s.1d": "الشؤون القانونية والالتزام — وحدة المعلومات والتحقيقات", "p.s.2": "التقييم والتحقيق", "p.s.2d": "قد يؤدي إلى فحص مستهدف", "p.s.3": "تسجيل النتيجة", "p.s.3d": "يمكنك متابعة الحالة عبر رمزك",
+    "p.alt": "هل تفضّل قناة أخرى؟", "p.altd": "اتصل بالخط الساخن السري أو راسل وحدة التحقيقات بالبريد الإلكتروني. يتولى الفريق نفسه القناتين.",
+    "p.tr.k": "تتبّع بلاغاً", "p.tr.t": "أدخل رمزك المرجعي.", "p.tr.d": "اطّلع على الحالة الحالية، واقرأ أسئلة المحققين، وردّ عليها — دون الكشف عن هويتك.", "p.tr.btn": "عرض الحالة",
+    "p.tr.s": "قيد التحقيق", "p.tr.1": "تم الاستلام", "p.tr.2": "تم الفرز — قُبل للتقييم", "p.tr.3": "سؤال من المحقق", "p.tr.3d": "«هل يمكنك إخبارنا إن كانت المكملات تُباع داخل الصالة الرياضية أم تُطلب عبر الإنترنت؟»", "p.tr.ph": "ردّ دون كشف هويتك…", "p.tr.reply": "إرسال الرد", "p.tr.4": "النتيجة", "p.tr.4d": "قيد الانتظار"
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

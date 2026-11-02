@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Events Calendar — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero">
+      <img src="assets/img/events.jpg" alt="">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="news.html" data-i18n="nav.media">Media</a><i></i><span data-i18n="nav.m2">Events Calendar</span></nav>
+        <h1 class="display" data-i18n="p.title">Events calendar</h1>
+        <p class="lede" data-i18n="p.lede">Workshops, seminars, outreach days and international observances. Switch between calendar and list views and register in one step.</p>
+      </div>
+    </section>
+
+    <section class="section" id="ev-views">
+      <div class="wrap">
+        <div class="sec-head row reveal">
+          <div class="chips" data-tabs="#ev-views"><button class="chip is-on" type="button" data-tab="cal" data-i18n="p.v1">Calendar</button><button class="chip" type="button" data-tab="list" data-i18n="p.v2">List</button></div>
+          <div class="chips"><span class="badge ok plain" data-i18n="p.l1">Training</span><span class="badge info plain" data-i18n="p.l2">Seminar</span><span class="badge danger plain" data-i18n="p.l3">Deadline</span><span class="badge plain" data-i18n="p.l4">International day</span></div>
+        </div>
+
+        <div data-panel="cal" class="is-on reveal">
+          <div class="cal">
+            <div class="cal-head"><span data-i18n="p.month">November 2026</span><div class="arrows"><button type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" class="ico"><path d="M15 18l-6-6 6-6"/></svg></button><button type="button" aria-label="Next month"><svg viewBox="0 0 24 24" class="ico"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
+            <div class="cal-grid">
+              <span data-i18n="p.d1">Sun</span><span data-i18n="p.d2">Mon</span><span data-i18n="p.d3">Tue</span><span data-i18n="p.d4">Wed</span><span data-i18n="p.d5">Thu</span><span data-i18n="p.d6">Fri</span><span data-i18n="p.d7">Sat</span>
+              <div><span>1</span></div><div><span>2</span></div><div><span>3</span></div><div class="has"><span>4</span><a href="event.html" data-i18n="p.e1">Education workshop — national teams</a></div><div><span>5</span></div><div><span>6</span></div><div><span>7</span></div>
+              <div><span>8</span></div><div><span>9</span></div><div class="has"><span>10</span><a class="navy" href="board.html" data-i18n="p.e2">Board meeting</a></div><div><span>11</span></div><div class="has"><span>12</span><a href="event.html" data-i18n="p.e3">Pharmacists seminar — Medicines &amp; the Prohibited List</a></div><div><span>13</span></div><div><span>14</span></div>
+              <div><span>15</span></div><div><span>16</span></div><div><span>17</span></div><div class="has"><span>18</span><a href="course.html?id=essentials" data-i18n="p.e4">Anti-Doping Essentials</a></div><div><span>19</span></div><div><span>20</span></div><div><span>21</span></div>
+              <div><span>22</span></div><div><span>23</span></div><div><span>24</span></div><div class="has"><span>25</span><a href="course.html?id=coaches" data-i18n="p.e5">Coaching Clean</a></div><div><span>26</span></div><div><span>27</span></div><div><span>28</span></div>
+              <div><span>29</span></div><div class="has"><span>30</span><a class="red" href="event.html" data-i18n="p.e6s">Conference registration closes</a></div><div class="dim"><span>1</span></div><div class="dim"><span>2</span></div><div class="dim"><span>3</span></div><div class="dim"><span>4</span></div><div class="dim"><span>5</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel="list" class="reveal">
+          <div class="grid-2 stagger">
+            <article class="ev"><div class="ev-date"><b>04</b><small data-i18n="p.nov">Nov</small></div><div><span class="badge ok plain" data-i18n="p.l1">Training</span><h3 data-i18n="p.e1">Education workshop — national teams</h3><p data-i18n="p.e1d">Half-day awareness workshop for Olympic-cycle athletes and their coaches.</p><div class="ev-meta"><span><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="num">09:00 – 13:00</span></span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span data-i18n="p.ven1">Olympic Committee Hall</span></span></div><div class="ev-foot"><span class="badge warn" data-i18n="p.inv">By invitation</span><a class="link-arrow" href="event.html"><span data-i18n="c.more">Learn more</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div></article>
+            <article class="ev"><div class="ev-date"><b>12</b><small data-i18n="p.nov">Nov</small></div><div><span class="badge info plain" data-i18n="p.l2">Seminar</span><h3 data-i18n="p.e3">Pharmacists seminar — Medicines &amp; the Prohibited List</h3><p data-i18n="p.e3d">For community pharmacists: recognising at-risk products and advising athletes.</p><div class="ev-meta"><span><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="num">18:00 – 20:00</span></span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span data-i18n="p.ven2">Online</span></span></div><div class="ev-foot"><span class="badge ok" data-i18n="c.open">Open</span><a class="btn btn-primary" href="event.html"><span data-i18n="c.register">Register</span></a></div></div></article>
+            <article class="ev"><div class="ev-date"><b>18</b><small data-i18n="p.nov">Nov</small></div><div><span class="badge ok plain" data-i18n="p.l1">Training</span><h3 data-i18n="p.e4">Anti-Doping Essentials</h3><p data-i18n="p.e4d">Foundation course, mandatory for national-team athletes.</p><div class="ev-meta"><span><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="num">17:00 – 20:00</span></span><span><svg viewBox="0 0 24 24" class="ico"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span data-i18n="p.ven3">KADA HQ, Hall A</span></span></div><div class="ev-foot"><span class="badge ok num" data-i18n="p.seats">11 seats left</span><a class="btn btn-primary" href="course.html?id=essentials"><span data-i18n="c.register">Register</span></a></div></div></article>
+            <article class="ev"><div class="ev-date"><b>30</b><small data-i18n="p.nov">Nov</small></div><div><span class="badge danger plain" data-i18n="p.l3">Deadline</span><h3 data-i18n="p.e6">Registration closes — National Clean Sport Conference 2026</h3><p data-i18n="p.e6d">Last day to register for the conference on 14 December.</p><div class="ev-meta"><span><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="num">23:59</span></span></div><div class="ev-foot"><span></span><a class="link-arrow" href="event.html"><span data-i18n="p.adams">Register now</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head row reveal"><div><p class="kicker" data-i18n="p.up.k">Coming up</p><h2 class="display" data-i18n="p.up.t">Highlights of the next quarter</h2></div><a class="btn btn-ghost" href="training.html"><span data-i18n="nav.s5">Training &amp; Events Portal</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        <div class="news-grid stagger">
+          <a class="ncard" href="event.html"><div class="ncard-img"><img src="assets/img/events.jpg" alt=""></div><div class="ncard-body"><div class="nmeta"><span class="ntag" data-i18n="p.l2">Seminar</span><span class="num">14 · 12 · 2026</span></div><h3 data-i18n="p.h1">National Clean Sport Conference 2026</h3></div></a>
+          <a class="ncard" href="course.html?id=dco"><div class="ncard-img"><img src="assets/img/ops.jpg" alt=""></div><div class="ncard-body"><div class="nmeta"><span class="ntag" data-i18n="p.l1">Training</span><span class="num">11 · 01 · 2027</span></div><h3 data-i18n="p.h2">Doping Control Officer accreditation course</h3></div></a>
+          <a class="ncard" href="event.html"><div class="ncard-img"><img src="assets/img/news-2.jpg" alt=""></div><div class="ncard-body"><div class="nmeta"><span class="ntag" data-i18n="p.l4">International day</span><span class="num">10 · 04 · 2027</span></div><h3 data-i18n="p.h3">Play True Day — nationwide activities</h3></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "تقويم الفعاليات — كادا",
+    "p.title": "تقويم الفعاليات", "p.lede": "ورش عمل وندوات وأيام توعوية ومناسبات دولية. بدّل بين عرض التقويم والقائمة وسجّل بخطوة واحدة.",
+    "p.v1": "التقويم", "p.v2": "القائمة", "p.l1": "تدريب", "p.l2": "ندوة", "p.l3": "موعد نهائي", "p.l4": "يوم دولي",
+    "p.nov": "نوفمبر", "p.seats": "متبقٍ 11 مقعداً",
+    "p.month": "نوفمبر 2026", "p.d1": "الأحد", "p.d2": "الاثنين", "p.d3": "الثلاثاء", "p.d4": "الأربعاء", "p.d5": "الخميس", "p.d6": "الجمعة", "p.d7": "السبت",
+    "p.e1": "ورشة توعوية — المنتخبات الوطنية", "p.e1d": "ورشة توعوية لمدة نصف يوم لرياضيي الدورة الأولمبية ومدربيهم.", "p.ven1": "قاعة اللجنة الأولمبية", "p.inv": "بدعوة",
+    "p.e2": "اجتماع مجلس الإدارة",
+    "p.e3": "ندوة الصيادلة — الأدوية وقائمة المحظورات", "p.e3d": "لصيادلة الصيدليات الأهلية: التعرف على المنتجات عالية الخطورة وتقديم المشورة للرياضيين.", "p.ven2": "عبر الإنترنت",
+    "p.e4": "أساسيات مكافحة المنشطات", "p.e4d": "دورة تأسيسية إلزامية لرياضيي المنتخبات الوطنية.", "p.ven3": "مقر كادا، القاعة A",
+    "p.e5": "التدريب النظيف",
+    "p.e6": "إغلاق التسجيل — المؤتمر الوطني للرياضة النظيفة 2026", "p.e6s": "إغلاق التسجيل في المؤتمر", "p.e6d": "آخر يوم للتسجيل في المؤتمر المقرر في 14 ديسمبر.", "p.adams": "سجّل الآن",
+    "p.up.k": "قريباً", "p.up.t": "أبرز فعاليات الربع القادم",
+    "p.h1": "المؤتمر الوطني للرياضة النظيفة 2026", "p.h2": "دورة اعتماد مسؤولي مراقبة المنشطات", "p.h3": "يوم اللعب النظيف — أنشطة في جميع أنحاء البلاد"
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

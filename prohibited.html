@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Prohibited List &amp; Medicine Checker — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero tall">
+      <img src="assets/img/svc-prohibited.jpg" alt="">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.s2">Prohibited List &amp; Medicine Checker</span></nav>
+        <h1 class="display" data-i18n="p.title">Is it prohibited? Check before you take it.</h1>
+        <p class="lede" data-i18n="p.lede">Search a substance or a brand-name medicine sold in Kuwait against the WADA Prohibited List in force (2026; the 2027 List applies from 1 January 2027). Results are indicative — the official list and your physician prevail.</p>
+        <form class="toolbar reveal in" style="margin-top:30px;max-width:820px" onsubmit="return false">
+          <div class="field grow search-field"><svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" value="Panadol Cold & Flu" aria-label="Substance or medicine"></div>
+          <div class="field"><select aria-label="Context"><option data-i18n="p.ctx1">In competition</option><option data-i18n="p.ctx2">Out of competition</option></select></div>
+          <button class="btn btn-primary" type="button" data-lookup="#res"><span data-i18n="p.check">Check</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:40px">
+      <div class="wrap">
+        <div class="result-card" id="res"><i></i><div>
+          <h3><span>Panadol Cold &amp; Flu</span><span class="badge danger" data-i18n="p.r.s">Prohibited in competition</span></h3>
+          <p data-i18n="p.r.d">Contains <b>pseudoephedrine</b> (S6.b Specified Stimulant) — prohibited in competition when urinary concentration exceeds 150 µg/mL. Paracetamol and chlorphenamine are permitted. Stop at least 24 hours before competition or ask your physician for an alternative.</p>
+          <div class="kv mt-2" style="grid-template-columns:180px 1fr"><div data-i18n="p.r.k1">Active ingredients</div><div>Paracetamol · Pseudoephedrine HCl · Chlorphenamine</div><div data-i18n="p.r.k2">WADA class</div><div data-i18n="p.r.cls">S6.b — Specified stimulants (threshold substance)</div><div data-i18n="p.r.k3">Out of competition</div><div><span class="badge ok" data-i18n="p.r.ok">Permitted</span></div><div data-i18n="p.r.k4">Source</div><div data-i18n="p.r.src">WADA Prohibited List 2026 (in force) · KADA medicine database · verified 01/10/2026</div></div>
+          <div class="chips mt-2"><a class="chip" href="assistant.html" data-i18n="p.r.ask">Ask the AI assistant about this result</a><a class="chip" href="tue.html" data-i18n="p.r.tue">How to apply for a TUE</a><a class="chip" href="#" data-i18n="p.r.report">Report an error</a></div>
+        </div></div>
+
+        <div class="grid-3 stagger mt-3">
+          <div class="card"><div class="icon-box"><svg viewBox="0 0 24 24" class="ico"><path d="M9 3h6v4H9z"/><path d="M7 7h10l2 13H5z"/></svg></div><h3 data-i18n="p.a1t">Over 2,400 brands sold in Kuwait</h3><p data-i18n="p.a1d">Each brand is mapped to its active ingredients; the list is reviewed periodically.</p></div>
+          <div class="card"><div class="icon-box"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3 data-i18n="p.a2t">Classified against the WADA List</h3><p data-i18n="p.a2d">Every result shows the active ingredient and its Prohibited List status (in-competition / at all times). For medicines bought outside Kuwait, we refer you to Global DRO.</p></div>
+          <div class="card"><div class="icon-box red"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg></div><h3 data-i18n="p.a3t">Supplements are not covered</h3><p data-i18n="p.a3d">Dietary supplements are not strictly regulated and may be contaminated. The checker cannot clear a supplement — see our guidance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="list">
+      <div class="wrap with-side">
+        <div>
+          <div class="sec-head reveal"><p class="kicker" data-i18n="p.l.k">The 2027 Prohibited List (from 1 January 2027), simplified</p><h2 class="display" data-i18n="p.l.t">What is prohibited, and when</h2><p class="lede" data-i18n="p.l.d">A plain-language guide. Tap a filter, then a class to expand. The official list is linked on the right.</p></div>
+          <div class="chips list-filters reveal" style="margin-bottom:20px" role="tablist">
+            <button type="button" class="badge danger plain" data-list-filter="always" aria-pressed="false" data-i18n="p.l.always">Prohibited at all times</button>
+            <button type="button" class="badge warn plain" data-list-filter="ic" aria-pressed="false" data-i18n="p.l.ic">In competition only</button>
+            <button type="button" class="badge info plain" data-list-filter="sport" aria-pressed="false" data-i18n="p.l.sport">Particular sports</button>
+          </div>
+          <div class="acc reveal">
+            <div class="acc-item open" data-when="always"><button type="button"><span><span class="badge danger plain">S0</span> <span data-i18n="p.l.s0">Non-approved substances</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s0d">Any pharmacological substance not approved for human therapeutic use by any government health authority — e.g. drugs in pre-clinical or clinical development, designer drugs, veterinary medicines.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">S1</span> <span data-i18n="p.l.s1">Anabolic agents</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s1d">Anabolic androgenic steroids (testosterone, nandrolone, stanozolol…) and other anabolic agents such as clenbuterol and SARMs.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">S2</span> <span data-i18n="p.l.s2">Peptide hormones, growth factors &amp; mimetics</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s2d">EPO and agents affecting erythropoiesis, growth hormone and its releasing factors, IGF-1 and other growth factors.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">S3</span> <span data-i18n="p.l.s3">Beta-2 agonists</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s3d">All beta-2 agonists are prohibited except inhaled salbutamol, formoterol, salmeterol and vilanterol within specified doses.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">S4</span> <span data-i18n="p.l.s4">Hormone &amp; metabolic modulators</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s4d">Aromatase inhibitors, anti-estrogens, myostatin inhibitors, insulins and metabolic modulators such as meldonium.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">S5</span> <span data-i18n="p.l.s5">Diuretics &amp; masking agents</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s5d">Furosemide, hydrochlorothiazide, desmopressin, probenecid and plasma expanders.</p></div></div></div>
+            <div class="acc-item" data-when="ic"><button type="button"><span><span class="badge warn plain">S6</span> <span data-i18n="p.l.s6">Stimulants</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s6d">Amphetamines, cocaine, methylphenidate, pseudoephedrine (above threshold) and many cold &amp; flu ingredients. Prohibited in competition only.</p></div></div></div>
+            <div class="acc-item" data-when="ic"><button type="button"><span><span class="badge warn plain">S7–S9</span> <span data-i18n="p.l.s7">Narcotics · Cannabinoids · Glucocorticoids</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.s7d">Morphine, fentanyl, tramadol; natural and synthetic cannabinoids; all injectable, oral and rectal glucocorticoids — in competition.</p></div></div></div>
+            <div class="acc-item" data-when="sport"><button type="button"><span><span class="badge info plain">P1</span> <span data-i18n="p.l.p1">Beta-blockers</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.p1d">Prohibited in particular sports such as archery and shooting (at all times) and in competition in others.</p></div></div></div>
+            <div class="acc-item" data-when="always"><button type="button"><span><span class="badge danger plain">M1–M3</span> <span data-i18n="p.l.m">Prohibited methods</span></span><i></i></button><div class="acc-body"><div><p data-i18n="p.l.md">Blood manipulation; chemical and physical manipulation, including sample tampering and IV infusions above 100 mL per 12 hours; gene and cell doping.</p></div></div></div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="side-box navy"><h4 data-i18n="p.sb.t">Official documents</h4><a href="#" style="color:#fff;border-color:rgba(255,255,255,.15)"><span data-i18n="p.sb.1">WADA Prohibited List 2027 (EN)</span><span class="badge plain">PDF</span></a><a href="#" style="color:#fff;border-color:rgba(255,255,255,.15)"><span data-i18n="p.sb.2">قائمة المحظورات 2027 (AR)</span><span class="badge plain">PDF</span></a><a href="#" style="color:#fff;border-color:rgba(255,255,255,.15)"><span data-i18n="p.sb.3">Summary of major modifications</span><span class="badge plain">PDF</span></a><a href="wada.html#dro" style="color:#fff;border:0"><span data-i18n="p.sb.4">Open Global DRO</span><svg viewBox="0 0 24 24" class="ico" style="width:16px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+          <div class="side-box"><h4 data-i18n="p.sb.5">Therapeutic Use Exemption</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.5d">Need a prohibited medicine for a diagnosed condition? Apply for a TUE with your physician's support before use; retroactive TUEs are possible in emergencies.</p><a class="btn btn-ghost" href="tue.html"><span data-i18n="p.sb.5b">Apply for a TUE</span></a></div>
+          <div class="side-box"><h4 data-i18n="p.sb.6">Supplements guidance</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.6d">Supplements may contain prohibited substances not listed on the label, and the athlete is responsible for everything that enters their body. Batch-tested products (e.g. Informed Sport, NSF Certified for Sport) reduce but do not remove the risk. Keep receipts and lot numbers.</p><a class="link-arrow" href="publications.html#supplements"><span data-i18n="p.sb.6b">Read the guidance</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="help"><div class="wrap"><div class="help-inner reveal"><div><h3 data-i18n="c.help">Need help?</h3><p data-i18n="c.helpd">Ask the KADA AI assistant or contact the team.</p></div><div class="cta"><a class="btn btn-primary" href="assistant.html"><span data-i18n="c.askai">Ask the AI assistant</span></a><a class="btn btn-outline" href="contact.html"><span data-i18n="c.contactus">Contact us</span></a></div></div></div></section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "قائمة المحظورات وفاحص الأدوية — كادا",
+    "p.title": "هل هي محظورة؟ افحص قبل أن تتناولها.", "p.lede": "ابحث عن مادة أو دواء متداول في الكويت باسمه التجاري ضمن قائمة وادا للمحظورات السارية (2026؛ وتسري قائمة 2027 اعتباراً من 1 يناير 2027). النتائج استرشادية — والمرجع هو القائمة الرسمية وطبيبك.",
+    "p.ctx1": "داخل المنافسة", "p.ctx2": "خارج المنافسة", "p.check": "افحص",
+    "p.r.s": "محظور داخل المنافسة", "p.r.d": "يحتوي على <b>السودوإيفيدرين</b> (S6.b منبّه مُحدَّد) — محظور داخل المنافسة إذا تجاوز تركيزه في البول 150 ميكروغرام/مل. أما الباراسيتامول والكلورفينامين فمسموحان. توقّف عن تناوله قبل 24 ساعة على الأقل من المنافسة أو اسأل طبيبك عن بديل.",
+    "p.r.k1": "المكونات الفعالة", "p.r.k2": "تصنيف وادا", "p.r.k3": "خارج المنافسة", "p.r.ok": "مسموح", "p.r.k4": "المصدر", "p.r.src": "قائمة وادا للمحظورات 2026 (السارية) · قاعدة بيانات الأدوية لدى الوكالة · تم التحقق 01/10/2026", "p.r.cls": "S6.b — منبّهات مُحدَّدة (مادة ذات حد عتبة)",
+    "p.r.ask": "اسأل المساعد الذكي عن هذه النتيجة", "p.r.tue": "كيفية التقدم بطلب الإعفاء للاستعمال العلاجي", "p.r.report": "الإبلاغ عن خطأ",
+    "p.a1t": "أكثر من 2,400 علامة تجارية متداولة في الكويت", "p.a1d": "كل علامة تجارية مطابَقة مع مكوناتها الفعالة، وتُراجَع القائمة بصفة دورية.",
+    "p.a2t": "مصنَّف وفق قائمة وادا", "p.a2d": "تعرض كل نتيجة المادة الفعالة وتصنيفها في قائمة المحظورات (داخل المنافسة / في جميع الأوقات). وللأدوية المشتراة من خارج الكويت، نحيلك إلى Global DRO.",
+    "p.a3t": "المكملات غير مشمولة", "p.a3d": "المكملات الغذائية غير خاضعة لرقابة صارمة وقد تكون ملوثة. لا يمكن للفاحص تأكيد سلامة أي مكمل — راجع إرشاداتنا.",
+    "p.l.k": "قائمة المحظورات 2027 (اعتباراً من 1 يناير 2027) مبسّطة", "p.l.t": "ما المحظور، ومتى", "p.l.d": "دليل بلغة واضحة. انقر على أحد المرشحات، ثم على الفئة لعرض تفاصيلها. رابط القائمة الرسمية في الجانب.",
+    "p.l.always": "محظور في جميع الأوقات", "p.l.ic": "داخل المنافسة فقط", "p.l.sport": "رياضات معينة",
+    "p.l.s0": "مواد غير معتمدة", "p.l.s0d": "أي مادة دوائية غير معتمدة للاستخدام العلاجي البشري من أي هيئة صحية حكومية — مثل الأدوية قيد التطوير قبل السريري أو السريري، والعقاقير المصممة، والأدوية البيطرية.",
+    "p.l.s1": "العوامل البنائية", "p.l.s1d": "الستيرويدات البنائية الأندروجينية (التستوستيرون، الناندرولون، الستانوزولول…) وعوامل بنائية أخرى مثل الكلينبوتيرول و SARMs.",
+    "p.l.s2": "الهرمونات الببتيدية وعوامل النمو ومحاكياتها", "p.l.s2d": "الإريثروبويتين والعوامل المؤثرة في تكوين كريات الدم، وهرمون النمو وعوامل إطلاقه، و IGF-1 وعوامل نمو أخرى.",
+    "p.l.s3": "منبهات بيتا-2", "p.l.s3d": "جميع منبهات بيتا-2 محظورة باستثناء السالبوتامول والفورموتيرول والسالميتيرول والفيلانتيرول المستنشقة ضمن جرعات محددة.",
+    "p.l.s4": "معدّلات الهرمونات والأيض", "p.l.s4d": "مثبطات الأروماتاز ومضادات الإستروجين ومثبطات الميوستاتين والإنسولينات ومعدّلات الأيض مثل الميلدونيوم.",
+    "p.l.s5": "مدرات البول والعوامل المقنّعة", "p.l.s5d": "الفوروسيميد والهيدروكلوروثيازيد والديسموبريسين والبروبينسيد وموسعات البلازما.",
+    "p.l.s6": "المنبهات", "p.l.s6d": "الأمفيتامينات والكوكايين والميثيلفينيدات والسودوإيفيدرين (فوق الحد) وكثير من مكونات أدوية البرد والإنفلونزا. محظورة داخل المنافسة فقط.",
+    "p.l.s7": "المخدرات · القنّبينات · الجلوكوكورتيكويدات", "p.l.s7d": "المورفين والفنتانيل والترامادول؛ والقنّبينات الطبيعية والاصطناعية؛ وجميع الجلوكوكورتيكويدات التي تُعطى بالحقن أو عن طريق الفم أو الشرج — داخل المنافسة.",
+    "p.l.p1": "حاصرات بيتا", "p.l.p1d": "محظورة في رياضات معينة مثل الرماية بالقوس والرماية بالأسلحة (في جميع الأوقات)، وداخل المنافسة في رياضات أخرى.",
+    "p.l.m": "الطرق المحظورة", "p.l.md": "التلاعب بالدم؛ والتلاعب الكيميائي والفيزيائي، بما في ذلك العبث بالعينات والحقن الوريدي بأكثر من 100 مل كل 12 ساعة؛ والمنشطات الجينية والخلوية.",
+    "p.sb.t": "الوثائق الرسمية", "p.sb.1": "قائمة وادا للمحظورات 2027 (EN)", "p.sb.2": "قائمة المحظورات 2027 (AR)", "p.sb.3": "ملخص التعديلات الرئيسية", "p.sb.4": "افتح Global DRO",
+    "p.sb.5": "الإعفاء للاستعمال العلاجي", "p.sb.5d": "تحتاج دواءً محظوراً لحالة مشخّصة؟ تقدّم بطلب الإعفاء للاستعمال العلاجي بدعم من طبيبك قبل الاستخدام؛ ويمكن منح إعفاء بأثر رجعي في الحالات الطارئة.", "p.sb.5b": "قدّم طلب الإعفاء",
+    "p.sb.6": "إرشادات المكملات", "p.sb.6d": "قد تحتوي المكملات على مواد محظورة غير مذكورة على الملصق، والرياضي مسؤول عن كل ما يدخل جسده. المنتجات المفحوصة حسب الدفعة (مثل Informed Sport و NSF Certified for Sport) تقلل الخطر ولا تلغيه. احتفظ بالإيصالات وأرقام التشغيلات.", "p.sb.6b": "اقرأ الإرشادات"
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

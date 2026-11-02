@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Sitemap — all pages — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+  <style>
+    .map-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .map-col a .badge { font-size: 10.5px; padding: 3px 8px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13.5px; color: var(--muted); margin-bottom: 28px; }
+    .legend span { display: inline-flex; align-items: center; gap: 8px; }
+    @media (max-width: 1100px) { .map-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 720px) { .map-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain short">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><span data-i18n="top.sitemap">Sitemap</span></nav>
+        <h1 class="display" data-i18n="p.title">Sitemap — every page of the proposed website</h1>
+        <p class="lede" data-i18n="p.lede">A complete map of the information architecture in this design proposal: 31 public pages grouped as in the main navigation, plus signed-in workspaces.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="legend reveal"><span><i class="badge ok" style="padding:3px 8px;font-size:10.5px" data-i18n="p.lg1">e-service</i> <span data-i18n="p.lg1d">interactive demo flow</span></span><span><i class="badge info" style="padding:3px 8px;font-size:10.5px" data-i18n="p.lg2">detail</i> <span data-i18n="p.lg2d">example detail page</span></span><span><i class="badge plain" style="padding:3px 8px;font-size:10.5px">AI</i> <span data-i18n="p.lg3d">AI assistant demo</span></span></div>
+        <div class="map-grid stagger">
+          <div class="map-col">
+            <h3 data-i18n="p.g1">Home &amp; corporate</h3>
+            <a href="index.html"><span data-i18n="nav.home">Home</span><small>index.html</small></a>
+            <a href="about.html"><span data-i18n="nav.about1">About the Agency</span><small>about.html</small></a>
+            <a href="vision.html" class="sub"><span data-i18n="nav.about2">Vision, Mission &amp; Values</span><small>vision.html</small></a>
+            <a href="board.html" class="sub"><span data-i18n="nav.about3">Board of Directors</span><small>board.html</small></a>
+            <a href="structure.html" class="sub"><span data-i18n="nav.about4">Organisational Structure</span><small>structure.html</small></a>
+            <a href="departments.html" class="sub"><span data-i18n="nav.about5">Departments</span><small>departments.html</small></a>
+            <a href="wada.html" class="sub"><span data-i18n="nav.about6">WADA Compliance</span><small>wada.html</small></a>
+            <a href="education.html"><span data-i18n="nav.kafah">Education</span><small>education.html</small></a>
+            <a href="platform.html"><span data-i18n="p.platform">The platform (app · workflow · analytics · AI)</span><small>platform.html</small></a>
+          </div>
+          <div class="map-col">
+            <h3 data-i18n="nav.services">E-Services</h3>
+            <a href="services.html"><span data-i18n="p.svcall">All services</span><small>services.html</small></a>
+            <a href="sanctions.html" class="sub"><span data-i18n="nav.s1">Sanctions Registry</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="sanction.html" class="sub"><span data-i18n="p.sanction">Sanction decision</span><span class="badge info" data-i18n="p.lg2">detail</span></a>
+            <a href="prohibited.html" class="sub"><span data-i18n="nav.s2">Prohibited List &amp; Medicine Checker</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="tue.html" class="sub"><span data-i18n="nav.s9">Therapeutic Use Exemption (TUE)</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="speakup.html" class="sub"><span data-i18n="nav.s3">Speak Up — confidential report</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="data-request.html" class="sub"><span data-i18n="nav.s4">Data Access Request</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="training.html" class="sub"><span data-i18n="nav.s5">Training &amp; Events Portal</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="course.html?id=essentials" class="sub"><span data-i18n="p.course">Course &amp; registration</span><span class="badge info" data-i18n="p.lg2">detail</span></a>
+            <a href="tenders.html" class="sub"><span data-i18n="nav.s6">Tenders &amp; Procurement</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="tender.html" class="sub"><span data-i18n="p.tender">Tender &amp; document purchase</span><span class="badge info" data-i18n="p.lg2">detail</span></a>
+            <a href="supplier.html" class="sub"><span data-i18n="nav.s7">Supplier Registration</span><span class="badge ok" data-i18n="p.lg1">e-service</span></a>
+            <a href="assistant.html" class="sub"><span data-i18n="nav.s8">AI Assistant</span><span class="badge plain">AI</span></a>
+          </div>
+          <div class="map-col">
+            <h3 data-i18n="nav.media">Media</h3>
+            <a href="news.html"><span data-i18n="nav.m1">News &amp; Announcements</span><small>news.html</small></a>
+            <a href="article.html" class="sub"><span data-i18n="p.article">News article</span><span class="badge info" data-i18n="p.lg2">detail</span></a>
+            <a href="events.html"><span data-i18n="nav.m2">Events Calendar</span><small>events.html</small></a>
+            <a href="event.html" class="sub"><span data-i18n="p.event">Event &amp; registration</span><span class="badge info" data-i18n="p.lg2">detail</span></a>
+            <a href="media.html"><span data-i18n="nav.m3">Media Center</span><small>media.html</small></a>
+            <a href="publications.html"><span data-i18n="nav.m4">Research &amp; Publications</span><small>publications.html</small></a>
+            <h3 class="mt-2" data-i18n="p.g4">Support &amp; utility</h3>
+            <a href="faq.html"><span data-i18n="nav.faq">FAQs</span><small>faq.html</small></a>
+            <a href="contact.html"><span data-i18n="nav.contact">Contact</span><small>contact.html</small></a>
+            <!-- <a href="accessibility.html"><span data-i18n="top.access">Accessibility</span><small>accessibility.html</small></a> -->
+            <a href="sitemap.html"><span data-i18n="top.sitemap">Sitemap</span><small>sitemap.html</small></a>
+            <h3 class="mt-2" data-i18n="p.g5">Signed-in workspaces</h3>
+            <a href="account.html"><span data-i18n="p.w1">My account (public)</span><span class="badge warn" data-i18n="p.lg3">sign-in</span></a>
+            <a href="supplier-dashboard.html"><span data-i18n="p.w2">Supplier dashboard</span><span class="badge warn" data-i18n="p.lg3">sign-in</span></a>
+            <a href="admin/index.html"><span data-i18n="p.w3">Staff admin application (CMS · operations · executive)</span><span class="badge warn" data-i18n="p.lg3">sign-in</span></a>          </div>
+        </div>
+
+        <div class="grid-3 mt-3 stagger">
+          <div class="card"><span class="num-big num">45</span><h3 data-i18n="p.k1">Designed pages</h3><p data-i18n="p.k1d">Public pages, signed-in workspaces and admin screens, in Arabic and English.</p></div>
+          <div class="card"><span class="num-big num">8</span><h3 data-i18n="p.k2">Interactive e-services</h3><p data-i18n="p.k2d">Registry, checker, Speak Up, data request, training, tenders, supplier, AI assistant.</p></div>
+          <div class="card"><span class="num-big num">6</span><h3 data-i18n="p.k3">App roles</h3><p data-i18n="p.k3d">Athlete, inspector, operations, results, committee, system administrator — previewed on the platform page.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "خريطة الموقع — جميع الصفحات — كادا",
+    "p.title": "خريطة الموقع — جميع صفحات الموقع المقترح", "p.lede": "خريطة كاملة لهيكل المعلومات في مقترح التصميم هذا: 31 صفحة عامة مرتبة كما في القائمة الرئيسية، إضافة إلى مساحات العمل بعد تسجيل الدخول.",
+    "p.lg1": "خدمة إلكترونية", "p.lg1d": "مسار تفاعلي توضيحي", "p.lg2": "تفاصيل", "p.lg2d": "مثال على صفحة تفاصيل", "p.lg3d": "عرض توضيحي للمساعد الذكي",
+    "p.g1": "الرئيسية والتعريف بالوكالة", "p.platform": "المنصة (التطبيق · سير العمل · التحليلات · الذكاء الاصطناعي)", "p.svcall": "جميع الخدمات", "p.sanction": "قرار عقوبة", "p.course": "الدورة والتسجيل", "p.tender": "المناقصة وشراء الوثائق", "p.article": "خبر", "p.event": "الفعالية والتسجيل", "p.g4": "الدعم والصفحات المساعدة", "p.g5": "مساحات العمل بعد تسجيل الدخول", "p.w1": "حسابي (للجمهور)", "p.w2": "لوحة المورد", "p.w3": "بوابة الموظفين الإدارية (إدارة المحتوى · العمليات · اللوحة التنفيذية)", "p.lg3": "يتطلب تسجيل الدخول",
+    "p.k1": "صفحة مصممة", "p.k1d": "الصفحات العامة ومساحات العمل وشاشات الإدارة، بالعربية والإنجليزية.", "p.k2": "خدمات إلكترونية تفاعلية", "p.k2d": "السجل والفاحص و Speak Up وطلب البيانات والتدريب والمناقصات وتسجيل الموردين والمساعد الذكي.", "p.k3": "أدوار التطبيق", "p.k3d": "الرياضي والمفتش والعمليات والنتائج واللجنة ومدير النظام — يمكن معاينتها في صفحة المنصة."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  // Show the file name next to every entry (presentation aid).
+  document.querySelectorAll(".map-col a").forEach(function (a) {
+    if (a.querySelector("small")) return;
+    var badge = a.querySelector(".badge");
+    var wrap = document.createElement("span");
+    wrap.style.cssText = "display:flex;align-items:center;gap:10px";
+    var small = document.createElement("small");
+    small.textContent = a.getAttribute("href");
+    wrap.append(small);
+    if (badge) wrap.append(badge);
+    a.append(wrap);
+  });
+  </script>
+</body>
+</html>

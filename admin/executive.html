@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Executive dashboard — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="executive">
+<div data-page>
+
+  <div class="page-head">
+    <div><h1 data-i18n="p.h">Executive analytics & management dashboard</h1><p data-i18n="p.d">Real-time view of organisational performance: testing plan, results management, Speak Up, training, procurement, SLA & compliance. Operational data streams from the KADA mobile application; website data from this platform.</p></div>
+    <div class="acts">
+      <div class="filters"><button class="chip" type="button" data-toast="Period: Q3 2026" data-toast-ar="الفترة: الربع الثالث 2026" data-i18n="p.per.q3">Q3</button><button class="chip is-on" type="button" data-i18n="p.per.ytd">YTD 2026</button><button class="chip" type="button" data-toast="Period: 12 months" data-toast-ar="الفترة: 12 شهراً" data-i18n="p.per.12m">12M</button></div>
+      <div class="filters"><button class="chip" type="button" data-toast="Federation filter — 22 federations tested in 2026 (design preview)" data-toast-ar="تصفية حسب الاتحاد — 22 اتحاداً خضعت للفحص في 2026 (معاينة تصميم)" data-i18n="p.f.fed">All federations</button><button class="chip" type="button" data-toast="Region filter — 6 governorates (design preview)" data-toast-ar="تصفية حسب المنطقة — 6 محافظات (معاينة تصميم)" data-i18n="p.f.reg">All regions</button></div>
+      <button class="btn btn-ghost sm" type="button" data-toast="Board pack generated (PDF, 18 pages) — design preview" data-toast-ar="أُنشئت حزمة تقارير مجلس الإدارة (PDF، 18 صفحة) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.pdf">PDF</span></button>
+      <button class="btn btn-ghost sm" type="button" data-toast="Excel export started — design preview" data-toast-ar="بدأ تصدير Excel — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.xls">Excel</span></button>
+      <a class="btn btn-primary sm" href="#reports"><svg class="ico"><use href="#i-file"/></svg><span data-i18n="p.reports">Reports</span></a>
+    </div>
+  </div>
+
+  <nav class="tabs">
+    <a href="#overview" data-i18n="p.t1">Overview</a>
+    <a href="#testing" data-i18n="p.t2">Testing & inspectors</a>
+    <a href="#cases" data-i18n="p.t3">Cases, sanctions & committees</a>
+    <a href="#reports" data-i18n="p.t4">Reports & exports</a>
+  </nav>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <section data-view="overview">
+    <div class="kpis six">
+      <div class="kpi navy"><small data-i18n="p.k1">Testing plan completion</small><b data-count="82" data-suffix="%">82%</b><em data-i18n="p.k1d">1,284 / 1,560 samples · on track</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Adverse analytical findings</small><b data-count="11">11</b><em class="flat" data-i18n="p.k2d">0.86% of samples · 2025: 0.91%</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Open cases</small><b data-count="19">19</b><em data-i18n="p.k3d">16 results management · 3 disciplinary</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Sanctions issued · 2026</small><b data-count="8">8</b><em data-i18n="p.k4d">Avg. 3.1 years · 2 provisional suspensions</em></div>
+      <div class="kpi"><small data-i18n="p.k5">People trained · 2026</small><b data-count="3106">3,106</b><em data-i18n="p.k5d">All courses · 141% of the 2,200 target</em></div>
+      <div class="kpi"><small data-i18n="p.k6">SLA compliance</small><b data-count="97.4" data-suffix="%">97.4%</b><em data-i18n="p.k6d">All statutory & internal SLAs</em></div>
+    </div>
+
+    <div class="grid g-32 mt-2">
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.o1">Samples collected vs plan · 2026</h2><small data-i18n="p.o1d">In-competition, out-of-competition and monthly plan</small></div><div class="legend" style="grid-auto-flow:column;gap:14px"><span><i style="background:var(--green)"></i><span data-i18n="p.ic">IC</span></span><span><i style="background:var(--navy)"></i><span data-i18n="p.ooc">OOC</span></span><span><i style="background:var(--lime)"></i><span data-i18n="p.plan">Plan</span></span></div></div>
+        <svg class="chart" data-chart="line" data-h="210" data-values="46,52,65,70,81,77,72,89,96,94|32,41,49,53,59,56,52,64,70,66|106,106,115,124,132,132,124,141,146,146" data-labels="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="ينا,فبر,مار,أبر,ماي,يون,يول,أغس,سبت,أكت" data-colors="green,navy,lime"></svg>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.o2">Testing by sport · plan vs actual</h2><small data-i18n="p.o2d">Top sports · YTD</small></div><a class="btn btn-ghost xs" href="#testing"><span data-i18n="p.o2.fed">By federation & region</span></a></div>
+        <div class="bars-h">
+          <div><span data-i18n="p.sp1">Athletics</span><div class="bar"><i style="width:91%"></i></div><b>214</b></div>
+          <div><span data-i18n="p.sp2">Football</span><div class="bar"><i style="width:82%"></i></div><b>186</b></div>
+          <div><span data-i18n="p.sp3">Weightlifting</span><div class="bar"><i class="red" style="width:68%"></i></div><b>128</b></div>
+          <div><span data-i18n="p.sp4">Swimming</span><div class="bar"><i style="width:83%"></i></div><b>142</b></div>
+          <div><span data-i18n="p.sp5">Bodybuilding</span><div class="bar"><i class="amber" style="width:66%"></i></div><b>121</b></div>
+          <div><span data-i18n="p.sp6">Shooting</span><div class="bar"><i style="width:81%"></i></div><b>96</b></div>
+          <div><span data-i18n="p.sp7">Handball</span><div class="bar"><i style="width:85%"></i></div><b>88</b></div>
+          <div><span data-i18n="p.sp8">Cycling</span><div class="bar"><i class="navy" style="width:86%"></i></div><b>74</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g-23 mt-2">
+      <div class="stack">
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ai">Executive AI · what needs attention</span></h2>
+          <p data-i18n="p.aid">Advisory only · generated from app and website data · 23 · 10 · 2026 · 08:00</p>
+          <ul>
+            <li><span data-i18n="p.ai1"><b>Weightlifting is 14% behind its testing plan</b> while athletics is 9% ahead. Rebalancing 20 OOC tests in November would close the gap before the Gulf Games.</span></li>
+            <li><span data-i18n="p.ai2"><b>Two Speak Up cases point to the same club</b> (weightlifting section). Investigations recommends a targeted test mission; approval pending.</span></li>
+            <li><span data-i18n="p.ai3"><b>Results-management median has improved to 94 days</b> (2025: 131). One case exceeds 180 days due to a B-sample request abroad.</span></li>
+            <li><span data-i18n="p.ai4"><b>Education demand exceeds capacity</b>: 3,106 trained vs 2,200 target. A second Level-2 trainer would clear the 38-person waitlist.</span></li>
+          </ul>
+          <div class="acts"><button class="btn btn-outline xs" type="button" data-toast="Question box — ask the executive assistant (design preview)" data-toast-ar="صندوق الأسئلة — اسأل المساعد التنفيذي (معاينة تصميم)"><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ask">Ask a question about the data</span></button></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.o3">Case management · pipeline</h2><small data-i18n="p.o3d">Results management & disciplinary</small></div>
+          <div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="4,3,5,4,3" data-labels="Notification,B-sample,Hearing scheduled,Committee deliberation,Decision drafting" data-labels-ar="إخطار,عينة ب,جلسة مجدولة,مداولة اللجنة,صياغة القرار" data-colors="green,lime,navy,amber,red" data-center="19" data-center-label="open" data-center-label-ar="مفتوحة"></svg>
+            <div class="legend"><span><i style="background:var(--green)"></i><span data-i18n="p.c1">Notification</span><b>4</b></span><span><i style="background:var(--lime)"></i><span data-i18n="p.c2">B-sample</span><b>3</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.c3">Hearing scheduled</span><b>5</b></span><span><i style="background:var(--amber)"></i><span data-i18n="p.c4">Committee deliberation</span><b>4</b></span><span><i style="background:var(--red)"></i><span data-i18n="p.c5">Decision drafting</span><b>3</b></span></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.map">Field activity · GIS</h2><small data-i18n="p.mapd">Inspection missions, venues and events · last 30 days</small></div><div class="filters"><button class="chip is-on" type="button" data-i18n="p.m30">30 d</button><button class="chip" type="button" data-toast="Map period: 90 days" data-toast-ar="فترة الخريطة: 90 يوماً" data-i18n="p.m90">90 d</button></div></div>
+        <div class="map">
+          <svg viewBox="0 0 420 330" role="img" aria-label="Kuwait map with inspection locations" direction="ltr">
+            <path class="land" d="M70 30 L230 22 L290 60 L296 100 L270 118 L236 128 Q200 140 222 162 L262 176 L292 188 L300 215 L292 262 L270 296 L150 300 L84 262 L62 180 L66 90 Z"/>
+            <path class="land" d="M300 48 Q340 52 342 96 Q332 112 310 100 Q296 72 300 48 Z"/>
+            <circle class="land" cx="336" cy="150" r="8"/>
+            <text x="268" y="150" text-anchor="middle" style="font-size:9px;fill:#6f7b76;font-weight:500" data-i18n="p.mp.bay">Kuwait Bay</text>
+            <text x="110" y="200" style="font-size:9px;fill:#6f7b76;font-weight:500" data-i18n="p.mp.jahra">Al Jahra governorate</text>
+            <text x="150" y="270" style="font-size:9px;fill:#6f7b76;font-weight:500" data-i18n="p.mp.ahmadi">Al Ahmadi governorate</text>
+            <g class="pin amber" transform="translate(150,110)"><circle r="5"/><text x="9" y="4" data-i18n="p.mp.p1">Training camp · OOC</text></g>
+            <g class="pin" transform="translate(222,150)"><circle r="5"/><text x="-9" y="4" text-anchor="end" data-i18n="p.mp.p2">Jahra · 11</text></g>
+            <g class="pin" transform="translate(262,174)"><circle class="pulse" r="6"/><circle r="6"/><text x="-10" y="-8" text-anchor="end" data-i18n="p.mp.p3">HQ · Kuwait City · 42</text></g>
+            <g class="pin" transform="translate(280,186)"><circle r="5"/><text x="9" y="4" data-i18n="p.mp.p4">Hawalli · 18</text></g>
+            <g class="pin red" transform="translate(240,198)"><circle class="pulse" r="6"/><circle r="6"/><text x="-10" y="4" text-anchor="end" data-i18n="p.mp.p5">Farwaniya · targeted mission</text></g>
+            <g class="pin" transform="translate(286,214)"><circle r="5"/><text x="9" y="4" data-i18n="p.mp.p6">Mubarak Al-Kabeer · 9</text></g>
+            <g class="pin amber" transform="translate(290,250)"><circle r="5"/><text x="9" y="4" data-i18n="p.mp.p7">Ahmadi · 14</text></g>
+            <g class="pin" transform="translate(336,150)"><circle r="4"/><text x="8" y="-6" data-i18n="p.mp.p8">Failaka · event</text></g>
+          </svg>
+          <div class="map-legend"><span><i></i><span data-i18n="p.l1">Completed missions</span></span><span><i class="amber"></i><span data-i18n="p.l2">Planned · this week</span></span><span><i class="red"></i><span data-i18n="p.l3">Intelligence-led · pending approval</span></span></div>
+        </div>
+        <div class="kpis mt-2" style="grid-template-columns:repeat(4,minmax(0,1fr));gap:10px">
+          <div class="kpi" style="padding:12px 14px"><small data-i18n="p.mk1">Missions · 30 d</small><b style="font-size:1.4rem">118</b></div>
+          <div class="kpi" style="padding:12px 14px"><small data-i18n="p.mk2">Venues covered</small><b style="font-size:1.4rem">37</b></div>
+          <div class="kpi" style="padding:12px 14px"><small data-i18n="p.mk3">No-shows</small><b style="font-size:1.4rem">4</b></div>
+          <div class="kpi" style="padding:12px 14px"><small data-i18n="p.mk4">Avg. mission time</small><b style="font-size:1.4rem">2.4 h</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3 mt-2">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.o4">Training & awareness</h2><small data-i18n="p.o4d">Registrations by programme · current quarter</small></div><svg class="chart" data-chart="stacked" data-h="170" data-values="29,12,0,8,212|0,0,57,0,0" data-labels="Essentials,Coaching Clean,TUE & Prescribing,Schools,Conference" data-labels-ar="الأساسيات,التدريب النظيف,الإعفاء العلاجي,المدارس,المؤتمر" data-colors="green,lime"></svg><div class="legend mt-1" style="grid-auto-flow:column"><span><i style="background:var(--green)"></i><span data-i18n="p.onsite">On-site</span></span><span><i style="background:var(--lime)"></i><span data-i18n="p.online">Online</span></span></div><h3 class="small muted mt-2" style="font-weight:700;margin-bottom:8px" data-i18n="p.aw.h">Awareness campaign · reach YTD</h3><div class="health"><div><span data-i18n="p.aw.1">Awareness sessions</span><b class="num">52</b></div><div><span data-i18n="p.aw.2">Schools reached</span><b class="num">31</b></div><div><span data-i18n="p.aw.3">Participants reached</span><b class="num">4,860</b></div></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.o5">SLA & compliance</h2><small data-i18n="p.o5d">Statutory and internal targets</small></div><div class="bars-h"><div><span data-i18n="p.s1">Speak Up triage ≤ 48 h</span><div class="bar"><i style="width:100%"></i></div><b>100%</b></div><div><span data-i18n="p.s2">Data requests ≤ 30 d</span><div class="bar"><i style="width:100%"></i></div><b>100%</b></div><div><span data-i18n="p.s3">Results mgmt ≤ 120 d</span><div class="bar"><i class="amber" style="width:89%"></i></div><b>89%</b></div><div><span data-i18n="p.s4">Athlete notices sent on time</span><div class="bar"><i style="width:94%"></i></div><b>94%</b></div><div><span data-i18n="p.s5">Content AR + EN parity</span><div class="bar"><i style="width:98%"></i></div><b>98%</b></div><div><span data-i18n="p.s6">WADA CCQ actions closed</span><div class="bar"><i class="navy" style="width:92%"></i></div><b>23 / 25</b></div></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.o6">Digital channels</h2><small data-i18n="p.o6d">Website · app · AI assistant · 30 days</small></div><div class="health"><div><span data-i18n="p.d1">Website visitors</span><b class="num">48,210 <em class="small" style="color:var(--green);font-style:normal">+12%</em></b></div><div><span data-i18n="p.d2">App monthly active users</span><b class="num">2,914</b></div><div><span data-i18n="p.d3">AI assistant conversations</span><b class="num">6,380</b></div><div><span data-i18n="p.d4">Self-service resolution</span><b class="num">81%</b></div><div><span data-i18n="p.d5">Prohibited List look-ups</span><b class="num">19,402</b></div><div><span data-i18n="p.d6">Course registrations</span><b class="num">612</b></div><div><span data-i18n="p.d7">K-Net collections</span><b class="num">KD 2,400</b></div></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTING ===================== -->
+  <section data-view="testing">
+    <div class="card flush">
+      <div class="card-head"><div><h2 data-i18n="p.fd.h">Testing by federation · plan vs actual</h2><small data-i18n="p.fd.d">Top 8 federations + others · YTD 2026 · rows sum to the national testing plan</small></div><div class="filters" data-filter-group="fd"><button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.fd.all">All</span><span class="cnt"></span></button><button class="chip" type="button" data-filter="team"><span data-i18n="p.fd.team">Team sports</span><span class="cnt"></span></button><button class="chip" type="button" data-filter="ind"><span data-i18n="p.fd.ind">Individual sports</span><span class="cnt"></span></button></div></div>
+      <div class="tbl-wrap"><table class="tbl compact">
+        <thead><tr><th data-i18n="p.fd.c1">Federation</th><th class="r" data-i18n="p.fd.c2">Planned 2026</th><th class="r" data-i18n="p.fd.c3">Tests done</th><th data-i18n="p.fd.c4">% of plan</th><th class="r" data-i18n="p.fd.c5">IC / OOC</th><th class="r" data-i18n="p.fd.c6">AAFs</th></tr></thead>
+        <tbody data-filter-rows="fd">
+          <tr data-f="ind"><td><b data-i18n="p.fd.r1">Kuwait Athletics Federation</b></td><td class="r num">236</td><td class="r num">214</td><td><div class="sla"><div class="bar"><i style="width:91%"></i></div><small class="num">91%</small></div></td><td class="r num">118 / 96</td><td class="r num">2</td></tr>
+          <tr data-f="team"><td><b data-i18n="p.fd.r2">Kuwait Football Association</b></td><td class="r num">226</td><td class="r num">186</td><td><div class="sla"><div class="bar"><i style="width:82%"></i></div><small class="num">82%</small></div></td><td class="r num">132 / 54</td><td class="r num">1</td></tr>
+          <tr data-f="ind"><td><b data-i18n="p.fd.r3">Kuwait Swimming Federation</b></td><td class="r num">172</td><td class="r num">142</td><td><div class="sla"><div class="bar"><i style="width:83%"></i></div><small class="num">83%</small></div></td><td class="r num">78 / 64</td><td class="r num">0</td></tr>
+          <tr data-f="ind"><td><b data-i18n="p.fd.r4">Kuwait Weightlifting Federation</b></td><td class="r num">188</td><td class="r num">128</td><td><div class="sla red"><div class="bar"><i style="width:68%"></i></div><small class="num">68%</small></div></td><td class="r num">52 / 76</td><td class="r num">3</td></tr>
+          <tr data-f="ind"><td><b data-i18n="p.fd.r5">Kuwait Shooting Sport Federation</b></td><td class="r num">118</td><td class="r num">96</td><td><div class="sla"><div class="bar"><i style="width:81%"></i></div><small class="num">81%</small></div></td><td class="r num">70 / 26</td><td class="r num">0</td></tr>
+          <tr data-f="team"><td><b data-i18n="p.fd.r6">Kuwait Handball Association</b></td><td class="r num">104</td><td class="r num">88</td><td><div class="sla"><div class="bar"><i style="width:85%"></i></div><small class="num">85%</small></div></td><td class="r num">62 / 26</td><td class="r num">1</td></tr>
+          <tr data-f="ind"><td><b data-i18n="p.fd.r7">Kuwait Cycling Federation</b></td><td class="r num">86</td><td class="r num">74</td><td><div class="sla"><div class="bar"><i style="width:86%"></i></div><small class="num">86%</small></div></td><td class="r num">38 / 36</td><td class="r num">1</td></tr>
+          <tr data-f="team"><td><b data-i18n="p.fd.r8">Kuwait Volleyball Association</b></td><td class="r num">78</td><td class="r num">62</td><td><div class="sla warn"><div class="bar"><i style="width:79%"></i></div><small class="num">79%</small></div></td><td class="r num">44 / 18</td><td class="r num">0</td></tr>
+          <tr data-f="team ind"><td><b data-i18n="p.fd.r9">Other federations · 14</b><span class="sub" data-i18n="p.fd.r9d">Incl. basketball, bodybuilding, karate, fencing</span></td><td class="r num">352</td><td class="r num">294</td><td><div class="sla"><div class="bar"><i style="width:84%"></i></div><small class="num">84%</small></div></td><td class="r num">148 / 146</td><td class="r num">3</td></tr>
+          <tr><td><b data-i18n="p.fd.tot">Total · all federations</b></td><td class="r num"><b>1,560</b></td><td class="r num"><b>1,284</b></td><td><div class="sla"><div class="bar"><i style="width:82%"></i></div><small class="num">82%</small></div></td><td class="r num"><b>742 / 542</b></td><td class="r num"><b>11</b></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.fd.f">Planned = 2026 test distribution plan · weightlifting 14 points below the national rate (82%), athletics 9 points above · IC = in-competition, OOC = out-of-competition, AAF = adverse analytical finding</span></div>
+    </div>
+    <div class="grid g-32 mt-2">
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.te.h">Testing intensity · sport × month</h2><small data-i18n="p.te.d">Samples collected · darker = more · click a cell for the mission list</small></div></div>
+        <div class="heat">
+          <span></span><span class="hd">J</span><span class="hd">F</span><span class="hd">M</span><span class="hd">A</span><span class="hd">M</span><span class="hd">J</span><span class="hd">J</span><span class="hd">A</span><span class="hd">S</span><span class="hd">O</span><span class="hd">N</span><span class="hd">D</span>
+          <span class="lbl" data-i18n="p.sp1">Athletics</span><i style="--v:.3"></i><i style="--v:.4"></i><i style="--v:.6"></i><i style="--v:.7"></i><i style="--v:.9"></i><i style="--v:.8"></i><i style="--v:.5"></i><i style="--v:.9"></i><i style="--v:1"></i><i style="--v:.8"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp2">Football</span><i style="--v:.5"></i><i style="--v:.6"></i><i style="--v:.6"></i><i style="--v:.7"></i><i style="--v:.6"></i><i style="--v:.2"></i><i style="--v:.1"></i><i style="--v:.6"></i><i style="--v:.8"></i><i style="--v:.8"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp3">Weightlifting</span><i style="--v:.2"></i><i style="--v:.3"></i><i style="--v:.3"></i><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:.3"></i><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp4">Swimming</span><i style="--v:.3"></i><i style="--v:.3"></i><i style="--v:.5"></i><i style="--v:.6"></i><i style="--v:.7"></i><i style="--v:.8"></i><i style="--v:.7"></i><i style="--v:.6"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp5">Bodybuilding</span><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:.7"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:.3"></i><i style="--v:.3"></i><i style="--v:.5"></i><i style="--v:.6"></i><i style="--v:.7"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp6">Shooting</span><i style="--v:.2"></i><i style="--v:.2"></i><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:.3"></i><i style="--v:.2"></i><i style="--v:.3"></i><i style="--v:.5"></i><i style="--v:.6"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp7">Handball</span><i style="--v:.3"></i><i style="--v:.4"></i><i style="--v:.4"></i><i style="--v:.3"></i><i style="--v:.2"></i><i style="--v:.1"></i><i style="--v:.1"></i><i style="--v:.3"></i><i style="--v:.5"></i><i style="--v:.6"></i><i style="--v:0"></i><i style="--v:0"></i>
+          <span class="lbl" data-i18n="p.sp8">Cycling</span><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:.4"></i><i style="--v:.3"></i><i style="--v:.2"></i><i style="--v:.1"></i><i style="--v:.1"></i><i style="--v:.2"></i><i style="--v:.4"></i><i style="--v:.5"></i><i style="--v:0"></i><i style="--v:0"></i>
+        </div>
+        <div class="grid g2 mt-2">
+          <div><h3 class="small muted" style="font-weight:700;margin-bottom:8px" data-i18n="p.te.reg">By region (governorate)</h3><div class="bars-h"><div><span data-i18n="p.g1">Capital</span><div class="bar"><i style="width:90%"></i></div><b>412</b></div><div><span data-i18n="p.g2">Hawalli</span><div class="bar"><i style="width:62%"></i></div><b>284</b></div><div><span data-i18n="p.g3">Farwaniya</span><div class="bar"><i style="width:48%"></i></div><b>219</b></div><div><span data-i18n="p.g4">Ahmadi</span><div class="bar"><i style="width:40%"></i></div><b>183</b></div><div><span data-i18n="p.g5">Jahra</span><div class="bar"><i style="width:24%"></i></div><b>110</b></div><div><span data-i18n="p.g6">Mubarak Al-Kabeer</span><div class="bar"><i style="width:17%"></i></div><b>76</b></div></div></div>
+          <div><h3 class="small muted" style="font-weight:700;margin-bottom:8px" data-i18n="p.te.typ">By sample type & analysis</h3><div class="bars-h"><div><span data-i18n="p.ty1">Urine</span><div class="bar"><i style="width:100%"></i></div><b>1,062</b></div><div><span data-i18n="p.ty2">Blood</span><div class="bar"><i class="navy" style="width:21%"></i></div><b>222</b></div><div><span data-i18n="p.ty3">ABP (passport)</span><div class="bar"><i class="lime" style="width:14%"></i></div><b>148</b></div><div><span data-i18n="p.ty4">ESAs / GH analysis</span><div class="bar"><i class="amber" style="width:9%"></i></div><b>96</b></div></div></div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card flush">
+          <div class="card-head"><div><h2 data-i18n="p.in.h">Inspector productivity</h2><small data-i18n="p.in.d">Doping control officers · YTD · from the app</small></div></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="p.in.c1">Officer</th><th class="r" data-i18n="p.in.c2">Missions</th><th class="r" data-i18n="p.in.c3">Samples</th><th class="r" data-i18n="p.in.c4">On-time</th><th data-i18n="p.in.c5">Load</th></tr></thead>
+            <tbody>
+              <tr><td><b>DCO-07</b><span class="sub" data-i18n="p.in.sr">Senior · lead</span></td><td class="r num">96</td><td class="r num">212</td><td class="r num">99%</td><td><div class="sla"><div class="bar"><i style="width:92%"></i></div></div></td></tr>
+              <tr><td><b>DCO-03</b><span class="sub" data-i18n="p.in.sr">Senior · lead</span></td><td class="r num">88</td><td class="r num">190</td><td class="r num">97%</td><td><div class="sla"><div class="bar"><i style="width:84%"></i></div></div></td></tr>
+              <tr><td><b>DCO-12</b><span class="sub" data-i18n="p.in.of">Officer</span></td><td class="r num">74</td><td class="r num">151</td><td class="r num">98%</td><td><div class="sla"><div class="bar"><i style="width:70%"></i></div></div></td></tr>
+              <tr><td><b>DCO-15</b><span class="sub" data-i18n="p.in.of">Officer</span></td><td class="r num">69</td><td class="r num">143</td><td class="r num">94%</td><td><div class="sla"><div class="bar"><i style="width:66%"></i></div></div></td></tr>
+              <tr><td><b>DCO-21</b><span class="sub" data-i18n="p.in.ch">Chaperone · trainee</span></td><td class="r num">41</td><td class="r num">—</td><td class="r num">100%</td><td><div class="sla"><div class="bar"><i style="width:39%"></i></div></div></td></tr>
+              <tr><td><b>DCO-09</b><span class="sub" data-i18n="p.in.of">Officer</span></td><td class="r num">38</td><td class="r num">80</td><td class="r num">87%</td><td><div class="sla warn"><div class="bar"><i style="width:36%"></i></div></div></td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.in.f">14 active officers · average 2.4 h per mission · 4 no-shows escalated to results management</span></div>
+        </div>
+        <div class="card"><div class="card-head"><h2 data-i18n="p.in.plan">Plan execution · next 30 days</h2></div><div class="health"><div><span data-i18n="p.in.p1">Planned missions</span><b class="num">64</b></div><div><span data-i18n="p.in.p2">Assigned</span><b class="num">58 · 91%</b></div><div><span data-i18n="p.in.p3">Events covered</span><b class="num">9 / 9</b></div><div><span data-i18n="p.in.p4">Intelligence-led (pending approval)</span><b class="num">3</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CASES ===================== -->
+  <section data-view="cases">
+    <div class="grid g2">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ca.h1">Violations & sanctions · 5-year trend</h2></div><svg class="chart" data-chart="bars" data-h="200" data-values="14,11,13,9,11|9,8,10,7,8" data-labels="2022,2023,2024,2025,2026" data-colors="red,navy"></svg><div class="legend mt-1" style="grid-auto-flow:column"><span><i style="background:var(--red)"></i><span data-i18n="p.ca.l1">Violations asserted</span></span><span><i style="background:var(--navy)"></i><span data-i18n="p.ca.l2">Sanctions issued</span></span></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ca.h2">Sanctions by type · 2026</h2></div><div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="4,2,1,1" data-labels="Presence,Use,Refusal,Trafficking" data-labels-ar="وجود,استخدام,رفض,اتجار" data-colors="red,amber,navy,green" data-center="8" data-center-label="sanctions" data-center-label-ar="عقوبات"></svg><div class="legend"><span><i style="background:var(--red)"></i><span data-i18n="p.ca.t1">Presence (Art. 2.1)</span><b>4</b></span><span><i style="background:var(--amber)"></i><span data-i18n="p.ca.t2">Use (Art. 2.2)</span><b>2</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.ca.t3">Evading or refusing sample collection (Art. 2.3)</span><b>1</b></span><span><i style="background:var(--green)"></i><span data-i18n="p.ca.t4">Trafficking (Art. 2.7)</span><b>1</b></span></div></div></div>
+      <div class="card flush"><div class="card-head"><div><h2 data-i18n="p.ca.h3">Committee performance</h2><small data-i18n="p.ca.h3d">Results, Disciplinary & TUE committees · YTD</small></div></div><div class="tbl-wrap"><table class="tbl compact"><thead><tr><th data-i18n="p.ca.c1">Committee</th><th class="r" data-i18n="p.ca.c2">Cases assigned</th><th class="r" data-i18n="p.ca.c3">Decided</th><th class="r" data-i18n="p.ca.c4">Median days</th><th data-i18n="p.ca.c5">Next sitting</th></tr></thead><tbody><tr><td><b data-i18n="p.ca.r1">Disciplinary Committee</b></td><td class="r num">12</td><td class="r num">9</td><td class="r num">41</td><td class="num">04 · 11 · 2026</td></tr><tr><td><b data-i18n="p.ca.r2">TUE Committee</b></td><td class="r num">38</td><td class="r num">36</td><td class="r num">9</td><td class="num">28 · 10 · 2026</td></tr><tr><td><b data-i18n="p.ca.r4">Results Committee</b></td><td class="r num">19</td><td class="r num">14</td><td class="r num">94</td><td class="num" data-i18n="p.ca.weekly">Weekly</td></tr></tbody></table></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ca.h4">Results management · days to decision</h2><small data-i18n="p.ca.h4d">Target ≤ 120 days · median by quarter</small></div><svg class="chart" data-chart="area" data-h="200" data-values="131,118,104,98,94" data-labels="Q3 25,Q4 25,Q1 26,Q2 26,Q3 26" data-colors="green"></svg><p class="small muted mt-1" data-i18n="p.ca.note">Personal data never appears in the executive layer: all figures are aggregated from the app's results-management module.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== REPORTS ===================== -->
+  <section data-view="reports">
+    <div class="grid g-32">
+      <div class="card flush">
+        <div class="card-head"><div><h2 data-i18n="p.rp.h">Executive reports</h2><small data-i18n="p.rp.d">Generated from live data · exportable as PDF, Excel and CSV · bilingual</small></div><button class="btn btn-primary xs" type="button" data-toast="Custom report builder — design preview" data-toast-ar="منشئ التقارير المخصصة — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.rp.new">Custom report</span></button></div>
+        <div class="tbl-wrap"><table class="tbl compact">
+          <thead><tr><th data-i18n="p.rp.c1">Report</th><th data-i18n="p.rp.c2">Audience</th><th data-i18n="p.rp.c3">Schedule</th><th data-i18n="p.rp.c4">Last run</th><th class="r" data-i18n="p.rp.c5">Export</th></tr></thead>
+          <tbody>
+            <tr><td><b data-i18n="p.rp.r1">Quarterly performance report · Q3 2026</b><span class="sub" data-i18n="p.rp.r1d">18 pages · KPIs, testing, cases, education, finance</span></td><td data-i18n="p.rp.a1">Board of Directors</td><td data-i18n="p.rp.q">Quarterly</td><td class="num">21 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button><button class="btn btn-ghost xs" type="button" data-toast="Excel ready" data-toast-ar="Excel جاهز">XLS</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r2">Testing distribution plan · execution</b><span class="sub" data-i18n="p.rp.r2d">By sport, federation, region, period</span></td><td data-i18n="p.rp.a2">DG · Operations</td><td data-i18n="p.rp.m">Monthly</td><td class="num">01 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button><button class="btn btn-ghost xs" type="button" data-toast="CSV ready" data-toast-ar="CSV جاهز">CSV</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r3">WADA compliance (CCQ) status</b><span class="sub" data-i18n="p.rp.r3d">Corrective actions and evidence links</span></td><td data-i18n="p.rp.a3">DG · Legal</td><td data-i18n="p.rp.m">Monthly</td><td class="num">01 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r4">Speak Up & intelligence summary</b><span class="sub" data-i18n="p.rp.r4d">Aggregated · no case-level data</span></td><td data-i18n="p.rp.a4">DG · Investigations</td><td data-i18n="p.rp.m">Monthly</td><td class="num">01 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r5">Education & awareness impact</b><span class="sub" data-i18n="p.rp.r5d">Education participation, assessments, certificates</span></td><td data-i18n="p.rp.a5">Education · Communications</td><td data-i18n="p.rp.q">Quarterly</td><td class="num">05 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button><button class="btn btn-ghost xs" type="button" data-toast="Excel ready" data-toast-ar="Excel جاهز">XLS</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r6">Procurement & K-Net collections</b><span class="sub" data-i18n="p.rp.r6d">Tenders, purchases, settlements</span></td><td data-i18n="p.rp.a6">Finance</td><td data-i18n="p.rp.m">Monthly</td><td class="num">01 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="Excel ready" data-toast-ar="Excel جاهز">XLS</button><button class="btn btn-ghost xs" type="button" data-toast="CSV ready" data-toast-ar="CSV جاهز">CSV</button></div></td></tr>
+            <tr><td><b data-i18n="p.rp.r7">Digital services & AI assistant analytics</b><span class="sub" data-i18n="p.rp.r7d">Traffic, self-service rate, top intents</span></td><td data-i18n="p.rp.a7">IT · Communications</td><td data-i18n="p.rp.m">Monthly</td><td class="num">01 · 10 · 2026</td><td class="r"><div class="acts"><button class="btn btn-ghost xs" type="button" data-toast="PDF ready" data-toast-ar="PDF جاهز">PDF</button></div></td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.rp.sub">Subscriptions</h2></div><div class="switches"><div><div><b data-i18n="p.rp.s1">Weekly executive brief (email, Sunday 07:00)</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.rp.s2">SLA breach alerts (SMS)</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.rp.s3">Board pack 7 days before meetings</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.rp.s4">AI anomaly notifications</b></div><span class="switch"></span></div></div></div>
+        <div class="card soft"><div class="card-head"><h2 data-i18n="p.rp.src">Data sources</h2></div><div class="health"><div><span data-i18n="p.rp.d1">KADA mobile app (operations)</span><b class="st ok plain" data-i18n="p.rp.live">Live · every 5 min</b></div><div><span data-i18n="p.rp.d2">Website & e-services</span><b class="st ok plain" data-i18n="p.rp.live">Live · every 5 min</b></div><div><span data-i18n="p.rp.d3">Laboratory reports (uploaded)</span><b class="st ok plain" data-i18n="p.rp.daily">Daily refresh</b></div><div><span data-i18n="p.rp.d4">K-Net settlements</span><b class="st ok plain" data-i18n="p.rp.daily">Daily refresh</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "اللوحة التنفيذية — إدارة كادا",
+  "p.h": "لوحة التحليلات التنفيذية والإدارية", "p.d": "عرض لحظي لأداء الوكالة: خطة الفحص، وإدارة النتائج، و Speak Up، والتدريب، والمشتريات، ومستويات الخدمة والامتثال. تَرِد البيانات التشغيلية من تطبيق كادا، وبيانات الموقع من هذه المنصة.",
+  "p.per.q3": "الربع الثالث", "p.per.ytd": "منذ بداية 2026", "p.per.12m": "12 شهراً", "p.f.fed": "جميع الاتحادات", "p.f.reg": "جميع المناطق", "p.o2.fed": "حسب الاتحاد والمنطقة",
+  "p.pdf": "PDF", "p.xls": "Excel", "p.reports": "التقارير", "p.t1": "نظرة عامة", "p.t2": "الفحص والمفتشون", "p.t3": "القضايا والعقوبات واللجان", "p.t4": "التقارير والتصدير",
+  "p.k1": "إنجاز خطة الفحص", "p.k1d": "1,284 / 1,560 عينة · على المسار", "p.k2": "نتائج تحليلية مغايرة", "p.k2d": "0.86% من العينات · 2025: 0.91%", "p.k3": "قضايا مفتوحة", "p.k3d": "16 في إدارة النتائج · 3 أمام اللجنة التأديبية", "p.k4": "عقوبات صادرة · 2026", "p.k4d": "المتوسط 3.1 سنة · إيقافان مؤقتان", "p.k5": "المتدربون · 2026", "p.k5d": "جميع الدورات · 141% من هدف 2,200", "p.k6": "الالتزام بمستويات الخدمة", "p.k6d": "جميع المهل النظامية والداخلية",
+  "p.o1": "العينات المجموعة مقابل الخطة · 2026", "p.o1d": "داخل المنافسة وخارجها والخطة الشهرية", "p.ic": "داخل المنافسة", "p.ooc": "خارج المنافسة", "p.plan": "الخطة", "p.o2": "الفحص حسب الرياضة · الخطة مقابل الفعلي", "p.o2d": "أبرز الرياضات · منذ بداية العام",
+  "p.sp1": "ألعاب القوى", "p.sp2": "كرة القدم", "p.sp3": "رفع الأثقال", "p.sp4": "السباحة", "p.sp5": "كمال الأجسام", "p.sp6": "الرماية", "p.sp7": "كرة اليد", "p.sp8": "الدراجات",
+  "p.ai": "المساعد التنفيذي الذكي · ما يستحق الاهتمام", "p.aid": "استشاري فقط · مستخلص من بيانات التطبيق والموقع · 23 · 10 · 2026 · 08:00",
+  "p.ai1": "<b>رفع الأثقال متأخر 14% عن خطة الفحص</b> بينما تتقدم ألعاب القوى بنسبة 9%. إعادة توزيع 20 فحصاً خارج المنافسة في نوفمبر قد تسدّ الفجوة قبل دورة الألعاب الخليجية.", "p.ai2": "<b>بلاغان في Speak Up يشيران إلى النادي نفسه</b> (قسم رفع الأثقال). يوصي قسم التحقيقات بمهمة فحص مستهدفة، والموافقة معلّقة.",
+  "p.ai3": "<b>تحسّن الوسيط الزمني لإدارة النتائج إلى 94 يوماً</b> (2025: 131). تجاوزت قضية واحدة 180 يوماً بسبب طلب تحليل العينة «ب» في الخارج.", "p.ai4": "<b>الطلب على دورات التثقيف يفوق الطاقة الاستيعابية</b>: 3,106 متدربين مقابل هدف 2,200. تعيين مدرب ثانٍ للمستوى 2 كفيل بإنهاء قائمة انتظار تضم 38 شخصاً.", "p.ask": "اطرح سؤالاً عن البيانات",
+  "p.o3": "إدارة القضايا · مراحل المعالجة", "p.o3d": "إدارة النتائج والتأديب", "p.c1": "إخطار", "p.c2": "عينة ب", "p.c3": "جلسة مجدولة", "p.c4": "مداولة اللجنة", "p.c5": "صياغة القرار",
+  "p.map": "النشاط الميداني · الخريطة الجغرافية (GIS)", "p.mapd": "مهام الفحص والمواقع والفعاليات · آخر 30 يوماً", "p.m30": "30 يوماً", "p.m90": "90 يوماً", "p.l1": "مهام منجزة", "p.l2": "مخططة · هذا الأسبوع", "p.l3": "مبنية على معلومات استخبارية · بانتظار الموافقة",
+  "p.mp.bay": "جون الكويت", "p.mp.jahra": "محافظة الجهراء", "p.mp.ahmadi": "محافظة الأحمدي", "p.mp.p1": "معسكر تدريب · خارج المنافسة", "p.mp.p2": "الجهراء · 11", "p.mp.p3": "المقر · مدينة الكويت · 42", "p.mp.p4": "حولي · 18", "p.mp.p5": "الفروانية · مهمة مستهدفة", "p.mp.p6": "مبارك الكبير · 9", "p.mp.p7": "الأحمدي · 14", "p.mp.p8": "فيلكا · فعالية",
+  "p.mk1": "المهام · 30 يوماً", "p.mk2": "المواقع المغطاة", "p.mk3": "حالات عدم الحضور", "p.mk4": "متوسط زمن المهمة",
+  "p.o4": "التدريب والتوعية", "p.o4d": "التسجيلات حسب البرنامج · الربع الحالي", "p.onsite": "حضوري", "p.online": "عن بُعد", "p.aw.h": "حملة التوعية · الوصول منذ بداية العام", "p.aw.1": "جلسات توعوية", "p.aw.2": "مدارس تمّ الوصول إليها", "p.aw.3": "مشاركون تمّ الوصول إليهم", "p.o5": "مستويات الخدمة والامتثال", "p.o5d": "المستهدفات النظامية والداخلية",
+  "p.s1": "فرز Speak Up ≤ 48 ساعة", "p.s2": "طلبات البيانات ≤ 30 يوماً", "p.s3": "إدارة النتائج ≤ 120 يوماً", "p.s4": "إخطارات الرياضيين في الموعد", "p.s5": "تكافؤ المحتوى عربي + إنجليزي", "p.s6": "إجراءات استبيان امتثال وادا المغلقة",
+  "p.o6": "القنوات الرقمية", "p.o6d": "الموقع · التطبيق · المساعد الذكي · 30 يوماً", "p.d1": "زوار الموقع", "p.d2": "مستخدمو التطبيق النشطون شهرياً", "p.d3": "محادثات المساعد الذكي", "p.d4": "نسبة الحل بالخدمة الذاتية", "p.d5": "عمليات البحث في قائمة المحظورات", "p.d6": "تسجيلات الدورات", "p.d7": "تحصيلات K-Net",
+  "p.fd.h": "الفحص حسب الاتحاد · الخطة مقابل الفعلي", "p.fd.d": "أعلى 8 اتحادات + الاتحادات الأخرى · منذ بداية 2026 · مجموع الصفوف يطابق خطة الفحص الوطنية", "p.fd.all": "الكل", "p.fd.team": "الرياضات الجماعية", "p.fd.ind": "الرياضات الفردية",
+  "p.fd.c1": "الاتحاد", "p.fd.c2": "المخطط 2026", "p.fd.c3": "الفحوصات المنفّذة", "p.fd.c4": "نسبة الإنجاز", "p.fd.c5": "داخل / خارج المنافسة", "p.fd.c6": "نتائج تحليلية مغايرة",
+  "p.fd.r1": "الاتحاد الكويتي لألعاب القوى", "p.fd.r2": "الاتحاد الكويتي لكرة القدم", "p.fd.r3": "الاتحاد الكويتي للسباحة", "p.fd.r4": "الاتحاد الكويتي لرفع الأثقال", "p.fd.r5": "الاتحاد الكويتي للرماية", "p.fd.r6": "الاتحاد الكويتي لكرة اليد", "p.fd.r7": "الاتحاد الكويتي للدراجات", "p.fd.r8": "الاتحاد الكويتي للكرة الطائرة",
+  "p.fd.r9": "اتحادات أخرى · 14", "p.fd.r9d": "منها كرة السلة وكمال الأجسام والكاراتيه والمبارزة", "p.fd.tot": "الإجمالي · جميع الاتحادات",
+  "p.fd.f": "المخطط = خطة توزيع الفحوصات لعام 2026 · رفع الأثقال أدنى من المعدل الوطني (82%) بـ 14 نقطة، وألعاب القوى أعلى منه بـ 9 نقاط",
+  "p.te.h": "كثافة الفحص · الرياضة × الشهر", "p.te.d": "العينات المجموعة · الأغمق = أكثر · انقر على خلية لعرض قائمة المهام", "p.te.reg": "حسب المنطقة (المحافظة)", "p.g1": "العاصمة", "p.g2": "حولي", "p.g3": "الفروانية", "p.g4": "الأحمدي", "p.g5": "الجهراء", "p.g6": "مبارك الكبير",
+  "p.te.typ": "حسب نوع العينة والتحليل", "p.ty1": "بول", "p.ty2": "دم", "p.ty3": "جواز السفر البيولوجي للرياضي", "p.ty4": "تحليل ESAs / هرمون النمو",
+  "p.in.h": "إنتاجية المفتشين", "p.in.d": "مسؤولو مراقبة المنشطات · منذ بداية العام · من التطبيق", "p.in.c1": "المسؤول", "p.in.c2": "مهام", "p.in.c3": "عينات", "p.in.c4": "في الموعد", "p.in.c5": "عبء العمل", "p.in.sr": "أول · رئيس فريق", "p.in.of": "مسؤول", "p.in.ch": "مرافق · متدرب", "p.in.f": "14 مسؤولاً نشطاً · متوسط 2.4 ساعة للمهمة · 4 حالات عدم حضور صُعّدت إلى إدارة النتائج",
+  "p.in.plan": "تنفيذ الخطة · الأيام الثلاثون القادمة", "p.in.p1": "مهام مخططة", "p.in.p2": "مهام مسندة", "p.in.p3": "فعاليات مغطاة", "p.in.p4": "مبنية على معلومات استخبارية (بانتظار الموافقة)",
+  "p.ca.h1": "الانتهاكات والعقوبات · الاتجاه خلال 5 سنوات", "p.ca.l1": "انتهاكات مُسندة", "p.ca.l2": "عقوبات صادرة", "p.ca.h2": "العقوبات حسب النوع · 2026", "p.ca.t1": "وجود مادة محظورة (المادة 2.1)", "p.ca.t2": "استخدام (المادة 2.2)", "p.ca.t3": "التهرب من جمع العينة أو رفضه (المادة 2.3)", "p.ca.t4": "اتجار (المادة 2.7)",
+  "p.ca.h3": "أداء اللجان", "p.ca.h3d": "لجان النتائج والتأديب والإعفاء للاستعمال العلاجي · منذ بداية العام", "p.ca.c1": "اللجنة", "p.ca.c2": "قضايا مسندة", "p.ca.c3": "مبتوت فيها", "p.ca.c4": "وسيط الأيام", "p.ca.c5": "الجلسة القادمة", "p.ca.r1": "اللجنة التأديبية", "p.ca.r2": "لجنة الإعفاء للاستعمال العلاجي", "p.ca.r4": "لجنة النتائج", "p.ca.weekly": "أسبوعياً",
+  "p.ca.h4": "إدارة النتائج · الأيام حتى صدور القرار", "p.ca.h4d": "المستهدف ≤ 120 يوماً · الوسيط لكل ربع", "p.ca.note": "لا تظهر أي بيانات شخصية في الطبقة التنفيذية: جميع الأرقام مجمّعة من وحدة إدارة النتائج في التطبيق.",
+  "p.rp.h": "التقارير التنفيذية", "p.rp.d": "تُولَّد من البيانات الحية · قابلة للتصدير بصيغ PDF و Excel و CSV · ثنائية اللغة", "p.rp.new": "تقرير مخصص", "p.rp.c1": "التقرير", "p.rp.c2": "الجهة المستهدفة", "p.rp.c3": "الجدولة", "p.rp.c4": "آخر تشغيل", "p.rp.c5": "تصدير",
+  "p.rp.r1": "تقرير الأداء الربع سنوي · الربع الثالث 2026", "p.rp.r1d": "18 صفحة · المؤشرات والفحص والقضايا والتثقيف والمالية", "p.rp.a1": "مجلس الإدارة", "p.rp.q": "ربع سنوي", "p.rp.m": "شهري",
+  "p.rp.r2": "خطة توزيع الفحوصات · التنفيذ", "p.rp.r2d": "حسب الرياضة والاتحاد والمنطقة والفترة", "p.rp.a2": "المدير العام · العمليات", "p.rp.r3": "حالة الامتثال لوادا (CCQ)", "p.rp.r3d": "الإجراءات التصحيحية وروابط الأدلة", "p.rp.a3": "المدير العام · الشؤون القانونية",
+  "p.rp.r4": "ملخص Speak Up والمعلومات الاستخبارية", "p.rp.r4d": "بيانات مجمّعة · دون تفاصيل القضايا", "p.rp.a4": "المدير العام · التحقيقات", "p.rp.r5": "أثر التثقيف والتوعية", "p.rp.r5d": "المشاركة في برنامج التثقيف والتقييمات والشهادات", "p.rp.a5": "التثقيف · الاتصال المؤسسي",
+  "p.rp.r6": "المشتريات وتحصيلات K-Net", "p.rp.r6d": "المناقصات والمشتريات والتسويات", "p.rp.a6": "المالية", "p.rp.r7": "تحليلات الخدمات الرقمية والمساعد الذكي", "p.rp.r7d": "الزيارات ونسبة الخدمة الذاتية وأكثر الأسئلة تكراراً", "p.rp.a7": "تقنية المعلومات · الاتصال المؤسسي",
+  "p.rp.sub": "الاشتراكات", "p.rp.s1": "الموجز التنفيذي الأسبوعي (بريد إلكتروني، الأحد 07:00)", "p.rp.s2": "تنبيهات تجاوز المهل (رسائل نصية)", "p.rp.s3": "حزمة تقارير المجلس قبل الاجتماعات بـ 7 أيام", "p.rp.s4": "تنبيهات الذكاء الاصطناعي بالأنماط غير المعتادة",
+  "p.rp.src": "مصادر البيانات", "p.rp.d1": "تطبيق كادا (العمليات)", "p.rp.live": "مباشر · كل 5 دقائق", "p.rp.d2": "الموقع والخدمات الإلكترونية", "p.rp.d3": "تقارير المختبرات (المرفوعة)", "p.rp.daily": "تحديث يومي", "p.rp.d4": "تسويات K-Net"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

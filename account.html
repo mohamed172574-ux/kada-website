@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">My account — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body data-require="public">
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain short acct-hero">
+      <div class="wrap">
+        <span class="signin-ava xl" data-signed-ava>Y</span>
+        <div>
+          <p class="kicker" style="color:var(--lime)" data-i18n="p.k">My account · Kuwait Mobile ID</p>
+          <h1 class="display"><span data-i18n="p.hi">Welcome,</span> <span data-signed-text="short">Yousef</span></h1>
+          <div class="acct-meta">
+            <span class="badge ok" data-signed-text="role">Registered athlete · Athletics</span>
+            <span data-signed-text="org">Kuwait Athletics Federation</span>
+            <span class="num"><span data-i18n="p.civil">Civil ID</span> <span data-signed-text="civil">•••• 2194</span></span>
+          </div>
+        </div>
+        <div class="acct-acts">
+          <a class="btn btn-outline" href="training.html"><span data-i18n="p.a1">Browse courses</span></a>
+          <a class="btn btn-outline" href="data-request.html"><span data-i18n="p.a2">New data request</span></a>
+          <a class="btn btn-primary" href="tue.html#apply" data-signed-only="athlete" hidden><span data-i18n="p.a3">New TUE application</span></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="subnav"><div class="wrap">
+      <a href="#regs" class="is-on" data-i18n="p.t1">My registrations</a>
+      <a href="#certs" data-i18n="p.t2">Certificates</a>
+      <a href="#reqs" data-i18n="p.t3">My requests</a>
+      <a href="#profile" data-i18n="p.t4">Profile</a>
+      <a href="#notif" data-i18n="p.t5">Notifications</a>
+    </div></div>
+
+    <section class="section tight soft">
+      <div class="wrap">
+        <div class="tiles reveal">
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small data-i18n="p.k1">Upcoming</small><b class="num">2</b><em data-i18n="p.k1d">Anti-Doping Essentials · 18 Nov</em></div>
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><path d="M12 15l-3 6 3-1.5L15 21z"/><circle cx="12" cy="9" r="6"/></svg><small data-i18n="p.k2">Certificates</small><b class="num">2</b><em data-i18n="p.k2d">Verified · downloadable</em></div>
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><path d="M4 4h16v16H4z"/><path d="M8 12h8M8 8h8M8 16h5"/></svg><small data-i18n="p.k3">Open requests</small><b class="num" data-signed-only="athlete" hidden>2</b><em class="warn" data-signed-only="athlete" hidden data-i18n="p.k3a">TUE · 1 document needed · DAR · 19 days left</em><b class="num" data-signed-only="citizen" hidden>1</b><em class="warn" data-signed-only="citizen" hidden data-i18n="p.k3d">DAR · 19 days left</em></div>
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4"/></svg><small data-i18n="p.k4">Unread notices</small><b class="num">3</b><em data-i18n="p.k4d">Email + SMS on</em></div>
+        </div>
+
+        <div class="with-side mt-2">
+          <div class="stack">
+            <div class="block reveal" id="regs">
+              <div class="block-head"><h2 data-i18n="p.r.t">My registrations<small>Courses and events — confirmations, QR tickets and receipts</small></h2><a class="btn btn-ghost" href="training.html"><span data-i18n="p.a1">Browse courses</span></a></div>
+              <div class="table-wrap"><table class="table">
+                <thead><tr><th data-i18n="p.r.h1">Course / event</th><th data-i18n="c.date">Date</th><th data-i18n="p.r.h3">Format</th><th data-i18n="c.status">Status</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><b data-i18n="p.r.1">Anti-Doping Essentials for athletes</b><span class="sub" data-i18n="p.r.1s">TR-2026-1148 · seat confirmed</span></td><td class="num">18 · 11 · 2026<span class="sub">17:00</span></td><td data-i18n="p.r.f1">In person<span class="sub">KADA HQ</span></td><td><span class="badge ok" data-i18n="p.r.st1">Confirmed</span></td><td><div style="display:flex;gap:10px;align-items:center"><span class="qr-mini" title="QR ticket"></span><a class="row-link" href="course.html?id=essentials"><span data-i18n="p.r.v">Details</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></td></tr>
+                  <tr><td><b data-i18n="p.r.2">National Clean Sport Conference 2026</b><span class="sub" data-i18n="p.r.2s">TR-2026-1213 · free for KADA-registered athletes</span></td><td class="num">14 · 12 · 2026<span class="sub">08:30</span></td><td data-i18n="p.r.f2">In person<span class="sub">JW Marriott, Kuwait City</span></td><td><span class="badge ok" data-i18n="p.r.st1">Confirmed</span></td><td><a class="row-link" href="event.html"><span data-i18n="p.r.v">Details</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b data-i18n="p.r.3">ADEL by WADA — Athlete e-learning</b><span class="sub" data-i18n="p.r.3s">Completed · certificate recognised by KADA</span></td><td class="num">22 · 09 · 2026</td><td data-i18n="p.r.f3">Online<span class="sub">Self-paced</span></td><td><span class="badge plain" data-i18n="p.r.st3">Completed</span></td><td><a class="row-link" href="#certs"><span data-i18n="p.r.c">Certificate</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b data-i18n="p.r.4">Supplements clinic</b><span class="sub" data-i18n="p.r.4s">Attended</span></td><td class="num">14 · 05 · 2026</td><td data-i18n="p.r.f1">In person<span class="sub">KADA HQ</span></td><td><span class="badge plain" data-i18n="p.r.st3">Completed</span></td><td><a class="row-link" href="#certs"><span data-i18n="p.r.c">Certificate</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="block reveal" id="certs">
+              <div class="block-head"><h2 data-i18n="p.c.t">Certificates<small>Issued to your account and your federation — each carries a public verification number</small></h2></div>
+              <div style="display:grid;gap:12px">
+                <a class="doc" href="#"><span class="doc-type green">PDF</span><div><b data-i18n="p.c.1">ADEL by WADA — Recognised e-learning certificate</b><small><span data-i18n="p.c.ver">Verification no.</span> <span class="num">EDU-A-26-08841</span> · <span class="num">22 · 09 · 2026</span></small></div><span class="btn btn-ghost"><svg viewBox="0 0 24 24" class="ico"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg><span data-i18n="c.download">Download</span></span></a>
+                <a class="doc" href="#"><span class="doc-type green">PDF</span><div><b data-i18n="p.c.2">Supplements clinic — Attendance certificate</b><small><span data-i18n="p.c.ver">Verification no.</span> <span class="num">EDU-S-26-02310</span> · <span class="num">14 · 05 · 2026</span></small></div><span class="btn btn-ghost"><svg viewBox="0 0 24 24" class="ico"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg><span data-i18n="c.download">Download</span></span></a>
+              </div>
+            </div>
+
+            <div class="block reveal" id="reqs">
+              <div class="block-head"><h2 data-i18n="p.q.t">My requests<small>Tracked by reference — data requests are answered within 30 days, TUE applications usually within 21 days of a complete file</small></h2><div class="chips"><a class="btn btn-ghost" href="tue.html#apply" data-signed-only="athlete" hidden><span data-i18n="p.a3">New TUE application</span></a><a class="btn btn-ghost" href="data-request.html"><span data-i18n="p.a2">New data request</span></a></div></div>
+              <div class="table-wrap"><table class="table">
+                <thead><tr><th data-i18n="p.q.h1">Request</th><th data-i18n="p.q.h3">Submitted</th><th data-i18n="p.q.h4">Progress</th><th data-i18n="c.status">Status</th><th></th></tr></thead>
+                <tbody>
+                  <tr data-signed-only="athlete"><td><b class="num">TUE-2026-0142</b><span class="sub" data-i18n="p.q.ty3">Therapeutic use exemption — insulin</span></td><td class="num">14 · 10 · 2026</td><td><div class="cap"><div class="steps-mini"><i class="done"></i><i class="done"></i><i class="now"></i><i></i></div><small data-i18n="p.q.p3">Received → File complete → <b>Committee request</b> → Decision</small></div></td><td><span class="badge warn" data-i18n="p.q.s3">Action needed · 1 document</span></td><td><a class="row-link" href="tue.html#track"><span data-i18n="p.r.v">Details</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b class="num">DAR-2026-0418</b><span class="sub" data-i18n="p.q.ty1">Access — copy of my data</span></td><td class="num">10 · 10 · 2026</td><td><div class="cap"><div class="steps-mini"><i class="done"></i><i class="done"></i><i class="now"></i><i></i></div><small data-i18n="p.q.p1">Received → Identity verified → <b>Processing</b> → Ready</small></div></td><td><span class="badge info" data-i18n="p.q.s1">In progress · 19 days left</span></td><td><a class="row-link" href="#"><span data-i18n="p.r.v">Details</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b class="num">DAR-2025-0291</b><span class="sub" data-i18n="p.q.ty2">Correction — phone number</span></td><td class="num">03 · 02 · 2025</td><td><div class="cap"><div class="steps-mini"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div><small data-i18n="p.q.p2">Completed in 6 days</small></div></td><td><span class="badge ok" data-i18n="p.q.s2">Closed</span></td><td><a class="row-link" href="#"><span data-i18n="p.r.v">Details</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="block reveal" id="profile">
+              <div class="block-head"><h2 data-i18n="p.p.t">Profile<small>Identity details come from Mobile ID and cannot be edited here; contact details can</small></h2><button class="btn btn-ghost" type="button"><span data-i18n="p.p.edit">Edit contact details</span></button></div>
+              <div class="kv">
+                <div data-i18n="c.name">Name</div><div data-signed-text="name">Yousef Al-Rashidi</div>
+                <div data-i18n="p.civil">Civil ID</div><div class="num" data-signed-text="civil">•••• 2194</div>
+                <div data-i18n="p.p.role">Relationship with KADA</div><div data-signed-text="role">Registered athlete · Athletics</div>
+                <div data-i18n="p.p.org">Club / federation</div><div data-signed-text="org">Kuwait Athletics Federation</div>
+                <div data-i18n="c.email">Email</div><div class="num" data-signed-text="email">yousef.r@example.com</div>
+                <div data-i18n="c.phone">Mobile</div><div class="num" data-signed-text="phone">+965 9900 2194</div>
+                <div data-i18n="p.p.lang">Preferred language</div><div data-i18n="p.p.langv">Arabic</div>
+                <div data-i18n="p.p.consent">Consents</div><div data-i18n="p.p.consentv">Education emails ✓ · Research surveys ✗ · <a href="data-request.html" style="color:var(--green);font-weight:700">manage</a></div>
+              </div>
+            </div>
+
+            <div class="block reveal" id="notif">
+              <div class="block-head"><h2 data-i18n="p.n.t">Notifications<small>How KADA reaches you — confirmations, reminders and request updates</small></h2></div>
+              <div class="grid-2" style="align-items:start">
+                <div class="switches">
+                  <label><span data-i18n="p.n.1">Email<small>Confirmations, certificates, request responses</small></span><input type="checkbox" checked></label>
+                  <label><span data-i18n="p.n.2">SMS<small>Reminders 24h before a course or event</small></span><input type="checkbox" checked></label>
+                  <label><span data-i18n="p.n.3">Education newsletter<small>Monthly education updates</small></span><input type="checkbox" checked></label>
+                </div>
+                <div class="feed">
+                  <div data-signed-only="athlete" hidden><i class="warn"></i><div><b data-i18n="p.n.f0">TUE-2026-0142 — committee request</b><small data-i18n="p.n.f0d">One more document needed · sent through the Results Department</small></div><span class="num">20 · 10</span></div>
+                  <div><i></i><div><b data-i18n="p.n.f3">Seat confirmed — Conference 2026</b><small data-i18n="p.n.f3d">Free for KADA-registered athletes · QR ticket attached</small></div><span class="num">15 · 10</span></div>
+                  <div><i class="info"></i><div><b data-i18n="p.n.f2">DAR-2026-0418 — identity verified</b><small data-i18n="p.n.f2d">Your request is now being processed</small></div><span class="num">11 · 10</span></div>
+                  <div><i></i><div><b data-i18n="p.n.f1">Seat confirmed — Anti-Doping Essentials</b><small data-i18n="p.n.f1d">QR ticket attached · email + SMS</small></div><span class="num">02 · 10</span></div>
+                  <div><i></i><div><b data-i18n="p.n.f4">Certificate recognised</b><small data-i18n="p.n.f4d">ADEL by WADA · shared with your federation too</small></div><span class="num">22 · 09</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="side">
+            <div class="side-box navy" data-signed-only="athlete">
+              <h4 data-i18n="p.sb.app">Your athlete workspace is in the app</h4>
+              <p data-i18n="p.sb.appd">Test results, testing history, TUE status, the medicine checker and secure messages from the Results Department live in the KADA mobile app — not on the website.</p>
+              <ul class="checks" style="margin:14px 0 18px;color:#fff"><li data-i18n="p.sb.a1">Anti-Doping Essentials · 18 Nov · seat confirmed</li><li data-i18n="p.sb.a2">Sample A-20419 · result available</li><li data-i18n="p.sb.a3">Secure inbox · 1 message</li></ul>
+              <a class="btn btn-outline" href="index.html#app"><span data-i18n="p.sb.appb">Open the app preview</span></a>
+            </div>
+            <div class="side-box navy" data-signed-only="citizen">
+              <h4 data-i18n="p.sb.coach">Coach resources</h4>
+              <p data-i18n="p.sb.coachd">As athlete support personnel you are bound by the World Anti-Doping Code. The Coaching Clean course and the Parents &amp; Coaches handbook cover your duties.</p>
+              <a class="btn btn-outline" href="education.html"><span data-i18n="p.sb.coachb">Education for coaches</span></a>
+            </div>
+            <div class="side-box"><h4 data-i18n="p.sb.q">Quick links</h4><a href="prohibited.html" data-i18n="nav.s2">Prohibited List &amp; Medicine Checker</a><a href="publications.html" data-i18n="nav.m4">Research &amp; Publications</a><a href="assistant.html" data-i18n="nav.s8">KADA AI Assistant</a><a href="faq.html" data-i18n="nav.faq">FAQs</a></div>
+            <div class="side-box"><h4 data-i18n="p.sb.s">Security</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.sd">Signed in with Kuwait Mobile ID. Sessions expire after 30 minutes of inactivity. Identity data from Mobile ID is used only to verify you and is protected under KADA's privacy policy.</p><button class="btn btn-ghost" type="button" data-signin-out><span data-i18n="auth.out">Sign out</span></button></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "حسابي — كادا",
+    "p.k": "حسابي · هويتي", "p.hi": "مرحباً،", "p.civil": "الرقم المدني", "p.a1": "تصفح الدورات", "p.a2": "طلب بيانات جديد", "p.a3": "طلب إعفاء جديد",
+    "p.t1": "تسجيلاتي", "p.t2": "الشهادات", "p.t3": "طلباتي", "p.t4": "الملف الشخصي", "p.t5": "الإشعارات",
+    "p.k1": "تسجيلات قادمة", "p.k1d": "أساسيات مكافحة المنشطات · 18 نوفمبر", "p.k2": "الشهادات", "p.k2d": "موثّقة · قابلة للتنزيل", "p.k3": "طلبات مفتوحة", "p.k3d": "طلب بيانات · تبقّى 19 يوماً", "p.k3a": "إعفاء · مطلوب مستند · بيانات · تبقّى 19 يوماً", "p.k4": "إشعارات غير مقروءة", "p.k4d": "البريد الإلكتروني والرسائل النصية مفعّلة",
+    "p.r.t": "تسجيلاتي<small>الدورات والفعاليات — التأكيدات وتذاكر QR والإيصالات</small>", "p.r.h1": "الدورة / الفعالية", "p.r.h3": "الصيغة", "p.r.v": "التفاصيل", "p.r.c": "الشهادة",
+    "p.r.1": "أساسيات مكافحة المنشطات للرياضيين", "p.r.1s": "TR-2026-1148 · المقعد مؤكد", "p.r.f1": "حضوري<span class=\"sub\">مقر الوكالة</span>", "p.r.st1": "مؤكد",
+    "p.r.2": "المؤتمر الوطني للرياضة النظيفة 2026", "p.r.2s": "TR-2026-1213 · مجاني للرياضيين المسجلين لدى الوكالة", "p.r.f2": "حضوري<span class=\"sub\">فندق جي دبليو ماريوت، مدينة الكويت</span>",
+    "p.r.3": "برنامج ADEL من وادا — التعلّم الإلكتروني للرياضيين", "p.r.3s": "مكتملة · شهادة معتمدة لدى الوكالة", "p.r.f3": "عبر الإنترنت<span class=\"sub\">تعلّم ذاتي</span>", "p.r.st3": "مكتملة",
+    "p.r.4": "عيادة المكملات الغذائية", "p.r.4s": "تم الحضور",
+    "p.c.t": "الشهادات<small>تصدر إلى حسابك وإلى اتحادك — ولكل شهادة رقم تحقق علني</small>", "p.c.ver": "رقم التحقق", "p.c.1": "برنامج ADEL من وادا — شهادة تعلّم إلكتروني معتمدة", "p.c.2": "عيادة المكملات الغذائية — شهادة حضور",
+    "p.q.t": "طلباتي<small>تُتابَع بالرقم المرجعي — يُردّ على طلبات البيانات خلال 30 يوماً، وعلى طلبات الإعفاء للاستعمال العلاجي عادةً خلال 21 يوماً من اكتمال الملف</small>", "p.q.h1": "الطلب", "p.q.h3": "تاريخ التقديم", "p.q.h4": "مراحل الطلب",
+    "p.q.ty1": "اطلاع — نسخة من بياناتي", "p.q.p1": "استُلم ← تم التحقق من الهوية ← <b>قيد المعالجة</b> ← جاهز", "p.q.s1": "قيد المعالجة · تبقّى 19 يوماً",
+    "p.q.ty2": "تصحيح — رقم الهاتف", "p.q.p2": "أُنجز خلال 6 أيام", "p.q.s2": "مغلق",
+    "p.q.ty3": "الإعفاء للاستعمال العلاجي — الإنسولين", "p.q.p3": "استُلم ← اكتمل الملف ← <b>طلب من اللجنة</b> ← القرار", "p.q.s3": "مطلوب إجراء · مستند واحد",
+    "p.p.t": "الملف الشخصي<small>تُستمد بيانات الهوية من هويتي ولا يمكن تعديلها هنا، أما بيانات التواصل فقابلة للتعديل</small>", "p.p.edit": "تعديل بيانات التواصل", "p.p.role": "صفتك لدى الوكالة", "p.p.org": "النادي / الاتحاد", "p.p.lang": "اللغة المفضلة", "p.p.langv": "العربية", "p.p.consent": "الموافقات", "p.p.consentv": "رسائل التوعية ✓ · استبيانات البحث ✗ · <a href=\"data-request.html\" style=\"color:var(--green);font-weight:700\">إدارة</a>",
+    "p.n.t": "الإشعارات<small>وسائل تواصل الوكالة معك — التأكيدات والتذكيرات وتحديثات الطلبات</small>", "p.n.1": "البريد الإلكتروني<small>التأكيدات والشهادات والردود على الطلبات</small>", "p.n.2": "الرسائل النصية<small>تذكير قبل موعد الدورة أو الفعالية بـ24 ساعة</small>", "p.n.3": "النشرة التوعوية<small>مستجدات التثقيف الشهرية</small>",
+    "p.n.f0": "TUE-2026-0142 — طلب من اللجنة", "p.n.f0d": "مطلوب مستند إضافي · أُرسل عبر إدارة النتائج", "p.n.f1": "تأكيد المقعد — أساسيات مكافحة المنشطات", "p.n.f1d": "تذكرة QR مرفقة · بريد إلكتروني ورسالة نصية", "p.n.f2": "DAR-2026-0418 — تم التحقق من الهوية", "p.n.f2d": "طلبك الآن قيد المعالجة", "p.n.f3": "تأكيد المقعد — مؤتمر 2026", "p.n.f3d": "مجاني للرياضيين المسجلين لدى الوكالة · تذكرة QR مرفقة", "p.n.f4": "اعتُمدت الشهادة", "p.n.f4d": "برنامج ADEL من وادا · أُرسلت إلى اتحادك أيضاً",
+    "p.sb.app": "مساحتك بصفتك رياضياً في التطبيق", "p.sb.appd": "نتائج الفحوصات وسجلها وحالة طلبات الإعفاء للاستعمال العلاجي وفاحص الأدوية والرسائل الآمنة من إدارة النتائج — كلها في تطبيق الوكالة، لا على الموقع.", "p.sb.a1": "أساسيات مكافحة المنشطات · 18 نوفمبر · المقعد مؤكد", "p.sb.a2": "العينة A-20419 · النتيجة متاحة", "p.sb.a3": "صندوق الرسائل الآمن · رسالة واحدة", "p.sb.appb": "افتح معاينة التطبيق",
+    "p.sb.coach": "موارد المدربين", "p.sb.coachd": "بصفتك من أفراد دعم الرياضيين، فأنت ملزم بالمدونة العالمية لمكافحة المنشطات. تغطي دورة «التدريب النظيف» ودليل أولياء الأمور والمدربين واجباتك.", "p.sb.coachb": "التثقيف للمدربين",
+    "p.sb.q": "روابط سريعة", "p.sb.s": "الأمان", "p.sb.sd": "تم تسجيل الدخول بهويتي. تنتهي الجلسة بعد 30 دقيقة من عدم النشاط. تُستخدم بيانات هويتي للتحقق من هويتك فقط، وتخضع لسياسة الخصوصية في الوكالة."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

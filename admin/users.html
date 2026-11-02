@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Users & roles — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="users">
+<div data-page>
+
+  <div class="page-head">
+    <div><h1 data-i18n="p.h">Users, roles & permissions</h1><p data-i18n="p.d">Staff accounts come from the KADA directory (single sign-on). Here you assign roles, review module-level permissions, manage invitations and see who did what — the same model governs the website admin and the KADA app.</p></div>
+    <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Directory sync completed · 0 changes" data-toast-ar="اكتملت مزامنة الدليل · لا تغييرات"><svg class="ico"><use href="#i-refresh"/></svg><span data-i18n="p.sync">Sync directory</span></button><button class="btn btn-primary sm" type="button" data-drawer="d-invite"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.invite">Invite user</span></button></div>
+  </div>
+
+  <nav class="tabs">
+    <a href="#users"><span data-i18n="p.t1">Staff users</span><span class="cnt">42</span></a>
+    <a href="#roles" data-i18n="p.t2">Roles & permission matrix</a>
+    <a href="#external"><span data-i18n="p.t3">External accounts</span><span class="cnt">12,418</span></a>
+    <a href="#access" data-i18n="p.t4">Access reviews & SSO</a>
+  </nav>
+
+  <!-- ===================== USERS ===================== -->
+  <section data-view="users">
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.k1">Active staff accounts</small><b data-count="42">42</b><em data-i18n="p.k1d">9 roles · SSO enforced · MFA 100%</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Pending invitations</small><b data-count="2">2</b><em class="warn" data-i18n="p.k2d">Expire after 7 days</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Privileged accounts</small><b data-count="3">3</b><em data-i18n="p.k3d">System administrators · reviewed quarterly</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Inactive 90+ days</small><b data-count="1">1</b><em class="warn" data-i18n="p.k4d">Auto-suspend proposal ready</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="u">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.all">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="adm"><span data-i18n="r.sysadmin">System administrator</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="ed"><span data-i18n="r.editor">Content editor</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="ops"><span data-i18n="p.f.ops">Operations roles</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="gov"><span data-i18n="p.f.gov">Governance</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="warn"><span data-i18n="p.f.warn">Needs attention</span><span class="cnt"></span></button>
+        </div>
+        <label class="tb-search" style="margin:0;height:36px"><svg class="ico"><use href="#i-search"/></svg><input type="search" placeholder="Search name, email or department" data-i18n-ph="p.srch"></label>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="u"><table class="tbl">
+        <thead><tr><th data-i18n="p.u.c1">User</th><th data-i18n="p.u.c2">Role</th><th data-i18n="p.u.c3">Department</th><th data-i18n="p.u.c4">Modules</th><th data-i18n="p.u.c5">Last sign-in</th><th data-i18n="p.u.c6">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="adm" data-sel><td><div class="row"><span class="ava">A</span><div><b>Abdullah Al-Mutairi</b><span class="sub">a.almutairi@kada.gov.kw</span></div></div></td><td><span class="st navy" data-i18n="r.sysadmin">System administrator</span></td><td data-i18n="o.it">IT & Digital Services</td><td class="num">12 / 14</td><td class="num" data-i18n="p.now">Now</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="gov" data-sel><td><div class="row"><span class="ava">M</span><div><b>Dr. Mona Al-Ajmi</b><span class="sub">m.alajmi@kada.gov.kw</span></div></div></td><td><span class="st navy" data-i18n="r.exec">Executive (Deputy DG)</span></td><td data-i18n="o.exec">Executive Office</td><td class="num">5 / 14</td><td class="num">23 · 10 · 07:52</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ed" data-sel><td><div class="row"><span class="ava">D</span><div><b>Dana Al-Kandari</b><span class="sub">d.alkandari@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.editor">Content editor</span></td><td data-i18n="o.comm">Media & Communications</td><td class="num">5 / 14</td><td class="num">23 · 10 · 08:10</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ed" data-sel><td><div class="row"><span class="ava">R</span><div><b>Rashed Al-Hamad</b><span class="sub">r.alhamad@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.editor">Content editor</span></td><td data-i18n="o.comm">Media & Communications</td><td class="num">5 / 14</td><td class="num">22 · 10 · 16:40</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ed" data-sel><td><div class="row"><span class="ava">S</span><div><b>Salem Al-Dosari</b><span class="sub">s.aldosari@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.approver">Content approver (Comms head)</span></td><td data-i18n="o.comm">Media & Communications</td><td class="num">4 / 14</td><td class="num">23 · 10 · 09:05</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ops" data-sel><td><div class="row"><span class="ava">F</span><div><b>Faisal Al-Anzi</b><span class="sub">f.alanzi@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.training">Training coordinator</span></td><td data-i18n="o.edu">Education & Awareness</td><td class="num">5 / 14</td><td class="num">23 · 10 · 08:30</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ops" data-sel><td><div class="row"><span class="ava">H</span><div><b>Huda Al-Otaibi</b><span class="sub">h.alotaibi@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.procure">Procurement officer</span></td><td data-i18n="o.proc">Finance & Procurement</td><td class="num">4 / 14</td><td class="num">23 · 10 · 08:44</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ops" data-sel><td><div class="row"><span class="ava">K</span><div><b>Khalid Al-Shammari</b><span class="sub">k.alshammari@kada.gov.kw</span></div></div></td><td><span class="st red" data-i18n="r.invest">Intelligence & investigations</span></td><td data-i18n="o.ii">Intelligence & Investigations</td><td class="num">4 / 14</td><td class="num">23 · 10 · 07:15</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="ops" data-sel><td><div class="row"><span class="ava">R</span><div><b>Dr. Reem Al-Saleh</b><span class="sub">r.alsaleh@kada.gov.kw</span></div></div></td><td><span class="st red" data-i18n="r.tue">TUE Committee secretary</span></td><td data-i18n="o.rm">Results Management</td><td class="num">4 / 14</td><td class="num">23 · 10 · 08:25</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="gov" data-sel><td><div class="row"><span class="ava">N</span><div><b>Noura Al-Hajri</b><span class="sub">n.alhajri@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.dpo">Data protection officer</span></td><td data-i18n="o.legal">Legal & Compliance</td><td class="num">5 / 14</td><td class="num">23 · 10 · 08:02</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-user" data-i18n="p.manage">Manage</button></td></tr>
+          <tr data-f="warn ops" data-sel><td><div class="row"><span class="ava">B</span><div><b>Bader Al-Qattan</b><span class="sub">b.alqattan@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.training">Training coordinator</span></td><td data-i18n="o.edu">Education & Awareness</td><td class="num">5 / 14</td><td class="num">14 · 07 · 2026</td><td><span class="st warn" id="st-u10" data-i18n="p.inactive">Inactive 101 d</span></td><td class="r"><button class="lnk" type="button" data-toast="Account suspended · access removed · audit entry created" data-toast-ar="عُلّق الحساب · أُزيل الوصول · أُنشئ سجل تدقيق" data-set-status="#st-u10" data-st-class="plain" data-st-en="Suspended" data-st-ar="معلّق" data-hide-after data-i18n="p.suspend">Suspend</button></td></tr>
+          <tr data-f="warn ed" data-sel><td><div class="row"><span class="ava">L</span><div><b>Latifa Al-Mansour</b><span class="sub">l.almansour@kada.gov.kw</span></div></div></td><td><span class="st ok" data-i18n="r.editor">Content editor</span></td><td data-i18n="o.comm">Media & Communications</td><td class="num">5 / 14</td><td class="num">—</td><td><span class="st info" data-i18n="p.invited">Invited · 5 d left</span></td><td class="r"><button class="lnk" type="button" data-toast="Invitation re-sent" data-toast-ar="أُعيد إرسال الدعوة" data-i18n="p.resend">Resend</button></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.u.foot">12 of 42 shown · accounts are provisioned from the directory; deactivation there removes access here within 15 minutes</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== ROLES ===================== -->
+  <section data-view="roles">
+    <div class="grid g-main">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.rm.h">Permission matrix · modules × roles</h2><div class="row"><span class="st ok plain" data-i18n="p.rm.full">● Full</span><span class="st info plain" data-i18n="p.rm.ro">◐ Read-only</span><span class="st plain" data-i18n="p.rm.no">— None</span></div></div>
+        <div class="tbl-wrap"><table class="tbl matrix">
+          <thead><tr><th data-i18n="p.rm.mod">Module</th><th data-i18n="r.s.sysadmin">Sys admin</th><th data-i18n="r.s.exec">Executive</th><th data-i18n="r.s.editor">Editor</th><th data-i18n="r.s.approver">Approver</th><th data-i18n="r.s.training">Training</th><th data-i18n="r.s.procure">Procurement</th><th data-i18n="r.s.invest">Investigations</th><th data-i18n="r.s.tue">TUE</th><th data-i18n="r.s.dpo">DPO</th></tr></thead>
+          <tbody>
+            <tr><td><b data-i18n="m.home">Dashboard & tasks</b></td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td><td class="c on">●</td></tr>
+            <tr><td><b data-i18n="m.content">Website content (CMS)</b><span class="sub" data-i18n="m.contentd">All site pages, news, collections, menus — create, edit, submit, approve, publish</span></td><td class="c on">●</td><td class="c ro">◐</td><td class="c on">●</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.publish">Approve & publish</b><span class="sub" data-i18n="m.publishd">Four-eyes rule — editors cannot self-publish</span></td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.media">Media & documents</b></td><td class="c on">●</td><td class="c ro">◐</td><td class="c on">●</td><td class="c">—</td><td class="c on">●</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.training">Training & events</b></td><td class="c on">●</td><td class="c ro">◐</td><td class="c ro">◐</td><td class="c ro">◐</td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.procurement">Tenders & suppliers</b><span class="sub" data-i18n="m.procurementd">Sealed bids visible to committee only</span></td><td class="c on">●</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.speakup">Speak Up cases</b><span class="sub" data-i18n="m.speakupd">Restricted — Investigations only · Executive ◐ = aggregated statistics only · Sys admin cannot view case content</span></td><td class="c">—</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c on">●</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.tue">TUE applications</b><span class="sub" data-i18n="m.tued">Restricted medical data — TUE secretary only; committee physicians review in the app · Executive ◐ = aggregated statistics only · Sys admin cannot view medical content</span></td><td class="c">—</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c on">●</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.data">Data requests & consent</b></td><td class="c ro">◐</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c on">●</td></tr>
+            <tr><td><b data-i18n="m.executive">Executive dashboard</b></td><td class="c on">●</td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.audit">Audit log</b></td><td class="c on">●</td><td class="c ro">◐</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c ro">◐</td></tr>
+            <tr><td><b data-i18n="m.users">Users & roles</b></td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+            <tr><td><b data-i18n="m.settings">Settings & integrations</b></td><td class="c on">●</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.rm.foot">Changing a cell requires a second administrator’s approval and is written to the audit log</span><button class="btn btn-ghost xs" type="button" data-toast="Matrix exported (XLSX) — for the project approval pack" data-toast-ar="صُدّرت المصفوفة (XLSX) — لحزمة اعتماد المشروع"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.rl.h">Roles in this demo</h2></div>
+          <div class="feed">
+            <div><span class="ava">A</span><div><b data-i18n="r.sysadmin">System administrator</b><small data-i18n="r.d.sysadmin">Settings · users · integrations · support access · no Speak Up case content</small></div></div>
+            <div><span class="ava">M</span><div><b data-i18n="r.exec">Executive (Deputy DG)</b><small data-i18n="r.d.exec">Executive dashboard · reports · read-only oversight of most modules · Speak Up aggregated statistics only</small></div></div>
+            <div><span class="ava">D</span><div><b data-i18n="r.editor">Content editor</b><small data-i18n="r.d.editor">Pages, news, media · submits for approval · AR + EN</small></div></div>
+            <div><span class="ava">S</span><div><b data-i18n="r.approver">Content approver</b><small data-i18n="r.d.approver">Reviews what is sent for approval — approves it for publishing or returns it with the reason</small></div></div>
+            <div><span class="ava">F</span><div><b data-i18n="r.training">Training coordinator</b><small data-i18n="r.d.training">Courses, events, registrations, certificates</small></div></div>
+            <div><span class="ava">H</span><div><b data-i18n="r.procure">Procurement officer</b><small data-i18n="r.d.procure">Tenders, addenda, supplier approvals, K-Net reconciliation</small></div></div>
+            <div><span class="ava">K</span><div><b data-i18n="r.invest">Intelligence & investigations</b><small data-i18n="r.d.invest">Full Speak Up access: inbox, case files, messages and statistics · restricted</small></div></div>
+            <div><span class="ava">R</span><div><b data-i18n="r.tue">TUE Committee secretary</b><small data-i18n="r.d.tue">TUE applications: completeness check, committee coordination, decision letters via Results Dept., ADAMS entry · restricted medical data</small></div></div>
+            <div><span class="ava">N</span><div><b data-i18n="r.dpo">Data protection officer</b><small data-i18n="r.d.dpo">Data requests (30-day clock), consent, retention</small></div></div>
+          </div>
+        </div>
+        <div class="notice"><svg class="ico"><use href="#i-shield"/></svg><div><b data-i18n="p.rl.n">Field roles live in the app</b><p data-i18n="p.rl.nd">Field inspectors (DCOs), operations managers, Results Department staff and committee members work in the KADA app; their permissions are managed in the same directory and shown here read-only.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXTERNAL ===================== -->
+  <section data-view="external">
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.x.k1">Public accounts</small><b data-count="11874">11,874</b><em data-i18n="p.x.k1d">Athletes, support personnel, citizens · Kuwait Mobile ID or email</em><svg class="spark" data-chart="spark" data-values="40,52,48,60,72,70,84,96,90,110" data-colors="green"></svg></div>
+      <div class="kpi"><small data-i18n="p.x.k2">Supplier accounts</small><b data-count="544">544</b><em data-i18n="p.x.k2d">Logins for 145 companies · 3 pending approval</em></div>
+      <div class="kpi"><small data-i18n="p.x.k3">Verified with Mobile ID</small><b data-count="68" data-suffix="%">68%</b><em data-i18n="p.x.k3d">Required for TUE and data requests</em></div>
+      <div class="kpi"><small data-i18n="p.x.k4">Support tickets · accounts</small><b data-count="9">9</b><em class="warn" data-i18n="p.x.k4d">Password / login issues this week</em></div>
+    </div>
+    <div class="grid g-main mt-2">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.x.h">Recent external accounts</h2><div class="filters"><button class="chip is-on" type="button" data-i18n="p.all">All</button><button class="chip" type="button" data-toast="Filter: public" data-toast-ar="تصفية: الحسابات العامة" data-i18n="p.x.pub">Public</button><button class="chip" type="button" data-toast="Filter: suppliers" data-toast-ar="تصفية: المورّدون" data-i18n="p.x.sup">Suppliers</button></div></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.x.c1">Account</th><th data-i18n="p.x.c2">Type</th><th data-i18n="p.x.c3">Verification</th><th data-i18n="p.x.c4">Created</th><th data-i18n="p.x.c5">Status</th><th></th></tr></thead>
+          <tbody>
+            <tr data-sel><td><b>Sara Al-Rashidi</b><span class="sub">sara.r@… · <span data-i18n="p.x.ath">Athlete · Swimming</span></span></td><td data-i18n="p.x.pub">Public</td><td><span class="st ok plain" data-i18n="p.x.mid">Mobile ID</span></td><td class="num">22 · 10 · 2026</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-toast="Account view (masked) — design preview" data-toast-ar="عرض الحساب (مع إخفاء البيانات) — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+            <tr data-sel><td><b>Gulf Lab Logistics</b><span class="sub">SUP-2026-0419 · procurement@…</span></td><td data-i18n="p.x.sup">Suppliers</td><td><span class="st warn plain" data-i18n="p.x.docs">Documents under review</span></td><td class="num">15 · 10 · 2026</td><td><span class="st warn" data-i18n="p.x.pend">Pending approval</span></td><td class="r"><a class="lnk" href="procurement.html#suppliers" data-i18n="p.x.review">Review in Procurement</a></td></tr>
+            <tr data-sel><td><b>Omar Al-Fadhli</b><span class="sub">omar.f@… · <span data-i18n="p.x.cit">Citizen</span></span></td><td data-i18n="p.x.pub">Public</td><td><span class="st plain" data-i18n="p.x.email">Email only</span></td><td class="num">21 · 10 · 2026</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-toast="Account view (masked) — design preview" data-toast-ar="عرض الحساب (مع إخفاء البيانات) — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+            <tr data-sel><td><b>Dr. Hessa Al-Mutawa</b><span class="sub">h.mutawa@… · <span data-i18n="p.x.med">Team physician</span></span></td><td data-i18n="p.x.pub">Public</td><td><span class="st ok plain" data-i18n="p.x.mid">Mobile ID</span></td><td class="num">20 · 10 · 2026</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-toast="Account view (masked) — design preview" data-toast-ar="عرض الحساب (مع إخفاء البيانات) — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+            <tr data-sel><td><b>Al-Saqr Medical Supplies W.L.L.</b><span class="sub">SUP-2024-0117</span></td><td data-i18n="p.x.sup">Suppliers</td><td><span class="st ok plain" data-i18n="p.x.cr">Commercial registry verified</span></td><td class="num">2024</td><td><span class="st ok" data-i18n="p.active">Active</span></td><td class="r"><button class="lnk" type="button" data-toast="Account view — design preview" data-toast-ar="عرض الحساب — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+            <tr data-sel><td><b><span data-i18n="p.x.lockt">(locked)</span> m.alharbi@…</b><span class="sub" data-i18n="p.x.lockd">5 failed attempts · 20 min lock</span></td><td data-i18n="p.x.pub">Public</td><td><span class="st plain" data-i18n="p.x.email">Email only</span></td><td class="num">2025</td><td><span class="st red" id="st-x6" data-i18n="p.x.lock">Locked</span></td><td class="r"><button class="lnk" type="button" data-toast="Unlocked · reset link sent" data-toast-ar="فُتح القفل · أُرسل رابط إعادة التعيين" data-set-status="#st-x6" data-st-en="Active" data-st-ar="نشط" data-hide-after data-i18n="p.x.unlock">Unlock</button></td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.x.foot">Staff see external accounts masked (no civil ID, no medical data) · full records only through Data requests with DPO approval</span></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.x.growth">Account growth · 12 months</h2></div><svg class="chart" data-chart="area" data-values="6200,6600,7100,7500,8200,8800,9300,9900,10400,10900,11400,11874" data-labels="N,D,J,F,M,A,M,J,J,A,S,O" data-labels-ar="ن,د,ي,ف,م,أ,م,ي,ي,أ,س,أ" data-colors="green" data-h="170"></svg></div>
+        <div class="card soft"><div class="card-head"><h2 data-i18n="p.x.pol">Account policies</h2></div><div class="health"><div><span data-i18n="p.x.p1">Sign-in methods</span><b data-i18n="p.x.p1v">Mobile ID · email + OTP</b></div><div><span data-i18n="p.x.p2">Lockout</span><b data-i18n="p.x.p2v">5 attempts · 20 min</b></div><div><span data-i18n="p.x.p3">Session</span><b data-i18n="p.x.p3v">30 min idle · 12 h max</b></div><div><span data-i18n="p.x.p4">Dormant accounts</span><b data-i18n="p.x.p4v">Notice at 22 months · delete at 24</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACCESS ===================== -->
+  <section data-view="access">
+    <div class="grid g3">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ac.h1">Single sign-on</h2></div><div class="health"><div><span data-i18n="p.ac.a1">Identity provider</span><b>KADA Entra ID</b></div><div><span data-i18n="p.ac.a2">Protocol</span><b data-i18n="p.ac.a2v">OIDC · SAML fallback</b></div><div><span data-i18n="p.ac.a3">MFA</span><b data-i18n="p.ac.a3v">Enforced · authenticator app</b></div><div><span data-i18n="p.ac.a4">Group → role mapping</span><b data-i18n="p.ac.a4v">9 groups mapped</b></div><div><span data-i18n="p.ac.a5">Last sync</span><b class="num">23 · 10 · 09:00</b></div></div><button class="btn btn-ghost xs mt-2" type="button" data-toast="Group mapping — design preview" data-toast-ar="ربط المجموعات — معاينة تصميم" data-i18n="p.ac.map">Edit group mapping</button></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ac.h2">Quarterly access review · Q4 2026</h2></div>
+        <div class="steps"><div class="done"><b data-i18n="p.ac.s1">Review pack generated</b><span class="num">01 · 10</span></div><div class="done"><b data-i18n="p.ac.s2">Department heads confirm</b><span class="num">6 / 7</span></div><div class="now"><b data-i18n="p.ac.s3">Privileged accounts review</b><span data-i18n="p.ac.s3d">DG sign-off pending</span></div><div><b data-i18n="p.ac.s4">Close & archive</b><span class="num">31 · 10</span></div></div>
+        <div class="row mt-2"><button class="btn btn-primary sm" type="button" data-toast="Reminder sent to Testing department head" data-toast-ar="أُرسل تذكير إلى رئيس إدارة الفحص" data-i18n="p.ac.rem">Remind outstanding</button><button class="btn btn-ghost sm" type="button" data-toast="Review pack (PDF) opened" data-toast-ar="فُتحت حزمة المراجعة (PDF)" data-i18n="p.ac.pack">Open pack</button></div>
+      </div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.ac.h3">Recent permission changes</h2></div>
+        <div class="tl">
+          <div><b data-i18n="p.ac.c1">Salem Al-Dosari → Content approver</b><span class="num">20 · 10 · 2026 · <span data-i18n="p.ac.by">by</span> A. Al-Mutairi</span></div>
+          <div><b data-i18n="p.ac.c2">Latifa Al-Mansour invited (Content editor)</b><span class="num">18 · 10 · 2026</span></div>
+          <div><b data-i18n="p.ac.c3">Executive role created · mapped to group “KADA-Exec”</b><span class="num">05 · 10 · 2026</span></div>
+          <div><b data-i18n="p.ac.c4">Khalid Al-Shammari · Speak Up full access granted</b><span class="num">01 · 10 · 2026 · <span data-i18n="p.ac.two">two-admin approval</span></span></div>
+        </div>
+        <a class="lnk mt-2" href="audit.html" data-i18n="p.ac.all">Full history in Audit log →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- drawers -->
+  <div class="drawer" id="d-user"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="row"><span class="ava lg">D</span><div><h3 style="margin:0">Dana Al-Kandari</h3><small>d.alkandari@kada.gov.kw · <span data-i18n="o.comm">Media & Communications</span></small></div></div>
+    <div class="form">
+      <div class="field"><label data-i18n="p.du.role">Role</label><select><option data-i18n="r.editor">Content editor</option><option data-i18n="r.approver">Content approver (Comms head)</option><option data-i18n="r.training">Training coordinator</option><option data-i18n="r.procure">Procurement officer</option><option data-i18n="r.invest">Intelligence & investigations</option><option data-i18n="r.tue">TUE Committee secretary</option><option data-i18n="r.dpo">Data protection officer</option><option data-i18n="r.exec">Executive (Deputy DG)</option><option data-i18n="r.sysadmin">System administrator</option></select></div>
+      <div class="field"><label data-i18n="p.du.extra">Additional module access (exception)</label><div class="check-list"><label><input type="checkbox" checked disabled><span data-i18n="m.content">Website content (CMS)</span></label><label><input type="checkbox" checked disabled><span data-i18n="m.media">Media & documents</span></label><label><input type="checkbox"><span data-i18n="m.training">Training & events</span></label><label><input type="checkbox"><span data-i18n="m.procurement">Tenders & suppliers</span></label></div></div>
+      <div class="field"><label data-i18n="p.du.until">Exception valid until</label><input type="date" value="2026-12-31"></div>
+    </div>
+    <dl class="kv"><dt data-i18n="p.du.last">Last sign-in</dt><dd class="num">23 · 10 · 2026 · 08:10 · <span data-i18n="p.du.kw">Kuwait</span></dd><dt data-i18n="p.du.mfa">MFA</dt><dd data-i18n="p.du.mfav">Authenticator app · enrolled</dd><dt data-i18n="p.du.sess">Sessions</dt><dd data-i18n="p.du.sessv">2 active (desktop, mobile)</dd></dl>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Change submitted · needs a second administrator’s approval" data-toast-ar="أُرسل التغيير · يحتاج إلى موافقة مسؤول ثانٍ" data-i18n="p.du.save">Submit change</button><button class="btn btn-ghost sm" type="button" data-close data-toast="All sessions revoked" data-toast-ar="أُلغيت جميع الجلسات" data-i18n="p.du.revoke">Revoke sessions</button></div>
+  </div></div>
+  <div class="drawer" id="d-invite"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.inv.h">Invite a staff user</h3>
+    <div class="form">
+      <div class="field"><label data-i18n="p.inv.email">Work email (must exist in directory)</label><input type="email" placeholder="name@kada.gov.kw"></div>
+      <div class="field"><label data-i18n="p.du.role">Role</label><select><option data-i18n="r.editor">Content editor</option><option data-i18n="r.training">Training coordinator</option><option data-i18n="r.procure">Procurement officer</option><option data-i18n="r.invest">Intelligence & investigations</option><option data-i18n="r.tue">TUE Committee secretary</option><option data-i18n="r.dpo">Data protection officer</option><option data-i18n="r.approver">Content approver (Comms head)</option></select></div>
+      <div class="field"><label data-i18n="p.inv.msg">Message (optional)</label><textarea style="min-height:70px" placeholder="Welcome to the KADA admin application…" data-i18n-ph="p.inv.msgph"></textarea></div>
+    </div>
+    <div class="notice"><svg class="ico"><use href="#i-lock"/></svg><div><p data-i18n="p.inv.n">The invitee signs in with SSO; no password is created. The invitation expires in 7 days.</p></div></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Invitation sent" data-toast-ar="أُرسلت الدعوة" data-i18n="p.inv.send">Send invitation</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "المستخدمون والأدوار — إدارة كادا",
+  "p.h": "المستخدمون والأدوار والصلاحيات", "p.d": "تُستمد حسابات الموظفين من دليل كادا (الدخول الموحّد). هنا تُسند الأدوار، وتُراجع الصلاحيات على مستوى الوحدات، وتُدار الدعوات، ويُعرض من نفّذ كل إجراء — ويحكم النموذج نفسه إدارة الموقع وتطبيق كادا.",
+  "p.sync": "مزامنة الدليل", "p.invite": "دعوة مستخدم", "p.t1": "الموظفون", "p.t2": "الأدوار ومصفوفة الصلاحيات", "p.t3": "الحسابات الخارجية", "p.t4": "مراجعات الوصول والدخول الموحّد",
+  "p.k1": "حسابات موظفين نشطة", "p.k1d": "9 أدوار · دخول موحّد إلزامي · تحقق متعدد العوامل 100%", "p.k2": "دعوات معلّقة", "p.k2d": "تنتهي بعد 7 أيام", "p.k3": "حسابات ذات صلاحيات مميزة", "p.k3d": "مسؤولو النظام · تُراجَع ربع سنوياً", "p.k4": "غير نشطة 90+ يوماً", "p.k4d": "مقترح التعليق التلقائي جاهز",
+  "p.all": "الكل", "p.f.ops": "أدوار العمليات", "p.f.gov": "الحوكمة", "p.f.warn": "تحتاج إلى متابعة", "p.srch": "ابحث بالاسم أو البريد أو الإدارة",
+  "p.u.c1": "المستخدم", "p.u.c2": "الدور", "p.u.c3": "الإدارة", "p.u.c4": "الوحدات", "p.u.c5": "آخر دخول", "p.u.c6": "الحالة", "p.now": "الآن", "p.active": "نشط", "p.manage": "إدارة", "p.inactive": "غير نشط منذ 101 يوم", "p.suspend": "تعليق", "p.invited": "مدعوّة · تبقّت 5 أيام", "p.resend": "إعادة إرسال",
+  "p.u.foot": "عرض 12 من 42 · تُنشأ الحسابات من الدليل، وتعطيلها فيه يُلغي الوصول هنا خلال 15 دقيقة",
+  "r.sysadmin": "مدير النظام", "r.exec": "تنفيذي (نائب المدير العام)", "r.editor": "محرر محتوى", "r.approver": "معتمِد المحتوى (رئيس الإعلام والاتصال)", "r.training": "منسق التدريب", "r.procure": "مسؤول المشتريات", "r.invest": "الاستخبارات والتحقيقات", "r.dpo": "مسؤول حماية البيانات", "r.tue": "أمين سر لجنة الإعفاء للاستعمال العلاجي",
+  "r.s.sysadmin": "مدير النظام", "r.s.exec": "تنفيذي", "r.s.editor": "محرر", "r.s.approver": "معتمِد", "r.s.training": "التدريب", "r.s.procure": "المشتريات", "r.s.invest": "التحقيقات", "r.s.dpo": "حماية البيانات", "r.s.tue": "الإعفاء العلاجي",
+  "o.it": "تقنية المعلومات والخدمات الرقمية", "o.exec": "المكتب التنفيذي", "o.comm": "الإعلام والاتصال", "o.edu": "التعليم والتوعية", "o.proc": "المالية والمشتريات", "o.ii": "الاستخبارات والتحقيقات", "o.legal": "الشؤون القانونية والامتثال", "o.rm": "إدارة النتائج",
+  "p.rm.h": "مصفوفة الصلاحيات · الوحدات × الأدوار", "p.rm.full": "● كامل", "p.rm.ro": "◐ قراءة فقط", "p.rm.no": "— بلا صلاحية", "p.rm.mod": "الوحدة",
+  "m.home": "لوحة المعلومات والمهام", "m.content": "محتوى الموقع (CMS)", "m.contentd": "كل صفحات الموقع والأخبار والمجموعات والقوائم — إنشاء، تعديل، إرسال، اعتماد، نشر", "m.publish": "الاعتماد والنشر", "m.publishd": "مبدأ العيون الأربع — لا يملك المحرر نشر محتواه بنفسه", "m.media": "الوسائط والوثائق", "m.training": "التدريب والفعاليات", "m.procurement": "المناقصات والمورّدون", "m.procurementd": "لا تظهر العطاءات المختومة إلا للجنة المختصة", "m.speakup": "بلاغات Speak Up", "m.speakupd": "مقيّد — للتحقيقات فقط · التنفيذي ◐ = إحصاءات مجمّعة فقط · لا يطّلع مدير النظام على محتوى البلاغات", "m.tue": "طلبات الإعفاء للاستعمال العلاجي", "m.tued": "بيانات طبية مقيّدة — لأمين سر اللجنة فقط؛ ويراجع أطباء اللجنة في التطبيق · التنفيذي ◐ = إحصاءات مجمّعة فقط · لا يطّلع مدير النظام على المحتوى الطبي", "m.data": "طلبات البيانات والموافقات", "m.executive": "اللوحة التنفيذية", "m.audit": "سجل التدقيق", "m.users": "المستخدمون والأدوار", "m.settings": "الإعدادات والتكاملات",
+  "p.rm.foot": "يتطلب تغيير أي خلية موافقة مسؤول ثانٍ، ويُسجَّل في سجل التدقيق", "p.export": "تصدير",
+  "p.rl.h": "الأدوار في هذا العرض", "r.d.sysadmin": "الإعدادات · المستخدمون · التكاملات · وصول للدعم الفني · دون محتوى بلاغات Speak Up", "r.d.exec": "اللوحة التنفيذية · التقارير · إشراف للقراءة فقط على معظم الوحدات · إحصاءات Speak Up المجمّعة فقط", "r.d.editor": "الصفحات والأخبار والوسائط · يرسل المحتوى للاعتماد · عربي + إنجليزي", "r.d.approver": "يراجع ما يُرسل للاعتماد، فيعتمده للنشر أو يعيده إلى صاحبه مع السبب", "r.d.training": "الدورات والفعاليات والتسجيلات والشهادات", "r.d.procure": "المناقصات والملاحق واعتماد المورّدين وتسوية K-Net", "r.d.invest": "وصول كامل إلى Speak Up: صندوق البلاغات وملفات القضايا والرسائل والإحصاءات · مقيّد", "r.d.dpo": "طلبات البيانات (مهلة 30 يوماً) والموافقات والاحتفاظ", "r.d.tue": "طلبات الإعفاء: التحقق من الاكتمال، وتنسيق اللجنة، وخطابات القرار عبر إدارة النتائج، والإدخال في ADAMS · بيانات طبية مقيّدة",
+  "p.rl.n": "الأدوار الميدانية في التطبيق", "p.rl.nd": "يعمل المفتشون الميدانيون (مسؤولو مراقبة المنشطات) ومديرو العمليات وموظفو إدارة النتائج وأعضاء اللجان في تطبيق كادا؛ وتُدار صلاحياتهم في الدليل نفسه وتظهر هنا للقراءة فقط.",
+  "p.x.k1": "الحسابات العامة", "p.x.k1d": "رياضيون وأطقم مساندة ومواطنون · عبر هويتي أو البريد الإلكتروني", "p.x.k2": "حسابات المورّدين", "p.x.k2d": "حسابات لـ 145 شركة · 3 بانتظار الاعتماد", "p.x.k3": "موثّقة عبر هويتي", "p.x.k3d": "مطلوبة لطلبات الإعفاء للاستعمال العلاجي وطلبات البيانات", "p.x.k4": "تذاكر دعم الحسابات", "p.x.k4d": "مشكلات كلمة المرور / الدخول هذا الأسبوع",
+  "p.x.h": "أحدث الحسابات الخارجية", "p.x.pub": "عام", "p.x.sup": "مورّدون", "p.x.c1": "الحساب", "p.x.c2": "النوع", "p.x.c3": "التوثيق", "p.x.c4": "أُنشئ", "p.x.c5": "الحالة", "p.x.ath": "رياضية · سباحة", "p.view": "عرض", "p.x.docs": "الوثائق قيد المراجعة", "p.x.pend": "بانتظار الاعتماد", "p.x.review": "مراجعة في المشتريات", "p.x.cit": "مواطن", "p.x.email": "البريد الإلكتروني فقط", "p.x.med": "طبيب فريق", "p.x.cr": "السجل التجاري موثّق", "p.x.lockd": "5 محاولات فاشلة · قفل لمدة 20 دقيقة", "p.x.lock": "مقفل", "p.x.lockt": "(مقفل)", "p.x.unlock": "فتح القفل", "p.x.mid": "هويتي",
+  "p.x.foot": "يرى الموظفون الحسابات الخارجية مع إخفاء البيانات الحساسة (دون الرقم المدني أو البيانات الطبية) · ولا تُتاح السجلات الكاملة إلا عبر طلبات البيانات بموافقة مسؤول حماية البيانات",
+  "p.x.growth": "نمو الحسابات · 12 شهراً", "p.x.pol": "سياسات الحسابات", "p.x.p1": "طرق الدخول", "p.x.p1v": "هويتي · البريد + رمز لمرة واحدة", "p.x.p2": "القفل", "p.x.p2v": "5 محاولات · 20 دقيقة", "p.x.p3": "الجلسة", "p.x.p3v": "30 دقيقة دون نشاط · 12 ساعة حداً أقصى", "p.x.p4": "الحسابات الخاملة", "p.x.p4v": "إشعار عند 22 شهراً · حذف عند 24",
+  "p.ac.h1": "الدخول الموحّد", "p.ac.a1": "مزوّد الهوية", "p.ac.a2": "البروتوكول", "p.ac.a2v": "OIDC · SAML احتياطي", "p.ac.a3": "التحقق متعدد العوامل", "p.ac.a3v": "إلزامي · تطبيق مصادقة", "p.ac.a4": "ربط المجموعة ← الدور", "p.ac.a4v": "9 مجموعات مربوطة", "p.ac.a5": "آخر مزامنة", "p.ac.map": "تعديل ربط المجموعات",
+  "p.ac.h2": "مراجعة الوصول ربع السنوية · الربع الرابع 2026", "p.ac.s1": "أُنشئت حزمة المراجعة", "p.ac.s2": "تأكيد رؤساء الإدارات", "p.ac.s3": "مراجعة الحسابات ذات الامتياز", "p.ac.s3d": "بانتظار توقيع المدير العام", "p.ac.s4": "الإغلاق والأرشفة", "p.ac.rem": "تذكير المتأخرين", "p.ac.pack": "فتح الحزمة",
+  "p.ac.h3": "أحدث تغييرات الصلاحيات", "p.ac.c1": "سالم الدوسري ← معتمِد المحتوى", "p.ac.by": "بواسطة", "p.ac.c2": "دعوة لطيفة المنصور (محررة محتوى)", "p.ac.c3": "إنشاء الدور التنفيذي · مربوط بمجموعة «KADA-Exec»", "p.ac.c4": "خالد الشمري · منح وصول كامل إلى Speak Up", "p.ac.two": "موافقة مسؤولَين", "p.ac.all": "السجل الكامل في سجل التدقيق ←",
+  "p.du.role": "الدور", "p.du.extra": "وصول إضافي للوحدات (استثناء)", "p.du.until": "الاستثناء صالح حتى", "p.du.last": "آخر دخول", "p.du.kw": "الكويت", "p.du.mfa": "التحقق متعدد العوامل", "p.du.mfav": "تطبيق مصادقة · مسجَّل", "p.du.sess": "الجلسات", "p.du.sessv": "جلستان نشطتان (حاسوب، جوال)", "p.du.save": "إرسال التغيير", "p.du.revoke": "إلغاء الجلسات",
+  "p.inv.h": "دعوة موظف", "p.inv.email": "البريد الوظيفي (يجب أن يكون مسجّلاً في الدليل)", "p.inv.msg": "رسالة (اختيارية)", "p.inv.msgph": "مرحباً بك في تطبيق إدارة كادا…", "p.inv.n": "يسجّل المدعوّ دخوله عبر الدخول الموحّد، ولا تُنشأ كلمة مرور. تنتهي صلاحية الدعوة خلال 7 أيام.", "p.inv.send": "إرسال الدعوة"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

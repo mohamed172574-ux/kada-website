@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Tenders &amp; Procurement — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero">
+      <img src="assets/img/svc-tenders.jpg" alt="">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.s6">Tenders &amp; Procurement</span></nav>
+        <h1 class="display" data-i18n="p.title">Tenders &amp; procurement portal</h1>
+        <p class="lede" data-i18n="p.lede">All KADA tenders and RFQs are published here. Registered suppliers purchase tender documents through K-Net and receive them instantly, with every payment recorded.</p>
+        <div class="cta"><a class="btn btn-primary lg" href="supplier.html"><span data-i18n="p.c1">Register as a supplier</span></a><a class="btn btn-outline lg" href="#list"><span data-i18n="p.c2">View open tenders</span></a></div>
+      </div>
+    </section>
+
+    <section class="section" id="list" style="padding-top:0">
+      <div class="wrap">
+        <form class="toolbar reveal" style="margin-top:-36px; position:relative; z-index:3" onsubmit="return false">
+          <div class="field grow search-field"><svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Tender number or keyword…" data-i18n-ph="p.ph"></div>
+          <div class="field"><select><option data-i18n="p.cat">Category — all</option><option data-i18n="p.cat1">Laboratory &amp; testing supplies</option><option data-i18n="p.cat2">IT &amp; software</option><option data-i18n="p.cat3">Events &amp; media</option><option data-i18n="p.cat4">Consultancy</option><option data-i18n="p.cat5">Facilities &amp; logistics</option></select></div>
+          <div class="field"><select><option data-i18n="p.st">Status — open</option><option data-i18n="c.closed">Closed</option><option data-i18n="p.awarded">Awarded</option><option data-i18n="c.all">All</option></select></div>
+          <button class="btn btn-primary" type="submit"><span data-i18n="c.search">Search</span></button>
+        </form>
+
+        <div class="result-head"><span><b class="num">4</b> <span data-i18n="p.open">open tenders</span></span><span class="chips"><a class="chip" href="#">RSS</a><a class="chip" href="#" data-i18n="p.alerts">Email alerts</a></span></div>
+
+        <div class="stagger">
+          <a class="doc" href="tender.html"><span class="doc-type green" data-i18n="p.tnd">RFP</span><div><b data-i18n="p.t1">Supply of doping-control sample collection kits (2027–2029)</b><small><span class="num">KADA/T/2026/014</span> · <span data-i18n="p.cat1">Laboratory &amp; testing supplies</span> · <span data-i18n="p.closes">Closes</span> <span class="num">30 · 11 · 2026 · 13:00</span></small></div><span class="badge ok" data-i18n="c.open">Open</span></a>
+          <a class="doc mt-1" href="tender.html"><span class="doc-type green" data-i18n="p.tnd">RFP</span><div><b data-i18n="p.t2">Laboratory analysis services — WADA-accredited laboratory</b><small><span class="num">KADA/T/2026/015</span> · <span data-i18n="p.cat1">Laboratory &amp; testing supplies</span> · <span data-i18n="p.closes">Closes</span> <span class="num">15 · 12 · 2026 · 13:00</span></small></div><span class="badge ok" data-i18n="c.open">Open</span></a>
+          <a class="doc mt-1" href="tender.html"><span class="doc-type" data-i18n="p.rfq">RFQ</span><div><b data-i18n="p.t3">Event production — National Clean Sport Conference 2026</b><small><span class="num">KADA/Q/2026/031</span> · <span data-i18n="p.cat3">Events &amp; media</span> · <span data-i18n="p.closes">Closes</span> <span class="num">10 · 11 · 2026 · 13:00</span></small></div><span class="badge warn" data-i18n="p.soon">Closing soon</span></a>
+          <a class="doc mt-1" href="tender.html"><span class="doc-type" data-i18n="p.rfq">RFQ</span><div><b data-i18n="p.t4">Printing &amp; distribution of awareness materials</b><small><span class="num">KADA/Q/2026/032</span> · <span data-i18n="p.cat3">Events &amp; media</span> · <span data-i18n="p.closes">Closes</span> <span class="num">21 · 11 · 2026 · 13:00</span></small></div><span class="badge ok" data-i18n="c.open">Open</span></a>
+          <a class="doc mt-1" href="#list" style="opacity:.7"><span class="doc-type" data-i18n="p.rfq">RFQ</span><div><b data-i18n="p.t6">Cold-chain transport of samples to the accredited laboratory</b><small><span class="num">KADA/Q/2026/033</span> · <span data-i18n="p.cat5">Facilities &amp; logistics</span> · <span data-i18n="c.closed">Closed</span> <span class="num">15 · 10 · 2026 · 13:00</span></small></div><span class="badge info" data-i18n="p.eval">Under evaluation</span></a>
+          <a class="doc mt-1" href="tender.html" style="opacity:.7"><span class="doc-type" data-i18n="p.tnd">RFP</span><div><b data-i18n="p.t5">Translation &amp; localisation services 2026–27</b><small><span class="num">KADA/T/2026/009</span> · <span data-i18n="p.cat4">Consultancy</span> · <span data-i18n="p.awardedon">Awarded</span> <span class="num">15 · 09 · 2026</span></small></div><span class="badge" data-i18n="p.awarded">Awarded</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head center reveal"><p class="kicker" data-i18n="p.how.k">How to participate</p><h2 class="display" data-i18n="p.how.t">From registration to award</h2></div>
+        <div class="flow">
+          <div class="flow-step"><b data-i18n="p.how.1">Register your company</b><small data-i18n="p.how.1d">Commercial licence, authorised signatory and Mobile ID verification.</small></div>
+          <div class="flow-step"><b data-i18n="p.how.2">Buy the tender documents</b><small data-i18n="p.how.2d">Pay the document fee with K-Net; files unlock instantly in your account.</small></div>
+          <div class="flow-step"><b data-i18n="p.how.3">Clarifications</b><small data-i18n="p.how.3d">Ask questions before the deadline; answers are published to all document purchasers.</small></div>
+          <div class="flow-step"><b data-i18n="p.how.4">Submit your bid</b><small data-i18n="p.how.4d">Upload technical and financial envelopes; get a time-stamped receipt.</small></div>
+          <div class="flow-step hi"><b data-i18n="p.how.5">Evaluation &amp; award</b><small data-i18n="p.how.5d">Evaluation by the tender committee; the award notice is published here.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="help"><div class="wrap"><div class="help-inner reveal"><div><h3 data-i18n="p.cta.t">Procurement enquiries</h3><p data-i18n="p.cta.d">The Corporate Services department answers supplier questions within two working days.</p></div><div class="cta"><a class="btn btn-primary" href="mailto:procurement@kada.gov.kw">procurement@kada.gov.kw</a><a class="btn btn-outline" href="supplier.html"><span data-i18n="nav.s7">Supplier Registration</span></a></div></div></div></section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "المناقصات والمشتريات — كادا",
+    "p.title": "بوابة المناقصات والمشتريات", "p.lede": "تُنشر هنا جميع مناقصات الوكالة وطلبات عروض الأسعار. يشتري الموردون المسجلون وثائق المناقصات عبر كي-نت ويستلمونها فوراً، مع توثيق كل عملية دفع.",
+    "p.c1": "سجّل كمورد", "p.c2": "عرض المناقصات المفتوحة", "p.ph": "رقم المناقصة أو كلمة مفتاحية…",
+    "p.cat": "الفئة — الكل", "p.cat1": "مستلزمات المختبر والفحص", "p.cat2": "تقنية المعلومات والبرمجيات", "p.cat3": "الفعاليات والإعلام", "p.cat4": "الاستشارات", "p.cat5": "المرافق والخدمات اللوجستية",
+    "p.st": "الحالة — مفتوحة", "p.awarded": "تمت الترسية", "p.awardedon": "أُرسيت في", "p.open": "مناقصات مفتوحة", "p.alerts": "تنبيهات البريد الإلكتروني", "p.tnd": "مناقصة", "p.rfq": "طلب أسعار", "p.closes": "تُغلق في", "p.soon": "تُغلق قريباً",
+    "p.t1": "توريد أطقم جمع عينات مراقبة المنشطات (2027–2029)", "p.t2": "خدمات التحليل المخبري — مختبر معتمد من وادا", "p.t3": "تنظيم وإنتاج فعالية — المؤتمر الوطني للرياضة النظيفة 2026", "p.t4": "طباعة وتوزيع المواد التوعوية", "p.t5": "خدمات الترجمة والتعريب 2026–27", "p.t6": "نقل العينات بسلسلة التبريد إلى المختبر المعتمد", "p.eval": "قيد التقييم",
+    "p.how.k": "كيفية المشاركة", "p.how.t": "من التسجيل إلى الترسية",
+    "p.how.1": "سجّل شركتك", "p.how.1d": "الرخصة التجارية، وبيانات المفوض بالتوقيع، والتحقق عبر هويتي.", "p.how.2": "اشترِ وثائق المناقصة", "p.how.2d": "ادفع رسوم الوثائق عبر كي-نت، لتُتاح الملفات فوراً في حسابك.", "p.how.3": "الاستفسارات", "p.how.3d": "اطرح أسئلتك قبل الموعد المحدد، وتُنشر الإجابات لجميع مشتري الوثائق.", "p.how.4": "قدّم عطاءك", "p.how.4d": "ارفع المظروفين الفني والمالي، واحصل على إيصال مختوم بالتاريخ والوقت.", "p.how.5": "التقييم والترسية", "p.how.5d": "تقييم من قِبل لجنة المناقصة، ثم نشر إشعار الترسية هنا.",
+    "p.cta.t": "استفسارات المشتريات", "p.cta.d": "تردّ إدارة الخدمات المؤسسية على استفسارات الموردين خلال يومَي عمل."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

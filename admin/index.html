@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Dashboard — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="home">
+<div data-page>
+
+  <!-- ===================== HOME ===================== -->
+  <section data-view="home">
+    <div class="page-head">
+      <div>
+        <h1><span data-greet>Good morning,</span> <span data-user-text="short">Abdullah</span></h1>
+        <p><span data-user-text="role"></span> · <span data-user-text="org"></span> · <span class="num">23 · 10 · 2026</span></p>
+      </div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="content.html#edit" data-perm="content"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.q1">New page / news</span></a>
+        <a class="btn btn-ghost sm" href="procurement.html#tenders?drawer=d-tnew" data-perm="procurement"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.q2">Publish tender</span></a>
+        <a class="btn btn-ghost sm" href="training.html#course" data-perm="training"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.q3">New course</span></a>
+        <a class="btn btn-primary sm" href="executive.html" data-perm="executive"><svg class="ico"><use href="#i-chart"/></svg><span data-i18n="p.q4">Executive dashboard</span></a>
+        <a class="btn btn-primary sm" href="index.html#tasks"><svg class="ico"><use href="#i-tasks"/></svg><span data-i18n="p.q5">My tasks</span></a>
+      </div>
+    </div>
+
+    <div class="kpis auto">
+      <div class="kpi" data-perm="approvals"><svg class="ico"><use href="#i-doc"/></svg><small data-i18n="p.k1">Content awaiting approval</small><b data-count="4">4</b><em class="warn" data-i18n="p.k1d">2 news · 1 page · 1 event</em></div>
+      <div class="kpi" data-perm="publish"><svg class="ico"><use href="#i-check"/></svg><small data-i18n="p.k13">Your decisions · last 60 days</small><b data-count="7">7</b><em data-i18n="p.k13d">5 approved · 2 returned with the reason</em></div>
+      <div class="kpi" data-perm="approvals"><svg class="ico"><use href="#i-globe"/></svg><small data-i18n="p.k2">Visitors · 30 days</small><b data-count="48210">48,210</b><em data-i18n="p.k2d">+12% vs previous period</em><svg class="spark" data-chart="spark" data-values="31,34,33,38,41,40,44,47,46,49,53,58" data-colors="green"></svg></div>
+      <div class="kpi" data-perm="training"><svg class="ico"><use href="#i-cap"/></svg><small data-i18n="p.k3">Registrations · 7 days</small><b data-count="34">34</b><em data-i18n="p.k3d">TUE & Prescribing: 3 seats left · DCO course full</em><svg class="spark" data-chart="spark" data-values="2,4,3,5,6,7,7" data-colors="green"></svg></div>
+      <div class="kpi" data-perm="training"><svg class="ico"><use href="#i-users"/></svg><small data-i18n="p.k10">Seats booked · open courses</small><b data-count="106">106</b><em data-i18n="p.k10d">Of 170 seats across 4 courses</em></div>
+      <div class="kpi" data-perm="training"><svg class="ico"><use href="#i-cal"/></svg><small data-i18n="p.k11">Upcoming events</small><b data-count="5">5</b><em data-i18n="p.k11d">Next: national teams workshop · 04 · 11</em></div>
+      <div class="kpi" data-perm="training"><svg class="ico"><use href="#i-check"/></svg><small data-i18n="p.k12">Sent for approval</small><b data-count="2">2</b><em class="warn" data-i18n="p.k12d">With the Head of Communications</em></div>
+      <div class="kpi" data-perm="procurement"><svg class="ico"><use href="#i-cart"/></svg><small data-i18n="p.k4">Open tenders</small><b data-count="4">4</b><em data-i18n="p.k4d">12 document purchases in October · KD 1,800</em></div>
+      <div class="kpi hot" data-perm="speakup"><svg class="ico"><use href="#i-shield"/></svg><small data-i18n="p.k5">New Speak Up reports</small><b data-count="2">2</b><em class="down" data-i18n="p.k5d">Triage due within 48 h</em></div>
+      <div class="kpi" data-perm="speakup"><svg class="ico"><use href="#i-search"/></svg><small data-i18n="p.k14">Investigations in progress</small><b data-count="4">4</b><em data-i18n="p.k14d">Findings for SU-2026-0181 due 06 · 11</em></div>
+      <div class="kpi" data-perm="speakup"><svg class="ico"><use href="#i-mail"/></svg><small data-i18n="p.k15">Unread reporter replies</small><b data-count="1">1</b><em class="warn" data-i18n="p.k15d">SU-2026-0191 · replied 23 · 10</em></div>
+      <div class="kpi" data-perm="speakup"><svg class="ico"><use href="#i-chart"/></svg><small data-i18n="p.k16">Reports · 2026</small><b data-count="47">47</b><em data-i18n="p.k16d">37 in scope · 10 out of scope</em><svg class="spark" data-chart="spark" data-values="3,4,2,6,5,4,7,3,5,8" data-colors="red"></svg></div>
+      <div class="kpi" data-perm="tue"><svg class="ico"><use href="#i-med"/></svg><small data-i18n="p.k9">New TUE applications</small><b data-count="2">2</b><em class="warn" data-i18n="p.k9d">Completeness check · oldest received 1 day ago</em></div>
+      <div class="kpi" data-perm="tue"><svg class="ico"><use href="#i-users"/></svg><small data-i18n="p.k17">With the committee</small><b data-count="3">3</b><em data-i18n="p.k17d">1 awaiting documents from the athlete</em></div>
+      <div class="kpi" data-perm="tue"><svg class="ico"><use href="#i-upload"/></svg><small data-i18n="p.k18">ADAMS entries due</small><b data-count="1">1</b><em class="warn" data-i18n="p.k18d">TUE-2026-0139 · by 11 · 11</em></div>
+      <div class="kpi" data-perm="tue"><svg class="ico"><use href="#i-check"/></svg><small data-i18n="p.k19">Decisions · 2026</small><b data-count="23">23</b><em data-i18n="p.k19d">19 granted · 4 denied</em></div>
+      <div class="kpi" data-perm="data"><svg class="ico"><use href="#i-lock"/></svg><small data-i18n="p.k6">Data requests near deadline</small><b data-count="1">1</b><em class="warn" data-i18n="p.k6d">DAR-2026-0402 · 4 days left</em></div>
+      <div class="kpi" data-perm="data"><svg class="ico"><use href="#i-doc"/></svg><small data-i18n="p.k20">Open requests</small><b data-count="5">5</b><em data-i18n="p.k20d">3 access · 1 erasure · 1 rectification</em></div>
+      <div class="kpi" data-perm="data"><svg class="ico"><use href="#i-clock"/></svg><small data-i18n="p.k21">Median completion (days)</small><b data-count="12">12</b><em data-i18n="p.k21d">Statutory limit 30 days · 0 breaches in 2026</em></div>
+      <div class="kpi" data-perm="data"><svg class="ico"><use href="#i-chart"/></svg><small data-i18n="p.k22">Requests · 2026</small><b data-count="38">38</b><em data-i18n="p.k22d">Mostly athletes (71%) · via Mobile ID</em></div>
+      <div class="kpi" data-perm="users"><svg class="ico"><use href="#i-users"/></svg><small data-i18n="p.k7">Active staff accounts</small><b data-count="23">23</b><em data-i18n="p.k7d">MFA enforced · 0 locked</em></div>
+      <div class="kpi navy" data-perm="executive"><svg class="ico"><use href="#i-chart"/></svg><small data-i18n="p.k8">Testing plan completion · 2026</small><b data-count="82" data-suffix="%">82%</b><em data-i18n="p.k8d">On track · 1,284 samples collected</em><svg class="spark" data-chart="spark" data-values="5,11,18,26,35,44,52,61,72,82" data-colors="lime"></svg></div>
+    </div>
+
+    <div class="grid g-main mt-2">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.act">Needs your action</h2><a class="lnk small" href="index.html#tasks" data-i18n="p.seeall">See all tasks</a></div>
+          <div class="feed">
+            <div data-perm="publish"><span class="ic warn"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.a1">Approve: "WADA 2026 compliance audit closes with no critical findings" (AR + EN)</b><small data-i18n="p.a1d">Press release · submitted by Dana Al-Kandari · both languages complete</small></div><a href="content.html#approvals" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="publish"><span class="ic warn"><svg class="ico"><use href="#i-check"/></svg></span><div><b data-i18n="p.a11">3 more items awaiting your decision</b><small data-i18n="p.a11d">Conference registration · Education programme results Q3 · TUE guidance page</small></div><a href="content.html#approvals" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="content" data-no-perm="publish"><span class="ic red"><svg class="ico"><use href="#i-x"/></svg></span><div><b data-i18n="p.a10">Returned to you: "Nutrition supplements: what athletes must check"</b><small data-i18n="p.a10d">Head of Communications · 18 · 10 · 2026 · the last two paragraphs have no English version</small></div><a href="content.html#approvals" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="speakup"><span class="ic red"><svg class="ico"><use href="#i-shield"/></svg></span><div><b data-i18n="p.a2">Triage: report SU-2026-0191</b><small data-i18n="p.a2d">Category: trafficking · the reporter answered your question · 20 h left</small></div><a href="speakup.html#case" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="speakup"><span class="ic warn"><svg class="ico"><use href="#i-shield"/></svg></span><div><b data-i18n="p.a12">Triage: report SU-2026-0190</b><small data-i18n="p.a12d">Category: evasion / tampering · via the app · 29 h left</small></div><a href="speakup.html#inbox" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="speakup"><span class="ic warn"><svg class="ico"><use href="#i-warn"/></svg></span><div><b data-i18n="p.a13">Chain-of-custody signature missing: EV-03</b><small data-i18n="p.a13d">Investigation SU-2026-0181 · product sample handed to the laboratory courier on 14 · 10</small></div><a href="speakup.html#investigation" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="speakup"><span class="ic info"><svg class="ico"><use href="#i-cal"/></svg></span><div><b data-i18n="p.a14">Subject interview S1 · SU-2026-0181</b><small data-i18n="p.a14d">27 · 10 · 2026 at 10:00 · interview room booked</small></div><a href="speakup.html#investigation" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="tue"><span class="ic info"><svg class="ico"><use href="#i-med"/></svg></span><div><b data-i18n="p.a8">Completeness check: TUE-2026-0157</b><small data-i18n="p.a8d">Before use · competition on 28 · 11 · 3 documents · physician signed</small></div><a href="tue.html#app" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="tue"><span class="ic info"><svg class="ico"><use href="#i-med"/></svg></span><div><b data-i18n="p.a15">Completeness check: TUE-2026-0156</b><small data-i18n="p.a15d">Before use · via the KADA app · 2 documents</small></div><a href="tue.html#queue" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="tue"><span class="ic warn"><svg class="ico"><use href="#i-upload"/></svg></span><div><b data-i18n="p.a16">Enter the decision in ADAMS: TUE-2026-0139</b><small data-i18n="p.a16d">Granted 15 · 10 · due by 11 · 11 · manual entry on WADA's platform</small></div><a href="tue.html#queue" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="tue"><span class="ic"><svg class="ico"><use href="#i-mail"/></svg></span><div><b data-i18n="p.a17">Waiting on the athlete: TUE-2026-0142</b><small data-i18n="p.a17d">Additional documents requested 20 · 10 · send a reminder if nothing arrives</small></div><a href="tue.html#queue" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="procurement"><span class="ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b data-i18n="p.a3">Review supplier application SUP-2026-0419</b><small data-i18n="p.a3d">Gulf Lab Logistics · all documents uploaded · 3-working-day SLA</small></div><a href="procurement.html#suppliers" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="data"><span class="ic warn"><svg class="ico"><use href="#i-lock"/></svg></span><div><b data-i18n="p.a4">Respond: DAR-2026-0402 (access request)</b><small data-i18n="p.a4d">4 days to the statutory 30-day deadline · identity verified</small></div><a href="data.html#request" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="data"><span class="ic info"><svg class="ico"><use href="#i-users"/></svg></span><div><b data-i18n="p.a18">Verify guardianship: DAR-2026-0421</b><small data-i18n="p.a18d">Parent on behalf of a minor (U16 · swimming) · guardianship document attached</small></div><a href="data.html#list" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="data"><span class="ic"><svg class="ico"><use href="#i-lock"/></svg></span><div><b data-i18n="p.a19">New rectification request: DAR-2026-0422</b><small data-i18n="p.a19d">Supplier signatory · Al-Dhow Scientific · identity verified</small></div><a href="data.html#list" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="data"><span class="ic warn"><svg class="ico"><use href="#i-clock"/></svg></span><div><b data-i18n="p.a20">Review 41 inactive public accounts before deletion</b><small data-i18n="p.a20d">Retention schedule · 2 years of inactivity · next run 01 · 11</small></div><a href="data.html#retention" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="training"><span class="ic"><svg class="ico"><use href="#i-cap"/></svg></span><div><b data-i18n="p.a5">Recognise uploaded ADEL certificates</b><small data-i18n="p.a5d">7 athletes completed WADA's ADEL e-learning and uploaded their certificates to their KADA account</small></div><a href="training.html#certs" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="training"><span class="ic warn"><svg class="ico"><use href="#i-users"/></svg></span><div><b data-i18n="p.a9">Confirm 1 pending registration: Anti-Doping Essentials · 18 · 11</b><small data-i18n="p.a9d">29 of 40 seats booked · 9 federations have not registered any athlete yet</small></div><a href="training.html#course" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="users"><span class="ic info"><svg class="ico"><use href="#i-users"/></svg></span><div><b data-i18n="p.a6">Access request: new editor for Education dept.</b><small data-i18n="p.a6d">Requested by Faisal Al-Anzi · role: Content editor (training scope)</small></div><a href="users.html" class="lnk" data-i18n="p.open">Open</a></div>
+            <div data-perm="executive"><span class="ic"><svg class="ico"><use href="#i-chart"/></svg></span><div><b data-i18n="p.a7">Sign off: Q3 performance report to the Board</b><small data-i18n="p.a7d">Generated 21 · 10 · 2026 · 18 pages · PDF</small></div><a href="executive.html#reports" class="lnk" data-i18n="p.open">Open</a></div>
+          </div>
+        </div>
+
+        <div class="grid g2">
+          <div class="card" data-perm="approvals">
+            <div class="card-head"><h2 data-i18n="p.pub">Publishing pipeline</h2><small data-i18n="p.pubd">Last 30 days</small></div>
+            <svg class="chart" data-chart="stacked" data-h="170" data-values="6,9,7,11|2,3,1,4" data-labels="W40,W41,W42,W43" data-colors="green,lime"></svg>
+            <div class="legend mt-1"><span><i style="background:var(--green)"></i><span data-i18n="p.pub1">Published (AR + EN)</span><b>33</b></span><span><i style="background:var(--lime)"></i><span data-i18n="p.pub2">Returned for edits</span><b>10</b></span></div>
+          </div>
+          <div class="card" data-perm="publish">
+            <div class="card-head"><h2 data-i18n="p.dec">Your latest decisions</h2><a class="lnk small" href="content.html#approvals" data-i18n="p.decall">Approval queue</a></div>
+            <div class="tl">
+              <div><i></i><div><b data-i18n="p.dec1">Approved: Medicine checker updated for the 2027 Prohibited List</b><small class="num">23 · 10 · 2026</small></div></div>
+              <div><i class="red"></i><div><b data-i18n="p.dec2">Returned: Board Members page</b><small><span class="num">20 · 10 · 2026</span> · <span data-i18n="p.dec2d">needs the Executive Office's confirmation</span></small></div></div>
+              <div><i class="red"></i><div><b data-i18n="p.dec3">Returned: Nutrition supplements: what athletes must check</b><small><span class="num">18 · 10 · 2026</span> · <span data-i18n="p.dec3d">English version missing</span></small></div></div>
+              <div><i></i><div><b data-i18n="p.dec4">Approved: Prohibited List 2027 takes effect on 1 January</b><small><span class="num">16 · 10 · 2026</span> · <span data-i18n="p.dec4d">publishes on 15 · 12 · 2026</span></small></div></div>
+            </div>
+          </div>
+          <div class="card" data-perm="training">
+            <div class="card-head"><h2 data-i18n="p.reg">Seats booked · upcoming</h2><small data-i18n="p.regd">Courses and the conference</small></div>
+            <div class="bars-h">
+              <div><span data-i18n="p.r1">Anti-Doping Essentials · 18 Nov</span><div class="bar"><i style="width:72%"></i></div><b class="num">29/40</b></div>
+              <div><span data-i18n="p.r2">Coaching Clean · 25 Nov</span><div class="bar"><i style="width:40%"></i></div><b class="num">12/30</b></div>
+              <div><span data-i18n="p.r3">TUE & Prescribing · 02 Dec</span><div class="bar"><i style="width:95%"></i></div><b class="num">57/60</b></div>
+              <div><span data-i18n="p.r4">Clean Sport Day (schools) · 09 Dec</span><div class="bar"><i style="width:20%"></i></div><b class="num">8/40</b></div>
+              <div><span data-i18n="p.r5">DCO accreditation · 11 Jan</span><div class="bar"><i class="lime" style="width:100%"></i></div><b class="num">20/20</b></div>
+              <div><span data-i18n="p.r6">Clean Sport Conference · 14 Dec</span><div class="bar"><i class="navy" style="width:71%"></i></div><b class="num">212/300</b></div>
+            </div>
+          </div>
+          <div class="card" data-perm="training">
+            <div class="card-head"><h2 data-i18n="p.mine">Sent for approval</h2><small data-i18n="p.mined">Reviewed by the Head of Communications</small></div>
+            <div class="feed">
+              <div><span class="ic warn"><svg class="ico"><use href="#i-cal"/></svg></span><div><b data-i18n="p.mi1">Registration opens — National Clean Sport Conference</b><small data-i18n="p.mi1d">Event · sent 21 · 10 · 2026 · awaiting approval</small></div></div>
+              <div><span class="ic warn"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.mi2">Education programme results · Q3 2026</b><small data-i18n="p.mi2d">News · sent 21 · 10 · 2026 · awaiting approval</small></div></div>
+            </div>
+            <p class="small muted mt-1" data-i18n="p.minote">You are notified of each decision by email and in the app. If an item is rejected, the reason appears here and you can edit and resend it.</p>
+          </div>
+          <div class="card" data-perm="procurement">
+            <div class="card-head"><h2 data-i18n="p.proc">Procurement activity</h2><small data-i18n="p.procd">Document purchases · K-Net</small></div>
+            <svg class="chart" data-chart="bars" data-h="170" data-values="2,5,3,8,6,12" data-labels="May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر" data-colors="navy"></svg>
+          </div>
+          <div class="card" data-perm="speakup">
+            <div class="card-head"><h2 data-i18n="p.su">Speak Up · case status</h2><small data-i18n="p.sud">Open caseload</small></div>
+            <div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="2,3,4,2" data-labels="New,Triage,Investigation,Referred to Results Mgmt" data-labels-ar="جديد,فرز,تحقيق,محال لإدارة النتائج" data-colors="red,amber,green,navy" data-center="11" data-center-label="open" data-center-label-ar="مفتوحة"></svg>
+              <div class="legend"><span><i style="background:var(--red)"></i><span data-i18n="p.su1">New</span><b>2</b></span><span><i style="background:var(--amber)"></i><span data-i18n="p.su2">Triage</span><b>3</b></span><span><i style="background:var(--green)"></i><span data-i18n="p.su3">Investigation</span><b>4</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.su4">Referred to Results Mgmt</span><b>2</b></span></div></div>
+          </div>
+          <div class="card" data-perm="data">
+            <div class="card-head"><h2 data-i18n="p.dar">Data requests · SLA</h2><small data-i18n="p.dard">30-day statutory window</small></div>
+            <div class="stack" style="gap:12px">
+              <div class="row between"><b class="num">DAR-2026-0402</b><span class="st red" data-i18n="p.d1">4 days left</span></div><div class="sla red"><div class="bar"><i style="width:87%"></i></div></div>
+              <div class="row between"><b class="num">DAR-2026-0418</b><span class="st ok" data-i18n="p.d2">19 days left</span></div><div class="sla"><div class="bar"><i style="width:37%"></i></div></div>
+              <div class="row between"><b class="num">DAR-2026-0421</b><span class="st ok" data-i18n="p.d3">26 days left</span></div><div class="sla"><div class="bar"><i style="width:13%"></i></div></div>
+            </div>
+          </div>
+          <div class="card" data-perm="speakup">
+            <div class="card-head"><h2 data-i18n="p.inv">My investigations</h2><a class="lnk small" href="speakup.html#inbox" data-i18n="p.invall">All reports</a></div>
+            <div class="feed">
+              <div><span class="ic"><svg class="ico"><use href="#i-search"/></svg></span><div><b><span class="num">SU-2026-0181</span> · <span data-i18n="p.inv1c">Evasion / tampering</span></b><small data-i18n="p.inv1d">Interviews · 2 of 3 held · findings due 06 · 11</small></div><a href="speakup.html#investigation" class="lnk" data-i18n="p.open">Open</a></div>
+              <div><span class="ic"><svg class="ico"><use href="#i-search"/></svg></span><div><b><span class="num">SU-2026-0187</span> · <span data-i18n="p.inv2c">Trafficking / supply</span></b><small data-i18n="p.inv2d">Evidence review · 3 of 5 attachments reviewed</small></div><a href="speakup.html#inbox" class="lnk" data-i18n="p.open">Open</a></div>
+              <div><span class="ic"><svg class="ico"><use href="#i-search"/></svg></span><div><b><span class="num">SU-2026-0178</span> · <span data-i18n="p.inv3c">Use / possession</span></b><small data-i18n="p.inv3d">Evidence gathering · plan approved</small></div><a href="speakup.html#inbox" class="lnk" data-i18n="p.open">Open</a></div>
+              <div><span class="ic"><svg class="ico"><use href="#i-search"/></svg></span><div><b><span class="num">SU-2026-0176</span> · <span data-i18n="p.inv4c">Complicity / assistance</span></b><small data-i18n="p.inv4d">Findings drafted · with the Head of Intelligence & Investigations</small></div><a href="speakup.html#inbox" class="lnk" data-i18n="p.open">Open</a></div>
+            </div>
+          </div>
+          <div class="card" data-perm="tue">
+            <div class="card-head"><h2 data-i18n="p.tq">TUE applications · status</h2><small data-i18n="p.tqd">Current queue</small></div>
+            <div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="2,2,1,2" data-labels="New,With committee,Awaiting athlete,Decided" data-labels-ar="جديد,لدى اللجنة,بانتظار الرياضي,صدر القرار" data-colors="red,green,amber,navy" data-center="7" data-center-label="applications" data-center-label-ar="طلبات"></svg>
+              <div class="legend"><span><i style="background:var(--red)"></i><span data-i18n="p.tq1">New</span><b>2</b></span><span><i style="background:var(--green)"></i><span data-i18n="p.tq2">With committee</span><b>2</b></span><span><i style="background:var(--amber)"></i><span data-i18n="p.tq3">Awaiting athlete</span><b>1</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.tq4">Decided</span><b>2</b></span></div></div>
+          </div>
+          <div class="card" data-perm="tue">
+            <div class="card-head"><h2 data-i18n="p.tc">With the committee · 21-day clock</h2><small data-i18n="p.tcd">Runs from the date the file is complete</small></div>
+            <div class="stack" style="gap:12px">
+              <div class="row between"><b class="num">TUE-2026-0151</b><span class="st ok" data-i18n="p.tc1">14 days left</span></div><div class="sla"><div class="bar"><i style="width:33%"></i></div></div>
+              <div class="row between"><b class="num">TUE-2026-0148</b><span class="st ok" data-i18n="p.tc2">10 days left</span></div><div class="sla"><div class="bar"><i style="width:52%"></i></div></div>
+              <div class="row between"><b class="num">TUE-2026-0142</b><span class="st warn" data-i18n="p.tc3">Awaiting athlete since 20 · 10</span></div><div class="sla warn"><div class="bar"><i style="width:33%"></i></div></div>
+            </div>
+          </div>
+          <div class="card" data-perm="data">
+            <div class="card-head"><h2 data-i18n="p.cw">Consent withdrawn · 30 days</h2><a class="lnk small" href="data.html#consent" data-i18n="p.cwall">Consent records</a></div>
+            <div class="bars-h"><div><span data-i18n="p.cw1">Newsletter & announcements</span><div class="bar"><i style="width:100%"></i></div><b class="num">88</b></div><div><span data-i18n="p.cw2">Account & e-services</span><div class="bar"><i class="navy" style="width:14%"></i></div><b class="num">12</b></div><div><span data-i18n="p.cw3">Training & certificates</span><div class="bar"><i class="lime" style="width:5%"></i></div><b class="num">4</b></div></div>
+          </div>
+          <div class="card" data-perm="executive">
+            <div class="card-head"><h2 data-i18n="p.tst">Samples collected · 2026</h2><small data-i18n="p.tstd">In-competition vs out-of-competition</small></div>
+            <svg class="chart" data-chart="line" data-h="170" data-values="46,52,65,70,81,77,72,89,96,94|32,41,49,53,59,56,52,64,70,66" data-labels="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="ينا,فبر,مار,أبر,ماي,يون,يول,أغس,سبت,أكت" data-colors="green,navy"></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ai">KADA AI · insights for you</span></h2>
+          <p data-i18n="p.aid">Generated from your modules · refreshed hourly</p>
+          <ul>
+            <li data-perm="approvals"><span><b data-i18n="p.ai1">Arabic pages are 2.4× more visited</b> <span data-i18n="p.ai1d">than English — 3 pages still lack an Arabic version.</span></span></li>
+            <li data-perm="training"><span><b data-i18n="p.ai2">TUE & Prescribing has 3 seats left a month before the session</b> <span data-i18n="p.ai2d">— consider a second online session for medical staff in January.</span></span></li>
+            <li data-perm="procurement"><span><b data-i18n="p.ai3">Addendum 2 not yet acknowledged</b> <span data-i18n="p.ai3d">by 4 of 9 purchasers of KADA/T/2026/014; closing is in 38 days.</span></span></li>
+            <li data-perm="speakup"><span><b data-i18n="p.ai4">SU-2026-0191 resembles SU-2026-0187</b> <span data-i18n="p.ai4d">(same federation, same window). Suggested: link cases for review.</span></span></li>
+            <li data-perm="tue"><span><b data-i18n="p.ai8">TUE-2026-0139 was granted on 15 · 10</b> <span data-i18n="p.ai8d">— the ADAMS entry is due by 11 · 11 (21 days from the decision).</span></span></li>
+            <li data-perm="data"><span><b data-i18n="p.ai5">DAR-2026-0402 touches 3 systems</b> <span data-i18n="p.ai5d">— the training record export is still pending from Education.</span></span></li>
+            <li data-perm="executive"><span><b data-i18n="p.ai6">Weightlifting testing lags the plan by 14%</b> <span data-i18n="p.ai6d">while athletics is 9% ahead; reallocating 20 out-of-competition tests could close the gap.</span></span></li>
+            <li data-perm="users"><span><b data-i18n="p.ai7">2 accounts inactive for 60+ days</b> <span data-i18n="p.ai7d">still hold publishing rights — review recommended.</span></span></li>
+          </ul>
+          <div class="acts"><button class="btn btn-outline xs" type="button" data-toast="AI brief sent to your mailbox — design preview" data-toast-ar="أُرسل الموجز إلى بريدك — معاينة تصميم"><svg class="ico"><use href="#i-mail"/></svg><span data-i18n="p.aib">Email me this brief</span></button></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.dl">Upcoming deadlines</h2></div>
+          <div class="tl">
+            <div data-perm="speakup"><i class="red"></i><div><b data-i18n="p.dl1">Triage window closes · SU-2026-0191</b><small class="num">24 · 10 · 2026 · 09:40</small></div></div>
+            <div data-perm="speakup"><i class="warn"></i><div><b data-i18n="p.dl10">Triage window closes · SU-2026-0190</b><small class="num">24 · 10 · 2026 · 18:15</small></div></div>
+            <div data-perm="speakup"><i></i><div><b data-i18n="p.dl11">Subject interview S1 · SU-2026-0181</b><small class="num">27 · 10 · 2026 · 10:00</small></div></div>
+            <div data-perm="speakup"><i></i><div><b data-i18n="p.dl12">Findings due · SU-2026-0181</b><small class="num">06 · 11 · 2026</small></div></div>
+            <div data-perm="tue"><i class="warn"></i><div><b data-i18n="p.dl7">ADAMS entry · TUE-2026-0139</b><small class="num">11 · 11 · 2026</small></div></div>
+            <div data-perm="tue"><i></i><div><b data-i18n="p.dl13">Committee decision due · TUE-2026-0148</b><small class="num">02 · 11 · 2026</small></div></div>
+            <div data-perm="tue"><i></i><div><b data-i18n="p.dl14">National swimming championship · athlete of TUE-2026-0157</b><small class="num">28 · 11 · 2026</small></div></div>
+            <div data-perm="data"><i class="warn"></i><div><b data-i18n="p.dl2">Statutory response · DAR-2026-0402</b><small class="num">27 · 10 · 2026</small></div></div>
+            <div data-perm="data"><i></i><div><b data-i18n="p.dl15">Monthly deletion run · retention schedule</b><small class="num">01 · 11 · 2026</small></div></div>
+            <div data-perm="data"><i></i><div><b data-i18n="p.dl16">Statutory response · DAR-2026-0418</b><small class="num">11 · 11 · 2026</small></div></div>
+            <div data-perm="procurement"><i></i><div><b data-i18n="p.dl3">Tender closes · KADA/T/2026/014</b><small class="num">30 · 11 · 2026 · 13:00</small></div></div>
+            <div data-perm="training"><i></i><div><b data-i18n="p.dl4">Education workshop — national teams</b><small class="num">04 · 11 · 2026</small></div></div>
+            <div data-perm="training"><i></i><div><b data-i18n="p.dl8">Anti-Doping Essentials · session</b><small class="num">18 · 11 · 2026</small></div></div>
+            <div data-perm="training"><i class="warn"></i><div><b data-i18n="p.dl9">Conference registration closes</b><small class="num">30 · 11 · 2026</small></div></div>
+            <div data-perm="approvals"><i></i><div><b data-i18n="p.dl5">Prohibited List 2027 — publish AR + EN</b><small class="num">01 · 01 · 2027</small></div></div>
+            <div data-perm="executive"><i></i><div><b data-i18n="p.dl6">Board meeting · Q3 report</b><small class="num">02 · 11 · 2026</small></div></div>
+          </div>
+        </div>
+
+        <div class="card" data-perm="settings">
+          <div class="card-head"><h2 data-i18n="p.h">System health</h2><span class="st ok" data-i18n="p.hok">All good</span></div>
+          <div class="health">
+            <div><span data-i18n="p.h1">Website uptime · 30 days</span><b class="num">99.98%</b></div>
+            <div><span data-i18n="p.h2">K-Net gateway</span><b class="st ok plain" data-i18n="p.hon">Online</b></div>
+            <div><span data-i18n="p.h3">Email / SMS queue</span><b class="num">0 <span data-i18n="p.hq">pending</span></b></div>
+            <div><span data-i18n="p.h4">Last backup</span><b class="num">02:00 · OK</b></div>
+            <div><span data-i18n="p.h5">Security alerts · 24 h</span><b class="num">0</b></div>
+          </div>
+        </div>
+
+        <div class="card soft" data-acct="sysadmin,exec">
+          <div class="card-head"><h2 data-i18n="p.fa">Field roles live in the app</h2></div>
+          <p class="small muted" data-i18n="p.fad">Inspectors, results management and committees work in the KADA mobile application with their own role-based dashboards. This admin application governs the website, e-services and the executive view.</p>
+          <a class="btn btn-ghost xs mt-1" href="../platform.html#app"><svg class="ico"><use href="#i-phone"/></svg><span data-i18n="p.fab">Preview app roles</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MY TASKS ===================== -->
+  <section data-view="tasks">
+    <div class="page-head">
+      <div><h1 data-i18n="t.h">My tasks</h1><p data-i18n="t.d">Everything assigned to you across modules, ordered by deadline. Tasks are created by workflows (approvals, SLAs) or by colleagues.</p></div>
+      <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Filter panel — design preview" data-toast-ar="لوحة التصفية — معاينة تصميم"><svg class="ico"><use href="#i-filter"/></svg><span data-i18n="t.filter">Filter</span></button><button class="btn btn-primary sm" type="button" data-toast="Task created — design preview" data-toast-ar="أُنشئت المهمة — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="t.new">New task</span></button></div>
+    </div>
+    <div class="kan">
+      <div class="col"><h4><span data-i18n="t.c1">To do</span><span class="num">8</span></h4>
+        <div class="it" data-perm="publish"><b data-i18n="p.a1">Approve: "WADA 2026 compliance audit closes with no critical findings" (AR + EN)</b><small data-i18n="t.i1">Workflow · content approval</small><div class="row"><span class="st warn" data-i18n="t.today">Today</span></div></div>
+        <div class="it" data-perm="speakup"><b data-i18n="p.a2">Triage: report SU-2026-0191</b><small data-i18n="t.i2">SLA · 48-hour triage</small><div class="row"><span class="st red" data-i18n="t.h20">20 h left</span></div></div>
+        <div class="it" data-perm="tue"><b data-i18n="p.a8">Completeness check: TUE-2026-0157</b><small data-i18n="t.i8">ISTUE · decision within 21 days of a complete file</small><div class="row"><span class="st warn" data-i18n="t.today">Today</span></div></div>
+        <div class="it" data-perm="procurement"><b data-i18n="p.a3">Review supplier application SUP-2026-0419</b><small data-i18n="t.i3">SLA · 3 working days</small><div class="row"><span class="st" data-i18n="t.d2">2 days</span></div></div>
+        <div class="it" data-perm="data"><b data-i18n="p.a4">Respond: DAR-2026-0402 (access request)</b><small data-i18n="t.i4">Statutory · 30 days</small><div class="row"><span class="st red" data-i18n="p.d1">4 days left</span></div></div>
+        <div class="it" data-perm="training"><b data-i18n="p.a5">Recognise uploaded ADEL certificates</b><small data-i18n="t.i5">Programme · certification</small><div class="row"><span class="st" data-i18n="t.d3">3 days</span></div></div>
+        <div class="it" data-perm="executive"><b data-i18n="p.a7">Sign off: Q3 performance report to the Board</b><small data-i18n="t.i7">Reporting · board pack</small><div class="row"><span class="st" data-i18n="t.d5">5 days</span></div></div>
+        <div class="it" data-perm="users"><b data-i18n="p.a6">Access request: new editor for Education dept.</b><small data-i18n="t.i6">IAM · role assignment</small><div class="row"><span class="st" data-i18n="t.d2">2 days</span></div></div>
+      </div>
+      <div class="col"><h4><span data-i18n="t.c2">In progress</span><span class="num">6</span></h4>
+        <div class="it" data-perm="content"><b data-i18n="t.p1">Translate "Board Members" page to English</b><small data-i18n="t.p1d">Blocked for publishing until EN exists</small><div class="row"><span class="st info" data-i18n="t.me">Me</span></div></div>
+        <div class="it" data-perm="training"><b data-i18n="t.p2">Prepare the conference workshops · 14 Dec</b><small data-i18n="t.p2d">Rooms and facilitators for the 3 parallel workshops</small></div>
+        <div class="it" data-perm="procurement"><b data-i18n="t.p3">Draft addendum 3 · KADA/T/2026/014</b><small data-i18n="t.p3d">Clarification answers · 6 questions</small></div>
+        <div class="it" data-perm="speakup"><b data-i18n="t.p4">Case SU-2026-0187 · evidence review</b><small data-i18n="t.p4d">3 of 5 attachments reviewed</small></div>
+        <div class="it" data-perm="data"><b data-i18n="t.p5">Retention schedule review · training records</b><small data-i18n="t.p5d">Legal & Compliance · annual</small></div>
+        <div class="it" data-perm="executive"><b data-i18n="t.p6">Review 2027 testing distribution plan</b><small data-i18n="t.p6d">Draft from Operations · v2</small></div>
+      </div>
+      <div class="col"><h4><span data-i18n="t.c3">Waiting on others</span><span class="num">6</span></h4>
+        <div class="it" data-perm="content"><b data-i18n="t.w1">Photos for conference article</b><small data-i18n="t.w1d">Waiting on Media team</small></div>
+        <div class="it" data-perm="data"><b data-i18n="t.w2">Training record export for DAR-2026-0402</b><small data-i18n="t.w2d">Waiting on Education & Awareness</small></div>
+        <div class="it" data-perm="procurement"><b data-i18n="t.w3">Legal opinion on bid security clause</b><small data-i18n="t.w3d">Waiting on Legal & Compliance</small></div>
+        <div class="it" data-perm="speakup"><b data-i18n="t.w4">Results Management review of SU-2026-0174</b><small data-i18n="t.w4d">Waiting on the Results Department</small></div>
+        <div class="it" data-perm="tue"><b data-i18n="t.w6">Additional documents · TUE-2026-0142</b><small data-i18n="t.w6d">Waiting on the athlete (requested through the Results Department)</small></div>
+        <div class="it" data-perm="training"><b data-i18n="t.w7">Approval: conference registration announcement</b><small data-i18n="t.w7d">Waiting on the Head of Communications</small></div>
+        <div class="it" data-perm="executive"><b data-i18n="t.w5">WADA audit follow-up letter</b><small data-i18n="t.w5d">Waiting on Director General signature</small></div>
+      </div>
+      <div class="col"><h4><span data-i18n="t.c4">Done · this week</span><span class="num">4</span></h4>
+        <div class="it"><b data-i18n="t.f1">Published: Medicine checker updated for the 2027 List (AR + EN)</b><small class="num">21 · 10 · 2026</small></div>
+        <div class="it"><b data-i18n="t.f2">Closed: DAR-2026-0391 (erasure · completed)</b><small class="num">20 · 10 · 2026</small></div>
+        <div class="it"><b data-i18n="t.f3">Published: Addendum 2 · KADA/T/2026/014</b><small class="num">22 · 10 · 2026</small></div>
+        <div class="it"><b data-i18n="t.f4">Certificates issued: Anti-Doping Essentials · October session</b><small class="num">16 · 10 · 2026</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROFILE ===================== -->
+  <section data-view="profile">
+    <div class="page-head"><div><h1 data-i18n="pr.h">My profile & sessions</h1><p data-i18n="pr.d">Identity comes from the agency directory (SSO). You can manage notification preferences and review your active sessions here.</p></div></div>
+    <div class="grid g-32">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="pr.id">Identity</h2><span class="st ok plain" data-i18n="pr.sso">Agency SSO · MFA active</span></div>
+          <dl class="kv">
+            <dt data-i18n="pr.name">Full name</dt><dd data-user-text="name"></dd>
+            <dt data-i18n="pr.role">Role</dt><dd data-user-text="role"></dd>
+            <dt data-i18n="pr.dept">Department</dt><dd data-user-text="org"></dd>
+            <dt data-i18n="pr.mail">Work email</dt><dd class="num" data-user-text="email"></dd>
+            <dt data-i18n="pr.lang">Interface language</dt><dd data-i18n="pr.langv">Arabic (default) · English</dd>
+            <dt data-i18n="pr.last">Last sign-in</dt><dd class="num">23 · 10 · 2026 · 08:12 · Kuwait City</dd>
+          </dl>
+        </div>
+        <div class="card flush">
+          <div class="card-head"><h2 data-i18n="pr.sess">Active sessions</h2><button class="btn btn-ghost xs" type="button" data-toast="Other sessions revoked — design preview" data-toast-ar="أُنهيت الجلسات الأخرى — معاينة تصميم" data-i18n="pr.revoke">Sign out other sessions</button></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="pr.s1">Device</th><th data-i18n="pr.s2">Location</th><th data-i18n="pr.s3">Started</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><b>Windows · Chrome 130</b><span class="sub" data-i18n="pr.this">This session</span></td><td data-i18n="pr.loc">Kuwait City · KADA HQ</td><td class="num">08:12</td><td><span class="st ok" data-i18n="pr.cur">Current</span></td></tr>
+              <tr><td><b>iPhone · <span data-i18n="pr.app">KADA app</span></b><span class="sub">iOS 19</span></td><td data-i18n="pr.loc">Kuwait City · KADA HQ</td><td class="num">22 · 10 · 2026</td><td><button class="lnk" type="button" data-toast="Session revoked — design preview" data-toast-ar="أُنهيت الجلسة — معاينة تصميم" data-i18n="pr.rev">Revoke</button></td></tr>
+            </tbody></table></div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="pr.notif">Notification preferences</h2></div>
+          <div class="switches">
+            <div><div><b data-i18n="pr.n1">Email</b><small data-i18n="pr.n1d">Approvals, assignments, SLA warnings</small></div><span class="switch on" role="switch" aria-checked="true"></span></div>
+            <div><div><b data-i18n="pr.n2">SMS</b><small data-i18n="pr.n2d">Critical only: new Speak Up report, SLA breach</small></div><span class="switch on" role="switch" aria-checked="true"></span></div>
+            <div><div><b data-i18n="pr.n3">Daily digest</b><small data-i18n="pr.n3d">08:00 · summary of open items</small></div><span class="switch" role="switch" aria-checked="false"></span></div>
+            <div><div><b data-i18n="pr.n4">AI weekly brief</b><small data-i18n="pr.n4d">Trends and anomalies across your modules</small></div><span class="switch on" role="switch" aria-checked="true"></span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="pr.sec">Security</h2></div>
+          <div class="health">
+            <div><span data-i18n="pr.mfa">Multi-factor authentication</span><b class="st ok plain" data-i18n="pr.on">Enforced</b></div>
+            <div><span data-i18n="pr.pw">Password</span><b data-i18n="pr.pwv">Managed by agency SSO</b></div>
+            <div><span data-i18n="pr.pk">Passkey</span><b data-i18n="pr.pkv">1 registered</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "لوحة المعلومات — إدارة كادا",
+  "p.q1": "صفحة / خبر جديد", "p.q2": "نشر مناقصة", "p.q3": "دورة جديدة", "p.q4": "اللوحة التنفيذية", "p.q5": "مهامي",
+  "p.k1": "محتوى بانتظار الاعتماد", "p.k1d": "خبران · صفحة · فعالية", "p.dec": "آخر قراراتك", "p.decall": "قائمة الاعتماد", "p.dec1": "اعتُمد: تحديث فاحص الأدوية وفق قائمة المحظورات 2027", "p.dec2": "أُعيد: صفحة مجلس الإدارة", "p.dec2d": "تحتاج تأكيد المكتب التنفيذي", "p.dec3": "أُعيد: المكملات الغذائية: ما يجب على الرياضيين التحقق منه", "p.dec3d": "النسخة الإنجليزية ناقصة", "p.dec4": "اعتُمد: قائمة المحظورات 2027 تدخل حيز التنفيذ في 1 يناير", "p.dec4d": "يُنشر في 15 · 12 · 2026",
+  "p.k13": "قراراتك · آخر 60 يوماً", "p.k13d": "5 اعتُمدت · 2 أُعيدت مع السبب", "p.k2": "الزوار · 30 يوماً", "p.k2d": "+12% مقارنة بالفترة السابقة", "p.k3": "التسجيلات · 7 أيام", "p.k3d": "الإعفاء العلاجي: بقيت 3 مقاعد · دورة مسؤولي المراقبة مكتملة",
+  "p.k10": "المقاعد المحجوزة · الدورات المفتوحة", "p.k10d": "من أصل 170 مقعداً في 4 دورات", "p.k11": "الفعاليات القادمة", "p.k11d": "التالية: ورشة المنتخبات الوطنية · 04 · 11", "p.k12": "مُرسلة للاعتماد", "p.k12d": "لدى رئيس الاتصال",
+  "p.k4": "مناقصات مفتوحة", "p.k4d": "12 عملية شراء لوثائق المناقصات في أكتوبر · 1,800 د.ك", "p.k5": "بلاغات Speak Up جديدة", "p.k5d": "الفرز مطلوب خلال 48 ساعة", "p.k6": "طلبات بيانات تقترب من المهلة", "p.k6d": "DAR-2026-0402 · باقٍ 4 أيام",
+  "p.k7": "حسابات الموظفين النشطة", "p.k7d": "التحقق متعدد العوامل إلزامي · لا حسابات مقفلة", "p.k8": "إنجاز خطة الفحص · 2026", "p.k8d": "على المسار · جُمعت 1,284 عينة",
+  "p.act": "تتطلب إجراءً منك", "p.seeall": "كل المهام", "p.open": "فتح",
+  "p.a1": "اعتماد: «اختتام تدقيق وادا للامتثال 2026 دون ملاحظات حرجة» (عربي + إنجليزي)", "p.a1d": "بيان صحفي · قدّمته دانة الكندري · النسختان مكتملتان", "p.a11": "3 عناصر أخرى بانتظار قرارك", "p.a11d": "التسجيل في المؤتمر · نتائج برنامج التثقيف للربع الثالث · صفحة إرشادات الإعفاء العلاجي", "p.a10": "أُعيد إليك: «المكملات الغذائية: ما يجب على الرياضيين التحقق منه»", "p.a10d": "رئيس الاتصال · 18 · 10 · 2026 · الفقرتان الأخيرتان بلا نسخة إنجليزية", "p.a2": "فرز: البلاغ SU-2026-0191", "p.a2d": "التصنيف: اتجار · ردّ المبلّغ على سؤالك · باقٍ 20 ساعة",
+  "p.a3": "مراجعة طلب تسجيل المورّد SUP-2026-0419", "p.a3d": "Gulf Lab Logistics · جميع الوثائق مرفوعة · مهلة 3 أيام عمل", "p.a4": "الرد على: DAR-2026-0402 (طلب وصول)", "p.a4d": "باقٍ 4 أيام على المهلة القانونية (30 يوماً) · الهوية موثّقة",
+  "p.a5": "اعتماد شهادات ADEL المرفوعة", "p.a5d": "أكمل 7 رياضيين برنامج ADEL الإلكتروني من وادا ورفعوا شهاداتهم إلى حساباتهم لدى الوكالة",
+  "p.a9": "تأكيد تسجيل معلّق: أساسيات مكافحة المنشطات · 18 · 11", "p.a9d": "حُجز 29 من 40 مقعداً · 9 اتحادات لم تسجّل أي رياضي بعد", "p.a6": "طلب صلاحية: محرر جديد لإدارة التعليم", "p.a6d": "مقدّم الطلب: فيصل العنزي · الدور: محرر محتوى (نطاق التدريب)",
+  "p.a7": "اعتماد: تقرير أداء الربع الثالث المرفوع إلى مجلس الإدارة", "p.a7d": "أُنشئ في 21 · 10 · 2026 · 18 صفحة · PDF",
+  "p.pub": "مسار النشر", "p.pubd": "آخر 30 يوماً", "p.pub1": "نُشر (عربي + إنجليزي)", "p.pub2": "أُعيد للتعديل", "p.reg": "المقاعد المحجوزة · القادم", "p.regd": "الدورات والمؤتمر",
+  "p.r1": "أساسيات مكافحة المنشطات · 18 نوفمبر", "p.r2": "التدريب النظيف · 25 نوفمبر", "p.r3": "الإعفاء العلاجي ووصف الأدوية · 02 ديسمبر", "p.r4": "يوم الرياضة النظيفة (المدارس) · 09 ديسمبر", "p.r5": "اعتماد مسؤولي المراقبة · 11 يناير", "p.r6": "مؤتمر الرياضة النظيفة · 14 ديسمبر",
+  "p.mine": "مُرسلة للاعتماد", "p.mined": "يراجعها رئيس الاتصال", "p.mi1": "فتح باب التسجيل — المؤتمر الوطني للرياضة النظيفة", "p.mi1d": "فعالية · أُرسلت 21 · 10 · 2026 · بانتظار الاعتماد", "p.mi2": "نتائج برنامج التثقيف · الربع الثالث 2026", "p.mi2d": "خبر · أُرسل 21 · 10 · 2026 · بانتظار الاعتماد",
+  "p.minote": "يصلك إشعار بكل قرار عبر البريد الإلكتروني وفي التطبيق. وإذا رُفض أي عنصر يظهر السبب هنا، ويمكنك تعديله وإعادة إرساله.", "p.proc": "نشاط المشتريات", "p.procd": "شراء وثائق المناقصات · كي-نت",
+  "p.su": "Speak Up · حالة القضايا", "p.sud": "القضايا المفتوحة", "p.su1": "جديد", "p.su2": "فرز", "p.su3": "تحقيق", "p.su4": "محال لإدارة النتائج", "p.dar": "طلبات البيانات · المهلة", "p.dard": "المهلة القانونية 30 يوماً",
+  "p.d1": "باقٍ 4 أيام", "p.d2": "باقٍ 19 يوماً", "p.d3": "باقٍ 26 يوماً", "p.tst": "العينات المُجمَّعة · 2026", "p.tstd": "داخل المنافسة مقابل خارجها",
+  "p.ai": "كادا AI · رؤى مخصصة لك", "p.aid": "مستخلصة من وحداتك · تُحدَّث كل ساعة", "p.ai1": "الصفحات العربية تُزار بمعدل 2.4 ضعف", "p.ai1d": "الصفحات الإنجليزية — 3 صفحات ما زالت بلا نسخة عربية.",
+  "p.ai2": "بقيت 3 مقاعد في دورة الإعفاء العلاجي ووصف الأدوية قبل شهر من موعدها", "p.ai2d": "— يُقترح فتح جلسة ثانية عبر الإنترنت للطواقم الطبية في يناير.", "p.ai3": "لم يُقرّ باستلام الملحق 2 بعد", "p.ai3d": "4 من أصل 9 مشترين لوثائق المناقصة KADA/T/2026/014؛ الإغلاق بعد 38 يوماً.",
+  "p.ai4": "البلاغ SU-2026-0191 يشبه SU-2026-0187", "p.ai4d": "(الاتحاد نفسه والفترة الزمنية نفسها). يُقترح ربط القضيتين للمراجعة.", "p.ai5": "الطلب DAR-2026-0402 يشمل بيانات في 3 أنظمة", "p.ai5d": "— تصدير سجل التدريب ما زال معلّقاً لدى إدارة التعليم.",
+  "p.ai6": "فحوصات رفع الأثقال متأخرة عن الخطة بنسبة 14%", "p.ai6d": "بينما تتقدم ألعاب القوى بنسبة 9%؛ إعادة توزيع 20 فحصاً خارج المنافسة قد تسدّ الفجوة.", "p.ai7": "حسابان غير نشطين منذ أكثر من 60 يوماً", "p.ai7d": "ما زالا يملكان صلاحية النشر — يُوصى بمراجعتهما.", "p.aib": "أرسل لي هذا الموجز",
+  "p.dl": "المواعيد النهائية القادمة", "p.dl1": "انتهاء مهلة الفرز · SU-2026-0191", "p.dl2": "موعد الرد القانوني · DAR-2026-0402", "p.dl3": "إغلاق المناقصة · KADA/T/2026/014", "p.dl4": "ورشة توعوية — المنتخبات الوطنية", "p.dl8": "أساسيات مكافحة المنشطات · موعد الجلسة", "p.dl9": "إغلاق التسجيل في المؤتمر", "p.dl5": "قائمة المحظورات 2027 — نشر عربي + إنجليزي", "p.dl6": "اجتماع مجلس الإدارة · تقرير الربع الثالث",
+  "p.h": "حالة النظام", "p.hok": "كل الأنظمة سليمة", "p.h1": "توافر الموقع · 30 يوماً", "p.h2": "بوابة كي-نت", "p.hon": "متصلة", "p.h3": "قائمة انتظار البريد / الرسائل النصية", "p.hq": "قيد الانتظار", "p.h4": "آخر نسخة احتياطية", "p.h5": "تنبيهات أمنية · 24 ساعة",
+  "p.fa": "الأدوار الميدانية في التطبيق", "p.fad": "يعمل المفتشون وإدارة النتائج واللجان في تطبيق كادا عبر لوحات خاصة بكل دور. أما هذا التطبيق الإداري فيدير الموقع والخدمات الإلكترونية والعرض التنفيذي.", "p.fab": "معاينة أدوار التطبيق",
+  "t.h": "مهامي", "t.d": "كل ما هو مسند إليك عبر الوحدات مرتباً حسب الموعد النهائي. تُنشأ المهام من سير العمل (الاعتمادات، المهل) أو من الزملاء.", "t.filter": "تصفية", "t.new": "مهمة جديدة",
+  "t.c1": "للتنفيذ", "t.c2": "قيد التنفيذ", "t.c3": "بانتظار الآخرين", "t.c4": "منجز · هذا الأسبوع", "t.today": "اليوم", "t.h20": "باقٍ 20 ساعة", "t.d2": "يومان", "t.d3": "3 أيام", "t.d5": "5 أيام", "t.me": "أنا",
+  "t.i1": "سير عمل · اعتماد المحتوى", "t.i2": "مهلة · فرز خلال 48 ساعة", "t.i3": "مهلة · 3 أيام عمل", "t.i4": "قانوني · 30 يوماً", "t.i5": "برنامج · إصدار شهادات", "t.i6": "الهوية والصلاحيات · إسناد دور", "t.i7": "تقارير · حزمة المجلس",
+  "t.p1": "ترجمة صفحة «أعضاء مجلس الإدارة» إلى الإنجليزية", "t.p1d": "النشر موقوف حتى توفر النسخة الإنجليزية", "t.p2": "تجهيز ورش المؤتمر · 14 ديسمبر", "t.p2d": "القاعات والميسّرون لثلاث ورش متوازية", "t.p3": "صياغة الملحق 3 · KADA/T/2026/014", "t.p3d": "إجابات الاستفسارات · 6 أسئلة",
+  "t.p4": "القضية SU-2026-0187 · مراجعة الأدلة", "t.p4d": "رُوجع 3 من 5 مرفقات", "t.p5": "مراجعة جدول الاحتفاظ · سجلات التدريب", "t.p5d": "الشؤون القانونية والامتثال · سنوية", "t.p6": "مراجعة خطة توزيع الفحوصات 2027", "t.p6d": "مسودة من العمليات · الإصدار 2",
+  "t.w1": "صور مقال المؤتمر", "t.w1d": "بانتظار فريق الإعلام", "t.w2": "تصدير سجل التدريب لـ DAR-2026-0402", "t.w2d": "بانتظار إدارة التعليم والتوعية", "t.w3": "رأي قانوني في بند الكفالة الأولية", "t.w3d": "بانتظار الشؤون القانونية والامتثال", "t.w4": "مراجعة إدارة النتائج للقضية SU-2026-0174", "t.w4d": "بانتظار إدارة النتائج", "t.w5": "خطاب متابعة تدقيق وادا", "t.w5d": "بانتظار توقيع المدير العام",
+  "t.f1": "نُشر: تحديث فاحص الأدوية وفق قائمة 2027 (عربي + إنجليزي)", "t.f2": "أُغلق: DAR-2026-0391 (حذف البيانات · مكتمل)", "t.f3": "نُشر: الملحق 2 · KADA/T/2026/014", "t.f4": "صدرت الشهادات: أساسيات مكافحة المنشطات · جلسة أكتوبر",
+  "pr.h": "ملفي وجلساتي", "pr.d": "تُستمد هويتك من دليل الوكالة (SSO). يمكنك هنا إدارة تفضيلات الإشعارات ومراجعة جلساتك النشطة.", "pr.id": "الهوية", "pr.sso": "SSO الوكالة · التحقق متعدد العوامل مفعّل",
+  "pr.name": "الاسم الكامل", "pr.role": "الدور", "pr.dept": "الإدارة", "pr.mail": "البريد الرسمي", "pr.lang": "لغة الواجهة", "pr.langv": "العربية (افتراضي) · الإنجليزية", "pr.last": "آخر دخول",
+  "pr.sess": "الجلسات النشطة", "pr.revoke": "إنهاء الجلسات الأخرى", "pr.s1": "الجهاز", "pr.s2": "الموقع", "pr.s3": "وقت البدء", "pr.this": "هذه الجلسة", "pr.loc": "مدينة الكويت · مقر كادا", "pr.app": "تطبيق الوكالة", "pr.cur": "الحالية", "pr.rev": "إنهاء",
+  "pr.notif": "تفضيلات الإشعارات", "pr.n1": "البريد الإلكتروني", "pr.n1d": "الاعتمادات، الإسنادات، تحذيرات المهل", "pr.n2": "الرسائل النصية", "pr.n2d": "الحالات الحرجة فقط: بلاغ Speak Up جديد، تجاوز مهلة", "pr.n3": "الملخص اليومي", "pr.n3d": "08:00 · ملخص العناصر المفتوحة", "pr.n4": "موجز AI الأسبوعي", "pr.n4d": "الاتجاهات والأنماط غير المعتادة عبر وحداتك",
+  "pr.sec": "الأمان", "pr.mfa": "التحقق متعدد العوامل", "pr.on": "إلزامي", "pr.pw": "كلمة المرور", "pr.pwv": "تُدار عبر SSO الوكالة", "pr.pk": "مفتاح المرور", "pr.pkv": "مفتاح واحد مسجّل"
+,
+  "p.k9": "طلبات إعفاء جديدة", "p.k9d": "التحقق من الاكتمال · أقدمها ورد قبل يوم",
+  "p.a8": "التحقق من الاكتمال: TUE-2026-0157", "p.a8d": "قبل الاستعمال · المنافسة في 28 · 11 · 3 مستندات · وقّع الطبيب",
+  "p.ai8": "مُنح الطلب TUE-2026-0139 في 15 · 10", "p.ai8d": "— ويجب إدخاله في ADAMS قبل 11 · 11 (خلال 21 يوماً من القرار).",
+  "p.dl7": "الإدخال في ADAMS · TUE-2026-0139", "t.i8": "المعيار الدولي · القرار خلال 21 يوماً من اكتمال الملف",
+  "t.w6": "مستندات إضافية · TUE-2026-0142", "t.w6d": "بانتظار الرياضي (طُلبت عبر إدارة النتائج)",
+  "t.w7": "الاعتماد: إعلان التسجيل في المؤتمر", "t.w7d": "بانتظار رئيس الاتصال",
+  "p.k14": "تحقيقات جارية", "p.k14d": "استنتاجات SU-2026-0181 مستحقة في 06 · 11", "p.k15": "ردود مبلّغين غير مقروءة", "p.k15d": "SU-2026-0191 · ردّ في 23 · 10", "p.k16": "البلاغات · 2026", "p.k16d": "37 ضمن النطاق · 10 خارج النطاق",
+  "p.k17": "لدى اللجنة", "p.k17d": "واحد بانتظار مستندات من الرياضي", "p.k18": "إدخالات ADAMS مستحقة", "p.k18d": "TUE-2026-0139 · قبل 11 · 11", "p.k19": "القرارات · 2026", "p.k19d": "19 منحاً · 4 رفضاً",
+  "p.k20": "طلبات مفتوحة", "p.k20d": "3 وصول · 1 محو · 1 تصحيح", "p.k21": "وسيط مدة الإنجاز (بالأيام)", "p.k21d": "الحد النظامي 30 يوماً · لا تجاوزات في 2026", "p.k22": "الطلبات · 2026", "p.k22d": "معظمها من الرياضيين (71%) · عبر هويتي",
+  "p.a12": "فرز: البلاغ SU-2026-0190", "p.a12d": "التصنيف: تهرّب / تلاعب · عبر التطبيق · باقٍ 29 ساعة", "p.a13": "توقيع سلسلة الحيازة ناقص: EV-03", "p.a13d": "التحقيق SU-2026-0181 · عيّنة المنتج سُلّمت إلى ناقل المختبر في 14 · 10", "p.a14": "مقابلة الشخص المعني S1 · SU-2026-0181", "p.a14d": "27 · 10 · 2026 الساعة 10:00 · حُجزت غرفة المقابلات",
+  "p.a15": "التحقق من الاكتمال: TUE-2026-0156", "p.a15d": "قبل الاستعمال · عبر تطبيق كادا · مستندان", "p.a16": "إدخال القرار في ADAMS: TUE-2026-0139", "p.a16d": "مُنح في 15 · 10 · قبل 11 · 11 · إدخال يدوي على منصة وادا", "p.a17": "بانتظار الرياضي: TUE-2026-0142", "p.a17d": "طُلبت مستندات إضافية في 20 · 10 · أرسلي تذكيراً إن لم تصل",
+  "p.a18": "التحقق من الولاية: DAR-2026-0421", "p.a18d": "وليّ أمر نيابةً عن قاصر (تحت 16 · سباحة) · مستند الولاية مرفق", "p.a19": "طلب تصحيح جديد: DAR-2026-0422", "p.a19d": "المفوض بالتوقيع · Al-Dhow Scientific · الهوية موثّقة", "p.a20": "مراجعة 41 حساباً عاماً غير نشط قبل الحذف", "p.a20d": "جدول الاحتفاظ · سنتان دون نشاط · الدورة التالية 01 · 11",
+  "p.inv": "تحقيقاتي", "p.invall": "كل البلاغات", "p.inv1c": "تهرّب / تلاعب", "p.inv1d": "المقابلات · عُقدت 2 من 3 · الاستنتاجات مستحقة 06 · 11", "p.inv2c": "اتجار / توريد", "p.inv2d": "مراجعة الأدلة · رُوجع 3 من 5 مرفقات", "p.inv3c": "استعمال / حيازة", "p.inv3d": "جمع الأدلة · اعتُمدت الخطة", "p.inv4c": "تواطؤ / مساعدة", "p.inv4d": "صيغت الاستنتاجات · لدى رئيس الاستخبارات والتحقيقات",
+  "p.tq": "طلبات الإعفاء · الحالة", "p.tqd": "القائمة الحالية", "p.tq1": "جديد", "p.tq2": "لدى اللجنة", "p.tq3": "بانتظار الرياضي", "p.tq4": "صدر القرار",
+  "p.tc": "لدى اللجنة · مهلة 21 يوماً", "p.tcd": "تُحتسب من تاريخ اكتمال الملف", "p.tc1": "باقٍ 14 يوماً", "p.tc2": "باقٍ 10 أيام", "p.tc3": "بانتظار الرياضي منذ 20 · 10",
+  "p.cw": "سحب الموافقات · 30 يوماً", "p.cwall": "سجلات الموافقة", "p.cw1": "النشرة والإعلانات", "p.cw2": "الحساب والخدمات الإلكترونية", "p.cw3": "التدريب والشهادات",
+  "p.dl10": "انتهاء مهلة الفرز · SU-2026-0190", "p.dl11": "مقابلة الشخص المعني S1 · SU-2026-0181", "p.dl12": "موعد الاستنتاجات · SU-2026-0181", "p.dl13": "موعد قرار اللجنة · TUE-2026-0148", "p.dl14": "بطولة السباحة الوطنية · رياضي الطلب TUE-2026-0157", "p.dl15": "دورة الحذف الشهرية · جدول الاحتفاظ", "p.dl16": "موعد الرد القانوني · DAR-2026-0418"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

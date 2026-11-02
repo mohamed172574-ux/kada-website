@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">TUE applications — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="tue">
+<div data-page>
+
+  <!-- ===================== QUEUE ===================== -->
+  <section data-view="queue">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">TUE applications</h1><p data-i18n="p.d">Check that each application is complete, send it to the committee in the KADA app, then follow the decision through to the athlete and ADAMS.</p></div>
+      <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="TUE register exported (PDF, no medical content) — design preview" data-toast-ar="صُدّر سجل الطلبات (PDF، دون محتوى طبي) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export register</span></button><a class="btn btn-primary sm" href="#app"><svg class="ico"><use href="#i-med"/></svg><span data-i18n="p.next">Check next application</span></a></div>
+    </div>
+
+    <div class="restricted"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.restr">Restricted medical module. Access is limited to the TUE Committee secretary and the committee physicians; the system administrator manages accounts but cannot view medical content. Every view is logged, and diagnoses never appear in list views.</span></div>
+    <div class="kpis mt-2">
+      <div class="kpi hot"><small data-i18n="p.k1">New · completeness check</small><b data-count="2">2</b><em class="down" data-i18n="p.k1d">Oldest received 1 day ago</em></div>
+      <div class="kpi"><small data-i18n="p.k2">With the committee</small><b data-count="3">3</b><em data-i18n="p.k2d">1 awaiting documents from the athlete</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Median decision time (days)</small><b data-count="12">12</b><em data-i18n="p.k3d">Standard: usually ≤ 21 days of a complete file</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Decisions · 2026</small><b data-count="23">23</b><em data-i18n="p.k4d">19 granted · 4 denied</em><svg class="spark" data-chart="spark" data-values="1,2,3,2,1,3,2,4,3,2" data-colors="green"></svg></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="t">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="new"><span data-i18n="p.f1">Completeness check</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="com"><span data-i18n="p.f2">With committee</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="dec"><span data-i18n="p.f3">Decided</span><span class="cnt"></span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="t"><table class="tbl">
+        <thead><tr><th data-i18n="p.c1">Application</th><th data-i18n="p.c2">Athlete</th><th data-i18n="p.c3">Type</th><th data-i18n="p.c4">Received</th><th data-i18n="p.c5">21-day clock</th><th data-i18n="p.c6">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="new" data-sel class="is-sel"><td class="nw"><b class="num">TUE-2026-0157</b><span class="sub" data-i18n="p.ch1">Website · 3 documents · AR</span></td><td>H. Al-Enezi<span class="sub" data-i18n="p.sp2">Swimming</span></td><td data-i18n="p.ty1">Before use</td><td class="num nw">22 · 10 · 09:12</td><td><small class="muted" data-i18n="p.clk0">Starts when complete</small></td><td><span class="st red" data-i18n="p.s1">New</span></td><td class="r"><a class="lnk" href="#app" data-i18n="p.open">Open</a></td></tr>
+          <tr data-f="new" data-sel><td class="nw"><b class="num">TUE-2026-0156</b><span class="sub" data-i18n="p.ch2">KADA app · 2 documents · EN</span></td><td>F. Al-Fadhel<span class="sub" data-i18n="p.sp3">Football</span></td><td data-i18n="p.ty1">Before use</td><td class="num nw">21 · 10 · 18:40</td><td><small class="muted" data-i18n="p.clk0">Starts when complete</small></td><td><span class="st red" data-i18n="p.s1">New</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="com" data-sel><td class="nw"><b class="num">TUE-2026-0151</b><span class="sub" data-i18n="p.ch3">Website · 5 documents · AR</span></td><td>M. Behbehani<span class="sub" data-i18n="p.sp4">Weightlifting</span></td><td data-i18n="p.ty2">Retroactive</td><td class="num nw">15 · 10 · 11:05</td><td><div class="sla"><div class="bar"><i style="width:33%"></i></div><small data-i18n="p.clk1">14 days left</small></div></td><td><span class="st info" data-i18n="p.s2">With committee</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="com" data-sel><td class="nw"><b class="num">TUE-2026-0148</b><span class="sub" data-i18n="p.ch2">KADA app · 2 documents · EN</span></td><td>A. Al-Azmi<span class="sub" data-i18n="p.sp1">Athletics</span></td><td data-i18n="p.ty3">Renewal</td><td class="num nw">12 · 10 · 08:20</td><td><div class="sla"><div class="bar"><i style="width:52%"></i></div><small data-i18n="p.clk2">10 days left</small></div></td><td><span class="st info" data-i18n="p.s2">With committee</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="com" data-sel><td class="nw"><b class="num">TUE-2026-0142</b><span class="sub" data-i18n="p.ch1">Website · 3 documents · AR</span></td><td>Y. Al-Rashidi<span class="sub" data-i18n="p.sp1">Athletics</span></td><td data-i18n="p.ty1">Before use</td><td class="num nw">14 · 10 · 16:02</td><td><div class="sla warn"><div class="bar"><i style="width:33%"></i></div><small data-i18n="p.clk3">Awaiting athlete since 20 · 10</small></div></td><td><span class="st warn" data-i18n="p.s3">Information requested</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="dec" data-sel><td class="nw"><b class="num">TUE-2026-0139</b><span class="sub" data-i18n="p.ch3">Website · 5 documents · AR</span></td><td>N. Al-Shatti<span class="sub" data-i18n="p.sp2">Swimming</span></td><td data-i18n="p.ty1">Before use</td><td class="num nw">02 · 10 · 10:30</td><td><small data-i18n="p.clk4">Decided in 13 days</small></td><td><span class="st ok" data-i18n="p.s4">Granted · ADAMS entry due 11 · 11</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="dec" data-sel><td class="nw"><b class="num">TUE-2026-0133</b><span class="sub" data-i18n="p.ch2">KADA app · 2 documents · EN</span></td><td>K. Dashti<span class="sub" data-i18n="p.sp1">Athletics</span></td><td data-i18n="p.ty1">Before use</td><td class="num nw">25 · 09 · 13:15</td><td><small data-i18n="p.clk5">Decided in 18 days</small></td><td><span class="st" data-i18n="p.s5">Denied · reasons sent</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.foot">Medical files are retained under WADA's privacy standard (ISPPPI) and never leave this module; the executive dashboard receives counts only</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== APPLICATION ===================== -->
+  <section data-view="app">
+    <a class="pe-back mb-1" href="#queue"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.back">All applications</span></a>
+    <div class="restricted"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.a.restr">Confidential medical file · your access is logged. Documents open in a watermarked viewer and cannot be downloaded from this module.</span></div>
+    <div class="grid g-main mt-2">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2><span class="num">TUE-2026-0157</span> · <span data-i18n="p.ty1">Before use</span></h2><small><span data-i18n="p.a.rec">Received</span> <span class="num">22 · 10 · 2026 · 09:12</span> · <span data-i18n="p.a.via">via the website (Arabic) · identity verified with Mobile ID</span></small></div><div class="row"><span class="st red" id="st-tue" data-i18n="p.s1">New</span></div></div>
+          <div class="steps">
+            <div class="done"><b data-i18n="p.a.s1">Received</b><small class="num">22 · 10</small></div>
+            <div class="cur"><b data-i18n="p.a.s2">Completeness check</b><small data-i18n="p.a.you">You</small></div>
+            <div><b data-i18n="p.a.s3">Committee review</b><small data-i18n="p.a.app">KADA app</small></div>
+            <div><b data-i18n="p.a.s4">Decision</b><small>—</small></div>
+            <div><b data-i18n="p.a.s5">Notified via Results Dept.</b><small>—</small></div>
+            <div><b data-i18n="p.a.s6">Entered in ADAMS</b><small>—</small></div>
+          </div>
+          <div class="tabs pills mt-2" data-tabs="ap">
+            <button type="button" class="is-on" data-tab="sum" data-i18n="p.a.t1">Application</button>
+            <button type="button" data-tab="med"><span data-i18n="p.a.t2">Medical file</span> <span class="pill-num">3</span></button>
+            <button type="button" data-tab="doc" data-i18n="p.a.t3">Physician</button>
+            <button type="button" data-tab="tl" data-i18n="p.a.t4">Timeline</button>
+          </div>
+          <div data-pane-group="ap" data-pane="sum">
+            <dl class="kv">
+              <dt data-i18n="p.a.ath">Athlete</dt><dd><span>H. Al-Enezi</span> · <span data-i18n="p.a.athv">Swimming · national-level athlete (KADA definition) · Kuwait Swimming Association</span></dd>
+              <dt data-i18n="p.a.dx">Diagnosis</dt><dd data-i18n="p.a.dxv">Ulcerative colitis — moderate flare</dd>
+              <dt data-i18n="p.a.sub">Substance &amp; dosage</dt><dd data-i18n="p.a.subv">Prednisolone · oral · 20 mg once daily, tapering · 8 weeks (oral glucocorticoids are prohibited in competition)</dd>
+              <dt data-i18n="p.a.alt">Permitted alternatives</dt><dd data-i18n="p.a.altv">Mesalazine for 10 weeks — insufficient response, documented by the treating gastroenterologist</dd>
+              <dt data-i18n="p.a.ev">Next competition</dt><dd><span data-i18n="p.a.evv">National swimming championship</span> · <span class="num">28 · 11 · 2026</span></dd>
+            </dl>
+          </div>
+          <div data-pane-group="ap" data-pane="med" hidden>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.a.d1">Gastroenterologist's report</b><small class="num">12 · 10 · 2026 · 2 p.</small></div><button class="btn btn-ghost xs" type="button" data-toast="Opened in the watermarked viewer · access logged" data-toast-ar="فُتح في العارض ذي العلامة المائية · سُجّل الوصول" data-i18n="p.view">View</button></div>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.a.d2">Colonoscopy report</b><small class="num">03 · 09 · 2026 · 3 p.</small></div><button class="btn btn-ghost xs" type="button" data-toast="Opened in the watermarked viewer · access logged" data-toast-ar="فُتح في العارض ذي العلامة المائية · سُجّل الوصول" data-i18n="p.view">View</button></div>
+            <div class="doc-row"><span class="ty">PDF</span><div><b data-i18n="p.a.d3">Laboratory results · CRP and faecal calprotectin</b><small class="num">10 · 10 · 2026 · 1 p.</small></div><button class="btn btn-ghost xs" type="button" data-toast="Opened in the watermarked viewer · access logged" data-toast-ar="فُتح في العارض ذي العلامة المائية · سُجّل الوصول" data-i18n="p.view">View</button></div>
+          </div>
+          <div data-pane-group="ap" data-pane="doc" hidden>
+            <dl class="kv">
+              <dt data-i18n="p.a.dr">Treating physician</dt><dd data-i18n="p.a.drv">Dr. Sara Al-Ali · Gastroenterology</dd>
+              <dt data-i18n="p.a.lic">Medical licence</dt><dd class="num">KW-MED-48213</dd>
+              <dt data-i18n="p.a.sig">Physician's signature</dt><dd><span class="st ok" data-i18n="p.a.sigv">Signed electronically · 22 · 10 · 09:40</span></dd>
+            </dl>
+          </div>
+          <div data-pane-group="ap" data-pane="tl" hidden>
+            <div class="tl">
+              <div><i></i><div><b data-i18n="p.a.tl1">Application submitted by the athlete · identity verified with Mobile ID</b><small class="num">22 · 10 · 09:12 · <span data-i18n="p.a.sys">system</span></small></div></div>
+              <div><i></i><div><b data-i18n="p.a.tl2">Physician signed the medical sections</b><small class="num">22 · 10 · 09:40</small></div></div>
+              <div><i class="warn"></i><div><b data-i18n="p.a.tl3">Notified: TUE Committee secretary</b><small class="num">22 · 10 · 09:41 · <span data-i18n="p.a.sys">system</span></small></div></div>
+              <div><i class="grey"></i><div><b data-i18n="p.a.tl4">Completeness check</b><small data-i18n="p.a.tl4d">In progress</small></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.a.after">After the decision</h2></div>
+          <div class="check-list">
+            <label><input type="checkbox" disabled><span data-i18n="p.a.af1">Decision letter sent to the athlete by the Results Department (app and account) — a denial states the reasons and the right to appeal</span></label>
+            <label><input type="checkbox" disabled><span data-i18n="p.a.af2">If granted: athlete warned in writing that the TUE is valid at national level only</span></label>
+            <label><input type="checkbox" disabled><span data-i18n="p.a.af3">Decision entered in ADAMS within 21 days — manual entry on WADA's platform (no integration)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.a.cc">Completeness check</h2></div>
+          <div class="check-list">
+            <label><input type="checkbox" checked><span data-i18n="p.a.c1">Application form complete</span></label>
+            <label><input type="checkbox" checked><span data-i18n="p.a.c2">Physician's signature</span></label>
+            <label><input type="checkbox" checked><span data-i18n="p.a.c3">Specialist's diagnosis report</span></label>
+            <label><input type="checkbox" checked><span data-i18n="p.a.c4">Examinations and test results</span></label>
+            <label><input type="checkbox" checked><span data-i18n="p.a.c5">Permitted alternatives explained</span></label>
+          </div>
+          <div class="stack mt-2" style="gap:8px">
+            <button class="btn btn-primary" type="button" data-toast="Sent to the TUE Committee in the KADA app · 3 physicians notified · 21-day clock started" data-toast-ar="أُحيل إلى لجنة الإعفاء في تطبيق كادا · أُخطر 3 أطباء · بدأت مهلة 21 يوماً" data-set-status="#st-tue" data-st-class="info" data-st-en="With committee" data-st-ar="لدى اللجنة"><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.a.send">Complete · send to committee</span></button>
+            <button class="btn btn-ghost sm" type="button" data-drawer="d-req"><svg class="ico"><use href="#i-mail"/></svg><span data-i18n="p.a.ret">Request missing documents</span></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.a.panel">Committee panel</h2><span class="st ok plain" data-i18n="p.a.coi">Conflict-of-interest declarations ✓</span></div>
+          <div class="feed">
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px">A</span><div><b data-i18n="p.a.m1">Dr. Ahmad Al-Mulla · chair</b><small data-i18n="p.a.m1d">Sports medicine</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">L</span><div><b data-i18n="p.a.m2">Dr. Layla Hayat</b><small data-i18n="p.a.m2d">Gastroenterology</small></div><span class="tick">✓</span></div>
+            <div><span class="ava" style="width:36px;height:36px;font-size:12px;background:var(--navy)">B</span><div><b data-i18n="p.a.m3">Dr. Bader Al-Roumi</b><small data-i18n="p.a.m3d">Internal medicine</small></div><span class="tick">✓</span></div>
+          </div>
+          <p class="small muted mt-2" data-i18n="p.a.paneln">Members review and vote in the KADA app (committee role). Decisions are reached by consensus, otherwise by majority.</p>
+        </div>
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.a.ai">AI assistant · advisory</span></h2>
+          <p data-i18n="p.a.aip">Supports the completeness check. AI never assesses the medical criteria or makes a decision.</p>
+          <ul>
+            <li><span data-i18n="p.a.ai1"><b>Documents present</b> for the evidence WADA's medical guidance lists for this condition: specialist report, endoscopy and laboratory results.</span></li>
+            <li><span data-i18n="p.a.ai2"><b>Competition on 28 · 11.</b> Sending the file to the committee today allows a decision before the event.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="drawer" id="d-req"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-i18n="p.rq.h">Request missing documents</span> <span class="num">TUE-2026-0157</span></h3>
+    <p class="small muted" data-i18n="p.rq.d">The athlete receives this request from the Results Department in their KADA account and app. The 21-day decision period starts only when the file is complete.</p>
+    <div class="form">
+      <div class="field"><label data-i18n="p.rq.what">What is missing?</label>
+        <div class="check-list">
+          <label><input type="checkbox"><span data-i18n="p.a.c3">Specialist's diagnosis report</span></label>
+          <label><input type="checkbox"><span data-i18n="p.a.c4">Examinations and test results</span></label>
+          <label><input type="checkbox"><span data-i18n="p.a.c5">Permitted alternatives explained</span></label>
+          <label><input type="checkbox"><span data-i18n="p.a.c2">Physician's signature</span></label>
+        </div>
+      </div>
+      <div class="field"><label data-i18n="p.rq.msg">Message to the athlete</label><textarea data-i18n-ph="p.rq.ph" placeholder="e.g. Please upload the latest laboratory results signed by your physician…"></textarea></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Request sent to the athlete through the Results Department · status: information requested" data-toast-ar="أُرسل الطلب إلى الرياضي عبر إدارة النتائج · الحالة: مطلوب معلومات إضافية" data-set-status="#st-tue" data-st-class="warn" data-st-en="Information requested" data-st-ar="مطلوب معلومات إضافية"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.rq.send">Send to athlete</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.rq.cancel">Cancel</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "طلبات الإعفاء للاستعمال العلاجي — إدارة كادا",
+  "p.h": "طلبات الإعفاء للاستعمال العلاجي", "p.d": "التحقق من اكتمال كل طلب، وإحالته إلى اللجنة في تطبيق كادا، ثم متابعة القرار حتى يصل إلى الرياضي ويُدخل في ADAMS.",
+  "p.export": "تصدير السجل", "p.next": "تحقّق من الطلب التالي", "p.back": "كل الطلبات", "p.open": "فتح", "p.view": "عرض",
+  "p.restr": "وحدة طبية مقيّدة. الوصول محصور بأمين سر لجنة الإعفاء للاستعمال العلاجي وأطباء اللجنة؛ ويدير مدير النظام الحسابات دون أن يطّلع على المحتوى الطبي. تُسجَّل كل مشاهدة، ولا يظهر التشخيص في القوائم أبداً.",
+  "p.k1": "جديدة · التحقق من الاكتمال", "p.k1d": "أقدمها ورد قبل يوم واحد", "p.k2": "لدى اللجنة", "p.k2d": "واحد بانتظار مستندات من الرياضي", "p.k3": "الوسيط لزمن القرار (بالأيام)", "p.k3d": "المعيار: عادةً ≤ 21 يوماً من اكتمال الملف", "p.k4": "القرارات · 2026", "p.k4d": "19 منحاً · 4 رفضاً",
+  "p.f0": "الكل", "p.f1": "التحقق من الاكتمال", "p.f2": "لدى اللجنة", "p.f3": "صدر فيها قرار",
+  "p.c1": "الطلب", "p.c2": "الرياضي", "p.c3": "النوع", "p.c4": "تاريخ الورود", "p.c5": "مهلة 21 يوماً", "p.c6": "الحالة",
+  "p.ch1": "الموقع · 3 مستندات · عربي", "p.ch2": "تطبيق كادا · مستندان · إنجليزي", "p.ch3": "الموقع · 5 مستندات · عربي",
+  "p.sp1": "ألعاب القوى", "p.sp2": "السباحة", "p.sp3": "كرة القدم", "p.sp4": "رفع الأثقال",
+  "p.ty1": "قبل الاستعمال", "p.ty2": "بأثر رجعي", "p.ty3": "تجديد",
+  "p.clk0": "تبدأ عند اكتمال الملف", "p.clk1": "باقٍ 14 يوماً", "p.clk2": "باقٍ 10 أيام", "p.clk3": "بانتظار الرياضي منذ 20 · 10", "p.clk4": "صدر القرار خلال 13 يوماً", "p.clk5": "صدر القرار خلال 18 يوماً",
+  "p.s1": "جديد", "p.s2": "لدى اللجنة", "p.s3": "مطلوب معلومات إضافية", "p.s4": "مُنح · إدخاله في ADAMS قبل 11 · 11", "p.s5": "مرفوض · أُرسلت الأسباب",
+  "p.foot": "تُحفظ الملفات الطبية وفق معيار وادا لحماية الخصوصية (ISPPPI) ولا تخرج من هذه الوحدة؛ ولا تتلقى اللوحة التنفيذية إلا الأعداد",
+  "p.a.restr": "ملف طبي سرّي · يُسجَّل وصولك. تُفتح المستندات في عارض بعلامة مائية ولا يمكن تنزيلها من هذه الوحدة.",
+  "p.a.rec": "ورد", "p.a.via": "عبر الموقع (عربي) · تم التحقق من الهوية عبر «هويتي»",
+  "p.a.s1": "الاستلام", "p.a.s2": "التحقق من الاكتمال", "p.a.you": "أنت", "p.a.s3": "مراجعة اللجنة", "p.a.app": "تطبيق كادا", "p.a.s4": "القرار", "p.a.s5": "الإبلاغ عبر إدارة النتائج", "p.a.s6": "الإدخال في ADAMS",
+  "p.a.t1": "الطلب", "p.a.t2": "الملف الطبي", "p.a.t3": "الطبيب", "p.a.t4": "الخط الزمني",
+  "p.a.ath": "الرياضي", "p.a.athv": "السباحة · رياضي على المستوى الوطني (وفق تعريف الوكالة) · الاتحاد الكويتي للسباحة",
+  "p.a.dx": "التشخيص", "p.a.dxv": "التهاب القولون التقرحي — نوبة متوسطة",
+  "p.a.sub": "المادة والجرعة", "p.a.subv": "بريدنيزولون · عن طريق الفم · 20 ملغ مرة يومياً مع تخفيض تدريجي · 8 أسابيع (الجلوكوكورتيكويدات الفموية محظورة داخل المنافسة)",
+  "p.a.alt": "البدائل المسموحة", "p.a.altv": "ميسالازين لمدة 10 أسابيع — استجابة غير كافية، موثّقة من طبيب الجهاز الهضمي المعالج",
+  "p.a.ev": "المنافسة القادمة", "p.a.evv": "بطولة السباحة الوطنية",
+  "p.a.d1": "تقرير طبيب الجهاز الهضمي", "p.a.d2": "تقرير تنظير القولون", "p.a.d3": "نتائج المختبر · CRP والكالبروتكتين في البراز",
+  "p.a.dr": "الطبيب المعالج", "p.a.drv": "د. سارة العلي · أمراض الجهاز الهضمي", "p.a.lic": "الترخيص الطبي", "p.a.sig": "توقيع الطبيب", "p.a.sigv": "موقّع إلكترونياً · 22 · 10 · 09:40",
+  "p.a.tl1": "قدّم الرياضي الطلب · تم التحقق من الهوية عبر «هويتي»", "p.a.tl2": "وقّع الطبيب الأقسام الطبية", "p.a.tl3": "أُخطر: أمين سر لجنة الإعفاء", "p.a.tl4": "التحقق من الاكتمال", "p.a.tl4d": "قيد الإجراء", "p.a.sys": "النظام",
+  "p.a.after": "بعد صدور القرار",
+  "p.a.af1": "إرسال خطاب القرار إلى الرياضي عبر إدارة النتائج (التطبيق والحساب) — ويتضمن الرفض أسبابه والحق في الاستئناف",
+  "p.a.af2": "عند المنح: تنبيه الرياضي كتابياً إلى أن الإعفاء صالح على المستوى الوطني فقط",
+  "p.a.af3": "إدخال القرار في ADAMS خلال 21 يوماً — إدخال يدوي على منصة وادا (دون تكامل)",
+  "p.a.cc": "التحقق من الاكتمال", "p.a.c1": "نموذج الطلب مكتمل", "p.a.c2": "توقيع الطبيب", "p.a.c3": "تقرير التشخيص من الطبيب المختص", "p.a.c4": "الفحوصات ونتائج التحاليل", "p.a.c5": "توضيح البدائل المسموحة",
+  "p.a.send": "مكتمل · إحالة إلى اللجنة", "p.a.ret": "طلب مستندات ناقصة",
+  "p.a.panel": "أعضاء اللجنة", "p.a.coi": "إقرارات عدم تعارض المصالح ✓",
+  "p.a.m1": "د. أحمد الملا · رئيس اللجنة", "p.a.m1d": "الطب الرياضي", "p.a.m2": "د. ليلى حياة", "p.a.m2d": "أمراض الجهاز الهضمي", "p.a.m3": "د. بدر الرومي", "p.a.m3d": "الطب الباطني",
+  "p.a.paneln": "يراجع الأعضاء الطلب ويصوّتون في تطبيق كادا (دور عضو اللجنة). ويصدر القرار بالتوافق، وإلا فبالأغلبية.",
+  "p.a.ai": "مساعد AI · استرشادي", "p.a.aip": "يدعم التحقق من الاكتمال فقط، ولا يقيّم المعايير الطبية ولا يتخذ أي قرار.",
+  "p.a.ai1": "<b>المستندات متوفرة</b> وفق الأدلة التي تحددها إرشادات وادا الطبية لهذه الحالة: تقرير الطبيب المختص، والتنظير، ونتائج المختبر.",
+  "p.a.ai2": "<b>المنافسة في 28 · 11.</b> إحالة الملف إلى اللجنة اليوم تتيح صدور القرار قبل موعدها.",
+  "p.rq.h": "طلب مستندات ناقصة", "p.rq.d": "يصل هذا الطلب إلى الرياضي من إدارة النتائج في حسابه وتطبيق كادا. لا تبدأ مهلة القرار (21 يوماً) إلا عند اكتمال الملف.", "p.rq.what": "ما الناقص؟", "p.rq.msg": "رسالة إلى الرياضي", "p.rq.ph": "مثال: يرجى رفع أحدث نتائج المختبر موقّعة من طبيبك…", "p.rq.send": "إرسال إلى الرياضي", "p.rq.cancel": "إلغاء"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

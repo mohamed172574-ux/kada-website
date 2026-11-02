@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Data Access Request — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.s4">Data Access Request</span></nav>
+        <h1 class="display" data-i18n="p.title">Your data. Your rights.</h1>
+        <p class="lede" data-i18n="p.lede">Request a copy of the personal data KADA holds about you, ask for a correction, object to processing or request deletion where the law allows. We respond within 30 days, in line with WADA's International Standard for the Protection of Privacy and Personal Information (ISPPPI).</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap with-side">
+        <div>
+          <div class="form-card reveal">
+            <h3 data-i18n="p.f.t">Submit a request</h3>
+            <p class="hint" data-i18n="p.f.h">Identity verification protects your data from being disclosed to someone else. Sign in with Kuwait Mobile ID, or upload a copy of your Civil ID.</p>
+            <form data-demo="#ok">
+              <div class="field req-types"><label data-i18n="p.f.q1">Type of request <span class="req">*</span></label>
+                <div class="radio-cards">
+                  <label><input type="radio" name="t" value="access" checked><b data-i18n="p.f.t1">Access</b><small data-i18n="p.f.t1d">Get a copy of what KADA holds about you</small></label>
+                  <label><input type="radio" name="t" value="correction"><b data-i18n="p.f.t2">Correction</b><small data-i18n="p.f.t2d">Fix a wrong name, date or other detail</small></label>
+                  <label><input type="radio" name="t" value="deletion"><b data-i18n="p.f.t3">Deletion</b><small data-i18n="p.f.t3d">Erase data KADA no longer has a legal reason to keep</small></label>
+                  <label><input type="radio" name="t" value="objection"><b data-i18n="p.f.t4">Objection / restriction</b><small data-i18n="p.f.t4d">Stop a specific use of your data while it stays on file</small></label>
+                </div>
+                <div class="req-type-help" role="status">
+                  <p class="kicker" data-i18n="p.f.helpk">What this type means</p>
+                  <p data-help="access" data-i18n="p.f.t1h">KADA sends you a copy of your personal data: identity and contact details, sport and federation, doping-control forms, lab results, TUE decisions, education records and any sanctions. This is not an appeal against a test result or a decision.</p>
+                  <p data-help="correction" data-i18n="p.f.t2h">Use this if a recorded detail is wrong — for example your name, date of birth, phone number or club. In the details box, write the current value and the correct one.</p>
+                  <p data-help="deletion" data-i18n="p.f.t3h">Ask KADA to erase personal data it no longer has a legal reason to keep, such as old contact details or a past course registration. Test results and sanctions cannot be deleted here; KADA must retain them for the periods set by ISPPPI.</p>
+                  <p data-help="objection" data-i18n="p.f.t4h">Ask KADA not to use your data for a specific purpose, or to freeze it while it is reviewed — for example stopping education emails, or pausing a record you believe is inaccurate. This is not an objection to an anti-doping rule violation or a sanction.</p>
+                </div>
+              </div>
+              <div class="form-grid mt-2">
+                <div class="notice full" data-signed-only="public" hidden><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg><span><b data-i18n="p.f.signed">Identity verified with Mobile ID</b> — <span data-signed-text="name">Yousef Al-Rashidi</span>, <span class="num" data-signed-text="civil">•••• 2194</span>. <span data-i18n="p.f.signedd">No ID upload is needed; the response will be delivered to your account.</span></span></div>
+                <div class="field"><label data-i18n="p.f.n">Full name <span class="req">*</span></label><input type="text" required data-signed-value="name"></div>
+                <div class="field"><label data-i18n="p.f.cid">Civil ID <span class="req">*</span></label><input type="text" class="num" required data-signed-value="civil"></div>
+                <div class="field"><label data-i18n="c.email">Email <span class="req">*</span></label><input type="email" required data-signed-value="email"></div>
+                <div class="field"><label data-i18n="c.phone">Mobile</label><input type="tel" data-signed-value="phone"></div>
+                <div class="field full"><label data-i18n="p.f.rel">Your relationship with KADA</label><select><option data-i18n="p.f.r1">Athlete</option><option data-i18n="p.f.r2">Athlete support personnel</option><option data-i18n="p.f.r3">Course participant</option><option data-i18n="p.f.r4">Supplier</option><option data-i18n="p.f.r5">Other</option></select></div>
+                <div class="field full"><label data-i18n="p.f.det">Details of your request <span class="req">*</span></label><textarea placeholder="Which data, which period, and why (for corrections, state the correct value)…" data-i18n-ph="p.f.detph" required></textarea></div>
+                <div class="field full" data-guest-only><label data-i18n="p.f.id">Identity verification <span class="req">*</span></label><div class="chips"><button class="btn btn-primary" type="button" data-signin-open data-signin-role="public"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg><span data-i18n="p.f.mid">Verify with Mobile ID</span></button><span style="align-self:center;color:var(--muted);font-size:14px" data-i18n="p.f.or">or</span></div><div class="upload mt-1"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.up">Upload a copy of your Civil ID</b><span data-i18n="p.f.upd">Deleted after verification</span></div></div>
+              </div>
+              <label class="check mt-2"><input type="checkbox" required><span data-i18n="p.f.terms">I understand that KADA may be required to retain certain anti-doping data (e.g. test results, sanctions) for the periods set by WADA's ISPPPI, and that such data cannot be deleted on request.</span></label>
+              <div class="form-foot"><span style="font-size:13px;color:var(--muted)" data-i18n="p.f.sla">Response within 30 days</span><button class="btn btn-primary lg" type="submit"><span data-i18n="c.submit">Submit</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </form>
+          </div>
+          <div class="success" id="ok"><div class="tick"><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg></div><h3 data-i18n="p.ok.t">Request received</h3><p data-i18n="p.ok.d">The Data Protection Officer will acknowledge within 2 working days and respond within 30 days.</p><p data-signed-only="public" hidden data-i18n="p.ok.saved">The request is saved under <b>My requests</b> in your account, where you will see each stage and the response. Reference for correspondence with KADA:</p><p data-guest-only data-i18n="p.ok.guest">Keep this reference to follow up by email or phone. If you sign in with Mobile ID, the request will also appear under My requests in your account:</p><div class="ref">DAR-2026-0077</div><div class="actions"><a class="btn btn-primary" href="account.html#reqs" data-signed-only="public" hidden><span data-i18n="p.ok.acc">View the request in My account</span></a><a class="btn btn-primary" href="account.html#reqs" data-guest-only><span data-i18n="p.ok.sign">Sign in to track in My account</span></a><a class="link-arrow" href="services.html"><span data-i18n="p.ok.srv">Back to e-services</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div>
+        </div>
+        <aside class="side">
+          <div class="side-box"><h4 data-i18n="p.sb.t">How it is handled</h4>
+            <div class="timeline" style="margin-top:6px">
+              <div class="tl done" style="padding-bottom:18px"><i>1</i><div><b data-i18n="p.sb.1">Received &amp; identity verified</b><small data-i18n="p.sb.1d">Legal &amp; Compliance (DPO)</small></div></div>
+              <div class="tl todo" style="padding-bottom:18px"><i>2</i><div><b data-i18n="p.sb.2">Data located across systems</b><small data-i18n="p.sb.2d">Operations, results, training, procurement</small></div></div>
+              <div class="tl todo" style="padding-bottom:18px"><i>3</i><div><b data-i18n="p.sb.3">Review of exemptions</b><small data-i18n="p.sb.3d">Ongoing investigations, third-party data</small></div></div>
+              <div class="tl todo" style="padding-bottom:0"><i>4</i><div><b data-i18n="p.sb.4">Secure delivery</b><small data-i18n="p.sb.4d">Encrypted download link · within 30 days</small></div></div>
+            </div>
+          </div>
+          <div class="side-box navy"><h4 data-i18n="p.sb.p">Privacy at KADA</h4><p data-i18n="p.sb.pd">Data is hosted in KADA's secure cloud environment with a secondary disaster-recovery environment, encrypted at rest and in transit, with role-based access and full audit logs.</p><a href="#" style="color:#fff;border:0"><span data-i18n="ft.privacy">Privacy policy</span><svg viewBox="0 0 24 24" class="ico" style="width:16px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="kicker" data-i18n="p.faq.k">Frequently asked</p><h2 class="display" data-i18n="p.faq.t">About your data</h2></div>
+        <div class="acc reveal">
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.1">What data does KADA hold about athletes?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.1a">Identity and contact details, sport and federation, doping-control forms, laboratory results, TUE decisions, results-management case files, education records and sanctions.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.2">Can I have my test results deleted?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.2a">No. WADA's ISPPPI sets mandatory retention periods (e.g. 10 years for sanctions and adverse analytical findings). We will tell you which data is subject to retention and when it will be deleted.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.3">Who else receives my data?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.3a">WADA, WADA-accredited laboratories, your international federation where required by the Code, and hearing bodies. Never commercial third parties.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "طلب الوصول إلى البيانات — كادا",
+    "p.title": "بياناتك. حقوقك.", "p.lede": "اطلب نسخة من بياناتك الشخصية لدى الوكالة، أو اطلب تصحيحها، أو اعترض على معالجتها، أو اطلب حذفها حيثما يسمح القانون. نرد خلال 30 يوماً، وفقاً لمعيار وادا الدولي لحماية الخصوصية والمعلومات الشخصية (ISPPPI).",
+    "p.f.t": "قدّم طلباً", "p.f.h": "يحمي التحقق من الهوية بياناتك من الإفصاح عنها لغيرك. سجّل الدخول عبر «هويتي» (Kuwait Mobile ID) أو ارفع نسخة من بطاقتك المدنية.",
+    "p.f.q1": "نوع الطلب <span class=\"req\">*</span>", "p.f.t1": "الوصول", "p.f.t1d": "احصل على نسخة مما تحتفظ به الوكالة عنك", "p.f.t2": "التصحيح", "p.f.t2d": "تصحيح اسم أو تاريخ أو بيان خاطئ", "p.f.t3": "الحذف", "p.f.t3d": "محو بيانات لم يعد للوكالة مبرر قانوني للاحتفاظ بها", "p.f.t4": "الاعتراض / التقييد", "p.f.t4d": "إيقاف استخدام بياناتك لغرض معيّن مع بقائها محفوظة",
+    "p.f.helpk": "ماذا يعني هذا النوع",
+    "p.f.t1h": "ترسل إليك الوكالة نسخة من بياناتك الشخصية لديها: بيانات الهوية والاتصال، والرياضة والاتحاد، ونماذج مراقبة المنشطات، ونتائج المختبر، وقرارات الإعفاء للاستعمال العلاجي، وسجلات التوعية، والعقوبات إن وُجدت. هذا ليس طعناً في نتيجة فحص أو قرار.",
+    "p.f.t2h": "استخدم هذا النوع إذا كان أحد بياناتك مسجلاً بشكل خاطئ، مثل الاسم أو تاريخ الميلاد أو رقم الهاتف أو النادي. اذكر في خانة التفاصيل القيمة الحالية والقيمة الصحيحة.",
+    "p.f.t3h": "اطلب محو بيانات لم يعد لدى الوكالة مسوّغ قانوني للاحتفاظ بها، مثل بيانات اتصال قديمة أو تسجيل سابق في دورة. لا تُحذف نتائج الفحص والعقوبات من هنا؛ فالوكالة ملزمة بالاحتفاظ بها للمدد التي يحددها معيار ISPPPI.",
+    "p.f.t4h": "اطلب ألا تُستخدم بياناتك لغرض معيّن، أو أن تُجمَّد مؤقتاً ريثما تُراجَع، مثل إيقاف رسائل التوعية أو تجميد بيان تراه غير دقيق. هذا ليس اعتراضاً على انتهاك لقواعد مكافحة المنشطات أو على قرار عقوبة.",
+    "p.f.n": "الاسم الكامل <span class=\"req\">*</span>", "p.f.cid": "الرقم المدني <span class=\"req\">*</span>", "p.f.rel": "علاقتك بالوكالة", "p.f.r1": "رياضي", "p.f.r2": "من أفراد دعم الرياضيين", "p.f.r3": "مشارك في دورة", "p.f.r4": "مورد", "p.f.r5": "أخرى",
+    "p.f.det": "تفاصيل طلبك <span class=\"req\">*</span>", "p.f.detph": "أي بيانات، وأي فترة، ولماذا (للتصحيحات اذكر القيمة الصحيحة)…",
+    "p.f.id": "التحقق من الهوية <span class=\"req\">*</span>", "p.f.mid": "التحقق عبر «هويتي»", "p.f.or": "أو", "p.f.signed": "تم التحقق من الهوية عبر «هويتي»", "p.f.signedd": "لا حاجة إلى رفع نسخة من البطاقة؛ وسيصلك الرد في حسابك.", "p.f.up": "ارفع نسخة من بطاقتك المدنية", "p.f.upd": "تُحذف بعد التحقق",
+    "p.f.terms": "أدرك أن الوكالة قد تكون ملزمة بالاحتفاظ ببعض بيانات مكافحة المنشطات (مثل نتائج الفحص والعقوبات) للفترات التي يحددها معيار ISPPPI، وأن هذه البيانات لا يمكن حذفها عند الطلب.", "p.f.sla": "الرد خلال 30 يوماً",
+    "p.ok.t": "تم استلام الطلب", "p.ok.d": "سيؤكد مسؤول حماية البيانات الاستلام خلال يومَي عمل ويرد خلال 30 يوماً.", "p.ok.saved": "حُفظ الطلب في قائمة <b>طلباتي</b> في حسابك، وستجد فيها مراحله والرد عليه. الرقم المرجعي للمراسلات مع الوكالة:", "p.ok.guest": "احتفظ بهذا الرقم المرجعي للمتابعة عبر البريد أو الهاتف. وإذا سجّلت الدخول عبر «هويتي» فسيظهر الطلب أيضاً في قائمة طلباتي في حسابك:", "p.ok.acc": "عرض الطلب في حسابي", "p.ok.sign": "سجّل الدخول للمتابعة في حسابي", "p.ok.srv": "العودة إلى الخدمات الإلكترونية",
+    "p.sb.t": "كيف يُعالَج الطلب", "p.sb.1": "الاستلام والتحقق من الهوية", "p.sb.1d": "الشؤون القانونية والالتزام (مسؤول حماية البيانات)", "p.sb.2": "تحديد البيانات عبر الأنظمة", "p.sb.2d": "العمليات والنتائج والتدريب والمشتريات", "p.sb.3": "مراجعة الاستثناءات", "p.sb.3d": "التحقيقات الجارية وبيانات الأطراف الثالثة", "p.sb.4": "تسليم آمن", "p.sb.4d": "رابط تحميل مشفّر · خلال 30 يوماً",
+    "p.sb.p": "الخصوصية في الوكالة", "p.sb.pd": "تُستضاف البيانات في البيئة السحابية الآمنة للوكالة مع بيئة ثانوية للتعافي من الكوارث، وهي مشفّرة أثناء التخزين والنقل، مع صلاحيات حسب الدور وسجلات تدقيق كاملة.",
+    "p.faq.k": "أسئلة متكررة", "p.faq.t": "عن بياناتك",
+    "p.faq.1": "ما البيانات التي تحتفظ بها الوكالة عن الرياضيين؟", "p.faq.1a": "بيانات الهوية والتواصل، والرياضة والاتحاد، ونماذج مراقبة المنشطات، ونتائج المختبر، وقرارات الإعفاء للاستعمال العلاجي، وملفات قضايا إدارة النتائج، وسجلات التوعية، والعقوبات.",
+    "p.faq.2": "هل يمكن حذف نتائج فحصي؟", "p.faq.2a": "لا. يحدد معيار ISPPPI فترات احتفاظ إلزامية (مثل 10 سنوات للعقوبات والنتائج التحليلية المغايرة). وسنخبرك بالبيانات الخاضعة للاحتفاظ وموعد حذفها.",
+    "p.faq.3": "ما الجهات الأخرى التي تتلقى بياناتي؟", "p.faq.3a": "وادا، والمختبرات المعتمدة من وادا، واتحادك الدولي حيثما تقتضي المدونة ذلك، وهيئات الاستماع. ولا تُشارَك أبداً مع أطراف تجارية."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

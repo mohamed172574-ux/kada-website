@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Website content — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="content">
+<div data-page>
+
+  <!-- ===================== SITE PAGES ===================== -->
+  <section data-view="pages">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Website pages</h1><p data-i18n="p.d">Every public page of kada.gov.kw with its owner, status and both languages. Open a page to edit it section by section.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../index.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.view">View live site</span></a>
+        <button class="btn btn-primary sm" type="button" data-drawer="d-newpage"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.newp">New page</span></button>
+      </div>
+    </div>
+    <nav class="tabs">
+      <a href="#pages"><svg class="ico"><use href="#i-grid"/></svg><span data-i18n="p.t0">All pages</span><span class="cnt">26</span></a>
+      <a href="#menus"><svg class="ico"><use href="#i-cog"/></svg><span data-i18n="p.t4">Menus & site settings</span></a>
+    </nav>
+
+    <div class="kpis">
+      <div class="kpi"><svg class="ico"><use href="#i-globe"/></svg><small data-i18n="p.pk1">Live pages</small><b data-count="23">23</b><em data-i18n="p.pk1d">+ 2 new pages in draft</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-edit"/></svg><small data-i18n="p.pk2">Changes in progress</small><b data-count="3">3</b><em class="warn" data-i18n="p.pk2d">Home · Board · TUE (awaiting approval)</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-warn"/></svg><small data-i18n="p.k3">Missing a language</small><b data-count="2">2</b><em class="down" data-i18n="p.k3d">Publishing blocked until both exist</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-cal"/></svg><small data-i18n="p.k4">Scheduled</small><b data-count="1">1</b><em class="flat" data-i18n="p.pk4d">Prohibited List page · 01 · 01 · 2027</em></div>
+    </div>
+
+    <div class="notice mt-2"><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.pn">Pages are edited section by section, in Arabic and English. <b>News, research &amp; publications and the media centre</b> are separate modules in the side menu — the pages that list them update automatically. <b>Courses and events</b> are managed by the Training &amp; Events unit, and reach the approval queue from there.</span></div>
+
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="pg">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="content"><span data-i18n="p.pf1">Content pages</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="service"><span data-i18n="p.pf2">Services & forms</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="work"><span data-i18n="p.pf4">In progress</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="attn"><span data-i18n="p.pf5">Needs attention</span><span class="cnt"></span></button>
+        </div>
+        <div class="acts"><label class="tb-search" style="margin:0;height:36px"><svg class="ico"><use href="#i-search"/></svg><input type="search" placeholder="Search pages" data-i18n-ph="p.psrch" data-pg-search></label></div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="pg"><table class="tbl pg-tbl">
+        <thead><tr><th data-i18n="p.pc1">Page</th><th data-i18n="p.pc2">Page type</th><th data-i18n="p.c3">Languages</th><th data-i18n="p.pc4">Content owner</th><th data-i18n="p.pc5">Last edit</th><th data-i18n="p.c5">Status</th><th class="r"></th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g1">Home</span><small>1</small></td></tr>
+          <tr data-f="content work" data-pg="index.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b data-i18n="pg.index">Home page</b><span class="sub num">/</span></div></div></td><td><span data-i18n="tp.landing">Landing page</span><span class="sub" data-i18n="ps.13">13 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.comms">Media & Communications</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">23 · 10 · 2026 · 09:40</span></td><td><span class="st info" data-i18n="s.v12">Draft v12 in progress</span></td><td><div class="acts"><a class="mini" href="#page?id=index.html" title="Edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../index.html" target="_blank" rel="noopener" title="View"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g2">About KADA</span><small>7</small></td></tr>
+          <tr data-f="content" data-pg="about.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="pg.about">About KADA</b><span class="sub num">/about</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.6">6 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.comms">Media & Communications</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">14 · 09 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=about.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../about.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="vision.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="pg.vision">Vision & mission</b><span class="sub num">/vision</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.5">5 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.exec">Executive Office</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">14 · 09 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=vision.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../vision.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content work attn" data-pg="board.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-users"/></svg></span><div><b data-i18n="pg.board">Board Members</b><span class="sub num">/board</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.15p">15 profiles</span></td><td><span class="lang2"><span>AR</span><span class="off">EN</span></span></td><td data-i18n="ow.exec">Executive Office</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">20 · 10 · 2026 · 09:02</span></td><td><span class="st red" data-i18n="p.s2">Draft · EN missing</span></td><td><div class="acts"><a class="mini" href="#page?id=board.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../board.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="structure.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-grid"/></svg></span><div><b data-i18n="pg.structure">Organisational structure</b><span class="sub num">/structure</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.2">2 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.exec">Executive Office</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">30 · 08 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=structure.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../structure.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="departments.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-grid"/></svg></span><div><b data-i18n="pg.departments">Departments</b><span class="sub num">/departments</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.7">7 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.exec">Executive Office</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">30 · 08 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=departments.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../departments.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="wada.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><b data-i18n="pg.wada">WADA compliance</b><span class="sub num">/wada</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.6">6 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.legal">Legal & Compliance</td><td class="nw"><span data-acct-name="approver">Salem Al-Dosari</span><span class="sub num">22 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=wada.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../wada.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content work attn" data-pg="annual-report-2025"><td><div class="pg"><span class="pg-ic new"><svg class="ico"><use href="#i-plus"/></svg></span><div><b data-i18n="p.r6">Annual Report 2025 — summary page</b><span class="sub num">/about/annual-report-2025</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.new">New page</span></td><td><span class="lang2"><span class="off">AR</span><span>EN</span></span></td><td data-i18n="ow.exec">Executive Office</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">18 · 10 · 2026</span></td><td><span class="st red" data-i18n="p.s3">Draft · AR missing</span></td><td><div class="acts"><a class="mini" href="#page?id=annual-report-2025"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g3">E-services</span><small>9</small></td></tr>
+          <tr data-f="content" data-pg="services.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-grid"/></svg></span><div><b data-i18n="pg.services">E-services (all services)</b><span class="sub num">/services</span></div></div></td><td><span data-i18n="tp.hub">Services hub</span><span class="sub" data-i18n="ps.3">3 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.comms">Media & Communications</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">05 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=services.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../services.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="sanctions.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-search"/></svg></span><div><b data-i18n="pg.sanctions">Athlete sanctions registry</b><span class="sub num">/sanctions</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub src" data-i18n="src.rm">Records: Results Management</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.rm">Results Management</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">12 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=sanctions.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../sanctions.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service work" data-pg="prohibited.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-med"/></svg></span><div><b data-i18n="pg.prohibited">Prohibited List & medicine checker</b><span class="sub num">/prohibited</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.4">4 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.edu">Education & Awareness</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">01 · 10 · 2026</span></td><td><span class="st info" data-i18n="p.s5">Scheduled · 01 · 01 · 2027</span></td><td><div class="acts"><a class="mini" href="#page?id=prohibited.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../prohibited.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service work" data-pg="tue.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-med"/></svg></span><div><b data-i18n="pg.tue">Therapeutic use exemption (TUE)</b><span class="sub num">/tue</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.form5">Form · 5 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.rm">Results Management</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">20 · 10 · 2026 · 15:30</span></td><td><span class="st warn" data-i18n="p.s1">Awaiting approval</span></td><td><div class="acts"><a class="mini" href="#page?id=tue.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../tue.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="speakup.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-lock"/></svg></span><div><b data-i18n="pg.speakup">Speak Up — confidential reporting</b><span class="sub num">/speakup</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.formonly">Form texts only · reports never appear here</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.inv">Intelligence & Investigations</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">21 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=speakup.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../speakup.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="data-request.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-db"/></svg></span><div><b data-i18n="pg.datareq">Data access request</b><span class="sub num">/data-request</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.form3">Form · 3 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.legal">Legal & Compliance</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">19 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=data-request.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../data-request.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="tenders.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b data-i18n="pg.tenders">Tenders & procurement</b><span class="sub num">/tenders</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub src" data-i18n="src.pr">Records: Tenders & suppliers unit</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.proc">Finance & Procurement</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">22 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=tenders.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../tenders.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="supplier.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-card"/></svg></span><div><b data-i18n="pg.supplier">Supplier registration</b><span class="sub num">/supplier</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.form2">Form · 2 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.proc">Finance & Procurement</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">22 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=supplier.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../supplier.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="assistant.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-spark"/></svg></span><div><b data-i18n="pg.assistant">KADA AI assistant</b><span class="sub num">/assistant</span></div></div></td><td><span data-i18n="tp.service">Service page</span><span class="sub" data-i18n="ps.4">4 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.it">IT & Digital Services</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">02 · 11 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=assistant.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../assistant.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g4">Education</span><small>1</small></td></tr>
+          <tr data-f="content" data-pg="education.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-cap"/></svg></span><div><b data-i18n="pg.education">Anti-doping education programme</b><span class="sub num">/education</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.5">5 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.edu">Education & Awareness</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">08 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=education.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../education.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g6">Help & contact</span><small>2</small></td></tr>
+          <tr data-f="content" data-pg="faq.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-list"/></svg></span><div><b data-i18n="pg.faq">Frequently asked questions</b><span class="sub num">/faq</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.29q">29 questions · 9 categories</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.comms">Media & Communications</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">28 · 09 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=faq.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../faq.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="contact.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-mail"/></svg></span><div><b data-i18n="pg.contact">Contact us</b><span class="sub num">/contact</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.form3">Form · 3 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.comms">Media & Communications</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">11 · 09 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=contact.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../contact.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g7">Footer & legal</span><small>4</small></td></tr>
+          <tr data-f="content" data-pg="platform.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-grid"/></svg></span><div><b data-i18n="pg.platform">The KADA platform</b><span class="sub num">/platform</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.7">7 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.it">IT & Digital Services</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">25 · 09 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=platform.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../platform.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content work" data-pg="privacy"><td><div class="pg"><span class="pg-ic new"><svg class="ico"><use href="#i-plus"/></svg></span><div><b data-i18n="p.m.f1">Privacy policy</b><span class="sub num">/privacy</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.new">New page</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.legal">Legal & Compliance</td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">17 · 10 · 2026</span></td><td><span class="st" data-i18n="s.legal">Draft · legal review</span></td><td><div class="acts"><a class="mini" href="#page?id=privacy"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="accessibility.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-eye"/></svg></span><div><b data-i18n="pg.accessibility">Accessibility statement</b><span class="sub num">/accessibility</span></div></div></td><td><span data-i18n="tp.content">Content page</span><span class="sub" data-i18n="ps.2">2 sections</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.it">IT & Digital Services</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">02 · 11 · 2026</span></td><td><span class="st" data-i18n="s.hidden">Hidden from site</span></td><td><div class="acts"><a class="mini" href="#page?id=accessibility.html"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../accessibility.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="content" data-pg="sitemap.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-list"/></svg></span><div><b data-i18n="pg.sitemap">Sitemap</b><span class="sub num">/sitemap</span></div></div></td><td><span data-i18n="tp.auto">Generated automatically</span><span class="sub" data-i18n="ps.frommenu">Built from the navigation menus</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.it">IT & Digital Services</td><td class="nw"><span data-i18n="s.system">System</span><span class="sub num">02 · 11 · 2026</span></td><td><span class="st ok" data-i18n="s.auto">Auto-updated</span></td><td><div class="acts"><a class="mini" href="../sitemap.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+
+          <tr class="grp"><td colspan="7"><span data-i18n="p.g8">Signed-in areas</span><small>2</small></td></tr>
+          <tr data-f="service" data-pg="account.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-users"/></svg></span><div><b data-i18n="pg.account">My account (athletes & public)</b><span class="sub num">/account</span></div></div></td><td><span data-i18n="tp.system">Signed-in area</span><span class="sub" data-i18n="ps.labels">Labels, help texts & notices only</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.it">IT & Digital Services</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">06 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=account.html"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="service" data-pg="supplier-dashboard.html"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b data-i18n="pg.supdash">Supplier dashboard</b><span class="sub num">/supplier-dashboard</span></div></div></td><td><span data-i18n="tp.system">Signed-in area</span><span class="sub" data-i18n="ps.labels">Labels, help texts & notices only</span></td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td data-i18n="ow.proc">Finance & Procurement</td><td class="nw"><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span><span class="sub num">22 · 10 · 2026</span></td><td><span class="st ok" data-i18n="s.pub">Published</span></td><td><div class="acts"><a class="mini" href="#page?id=supplier-dashboard.html"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+        </tbody>
+      </table></div>
+      <div class="foot-bar"><span data-i18n="p.pfoot">26 pages · 23 live · every page has an Arabic and an English version · the sitemap updates itself from the menus</span><a class="lnk" href="../sitemap.html" target="_blank" rel="noopener" data-i18n="p.pmap">Open the public sitemap</a></div>
+    </div>
+  </section>
+
+  <!-- ===================== PAGE EDITOR ===================== -->
+  <section data-view="page">
+    <div data-pe-editor>
+      <div class="pe-bar">
+        <a class="pe-back" href="#pages"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="b.back">Website pages</span></a>
+        <div class="pe-ttl"><span class="pg-ic"><svg class="ico"><use href="#i-home"/></svg></span><div><b data-i18n="pg.index">Home page</b><small class="num" dir="ltr">kada.gov.kw/ar</small></div></div>
+        <span class="st info" data-pe-status></span>
+        <span class="pe-dirty" data-pe-dirty></span>
+        <button class="lnk sm" type="button" data-pe-undo hidden><span data-i18n="b.undo">Undo all</span></button>
+        <div class="pe-acts">
+          <a class="btn btn-ghost sm" href="../index.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="b.prev">Preview</span></a>
+          <button class="btn btn-ghost sm" type="button" data-drawer="d-ver"><svg class="ico"><use href="#i-clock"/></svg><span data-i18n="b.ver">Versions</span></button>
+          <button class="btn btn-ghost sm" type="button" data-drawer="d-pageset"><svg class="ico"><use href="#i-cog"/></svg><span data-i18n="b.set">Page settings</span></button>
+          <button class="btn btn-ghost sm" type="button" data-pe-save><span data-i18n="p.ed.save">Save draft</span></button>
+          <button class="btn btn-primary sm" type="button" data-perm="content" data-no-perm="publish" data-pe-submit><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.ed.submit">Submit for approval</span></button>
+          <button class="btn btn-primary sm" type="button" data-perm="publish" data-pe-publish><svg class="ico"><use href="#i-check"/></svg><span data-i18n="b.pub">Approve & publish</span></button>
+        </div>
+      </div>
+
+      <div class="pe">
+        <aside class="pe-side">
+          <div class="pe-sideh"><b data-i18n="b.secs">Page sections</b><small data-pe-count></small></div>
+          <a class="pe-shared" href="#menus"><svg class="ico"><use href="#i-lock"/></svg><span><b data-i18n="b.hdr">Header & main menu</b><small data-i18n="b.shared">Shared on every page · edited in Menus & settings</small></span></a>
+          <ol class="pe-list" data-pe-list></ol>
+          <a class="pe-shared" href="#menus"><svg class="ico"><use href="#i-lock"/></svg><span><b data-i18n="b.ftr">Footer</b><small data-i18n="b.shared">Shared on every page · edited in Menus & settings</small></span></a>
+          <button class="pe-add" type="button" data-drawer="d-blocks"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="b.add">Add a section</span></button>
+        </aside>
+        <div class="pe-main">
+          <div class="pe-mhead">
+            <div class="notice"><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="b.demo">Open a section to edit it. Every text has an Arabic and an English field; images, buttons and lists have their own editors. <b>This is a design preview — try anything, nothing is saved.</b></span></div>
+            <button class="btn btn-ghost xs" type="button" data-pe-expand><svg class="ico"><use href="#i-list"/></svg><span data-i18n="b.expand">Open / close all</span></button>
+          </div>
+          <div class="pe-secs" data-pe-main></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pe-soon" data-pe-soon hidden>
+      <a class="pe-back" href="#pages"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="b.back">Website pages</span></a>
+      <div class="card soon-card">
+        <span class="soon-ic"><svg class="ico"><use href="#i-edit"/></svg></span>
+        <h2><span data-i18n="pz.pre">The editor for</span> «<span data-soon-name></span>» <span data-i18n="pz.post">is being prepared</span></h2>
+        <p data-i18n="pz.d">In this demo the home page editor is fully working, as the example of how every page will be managed. This page will get the same editor in the build phase.</p>
+        <ol class="soon-steps">
+          <li><b class="num">1</b><span><b data-i18n="pz.s1">Sections in order</b><small data-i18n="pz.s1d">The page is split into its sections; hide, reorder or add sections.</small></span></li>
+          <li><b class="num">2</b><span><b data-i18n="pz.s2">An editor for every element</b><small data-i18n="pz.s2d">Texts in Arabic and English, images, buttons and their links, lists.</small></span></li>
+          <li><b class="num">3</b><span><b data-i18n="pz.s3">Review, then publish</b><small data-i18n="pz.s3d">Saved as a draft, approved by a publisher, then published with its version history.</small></span></li>
+        </ol>
+        <div class="row" style="justify-content:center">
+          <a class="btn btn-primary sm" href="#page?id=index.html"><svg class="ico"><use href="#i-home"/></svg><span data-i18n="pz.open">Open the home page editor</span></a>
+          <a class="btn btn-ghost sm" href="../index.html" target="_blank" rel="noopener" data-soon-view><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="pz.view">View this page on the website</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MODULE: NEWS ===================== -->
+  <section data-view="news">
+    <div class="page-head">
+      <div><h1 data-i18n="n.h">News</h1><p data-i18n="n.d">Announcements, press releases and decisions. Each item is written in Arabic and English, approved, then shown on the News page, the home page and the app.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../news.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="m.site">View on the website</span></a>
+        <a class="btn btn-primary sm" href="#edit"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="n.new">New news item</span></a>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><svg class="ico"><use href="#i-globe"/></svg><small data-i18n="m.pub">Published</small><b data-count="152">152</b><em data-i18n="n.k1d">18 in 2026</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-check"/></svg><small data-i18n="p.s1">Awaiting approval</small><b data-count="2">2</b><em class="warn" data-i18n="n.k2d">Oldest: 1 day</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-edit"/></svg><small data-i18n="m.drafts">Drafts</small><b data-count="1">1</b><em class="down" data-i18n="n.k3d">English missing</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-cal"/></svg><small data-i18n="p.k4">Scheduled</small><b data-count="1">1</b><em class="flat" data-i18n="n.k4d">15 · 12 · 2026</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="nw">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="pub"><span data-i18n="m.pub">Published</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="review"><span data-i18n="p.s1">Awaiting approval</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="draft"><span data-i18n="m.drafts">Drafts</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="sched"><span data-i18n="p.k4">Scheduled</span><span class="cnt"></span></button>
+        </div>
+        <div class="acts"><select class="inp sm" aria-label="Category"><option data-i18n="n.allcat">All categories</option><option data-i18n="n.c1s">Announcements</option><option data-i18n="n.c2s">Press releases</option><option data-i18n="n.c3s">Decisions</option><option data-i18n="n.c4">Education</option></select></div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="nw"><table class="tbl">
+        <thead><tr><th data-i18n="n.c">News item</th><th data-i18n="m.cat">Category</th><th data-i18n="m.date">Date</th><th data-i18n="p.c3">Languages</th><th data-i18n="m.by">Last edit</th><th data-i18n="p.c5">Status</th><th class="r"></th></tr></thead>
+        <tbody>
+          <tr data-f="review"><td><div class="pg"><img class="th" src="../assets/img/hq.jpg" alt=""><div><b data-i18n="p.r1">WADA 2026 compliance audit closes with no critical findings</b><span class="sub num">news/wada-compliance-2026</span></div></div></td><td data-i18n="n.c2">Press release</td><td class="num nw">—</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">22 · 10 · 2026</span></td><td><span class="st warn" data-i18n="p.s1">Awaiting approval</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="review"><td><div class="pg"><img class="th" src="../assets/img/svc-training.jpg" alt=""><div><b data-i18n="p.r3">Education programme results · Q3 2026</b><span class="sub num">news/education-q3-2026</span></div></div></td><td data-i18n="n.c4">Education</td><td class="num nw">—</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="training">Faisal Al-Anzi</span><span class="sub num">21 · 10 · 2026</span></td><td><span class="st warn" data-i18n="p.s1">Awaiting approval</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="draft"><td><div class="pg"><img class="th" src="../assets/img/svc-prohibited.jpg" alt=""><div><b data-i18n="p.r7">Nutrition supplements: what athletes must check</b><span class="sub num">news/supplements-check</span></div></div></td><td data-i18n="n.c4">Education</td><td class="num nw">—</td><td><span class="lang2"><span>AR</span><span class="off">EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">17 · 10 · 2026</span></td><td><span class="st red" data-i18n="p.s2">Draft · EN missing</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="sched"><td><div class="pg"><img class="th" src="../assets/img/hero-2.jpg" alt=""><div><b data-i18n="p.r9">Prohibited List 2027 takes effect on 1 January</b><span class="sub num">news/prohibited-list-2027-effective</span></div></div></td><td data-i18n="n.c1">Announcement</td><td class="num nw">15 · 12 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">15 · 10 · 2026</span></td><td><span class="st info" data-i18n="p.s6">Scheduled · 15 · 12 · 2026</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/svc-prohibited.jpg" alt=""><div><b data-i18n="p.r10">Medicine checker updated for the 2027 Prohibited List</b><span class="sub num">news/medicine-checker-2027</span></div></div></td><td data-i18n="n.c1">Announcement</td><td class="num nw">23 · 10 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">23 · 10 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/news-1.jpg" alt=""><div><b data-i18n="n.r1">The 2027 Prohibited List is now available in Arabic</b><span class="sub"><span class="st ok plain" data-i18n="n.pin">Pinned on the home page</span></span></div></div></td><td data-i18n="n.c1">Announcement</td><td class="num nw">01 · 10 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="approver">Salem Al-Dosari</span><span class="sub num">01 · 10 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/news-2.jpg" alt=""><div><b data-i18n="n.r2">The education programme reaches 4,500 athletes and coaches in its third season</b><span class="sub num">news/education-season-3</span></div></div></td><td data-i18n="n.c4">Education</td><td class="num nw">28 · 09 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">28 · 09 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/hero-3.jpg" alt=""><div><b data-i18n="n.r3">Disciplinary Committee decision: four-year sanction in bodybuilding case</b><span class="sub num">news/decision-bodybuilding-2026</span></div></div></td><td data-i18n="n.c3">Decision</td><td class="num nw">22 · 09 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="approver">Salem Al-Dosari</span><span class="sub num">22 · 09 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/ops.jpg" alt=""><div><b data-i18n="n.r4">KADA launches digital doping-control platform for field inspectors</b><span class="sub num">news/digital-doping-control</span></div></div></td><td data-i18n="n.c2">Press release</td><td class="num nw">15 · 09 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">15 · 09 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/events.jpg" alt=""><div><b data-i18n="n.r5">Registration opens for the National Clean Sport Conference 2026</b><span class="sub num">news/conference-2026-registration</span></div></div></td><td data-i18n="n.c1">Announcement</td><td class="num nw">03 · 09 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">03 · 09 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+          <tr data-f="pub"><td><div class="pg"><img class="th" src="../assets/img/news-3.jpg" alt=""><div><b data-i18n="n.r6">Anti-Doping Essentials: national-team athletes must complete it before the 2027 season</b><span class="sub num">news/essentials-2027-season</span></div></div></td><td data-i18n="n.c1">Announcement</td><td class="num nw">10 · 08 · 2026</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">10 · 08 · 2026</span></td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><a class="mini" href="#edit"><svg class="ico"><use href="#i-edit"/></svg></a><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></div></td></tr>
+        </tbody>
+      </table></div>
+      <div class="foot-bar"><span data-i18n="n.foot">Showing 11 of 156 items</span><div class="pager"><button class="is-on">1</button><button>2</button><button>3</button><button>…</button><button>15</button></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS EDITOR ===================== -->
+  <section data-view="edit">
+    <a class="pe-back mb-1" href="#news"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="n.h">News</span></a>
+    <div class="grid g-main">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.ed.h">Editing · press release</h2><div class="row small muted"><svg class="ico" style="width:15px;height:15px"><use href="#i-clock"/></svg><span data-i18n="p.ed.saved">Autosaved 12 seconds ago · v3</span></div></div>
+          <div class="split">
+            <div class="form">
+              <div class="lbl-row"><span class="lbl"><span class="lang2"><span>AR</span></span> <span data-i18n="p.ap.ar">Arabic version</span></span><span class="st ok plain" data-i18n="p.ed.complete">Complete</span></div>
+              <div class="field"><label data-i18n="p.ed.title">Title</label><input dir="rtl" value="اختتام تدقيق وادا للامتثال 2026 دون ملاحظات حرجة"></div>
+              <div class="field"><label data-i18n="p.ed.excerpt">Excerpt</label><input dir="rtl" value="اختُتم تدقيق وادا للامتثال لعام 2026 لدى الوكالة دون ملاحظات حرجة، مع توصيات للتحسين"></div>
+              <div class="editor"><div class="ed-bar"><button type="button"><b>B</b></button><button type="button"><i>I</i></button><button type="button"><u>U</u></button><i></i><button type="button">H2</button><button type="button">H3</button><i></i><button type="button">• —</button><button type="button">1. —</button><button type="button">“ ”</button><i></i><button type="button" data-toast="Insert link — design preview" data-toast-ar="إدراج رابط — معاينة تصميم"><svg class="ico" style="width:14px;height:14px"><use href="#i-link"/></svg></button><button type="button" data-drawer="d-media"><svg class="ico" style="width:14px;height:14px"><use href="#i-image"/></svg></button></div>
+                <div class="ed-body" contenteditable="true" dir="rtl" lang="ar"><p>اختُتم تدقيق الامتثال الذي أجرته الوكالة العالمية لمكافحة المنشطات (وادا) لعام 2026 لدى الوكالة الكويتية لمكافحة المنشطات دون أي ملاحظات حرجة في ما يتعلق بالمدونة العالمية لمكافحة المنشطات والمعايير الدولية.</p><blockquote>«نتيجة تعكس عمل فريق كامل وشراكة الاتحادات الرياضية» — المدير العام</blockquote><p>وأشاد تقرير التدقيق ببرنامج التثقيف وبإجراءات إدارة النتائج.</p></div></div>
+            </div>
+            <div class="form">
+              <div class="lbl-row"><span class="lbl"><span class="lang2"><span>EN</span></span> <span data-i18n="p.ap.en">English version</span></span><button class="btn btn-soft xs" type="button" data-toast="AI draft translation inserted for review — design preview" data-toast-ar="أُدرجت ترجمة أولية بالذكاء الاصطناعي للمراجعة — معاينة تصميم"><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ed.ai">AI draft from Arabic</span></button></div>
+              <div class="field"><label data-i18n="p.ed.title">Title</label><input dir="ltr" value="WADA 2026 compliance audit closes with no critical findings"></div>
+              <div class="field"><label data-i18n="p.ed.excerpt">Excerpt</label><input dir="ltr" value="WADA's 2026 compliance audit of the agency closed with no critical findings and a set of improvement recommendations"></div>
+              <div class="editor"><div class="ed-bar"><button type="button"><b>B</b></button><button type="button"><i>I</i></button><button type="button"><u>U</u></button><i></i><button type="button">H2</button><button type="button">H3</button><i></i><button type="button">• —</button><button type="button">1. —</button><button type="button">“ ”</button><i></i><button type="button" data-toast="Insert link — design preview" data-toast-ar="إدراج رابط — معاينة تصميم"><svg class="ico" style="width:14px;height:14px"><use href="#i-link"/></svg></button><button type="button" data-drawer="d-media"><svg class="ico" style="width:14px;height:14px"><use href="#i-image"/></svg></button></div>
+                <div class="ed-body" contenteditable="true" dir="ltr" lang="en"><p>The World Anti-Doping Agency's 2026 compliance audit of the Kuwait Anti-Doping Agency has closed with no critical findings against the World Anti-Doping Code and International Standards.</p><blockquote>"A result that reflects the work of a whole team and the partnership of the sports federations." — Director General</blockquote><p>The audit report commended the anti-doping education programme and results-management procedures.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid g2">
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.ed.seo">SEO & sharing</h2><span class="st ok plain">92 / 100</span></div>
+            <div class="form">
+              <div class="field"><label data-i18n="p.ed.slug">URL slug</label><input class="num" value="news/wada-compliance-2026"></div>
+              <div class="field"><label data-i18n="p.ed.meta">Meta description (EN)</label><input value="WADA's 2026 compliance audit of the Kuwait Anti-Doping Agency closed with no critical findings."><small data-i18n="p.ed.metad">95 / 160 characters · Arabic meta description set</small></div>
+              <div class="seo-prev"><div class="u">kada.gov.kw › news › wada-compliance-2026</div><div class="t">WADA 2026 compliance audit closes with no critical findings</div><div class="d">WADA's 2026 compliance audit of the Kuwait Anti-Doping Agency closed with no critical findings.</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.ed.img">Featured image & media</h2><button class="btn btn-ghost xs" type="button" data-drawer="d-media"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.ed.lib">Media library</span></button></div>
+            <div class="media-grid" style="grid-template-columns:1fr 1fr">
+              <figure><img src="../assets/img/news-1.jpg" alt=""><figcaption><b>news-1.jpg</b><span data-i18n="p.ed.featured">Featured · alt AR/EN set</span></figcaption></figure>
+              <figure><img src="../assets/img/hq.jpg" alt=""><figcaption><b>hq.jpg</b><span data-i18n="p.ed.inline">Inline · paragraph 2</span></figcaption></figure>
+            </div>
+            <div class="field mt-2"><label data-i18n="p.ed.alt">Alt text (AR / EN)</label><input dir="rtl" value="مبنى مقر الوكالة الكويتية لمكافحة المنشطات"><input value="KADA headquarters building"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.ed.pubp">Publishing</h2><span class="st" data-i18n="p.ed.st">Draft · v3</span></div>
+          <div class="steps"><div class="cur"><b data-i18n="p.w1">Draft</b></div><div><b data-i18n="p.w2">Review</b></div><div><b data-i18n="p.w3">Approval</b></div><div><b data-i18n="p.w4">Published</b></div></div>
+          <div class="form mt-2">
+            <div class="field"><label data-i18n="m.cat">Category</label><select><option data-i18n="n.c2">Press release</option><option data-i18n="n.c1">Announcement</option><option data-i18n="n.c3">Decision</option><option data-i18n="n.c4">Education</option></select></div>
+            <div class="field"><label data-i18n="p.ed.when">Publish</label><select><option data-i18n="p.ed.when1">Immediately on approval</option><option data-i18n="p.ed.when2">Schedule date & time</option></select></div>
+            <div class="switches">
+              <div><div><b data-i18n="p.ed.ch1">Show in app news feed</b></div><span class="switch on"></span></div>
+              <div><div><b data-i18n="p.ed.ch2">Post to X & LinkedIn</b><small data-i18n="p.ed.ch2d">Social integration</small></div><span class="switch on"></span></div>
+              <div><div><b data-i18n="p.ed.ch3">Email subscribers</b></div><span class="switch"></span></div>
+              <div><div><b data-i18n="p.ed.ch4">Pin to home page</b></div><span class="switch"></span></div>
+            </div>
+          </div>
+          <div class="stack mt-2" style="gap:8px">
+            <button class="btn btn-primary" type="button" data-toast="Submitted for approval · reviewers notified" data-toast-ar="أُرسل للاعتماد · أُخطر المراجعون"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.ed.submit">Submit for approval</span></button>
+            <div class="row" style="gap:8px"><button class="btn btn-ghost sm" type="button" style="flex:1" data-toast="Draft saved" data-toast-ar="حُفظت المسودة"><span data-i18n="p.ed.save">Save draft</span></button><button class="btn btn-ghost sm" type="button" style="flex:1" data-toast="Preview opened — design preview" data-toast-ar="فُتحت المعاينة — معاينة تصميم"><span data-i18n="p.ap.prev">Preview</span></button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.ed.ver">Versions</h2></div>
+          <div class="ver">
+            <div><div><b>v3 · <span data-i18n="p.ed.cur">current</span></b><small>Dana Al-Kandari · <span class="num">22 · 10 · 10:14</span></small></div><span class="st info plain" data-i18n="p.ed.open">Open</span></div>
+            <div><div><b>v2</b><small>Dana Al-Kandari · <span class="num">21 · 10 · 14:40</span></small></div><button class="lnk" type="button" data-toast="Diff view — design preview" data-toast-ar="عرض الفروقات — معاينة تصميم" data-i18n="p.ed.diff">Compare</button></div>
+            <div><div><b>v1</b><small>Dana Al-Kandari · <span class="num">20 · 10 · 09:12</span></small></div><button class="lnk" type="button" data-toast="Version restored as a new draft — design preview" data-toast-ar="استُعيدت النسخة كمسودة جديدة — معاينة تصميم" data-i18n="p.ed.restore">Restore</button></div>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><h2 data-i18n="p.ed.acc">Accessibility & quality</h2></div>
+          <div class="check-list">
+            <label><input type="checkbox" checked disabled><span data-i18n="p.ed.q1">Headings in order</span></label>
+            <label><input type="checkbox" checked disabled><span data-i18n="p.ed.q2">All images have alt text</span></label>
+            <label><input type="checkbox" checked disabled><span data-i18n="p.ed.q3">Reading level · plain language</span></label>
+            <label><input type="checkbox" checked disabled><span data-i18n="p.ed.q4">Both languages present</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MODULE: PUBLICATIONS ===================== -->
+  <section data-view="pubs">
+    <div class="page-head">
+      <div><h1 data-i18n="d.h">Research & publications</h1><p data-i18n="d.d">Rules, policies, annual reports, research papers, educational material and forms — PDF files in Arabic and English, published on the Research &amp; publications page and used by the AI assistant.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../publications.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="m.site">View on the website</span></a>
+        <button class="btn btn-primary sm" type="button" data-it="d-pub" data-new><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="d.new">Upload a document</span></button>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><svg class="ico"><use href="#i-file"/></svg><small data-i18n="d.k1">Documents</small><b data-count="33">33</b><em data-i18n="d.k1d">6 categories · 32 in Arabic & English</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-down"/></svg><small data-i18n="d.k5">Downloads · 30 days</small><b data-count="4812">4,812</b><em data-i18n="d.k5d">Top: Prohibited List 2027 (AR)</em><svg class="spark" data-chart="spark" data-values="120,140,135,160,190,170,210,230,220,260" data-colors="green"></svg></div>
+      <div class="kpi"><svg class="ico"><use href="#i-spark"/></svg><small data-i18n="d.k3">Source for the AI assistant</small><b data-count="28">28</b><em class="flat" data-i18n="d.k3d">Forms are excluded</em></div>
+      <div class="kpi"><svg class="ico"><use href="#i-clock"/></svg><small data-i18n="d.k4">Moves to the archive</small><b data-count="1">1</b><em class="warn" data-i18n="d.k4d">Rules 2021 edition · 01 · 01 · 2027</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="dc">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t1"><span data-i18n="d.t1">Rules & regulations</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t2"><span data-i18n="d.t2">Policies</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t3"><span data-i18n="d.t3">Annual reports</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t4"><span data-i18n="d.t4">Research papers</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t5"><span data-i18n="d.t5">Educational material</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="t6"><span data-i18n="d.t6">Forms</span><span class="cnt"></span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="dc"><table class="tbl">
+        <thead><tr><th data-i18n="d.c">Document</th><th data-i18n="m.cat">Category</th><th data-i18n="p.c3">Languages</th><th data-i18n="d.ver">Version</th><th class="r" data-i18n="d.dl">Downloads</th><th data-i18n="m.date">Date</th><th data-i18n="p.c5">Status</th><th class="r"></th></tr></thead>
+        <tbody>
+          <tr data-f="t1"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r1">KADA National Anti-Doping Rules (2027 edition — effective 1 January 2027)</b><span class="sub">2.4 MB</span></div></div></td><td data-i18n="d.t1">Rules & regulations</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v2027.1</td><td class="r num">1,902</td><td class="num nw">15 · 09 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="القواعد الوطنية لمكافحة المنشطات — الوكالة (إصدار 2027 — يسري من 1 يناير 2027)" data-en="KADA National Anti-Doping Rules (2027 edition — effective 1 January 2027)" data-file="kada-rules-2027.pdf · 2.4 MB" data-cat="t1"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t1"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r2">KADA National Anti-Doping Rules (2021 edition — in force until 31 December 2026)</b><span class="sub">2.1 MB</span></div></div></td><td data-i18n="d.t1">Rules & regulations</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v2021.3</td><td class="r num">96</td><td class="num nw">01 · 01 · 2021</td><td><span class="st warn" data-i18n="d.arch">Archive on 01 · 01 · 2027</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="القواعد الوطنية لمكافحة المنشطات (إصدار 2021 — ساري حتى 31 ديسمبر 2026)" data-en="KADA National Anti-Doping Rules (2021 edition — in force until 31 December 2026)" data-file="kada-rules-2021.pdf · 2.1 MB" data-cat="t1"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t1"><td><div class="pg"><span class="ftype red">PDF</span><div><b data-i18n="d.r3">Prohibited List 2027 — Arabic translation & simplified guide</b><span class="sub">3.8 MB</span></div></div></td><td data-i18n="d.t1">Rules & regulations</td><td><span class="lang2"><span>AR</span></span></td><td class="num">v1.2</td><td class="r num">2,214</td><td class="num nw">01 · 10 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="قائمة المحظورات 2027 — الترجمة العربية والدليل المبسّط" data-en="Prohibited List 2027 — Arabic translation & simplified guide" data-file="prohibited-list-2027-ar.pdf · 3.8 MB" data-cat="t1"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t2"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r4">Responsible AI Policy</b><span class="sub">520 KB</span></div></div></td><td data-i18n="d.t2">Policies</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.0</td><td class="r num">188</td><td class="num nw">05 · 09 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="سياسة الذكاء الاصطناعي المسؤول" data-en="Responsible AI Policy" data-file="responsible-ai-policy.pdf · 520 KB" data-cat="t2"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t2"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r5">Privacy & Personal Data Protection Policy</b><span class="sub">640 KB</span></div></div></td><td data-i18n="d.t2">Policies</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v3.1</td><td class="r num">388</td><td class="num nw">12 · 03 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="سياسة الخصوصية وحماية البيانات الشخصية" data-en="Privacy & Personal Data Protection Policy" data-file="privacy-policy.pdf · 640 KB" data-cat="t2"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t3"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r6">KADA Annual Report 2025</b><span class="sub">9.2 MB</span></div></div></td><td data-i18n="d.t3">Annual reports</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.0</td><td class="r num">640</td><td class="num nw">30 · 04 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="التقرير السنوي للوكالة 2025" data-en="KADA Annual Report 2025" data-file="annual-report-2025.pdf · 9.2 MB" data-cat="t3"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t3"><td><div class="pg"><span class="ftype green">XLSX</span><div><b data-i18n="d.r7">Testing statistics 2025 — open data</b><span class="sub">180 KB</span></div></div></td><td data-i18n="d.t3">Annual reports</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.1</td><td class="r num">276</td><td class="num nw">30 · 04 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="إحصاءات الفحص 2025 — بيانات مفتوحة" data-en="Testing statistics 2025 — open data" data-file="testing-statistics-2025 · 180 KB" data-cat="t3"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t4"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r8">Supplement contamination risk among Kuwaiti gym users — survey findings</b><span class="sub">1.6 MB</span></div></div></td><td data-i18n="d.t4">Research papers</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.0</td><td class="r num">154</td><td class="num nw">18 · 06 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="مخاطر تلوث المكملات لدى مرتادي الصالات الرياضية في الكويت — نتائج المسح" data-en="Supplement contamination risk among Kuwaiti gym users — survey findings" data-file="supplements-survey-2026.pdf · 1.6 MB" data-cat="t4"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t5"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r9">Supplements: a risk guide for athletes and gym users</b><span class="sub">2.7 MB</span></div></div></td><td data-i18n="d.t5">Educational material</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v2.0</td><td class="r num">512</td><td class="num nw">20 · 05 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="المكملات الغذائية: دليل المخاطر للرياضيين ومرتادي الصالات" data-en="Supplements: a risk guide for athletes and gym users" data-file="supplements-risk-guide.pdf · 2.7 MB" data-cat="t5"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t5"><td><div class="pg"><span class="ftype">ZIP</span><div><b data-i18n="d.r10">School presentation kit (ages 12–17)</b><span class="sub">18 MB</span></div></div></td><td data-i18n="d.t5">Educational material</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.4</td><td class="r num">230</td><td class="num nw">01 · 09 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="حقيبة العروض المدرسية (12–17 سنة)" data-en="School presentation kit (ages 12–17)" data-file="school-kit.zip · 18 MB" data-cat="t5"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t6"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r11">Therapeutic Use Exemption (TUE) application form</b><span class="sub">220 KB</span></div></div></td><td data-i18n="d.t6">Forms</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v2026.1</td><td class="r num">842</td><td class="num nw">01 · 01 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="نموذج طلب الإعفاء للاستعمال العلاجي (TUE)" data-en="Therapeutic Use Exemption (TUE) application form" data-file="tue-application-form.pdf · 220 KB" data-cat="t6"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+          <tr data-f="t6"><td><div class="pg"><span class="ftype">PDF</span><div><b data-i18n="d.r12">Data access request form (Privacy Policy)</b><span class="sub">110 KB</span></div></div></td><td data-i18n="d.t6">Forms</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">v1.0</td><td class="r num">61</td><td class="num nw">12 · 03 · 2026</td><td><span class="st ok" data-i18n="p.s7">Published</span></td><td><div class="acts"><button class="mini" type="button" data-it="d-pub" data-ar="نموذج طلب الوصول إلى البيانات (سياسة الخصوصية)" data-en="Data access request form (Privacy Policy)" data-file="data-access-request-form.pdf · 110 KB" data-cat="t6"><svg class="ico"><use href="#i-edit"/></svg></button></div></td></tr>
+        </tbody>
+      </table></div>
+      <div class="foot-bar"><span data-i18n="d.foot">Showing 12 of 33 · every version is kept · the public page lists the current version with a change note</span><div class="pager"><button class="is-on">1</button><button>2</button><button>3</button></div></div>
+    </div>
+    <div class="grid g2 mt-2">
+      <div class="card"><div class="card-head"><h2 data-i18n="d.top">Top downloads · 30 days</h2></div><div class="bars-h"><div><span data-i18n="d.ts1">Prohibited List 2027 (AR)</span><div class="bar"><i style="width:100%"></i></div><b>2,214</b></div><div><span data-i18n="d.ts2">Athlete Guide 2027</span><div class="bar"><i style="width:92%"></i></div><b>2,040</b></div><div><span data-i18n="d.ts3">National Anti-Doping Rules</span><div class="bar"><i class="navy" style="width:86%"></i></div><b>1,902</b></div><div><span data-i18n="d.ts4">TUE application form</span><div class="bar"><i class="lime" style="width:38%"></i></div><b>842</b></div></div></div>
+      <div class="card soft"><div class="card-head"><h2 data-i18n="d.rules">Repository rules</h2></div><div class="check-list"><label><input type="checkbox" checked disabled><span data-i18n="d.ru1">PDF/A for long-term archive</span></label><label><input type="checkbox" checked disabled><span data-i18n="d.ru2">Accessible tagging (headings, reading order)</span></label><label><input type="checkbox" checked disabled><span data-i18n="d.ru3">Citation metadata (title, authors, DOI)</span></label><label><input type="checkbox" checked disabled><span data-i18n="d.ru4">Search-indexed full text (AR + EN)</span></label></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== MODULE: MEDIA CENTRE ===================== -->
+  <section data-view="gallery">
+    <div class="page-head">
+      <div><h1 data-i18n="g.h">Media centre</h1><p data-i18n="g.d">Photo albums and videos shown in the public Media Centre, with the brand assets, press contact and accreditation details for journalists.</p></div>
+      <div class="acts">
+        <a class="btn btn-ghost sm" href="../media.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="m.site">View on the website</span></a>
+        <button class="btn btn-primary sm" type="button" data-it="d-gal" data-new><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="g.new">New album or video</span></button>
+      </div>
+    </div>
+    <div class="grid g-main">
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="g.gal">Photos & video</h2><small data-i18n="g.gald">9 items · drag to change the order on the page</small></div>
+          <div class="filters" data-filter-group="gl">
+            <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="ph"><span data-i18n="g.ph">Photos</span><span class="cnt"></span></button>
+            <button class="chip" type="button" data-filter="vd"><span data-i18n="g.vd">Video</span><span class="cnt"></span></button>
+          </div>
+        </div>
+        <div class="gal-grid" data-filter-rows="gl">
+          <figure data-f="vd"><img src="../assets/img/events.jpg" alt=""><span class="gal-type">▶ 3:12</span><figcaption><b data-i18n="g.i1">Conference 2025 — highlights video (3:12)</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="مؤتمر 2025 — فيديو أبرز اللحظات (3:12)" data-en="Conference 2025 — highlights video (3:12)" data-img="../assets/img/events.jpg" data-kind="vd"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/news-1.jpg" alt=""><figcaption><b data-i18n="g.i2">Clean podium ceremony</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="مراسم تتويج نظيفة" data-en="Clean podium ceremony" data-img="../assets/img/news-1.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/news-2.jpg" alt=""><figcaption><b data-i18n="g.i3">Awareness session — national swim team</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="جلسة توعوية — منتخب السباحة الوطني" data-en="Awareness session — national swim team" data-img="../assets/img/news-2.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/ops.jpg" alt=""><figcaption><b data-i18n="g.i4">Early-morning out-of-competition mission</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="مهمة فحص خارج المنافسة في الصباح الباكر" data-en="Early-morning out-of-competition mission" data-img="../assets/img/ops.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/hero-3.jpg" alt=""><figcaption><b data-i18n="g.i5">Laboratory visit</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="زيارة المختبر" data-en="Laboratory visit" data-img="../assets/img/hero-3.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/hero-2.jpg" alt=""><figcaption><b data-i18n="g.i6">Play True Day 2026</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="يوم اللعب النظيف 2026" data-en="Play True Day 2026" data-img="../assets/img/hero-2.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/about.jpg" alt=""><figcaption><b data-i18n="g.i7">KADA team</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="فريق كادا" data-en="KADA team" data-img="../assets/img/about.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/hq.jpg" alt=""><figcaption><b data-i18n="g.i8">Headquarters</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="المقر الرئيسي" data-en="Headquarters" data-img="../assets/img/hq.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+          <figure data-f="ph"><img src="../assets/img/news-3.jpg" alt=""><figcaption><b data-i18n="g.i9">Athlete app launch</b><span class="row between"><span class="st ok plain" data-i18n="p.s7">Published</span><button class="mini" type="button" data-it="d-gal" data-ar="إطلاق تطبيق الرياضيين" data-en="Athlete app launch" data-img="../assets/img/news-3.jpg" data-kind="ph"><svg class="ico"><use href="#i-edit"/></svg></button></span></figcaption></figure>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2 data-i18n="g.b">Brand assets</h2><small data-i18n="g.bd">Files journalists and partners can download</small></div></div>
+          <div class="ver">
+            <div><div><b data-i18n="g.b1">Logo pack (ZIP)</b><small>AR · EN · <span data-i18n="g.b1d">light & dark</span></small></div><button class="btn btn-ghost xs" type="button" data-drawer="d-media"><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="g.rep">Replace</span></button></div>
+            <div><div><b data-i18n="g.b2">Guidelines (PDF)</b><small data-i18n="g.b2d">Colours and usage rules</small></div><button class="btn btn-ghost xs" type="button" data-drawer="d-media"><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="g.rep">Replace</span></button></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="g.p">Press contact</h2></div>
+          <div class="form">
+            <div class="form g2"><div class="field"><label data-i18n="p.gs.mail">Email</label><input dir="ltr" value="media@kada.gov.kw"></div><div class="field"><label data-i18n="p.gs.phone">Phone</label><input class="num" dir="ltr" value="+965 2222 0011"></div></div>
+            <div class="field"><label data-i18n="g.pr">Response time (AR / EN)</label><input dir="rtl" value="نرد على طلبات المقابلات والتصريحات خلال يوم عمل واحد."><input dir="ltr" value="We respond to interview and statement requests within one working day."></div>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><div><h2 data-i18n="g.a">Press accreditation</h2><small data-i18n="g.ad">Requests from journalists arrive here by email to the Media Center</small></div></div>
+          <div class="switches"><div><div><b data-i18n="g.a1">Show the "Request accreditation" button</b></div><span class="switch on"></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPROVALS ===================== -->
+  <section data-view="approvals">
+    <div class="page-head">
+      <div><h1 data-i18n="p.t2">Approval queue</h1><p data-i18n="ap.d">Everything sent for approval in one place: what is still waiting, what was approved and published, and what was rejected — with the reason.</p></div>
+    </div>
+
+    <div class="ap-sum">
+      <button class="ap-card wait" type="button" data-ap-go="wait"><span class="ap-ic"><svg class="ico"><use href="#i-clock"/></svg></span><span><b class="num" data-ap-n="wait">4</b><span class="l" data-i18n="ap.s.wait">Awaiting approval</span><small data-i18n="ap.c.wait">Waiting for the approver's decision</small></span></button>
+      <button class="ap-card ok" type="button" data-ap-go="ok"><span class="ap-ic"><svg class="ico"><use href="#i-check"/></svg></span><span><b class="num" data-ap-n="ok">5</b><span class="l" data-i18n="ap.s.ok">Approved</span><small data-i18n="ap.c.ok">Published, or scheduled to publish</small></span></button>
+      <button class="ap-card no" type="button" data-ap-go="no"><span class="ap-ic"><svg class="ico"><use href="#i-x"/></svg></span><span><b class="num" data-ap-n="no">2</b><span class="l" data-i18n="ap.s.no">Rejected</span><small data-i18n="ap.c.no">Returned to the author with the reason</small></span></button>
+    </div>
+
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="ap">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="wait"><span data-i18n="ap.s.wait">Awaiting approval</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="ok"><span data-i18n="ap.s.ok">Approved</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="no"><span data-i18n="ap.s.no">Rejected</span><span class="cnt"></span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="ap"><table class="tbl ap-tbl">
+        <thead><tr><th data-i18n="ap.h1">What was sent</th><th data-i18n="ap.h2">Sent by</th><th data-i18n="p.c5">Status</th><th data-i18n="ap.h3">Decision</th><th class="r"></th></tr></thead>
+        <tbody>
+          <tr data-f="wait"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.r1">WADA 2026 compliance audit closes with no critical findings</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">22 · 10 · 2026 · 10:14</span></td><td><span class="st warn" data-ap-st data-i18n="ap.s.wait">Awaiting approval</span></td><td class="ap-dec" data-ap-dec><span class="muted" data-i18n="ap.d0">Not decided yet</span></td><td class="r" data-ap-act><button class="btn btn-primary xs" type="button" data-perm="publish" data-review data-chg-en="New news item: the result of WADA's 2026 compliance audit, in Arabic and English (version 3, after the second paragraph was revised)." data-chg-ar="خبر جديد: نتيجة تدقيق وادا للامتثال 2026 بالعربية والإنجليزية (الإصدار 3 بعد تعديل الفقرة الثانية)." data-href="../article.html"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="ap.rev">Review</span></button><span class="small muted nw" data-perm="content" data-no-perm="publish" data-i18n="ap.withap">With the approver</span></td></tr>
+          <tr data-f="wait"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-cal"/></svg></span><div><b data-i18n="p.r2">Registration opens — National Clean Sport Conference</b><span class="sub" data-i18n="p.ty2">Event</span></div></div></td><td class="nw"><span data-acct-name="training">Faisal Al-Anzi</span><span class="sub num">21 · 10 · 2026 · 16:40</span></td><td><span class="st warn" data-ap-st data-i18n="ap.s.wait">Awaiting approval</span></td><td class="ap-dec" data-ap-dec><span class="muted" data-i18n="ap.d0">Not decided yet</span></td><td class="r" data-ap-act><button class="btn btn-primary xs" type="button" data-perm="publish" data-review data-chg-en="Event: registration opens for the National Clean Sport Conference on 14 December 2026." data-chg-ar="فعالية: فتح باب التسجيل في المؤتمر الوطني للرياضة النظيفة المقرر في 14 ديسمبر 2026." data-href="../event.html"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="ap.rev">Review</span></button><span class="small muted nw" data-perm="content" data-no-perm="publish" data-i18n="ap.withap">With the approver</span></td></tr>
+          <tr data-f="wait"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.r3">Education programme results · Q3 2026</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="training">Faisal Al-Anzi</span><span class="sub num">21 · 10 · 2026 · 11:02</span></td><td><span class="st warn" data-ap-st data-i18n="ap.s.wait">Awaiting approval</span></td><td class="ap-dec" data-ap-dec><span class="muted" data-i18n="ap.d0">Not decided yet</span></td><td class="r" data-ap-act><button class="btn btn-primary xs" type="button" data-perm="publish" data-review data-chg-en="New news item: results of the anti-doping education programme for the third quarter of 2026." data-chg-ar="خبر جديد: نتائج برنامج التثقيف لمكافحة المنشطات في الربع الثالث من 2026." data-href="../article.html"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="ap.rev">Review</span></button><span class="small muted nw" data-perm="content" data-no-perm="publish" data-i18n="ap.withap">With the approver</span></td></tr>
+          <tr data-f="wait"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-globe"/></svg></span><div><b data-i18n="p.r4">Therapeutic Use Exemptions — updated guidance</b><span class="sub" data-i18n="p.ty4">Page</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">20 · 10 · 2026 · 15:30</span></td><td><span class="st warn" data-ap-st data-i18n="ap.s.wait">Awaiting approval</span></td><td class="ap-dec" data-ap-dec><span class="muted" data-i18n="ap.d0">Not decided yet</span></td><td class="r" data-ap-act><button class="btn btn-primary xs" type="button" data-perm="publish" data-review data-chg-en="Page change: updated guidance on the Therapeutic Use Exemption (TUE) page." data-chg-ar="تعديل صفحة: إرشادات محدّثة في صفحة الإعفاء للاستعمال العلاجي." data-href="../tue.html"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="ap.rev">Review</span></button><span class="small muted nw" data-perm="content" data-no-perm="publish" data-i18n="ap.withap">With the approver</span></td></tr>
+
+          <tr data-f="no"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.r7">Nutrition supplements: what athletes must check</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">17 · 10 · 2026 · 13:20</span></td><td><span class="st red" data-i18n="ap.s.no">Rejected</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">18 · 10 · 2026</span></span><div class="ap-why"><b data-i18n="ap.why">Reason:</b> <span data-i18n="p.dr.r5">One language is missing or incomplete</span><q data-i18n="ap.n1">The last two paragraphs have no English version.</q></div></td><td class="r"><a class="btn btn-ghost xs" href="#edit" data-perm="content" data-no-perm="publish"><svg class="ico"><use href="#i-edit"/></svg><span data-i18n="ap.fix">Edit and resend</span></a></td></tr>
+          <tr data-f="no"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-globe"/></svg></span><div><b data-i18n="pg.board">Board Members</b><span class="sub" data-i18n="p.ty4">Page</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">19 · 10 · 2026 · 11:45</span></td><td><span class="st red" data-i18n="ap.s.no">Rejected</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">20 · 10 · 2026</span></span><div class="ap-why"><b data-i18n="ap.why">Reason:</b> <span data-i18n="p.dr.r3">Missing approvals (legal / DG)</span><q data-i18n="ap.n2">The member list needs the Executive Office's confirmation before it is published.</q></div></td><td class="r"><a class="btn btn-ghost xs" href="#page?id=board.html" data-perm="content" data-no-perm="publish"><svg class="ico"><use href="#i-edit"/></svg><span data-i18n="ap.fix">Edit and resend</span></a></td></tr>
+
+          <tr data-f="ok"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.r10">Medicine checker updated for the 2027 Prohibited List</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">22 · 10 · 2026 · 16:05</span></td><td><span class="st ok" data-i18n="ap.s.ok">Approved</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">23 · 10 · 2026</span></span><span class="sub" data-i18n="ap.d.pub">Published on the website</span></td><td class="r"><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></td></tr>
+          <tr data-f="ok"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="p.r9">Prohibited List 2027 takes effect on 1 January</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">15 · 10 · 2026 · 12:10</span></td><td><span class="st ok" data-i18n="ap.s.ok">Approved</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">16 · 10 · 2026</span></span><span class="sub" data-i18n="ap.d.sched">Publishes automatically on 15 · 12 · 2026</span></td><td class="r"></td></tr>
+          <tr data-f="ok"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-globe"/></svg></span><div><b data-i18n="ap.r.home">Home page — TUE added to the services strip</b><span class="sub" data-i18n="p.ty4">Page</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">01 · 10 · 2026 · 14:30</span></td><td><span class="st ok" data-i18n="ap.s.ok">Approved</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">02 · 10 · 2026</span></span><span class="sub" data-i18n="ap.d.pub">Published on the website</span></td><td class="r"><a class="mini" href="../index.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></td></tr>
+          <tr data-f="ok"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-doc"/></svg></span><div><b data-i18n="n.r1">The 2027 Prohibited List is now available in Arabic</b><span class="sub" data-i18n="p.ty3">News</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">30 · 09 · 2026 · 10:00</span></td><td><span class="st ok" data-i18n="ap.s.ok">Approved</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">01 · 10 · 2026</span></span><span class="sub" data-i18n="ap.d.pub">Published on the website</span></td><td class="r"><a class="mini" href="../article.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></td></tr>
+          <tr data-f="ok"><td><div class="pg"><span class="pg-ic"><svg class="ico"><use href="#i-file"/></svg></span><div><b data-i18n="d.r1">KADA National Anti-Doping Rules (2027 edition — effective 1 January 2027)</b><span class="sub" data-i18n="p.ty5">Document</span></div></div></td><td class="nw"><span data-acct-name="editor">Dana Al-Kandari</span><span class="sub num">14 · 09 · 2026 · 09:15</span></td><td><span class="st ok" data-i18n="ap.s.ok">Approved</span></td><td class="ap-dec"><span class="nw"><b data-acct-name="approver">Salem Al-Dosari</b> · <span class="num">15 · 09 · 2026</span></span><span class="sub" data-i18n="ap.d.pub">Published on the website</span></td><td class="r"><a class="mini" href="../publications.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-eye"/></svg></a></td></tr>
+        </tbody>
+      </table></div>
+      <div class="foot-bar"><span data-i18n="ap.foot">The author is notified of every decision by email and in the app · decisions are kept in the audit log</span><a class="lnk" href="audit.html" data-i18n="ap.audit">Open the audit log</a></div>
+    </div>
+  </section>
+
+  <!-- ===================== MENUS & SITE SETTINGS ===================== -->
+  <section data-view="menus">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Website pages</h1><p data-i18n="p.d">Every public page of kada.gov.kw with its owner, status and both languages. Open a page to edit it section by section.</p></div>
+    </div>
+    <nav class="tabs">
+      <a href="#pages"><svg class="ico"><use href="#i-grid"/></svg><span data-i18n="p.t0">All pages</span><span class="cnt">26</span></a>
+      <a href="#menus"><svg class="ico"><use href="#i-cog"/></svg><span data-i18n="p.t4">Menus & site settings</span></a>
+    </nav>
+    <div class="grid g2">
+      <div class="card flush">
+        <div class="card-head"><div><h2 data-i18n="p.m.h">Main navigation</h2><small data-i18n="p.m.d">Drag to reorder · labels in both languages · changes publish after approval</small></div><button class="btn btn-ghost xs" type="button" data-toast="Menu item added — design preview" data-toast-ar="أُضيف عنصر — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.m.add">Add item</span></button></div>
+        <div class="tbl-wrap"><table class="tbl compact">
+          <thead><tr><th data-i18n="p.m.c1">Label (EN)</th><th data-i18n="p.m.c2">Label (AR)</th><th data-i18n="p.m.c3">Target</th><th data-i18n="p.m.c4">Children</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><b>Home</b></td><td dir="rtl">الرئيسية</td><td class="num">/</td><td>—</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>About Us</b></td><td dir="rtl">عن الوكالة</td><td class="num">about</td><td>6</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>E-Services</b></td><td dir="rtl">الخدمات الإلكترونية</td><td class="num">services</td><td>9</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>Education</b></td><td dir="rtl">التثقيف</td><td class="num">education</td><td>—</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>Media</b></td><td dir="rtl">الإعلام</td><td class="num">media</td><td>4</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>FAQs</b></td><td dir="rtl">الأسئلة الشائعة</td><td class="num">faq</td><td>—</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+            <tr><td><b>Contact</b></td><td dir="rtl">تواصل معنا</td><td class="num">contact</td><td>—</td><td class="r"><span class="st ok plain" data-i18n="p.m.on">Visible</span></td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card flush">
+          <div class="card-head"><div><h2 data-i18n="p.m.red">Redirects</h2><small data-i18n="p.m.redd">Preserve old URLs after the migration · SEO safe (301)</small></div><button class="btn btn-ghost xs" type="button" data-toast="Redirect added — design preview" data-toast-ar="أُضيفت إعادة توجيه — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.m.add">Add item</span></button></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="p.m.from">From</th><th data-i18n="p.m.to">To</th><th data-i18n="p.m.hits">Hits · 30 d</th></tr></thead>
+            <tbody>
+              <tr><td class="num">/ar/news.php?id=812</td><td class="num">/news/medicine-checker-2027</td><td class="num">1,204</td></tr>
+              <tr><td class="num">/en/prohibited-list</td><td class="num">/prohibited</td><td class="num">3,918</td></tr>
+              <tr><td class="num">/tenders.aspx</td><td class="num">/tenders</td><td class="num">466</td></tr>
+            </tbody></table></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.m.foot">Footer & legal links</h2></div>
+          <div class="check-list">
+            <label><input type="checkbox" checked><span data-i18n="p.m.f1">Privacy policy</span><small class="num">pages/privacy</small></label>
+            <label><input type="checkbox"><span data-i18n="p.m.f2">Accessibility statement</span><small class="num">accessibility</small></label>
+            <label><input type="checkbox" checked><span data-i18n="p.m.f3">Sitemap</span><small class="num">sitemap</small></label>
+            <label><input type="checkbox" checked><span data-i18n="p.m.f4">Data access request</span><small class="num">data-request</small></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3 mt-2">
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.gs.h1">Site-wide announcement bar</h2><small data-i18n="p.gs.h1d">A short notice above the header on every page</small></div><span class="switch" role="switch" aria-label="On"></span></div>
+        <div class="form">
+          <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.gs.msg">Message</span></label><input dir="rtl" value="قائمة المحظورات 2027 تدخل حيز التنفيذ في 1 يناير — تحقّق من أدويتك"></div>
+          <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.gs.msg">Message</span></label><input dir="ltr" value="The 2027 Prohibited List takes effect on 1 January — check your medicines"></div>
+          <div class="field"><label data-i18n="p.gs.link">Link to</label><select><option data-i18n="pg.prohibited">Prohibited List & medicine checker</option><option data-i18n="n.h">News</option></select></div>
+          <div class="form g2"><div class="field"><label data-i18n="p.gs.from">Show from</label><input class="num" value="15 · 12 · 2026"></div><div class="field"><label data-i18n="p.gs.to">Until</label><input class="num" value="31 · 01 · 2027"></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.gs.h2">Contact details & social media</h2><small data-i18n="p.gs.h2d">Used in the footer, the Contact page and the AI assistant</small></div></div>
+        <div class="form">
+          <div class="field"><label data-i18n="p.gs.phone">Phone</label><input class="num" dir="ltr" value="+965 2222 0000"></div>
+          <div class="field"><label data-i18n="p.gs.mail">General email</label><input dir="ltr" value="info@kada.gov.kw"></div>
+          <div class="field"><label data-i18n="p.gs.hours">Working hours (AR / EN)</label><input dir="rtl" value="الأحد–الخميس · 8:00–14:00"><input dir="ltr" value="Sun–Thu · 8:00–14:00"></div>
+          <div class="field"><label>Instagram</label><input dir="ltr" value="instagram.com/kada.kw"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h2 data-i18n="p.gs.h3">Shared blocks</h2><small data-i18n="p.gs.h3d">Edit once — the change appears on every page that uses the block</small></div></div>
+        <div class="ver">
+          <div><div><b data-i18n="p.gs.b1">Header & main menu</b><small data-i18n="p.gs.b1d">All pages · logo, menu, language switch, sign-in</small></div><span class="st ok plain" data-i18n="s.pub">Published</span></div>
+          <div><div><b data-i18n="p.gs.b2">Footer</b><small data-i18n="p.gs.b2d">All pages · links, contact details, social media</small></div><span class="st ok plain" data-i18n="s.pub">Published</span></div>
+          <div><div><b data-i18n="p.gs.b3">"Need help?" banner</b><small data-i18n="p.gs.b3d">12 pages · AI assistant and Contact us buttons</small></div><span class="st ok plain" data-i18n="s.pub">Published</span></div>
+          <div><div><b data-i18n="p.gs.b4">Sign-in window</b><small data-i18n="p.gs.b4d">Kuwait Mobile ID · staff single sign-on</small></div><span class="st ok plain" data-i18n="s.pub">Published</span></div>
+        </div>
+        <button class="btn btn-ghost sm mt-1" type="button" data-toast="Changes to shared blocks go to the approval queue like any page" data-toast-ar="تعديلات العناصر المشتركة تمر بقائمة الاعتماد مثل أي صفحة"><svg class="ico"><use href="#i-edit"/></svg><span data-i18n="p.gs.edit">Edit a shared block</span></button>
+      </div>
+    </div>
+    <div class="row mt-2" style="justify-content:flex-end"><button class="btn btn-primary sm" type="button" data-toast="Site settings submitted for approval" data-toast-ar="أُرسلت إعدادات الموقع للاعتماد"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.gs.save">Submit settings for approval</span></button></div>
+  </section>
+
+  <!-- ===================== DRAWERS ===================== -->
+  <div class="drawer" id="d-blocks"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="b.add">Add a section</h3>
+    <p class="small muted" data-i18n="b.libd">Sections use the site's approved design, so every page stays consistent. The new section is added at the end of the page and is filled in both languages.</p>
+    <div class="blk-grid">
+      <button type="button" data-block="text" data-close><svg class="ico"><use href="#i-doc"/></svg><b data-i18n="bl.1">Text & image</b><small data-i18n="bl.1d">Heading, paragraph, picture, button</small></button>
+      <button type="button" data-block="cards" data-close><svg class="ico"><use href="#i-grid"/></svg><b data-i18n="bl.2">Cards</b><small data-i18n="bl.2d">3–6 cards with icon or image</small></button>
+      <button type="button" data-block="stats" data-close><svg class="ico"><use href="#i-chart"/></svg><b data-i18n="bl.3">Key figures</b><small data-i18n="bl.3d">Counters with a short label</small></button>
+      <button type="button" data-block="cta" data-close><svg class="ico"><use href="#i-send"/></svg><b data-i18n="bl.4">Call to action</b><small data-i18n="bl.4d">Banner with one or two buttons</small></button>
+      <button type="button" data-block="faq" data-close><svg class="ico"><use href="#i-list"/></svg><b data-i18n="bl.5">Questions & answers</b><small data-i18n="bl.5d">Short questions with their answers</small></button>
+      <button type="button" data-block="steps" data-close><svg class="ico"><use href="#i-check"/></svg><b data-i18n="bl.6">Steps</b><small data-i18n="bl.6d">Numbered process or timeline</small></button>
+      <button type="button" data-block="docs" data-close><svg class="ico"><use href="#i-file"/></svg><b data-i18n="bl.7">Documents</b><small data-i18n="bl.7d">Files from Research & publications</small></button>
+      <button type="button" data-block="news" data-close><svg class="ico"><use href="#i-cal"/></svg><b data-i18n="bl.8">Latest news or events</b><small data-i18n="bl.8d">Updates itself from the modules</small></button>
+      <button type="button" data-block="notice" data-close><svg class="ico"><use href="#i-warn"/></svg><b data-i18n="bl.9">Notice</b><small data-i18n="bl.9d">Highlighted message or deadline</small></button>
+    </div>
+  </div></div>
+
+  <div class="drawer" id="d-pageset"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-i18n="b.set">Page settings</span> · <span data-i18n="pg.index">Home page</span></h3>
+    <div class="form">
+      <div class="field"><label data-i18n="ps2.url">Page address</label><input class="num" dir="ltr" value="kada.gov.kw/"><small data-i18n="ps2.urld">Changing the address of a published page creates a 301 redirect automatically.</small></div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="ps2.title">Title in search results</span></label><input dir="rtl" value="كادا — الوكالة الكويتية لمكافحة المنشطات"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="ps2.title">Title in search results</span></label><input dir="ltr" value="KADA — Kuwait Anti-Doping Agency"></div>
+      </div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="ps2.desc">Description</span></label><textarea dir="rtl" style="min-height:84px">الوكالة الكويتية لمكافحة المنشطات: سجل العقوبات، والإبلاغ السري، والتدريب، والمناقصات، والمساعدات الذكية.</textarea></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="ps2.desc">Description</span></label><textarea dir="ltr" style="min-height:84px">Kuwait Anti-Doping Agency: sanctions register, confidential reporting, training, tenders and AI assistants.</textarea></div>
+      </div>
+      <div class="field"><label data-i18n="ps2.share">Image when shared on social media</label><div class="pe-img"><img src="../assets/img/hero-1.jpg" alt=""><div><b>hero-1.jpg</b><small>1200 × 630</small></div></div></div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="p.pc4">Content owner</label><select><option data-i18n="ow.comms">Media & Communications</option><option data-i18n="ow.exec">Executive Office</option><option data-i18n="ow.legal">Legal & Compliance</option><option data-i18n="ow.rm">Results Management</option><option data-i18n="ow.edu">Education & Awareness</option></select></div>
+        <div class="field"><label data-i18n="ps2.rev">Content review reminder</label><select><option data-i18n="ps2.rev1">Every 6 months</option><option data-i18n="ps2.rev2">Every 12 months</option></select></div>
+      </div>
+      <div class="switches">
+        <div><div><b data-i18n="ps2.s1">Show in search engines</b></div><span class="switch on"></span></div>
+        <div><div><b data-i18n="ps2.s2">Include in the sitemap and site search</b></div><span class="switch on"></span></div>
+        <div><div><b data-i18n="ps2.s3">Answerable by the AI assistant</b><small data-i18n="ps2.s3d">The assistant may quote this page, with a link to it</small></div><span class="switch on"></span></div>
+      </div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Page settings saved to the draft" data-toast-ar="حُفظت إعدادات الصفحة في المسودة"><span data-i18n="ps2.ok">Save settings</span></button><button class="btn btn-ghost sm" type="button" data-close><span data-i18n="p.dr.cancel">Cancel</span></button></div>
+  </div></div>
+
+  <div class="drawer" id="d-ver"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-i18n="b.ver">Versions</span> · <span data-i18n="pg.index">Home page</span></h3>
+    <p class="small muted" data-i18n="vr.d">Every saved draft and every publication is kept. You can compare any two versions or restore an older one as a new draft.</p>
+    <div class="ver">
+      <div><div><b>v12 · <span data-i18n="vr.draft">draft in progress</span></b><small><span data-acct-name="editor">Dana Al-Kandari</span> · <span class="num">23 · 10 · 2026 · 09:40</span> · <span data-i18n="vr.12">e-services intro text</span></small></div><span class="st info plain" data-i18n="p.ed.open">Open</span></div>
+      <div><div><b>v11 · <span data-i18n="vr.live">live now</span></b><small><span data-acct-name="approver">Salem Al-Dosari</span> · <span class="num">02 · 10 · 2026 · 13:05</span> · <span data-i18n="vr.11">TUE added to the services strip</span></small></div><button class="lnk" type="button" data-toast="Comparing v11 with v12 — design preview" data-toast-ar="مقارنة الإصدار 11 بالإصدار 12 — معاينة تصميم" data-i18n="p.ed.diff">Compare</button></div>
+      <div><div><b>v10</b><small><span data-acct-name="approver">Salem Al-Dosari</span> · <span class="num">14 · 09 · 2026 · 10:20</span> · <span data-i18n="vr.10">sample journey rewritten with athlete rights</span></small></div><button class="lnk" type="button" data-toast="Version restored as a new draft — design preview" data-toast-ar="استُعيدت النسخة كمسودة جديدة — معاينة تصميم" data-i18n="p.ed.restore">Restore</button></div>
+      <div><div><b>v9</b><small><span data-acct-name="sysadmin">Abdullah Al-Mutairi</span> · <span class="num">28 · 08 · 2026 · 16:45</span> · <span data-i18n="vr.9">launch version</span></small></div><button class="lnk" type="button" data-toast="Version restored as a new draft — design preview" data-toast-ar="استُعيدت النسخة كمسودة جديدة — معاينة تصميم" data-i18n="p.ed.restore">Restore</button></div>
+    </div>
+  </div></div>
+
+  <div class="drawer" id="d-newpage"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="np.h">New page</h3>
+    <p class="small muted" data-i18n="np.d">Choose a starting layout. The page is created as a draft in both languages and only goes live after approval.</p>
+    <div class="blk-grid two">
+      <label class="blk-opt"><input type="radio" name="np" checked><span><svg class="ico"><use href="#i-doc"/></svg><b data-i18n="tp.content">Content page</b><small data-i18n="np.t1">Header, text sections, help banner</small></span></label>
+      <label class="blk-opt"><input type="radio" name="np"><span><svg class="ico"><use href="#i-edit"/></svg><b data-i18n="tp.service">Service page</b><small data-i18n="np.t2">Steps, conditions, form, questions</small></span></label>
+      <label class="blk-opt"><input type="radio" name="np"><span><svg class="ico"><use href="#i-home"/></svg><b data-i18n="tp.landing">Landing page</b><small data-i18n="np.t4">Campaign or programme page</small></span></label>
+      <label class="blk-opt"><input type="radio" name="np"><span><svg class="ico"><use href="#i-file"/></svg><b data-i18n="np.blank">Blank page</b><small data-i18n="np.t5">Start from an empty page and add sections</small></span></label>
+    </div>
+    <div class="split">
+      <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="ps2.ptitle">Page title</span></label><input dir="rtl" placeholder="مثال: سياسة الخصوصية"></div>
+      <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="ps2.ptitle">Page title</span></label><input dir="ltr" placeholder="e.g. Privacy policy"></div>
+    </div>
+    <div class="form g2">
+      <div class="field"><label data-i18n="np.menu">Place in the menu</label><select><option data-i18n="p.g2">About KADA</option><option data-i18n="p.g3">E-services</option><option data-i18n="p.g7">Footer & legal</option><option data-i18n="np.none">Not in the menu</option></select></div>
+      <div class="field"><label data-i18n="p.pc4">Content owner</label><select><option data-i18n="ow.comms">Media & Communications</option><option data-i18n="ow.legal">Legal & Compliance</option><option data-i18n="ow.exec">Executive Office</option><option data-i18n="ow.edu">Education & Awareness</option></select></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Draft page created" data-toast-ar="أُنشئت الصفحة كمسودة"><span data-i18n="np.ok">Create draft page</span></button><button class="btn btn-ghost sm" type="button" data-close><span data-i18n="p.dr.cancel">Cancel</span></button></div>
+  </div></div>
+
+  <div class="drawer" id="d-pub"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-mode="edit" data-i18n="dr.pb.e">Edit document</span><span data-mode="new" data-i18n="d.new">Upload a document</span></h3>
+    <div class="form">
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.ed.title">Title</span></label><input dir="rtl" data-fill="ar"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.ed.title">Title</span></label><input dir="ltr" data-fill="en"></div>
+      </div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="m.cat">Category</label><select data-fill="cat"><option value="t1" data-i18n="d.t1">Rules & regulations</option><option value="t2" data-i18n="d.t2">Policies</option><option value="t3" data-i18n="d.t3">Annual reports</option><option value="t4" data-i18n="d.t4">Research papers</option><option value="t5" data-i18n="d.t5">Educational material</option><option value="t6" data-i18n="d.t6">Forms</option></select></div>
+        <div class="field"><label data-i18n="dr.pdate">Publication date</label><input class="num" dir="ltr" placeholder="01 · 11 · 2026"></div>
+      </div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="dr.file">File</span></label><div class="upload sm"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.ml.drop">Drop files here or browse</b><span class="num" dir="ltr"></span></div></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="dr.file">File</span></label><div class="upload sm"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.ml.drop">Drop files here or browse</b><span class="num" dir="ltr"></span></div></div>
+      </div>
+      <div class="field"><label data-i18n="dr.cur">Current file</label><input class="num" dir="ltr" data-fill="file" readonly></div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="dr.ver">New version</label><input class="num" dir="ltr" placeholder="v1.1"></div>
+        <div class="field"><label data-i18n="dr.note">Change note (shown publicly)</label><input data-i18n-ph="dr.noteph" placeholder="e.g. Corrected table 3"></div>
+      </div>
+      <div class="switches">
+        <div><div><b data-i18n="dr.ai">Use as a source for the AI assistant</b><small data-i18n="dr.aid">Answers quote this document with a link to it</small></div><span class="switch on"></span></div>
+        <div><div><b data-i18n="dr.old">Keep older versions in the archive</b></div><span class="switch on"></span></div>
+      </div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Sent to the approval queue — the Head of Communications reviews it before it is published" data-toast-ar="أُرسل إلى قائمة الاعتماد — يراجعه رئيس الاتصال قبل نشره"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.ed.submit">Submit for approval</span></button><button class="btn btn-ghost sm" type="button" data-close><span data-i18n="p.dr.cancel">Cancel</span></button></div>
+  </div></div>
+
+  <div class="drawer" id="d-gal"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-mode="edit" data-i18n="dr.gl.e">Edit album or video</span><span data-mode="new" data-i18n="g.new">New album or video</span></h3>
+    <div class="form">
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.ed.title">Title</span></label><input dir="rtl" data-fill="ar"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.ed.title">Title</span></label><input dir="ltr" data-fill="en"></div>
+      </div>
+      <div class="form g2">
+        <div class="field"><label data-i18n="m.type">Type</label><select data-fill="kind"><option value="ph" data-i18n="dr.album">Photo album</option><option value="vd" data-i18n="g.vd">Video</option></select></div>
+        <div class="field"><label data-i18n="m.cat">Category</label><select><option data-i18n="dr.g1">Events</option><option data-i18n="n.c4">Education</option><option data-i18n="dr.g3">Operations</option></select></div>
+      </div>
+      <div class="field"><label data-i18n="dr.cover">Cover image</label><div class="pe-img"><img data-fill="img" data-def="../assets/img/library.jpg" src="../assets/img/library.jpg" alt=""><div><button class="btn btn-ghost xs" type="button" data-drawer="d-media"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="g.rep">Replace</span></button></div></div></div>
+      <div class="field"><label data-i18n="dr.photos">Photos or video file</label><div class="upload"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.ml.drop">Drop files here or browse</b><span data-i18n="dr.photosd">JPG, PNG or MP4 · photos are resized automatically</span></div></div>
+      <div class="split">
+        <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.ed.alt">Alt text</span></label><input dir="rtl"></div>
+        <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.ed.alt">Alt text</span></label><input dir="ltr"></div>
+      </div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Sent for approval — design preview" data-toast-ar="أُرسل للاعتماد — معاينة تصميم"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.ed.submit">Submit for approval</span></button><button class="btn btn-ghost sm" type="button" data-close><span data-i18n="p.dr.cancel">Cancel</span></button></div>
+  </div></div>
+
+  <div class="drawer" id="d-review"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="ap.rv.h">Review before publishing</h3>
+    <div class="rv-box">
+      <small class="muted" data-rv="type"></small>
+      <b class="rv-title" data-rv="title"></b>
+      <small class="muted"><span data-i18n="ap.h2">Sent by</span>: <span data-rv="by"></span> · <span class="num" data-rv="date"></span></small>
+    </div>
+    <div class="field"><label data-i18n="ap.rv.chg">What is being published?</label><p class="rv-chg" data-rv="chg"></p></div>
+    <a class="btn btn-ghost sm" href="../index.html" target="_blank" rel="noopener" data-rv="href" style="justify-self:start"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="ap.rv.prev">Preview on the website</span></a>
+    <div class="check-list">
+      <label><input type="checkbox" checked disabled><span data-i18n="ap.rv.c1">Arabic and English versions are both complete</span></label>
+      <label><input type="checkbox" checked disabled><span data-i18n="ap.rv.c2">Links and images checked</span></label>
+    </div>
+    <div class="rv-acts" data-rv-acts>
+      <button class="btn btn-primary" type="button" data-ap-ok><svg class="ico"><use href="#i-check"/></svg><span data-i18n="b.pub">Approve & publish</span></button>
+      <button class="btn btn-ghost no" type="button" data-ap-reject><svg class="ico"><use href="#i-x"/></svg><span data-i18n="ap.rej">Reject</span></button>
+    </div>
+    <div class="rv-no" data-rv-no hidden>
+      <div class="field"><label data-i18n="ap.rv.why">Reason for rejection</label><select data-ap-reason><option data-i18n="p.dr.r5">One language is missing or incomplete</option><option data-i18n="p.dr.r1">Wording / translation alignment</option><option data-i18n="p.dr.r2">Factual correction needed</option><option data-i18n="p.dr.r3">Missing approvals (legal / DG)</option><option data-i18n="p.dr.r4">Images or SEO fields</option></select></div>
+      <div class="field"><label data-i18n="ap.rv.note">Note to the author (optional)</label><textarea data-ap-note style="min-height:80px" data-i18n-ph="ap.rv.ph" placeholder="What should be changed?"></textarea></div>
+      <div class="row"><button class="btn btn-primary sm no-fill" type="button" data-ap-no><svg class="ico"><use href="#i-x"/></svg><span data-i18n="ap.rv.send">Reject and return to the author</span></button><button class="btn btn-ghost sm" type="button" data-ap-back><span data-i18n="p.dr.cancel">Cancel</span></button></div>
+    </div>
+  </div></div>
+
+  <div class="drawer" id="d-media"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.ml.h">Insert from media library</h3>
+    <div class="upload"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.ml.drop">Drop files here or browse</b><span data-i18n="p.ml.dropd">JPG, PNG, SVG, PDF · max 20 MB · virus-scanned</span></div>
+    <div class="media-grid">
+      <figure><img src="../assets/img/news-2.jpg" alt=""><figcaption><b>news-2.jpg</b>1.2 MB</figcaption></figure>
+      <figure><img src="../assets/img/news-3.jpg" alt=""><figcaption><b>news-3.jpg</b>0.9 MB</figcaption></figure>
+      <figure><img src="../assets/img/events.jpg" alt=""><figcaption><b>events.jpg</b>1.4 MB</figcaption></figure>
+      <figure><img src="../assets/img/library.jpg" alt=""><figcaption><b>library.jpg</b>1.1 MB</figcaption></figure>
+      <figure><img src="../assets/img/hq.jpg" alt=""><figcaption><b>hq.jpg</b>1.3 MB</figcaption></figure>
+      <figure><img src="../assets/img/board.jpg" alt=""><figcaption><b>board.jpg</b>1.0 MB</figcaption></figure>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Image inserted" data-toast-ar="أُدرجت الصورة"><span data-i18n="p.ml.insert">Insert selected</span></button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "محتوى الموقع — إدارة كادا",
+  "p.h": "صفحات الموقع", "p.d": "كل صفحات موقع kada.gov.kw العامة مع المسؤول عنها وحالتها ولغتيها. افتح أي صفحة لتعديلها قسماً بقسم.",
+  "p.view": "عرض الموقع", "p.newp": "صفحة جديدة", "p.t0": "كل الصفحات", "p.t2": "قائمة الاعتماد", "p.t4": "القوائم وإعدادات الموقع",
+  "p.pk1": "صفحات منشورة", "p.pk1d": "+ صفحتان جديدتان قيد الإعداد", "p.pk2": "تعديلات جارية", "p.pk2d": "الرئيسية · مجلس الإدارة · الإعفاء العلاجي (بانتظار الاعتماد)", "p.k3": "تنقصها إحدى اللغتين", "p.k3d": "النشر موقوف حتى اكتمال اللغتين", "p.k4": "مجدولة", "p.pk4d": "صفحة قائمة المحظورات · 01 · 01 · 2027",
+  "p.pn": "تُعدَّل الصفحات قسماً بقسم بالعربية والإنجليزية. أما <b>الأخبار والأبحاث والمنشورات والمركز الإعلامي</b> فوحدات مستقلة في القائمة الجانبية — وتتحدّث الصفحات التي تعرضها تلقائياً. و<b>الدورات والفعاليات</b> تديرها وحدة التدريب والفعاليات، وتصل منها إلى قائمة الاعتماد.",
+  "p.f0": "الكل", "p.pf1": "صفحات المحتوى", "p.pf2": "الخدمات والنماذج", "p.pf4": "قيد العمل", "p.pf5": "تحتاج إلى متابعة", "p.psrch": "ابحث في الصفحات",
+  "p.pc1": "الصفحة", "p.pc2": "نوع الصفحة", "p.c3": "اللغات", "p.pc4": "المسؤول عن المحتوى", "p.pc5": "آخر تعديل", "p.c5": "الحالة",
+  "p.g1": "الرئيسية", "p.g2": "عن الوكالة", "p.g3": "الخدمات الإلكترونية", "p.g4": "التثقيف", "p.g6": "المساعدة والتواصل", "p.g7": "التذييل والصفحات القانونية", "p.g8": "مناطق بعد تسجيل الدخول",
+  "pg.index": "الصفحة الرئيسية", "pg.about": "عن كادا", "pg.vision": "الرؤية والرسالة", "pg.board": "مجلس الإدارة", "pg.structure": "الهيكل التنظيمي", "pg.departments": "الإدارات", "pg.wada": "الامتثال لمتطلبات وادا",
+  "pg.services": "الخدمات الإلكترونية (كل الخدمات)", "pg.sanctions": "سجل عقوبات الرياضيين", "pg.prohibited": "قائمة المحظورات وفاحص الأدوية", "pg.tue": "الإعفاء للاستعمال العلاجي", "pg.speakup": "بلاغ سري — Speak Up", "pg.datareq": "طلب الوصول إلى البيانات", "pg.tenders": "المناقصات والمشتريات", "pg.supplier": "تسجيل الموردين", "pg.assistant": "مساعد كادا الذكي",
+  "pg.education": "برنامج التثقيف لمكافحة المنشطات", "pg.faq": "الأسئلة الشائعة", "pg.contact": "تواصل معنا", "pg.accessibility": "بيان إمكانية الوصول", "pg.platform": "منصة كادا", "pg.sitemap": "خريطة الموقع", "pg.account": "حسابي (الرياضيون والجمهور)", "pg.supdash": "لوحة المورد",
+  "tp.landing": "صفحة رئيسية", "tp.content": "صفحة محتوى", "tp.hub": "صفحة تجمع الخدمات", "tp.service": "صفحة خدمة", "tp.auto": "تُنشأ تلقائياً", "tp.system": "منطقة بعد تسجيل الدخول",
+  "ps.13": "13 قسماً", "ps.7": "7 أقسام", "ps.6": "6 أقسام", "ps.5": "5 أقسام", "ps.4": "4 أقسام", "ps.3": "3 أقسام", "ps.2": "قسمان", "ps.15p": "15 ملفاً تعريفياً", "ps.new": "صفحة جديدة", "ps.form5": "نموذج · 5 أقسام", "ps.form3": "نموذج · 3 أقسام", "ps.form2": "نموذج · قسمان", "ps.formonly": "نصوص النموذج فقط · لا تظهر البلاغات هنا", "ps.29q": "29 سؤالاً · 9 تصنيفات", "ps.frommenu": "تُبنى من قوائم التنقل", "ps.labels": "التسميات ونصوص المساعدة والتنبيهات فقط",
+  "src.rm": "السجلات: إدارة النتائج", "src.pr": "السجلات: وحدة المناقصات والمورّدين",
+  "ow.comms": "الإعلام والاتصال", "ow.exec": "المكتب التنفيذي", "ow.legal": "الشؤون القانونية والامتثال", "ow.rm": "إدارة النتائج", "ow.edu": "التعليم والتوعية", "ow.inv": "الاستخبارات والتحقيقات", "ow.proc": "المالية والمشتريات", "ow.it": "تقنية المعلومات والخدمات الرقمية",
+  "s.pub": "منشورة", "s.hidden": "مخفية من الموقع", "s.v12": "مسودة الإصدار 12 قيد التحرير", "s.legal": "مسودة · مراجعة قانونية", "s.auto": "تتحدّث تلقائياً", "s.system": "النظام",
+  "p.pfoot": "26 صفحة · 23 منشورة · لكل صفحة نسخة عربية وأخرى إنجليزية · وتتحدّث خريطة الموقع تلقائياً من القوائم", "p.pmap": "فتح خريطة الموقع العامة",
+  "b.back": "صفحات الموقع", "b.prev": "معاينة", "b.ver": "الإصدارات", "b.set": "إعدادات الصفحة", "b.pub": "اعتماد ونشر", "b.undo": "تراجع عن الكل", "b.secs": "أقسام الصفحة", "b.hdr": "رأس الصفحة والقائمة الرئيسية", "b.ftr": "التذييل", "b.shared": "مشترك في كل الصفحات · يُعدَّل من القوائم والإعدادات", "b.add": "إضافة قسم", "b.expand": "فتح / إغلاق الكل",
+  "b.demo": "افتح أي قسم لتعديله. لكل نص خانة عربية وأخرى إنجليزية، وللصور والأزرار والقوائم محرّراتها الخاصة. <b>هذه معاينة تصميم — جرّب ما تشاء، لن يُحفظ شيء.</b>",
+  "b.libd": "الأقسام مبنية على التصميم المعتمد للموقع، فتبقى كل الصفحات متناسقة. يُضاف القسم الجديد في آخر الصفحة ويُعبّأ باللغتين.",
+  "bl.1": "نص وصورة", "bl.1d": "عنوان وفقرة وصورة وزر", "bl.2": "بطاقات", "bl.2d": "من 3 إلى 6 بطاقات بأيقونة أو صورة", "bl.3": "أرقام رئيسية", "bl.3d": "أرقام مع وصف قصير", "bl.4": "دعوة إلى إجراء", "bl.4d": "شريط بزر أو زرين", "bl.5": "أسئلة وأجوبة", "bl.5d": "أسئلة قصيرة مع إجاباتها", "bl.6": "خطوات", "bl.6d": "إجراء مرقّم أو تسلسل زمني", "bl.7": "وثائق", "bl.7d": "ملفات من الأبحاث والمنشورات", "bl.8": "أحدث الأخبار أو الفعاليات", "bl.8d": "تتحدّث تلقائياً من الوحدات", "bl.9": "تنبيه", "bl.9d": "رسالة بارزة أو موعد نهائي",
+  "pz.pre": "محرّر صفحة", "pz.post": "قيد الإعداد", "pz.d": "في هذا العرض التوضيحي، محرّر الصفحة الرئيسية يعمل بالكامل كمثال على طريقة إدارة كل الصفحات. وستحصل هذه الصفحة على المحرّر نفسه في مرحلة البناء.",
+  "pz.s1": "أقسام مرتبة", "pz.s1d": "تُقسَّم الصفحة إلى أقسامها، ويمكن إخفاء أي قسم أو إعادة ترتيبه أو إضافة قسم جديد.", "pz.s2": "محرّر لكل عنصر", "pz.s2d": "النصوص بالعربية والإنجليزية، والصور، والأزرار وروابطها، والقوائم.", "pz.s3": "مراجعة ثم نشر", "pz.s3d": "تُحفظ كمسودة، ويعتمدها صاحب صلاحية النشر، ثم تُنشر مع سجل إصداراتها.", "pz.open": "فتح محرّر الصفحة الرئيسية", "pz.view": "عرض هذه الصفحة في الموقع",
+  "m.site": "عرض في الموقع", "m.pub": "منشورة", "m.drafts": "مسودات", "m.cat": "التصنيف", "m.date": "التاريخ", "m.by": "آخر تعديل", "m.type": "النوع",
+  "n.h": "الأخبار", "n.d": "الإعلانات والبيانات الصحفية والقرارات. يُكتب كل خبر بالعربية والإنجليزية ويُعتمد، ثم يظهر في صفحة الأخبار والصفحة الرئيسية والتطبيق.", "n.new": "خبر جديد",
+  "n.k1d": "18 خبراً في 2026", "n.k2d": "الأقدم: يوم واحد", "n.k3d": "تنقصها الإنجليزية", "n.k4d": "15 · 12 · 2026",
+  "n.allcat": "كل التصنيفات", "n.c1s": "إعلانات", "n.c2s": "بيانات صحفية", "n.c3s": "قرارات", "n.c": "الخبر", "n.c1": "إعلان", "n.c2": "بيان صحفي", "n.c3": "قرار", "n.c4": "التثقيف", "n.pin": "مثبّت في الصفحة الرئيسية",
+  "n.r1": "قائمة المحظورات 2027 متاحة الآن باللغة العربية", "n.r2": "برنامج التثقيف يصل إلى 4,500 رياضي ومدرب في موسمه الثالث", "n.r3": "قرار اللجنة التأديبية: عقوبة أربع سنوات في قضية كمال أجسام", "n.r4": "كادا تطلق منصة رقمية لمراقبة المنشطات للمفتشين الميدانيين", "n.r5": "فتح باب التسجيل في المؤتمر الوطني للرياضة النظيفة 2026", "n.r6": "أساسيات مكافحة المنشطات: على رياضيي المنتخبات الوطنية إكمالها قبل موسم 2027",
+  "n.foot": "عرض 11 من 156 خبراً",
+  "d.h": "الأبحاث والمنشورات", "d.d": "اللوائح والسياسات والتقارير السنوية والأوراق البحثية والمواد التوعوية والنماذج — ملفات بالعربية والإنجليزية تُنشر في صفحة الأبحاث والمنشورات ويستند إليها المساعد الذكي.", "d.new": "رفع وثيقة",
+  "d.k1": "الوثائق", "d.k1d": "6 تصنيفات · 32 منها بالعربية والإنجليزية", "d.k5": "التنزيلات · 30 يوماً", "d.k5d": "الأعلى: قائمة المحظورات 2027 (عربي)", "d.k3": "مصدر للمساعد الذكي", "d.k3d": "باستثناء النماذج", "d.k4": "تنتقل إلى الأرشيف", "d.k4d": "قواعد إصدار 2021 · 01 · 01 · 2027",
+  "d.t1": "اللوائح والقواعد", "d.t2": "السياسات", "d.t3": "التقارير السنوية", "d.t4": "الأوراق البحثية", "d.t5": "المواد التوعوية", "d.t6": "النماذج", "d.c": "الوثيقة", "d.ver": "الإصدار", "d.dl": "التنزيلات", "d.arch": "إلى الأرشيف في 01 · 01 · 2027",
+  "d.r1": "القواعد الوطنية لمكافحة المنشطات — الوكالة (إصدار 2027 — يسري من 1 يناير 2027)", "d.r2": "القواعد الوطنية لمكافحة المنشطات (إصدار 2021 — ساري حتى 31 ديسمبر 2026)", "d.r3": "قائمة المحظورات 2027 — الترجمة العربية والدليل المبسّط", "d.r4": "سياسة الذكاء الاصطناعي المسؤول", "d.r5": "سياسة الخصوصية وحماية البيانات الشخصية", "d.r6": "التقرير السنوي للوكالة 2025",
+  "d.r7": "إحصاءات الفحص 2025 — بيانات مفتوحة", "d.r8": "مخاطر تلوث المكملات لدى مرتادي الصالات الرياضية في الكويت — نتائج المسح", "d.r9": "المكملات الغذائية: دليل المخاطر للرياضيين ومرتادي الصالات", "d.r10": "حقيبة العروض المدرسية (12–17 سنة)", "d.r11": "نموذج طلب الإعفاء للاستعمال العلاجي (TUE)", "d.r12": "نموذج طلب الوصول إلى البيانات (سياسة الخصوصية)",
+  "d.foot": "عرض 12 من 33 · تُحفظ كل الإصدارات · الصفحة العامة تعرض الإصدار الحالي مع ملاحظة التغيير",
+  "d.top": "الأكثر تنزيلاً · 30 يوماً", "d.ts1": "قائمة المحظورات 2027 (عربي)", "d.ts2": "دليل الرياضي 2027", "d.ts3": "القواعد الوطنية لمكافحة المنشطات", "d.ts4": "نموذج طلب الإعفاء للاستعمال العلاجي",
+  "d.rules": "قواعد المستودع", "d.ru1": "PDF/A للأرشفة طويلة الأمد", "d.ru2": "وسوم إمكانية الوصول (العناوين، ترتيب القراءة)", "d.ru3": "بيانات الاستشهاد (العنوان، المؤلفون، DOI)", "d.ru4": "فهرسة النص الكامل للبحث (عربي + إنجليزي)",
+  "g.h": "المركز الإعلامي", "g.d": "ألبومات الصور ومقاطع الفيديو التي تظهر في المركز الإعلامي العام، مع أصول الهوية البصرية وبيانات التواصل الصحفي والاعتماد للصحفيين.", "g.new": "ألبوم أو فيديو جديد",
+  "g.gal": "الصور والفيديو", "g.gald": "9 عناصر · اسحب لتغيير ترتيبها في الصفحة", "g.ph": "صور", "g.vd": "فيديو",
+  "g.i1": "مؤتمر 2025 — فيديو أبرز اللحظات (3:12)", "g.i2": "مراسم تتويج نظيفة", "g.i3": "جلسة توعوية — منتخب السباحة الوطني", "g.i4": "مهمة فحص خارج المنافسة في الصباح الباكر", "g.i5": "زيارة المختبر", "g.i6": "يوم اللعب النظيف 2026", "g.i7": "فريق كادا", "g.i8": "المقر الرئيسي", "g.i9": "إطلاق تطبيق الرياضيين",
+  "g.b": "أصول الهوية البصرية", "g.bd": "ملفات يمكن للصحفيين والشركاء تنزيلها", "g.b1": "حزمة الشعار (ZIP)", "g.b1d": "فاتح وداكن", "g.b2": "الإرشادات (PDF)", "g.b2d": "الألوان وقواعد الاستخدام", "g.rep": "استبدال",
+  "g.p": "التواصل الصحفي", "g.pr": "مدة الرد (عربي / إنجليزي)", "g.a": "الاعتماد الصحفي", "g.ad": "تصل طلبات الصحفيين إلى بريد المركز الإعلامي", "g.a1": "إظهار زر «اطلب الاعتماد»",
+  "p.r1": "اختتام تدقيق وادا للامتثال 2026 دون ملاحظات حرجة", "p.r2": "فتح باب التسجيل — المؤتمر الوطني للرياضة النظيفة", "p.r3": "نتائج برنامج التثقيف · الربع الثالث 2026", "p.r4": "الإعفاء للاستعمال العلاجي — إرشادات محدّثة", "p.r6": "التقرير السنوي 2025 — صفحة الملخص",
+  "p.r7": "المكملات الغذائية: ما يجب على الرياضيين التحقق منه", "p.r9": "قائمة المحظورات 2027 تدخل حيز التنفيذ في 1 يناير", "p.r10": "تحديث فاحص الأدوية وفق قائمة المحظورات 2027",
+  "p.ty2": "فعالية", "p.ty3": "خبر", "p.ty4": "صفحة",
+  "p.s1": "بانتظار الاعتماد", "p.s2": "مسودة · الإنجليزية ناقصة", "p.s3": "مسودة · العربية ناقصة", "p.s5": "مجدول · 01 · 01 · 2027", "p.s6": "مجدول · 15 · 12 · 2026", "p.s7": "منشور", "p.w1": "مسودة", "p.w2": "مراجعة", "p.w3": "اعتماد", "p.w4": "منشور", "p.ap.ar": "النسخة العربية", "p.ap.en": "النسخة الإنجليزية", "p.ap.prev": "معاينة",
+  "p.ed.h": "تحرير · بيان صحفي", "p.ed.saved": "حُفظ تلقائياً قبل 12 ثانية · الإصدار 3", "p.ed.complete": "مكتملة", "p.ed.title": "العنوان", "p.ed.excerpt": "المقتطف", "p.ed.ai": "ترجمة أولية من العربية بالذكاء الاصطناعي",
+  "p.ed.seo": "SEO والمشاركة", "p.ed.slug": "مسار الرابط", "p.ed.meta": "الوصف التعريفي (إنجليزي)", "p.ed.metad": "95 / 160 حرفاً · الوصف التعريفي العربي مُدخل", "p.ed.img": "الصورة البارزة", "p.ed.lib": "مكتبة الوسائط", "p.ed.featured": "بارزة · النص البديل بالعربية والإنجليزية مُدخل", "p.ed.inline": "داخل النص · الفقرة 2", "p.ed.alt": "النص البديل",
+  "p.ed.pubp": "النشر", "p.ed.st": "مسودة · الإصدار 3", "p.ed.when": "النشر", "p.ed.when1": "فور الاعتماد", "p.ed.when2": "جدولة تاريخ ووقت",
+  "p.ed.ch1": "الإظهار في موجز أخبار التطبيق", "p.ed.ch2": "النشر على X ولينكدإن", "p.ed.ch2d": "تكامل وسائل التواصل", "p.ed.ch3": "إرسال للمشتركين بالبريد", "p.ed.ch4": "تثبيت في الصفحة الرئيسية",
+  "p.ed.submit": "إرسال للاعتماد", "p.ed.save": "حفظ المسودة", "p.ed.ver": "الإصدارات", "p.ed.cur": "الحالي", "p.ed.open": "مفتوح", "p.ed.diff": "مقارنة", "p.ed.restore": "استعادة",
+  "p.ed.acc": "إمكانية الوصول والجودة", "p.ed.q1": "ترتيب العناوين سليم", "p.ed.q2": "كل الصور لها نص بديل", "p.ed.q3": "مستوى القراءة · لغة واضحة", "p.ed.q4": "اللغتان موجودتان",
+  "p.m.h": "القائمة الرئيسية", "p.m.d": "اسحب لإعادة الترتيب · التسميات باللغتين · تُنشر التغييرات بعد الاعتماد", "p.m.add": "إضافة عنصر", "p.m.c1": "التسمية (إنجليزي)", "p.m.c2": "التسمية (عربي)", "p.m.c3": "الوجهة", "p.m.c4": "عناصر فرعية", "p.m.on": "ظاهر",
+  "p.m.red": "إعادة التوجيه", "p.m.redd": "الحفاظ على الروابط القديمة بعد ترحيل الموقع · آمن لـ SEO (301)", "p.m.from": "من", "p.m.to": "إلى", "p.m.hits": "زيارات · 30 يوماً", "p.m.foot": "روابط التذييل والروابط القانونية", "p.m.f1": "سياسة الخصوصية", "p.m.f2": "بيان إمكانية الوصول", "p.m.f3": "خريطة الموقع", "p.m.f4": "طلب الوصول إلى البيانات",
+  "p.gs.h1": "شريط تنبيه على مستوى الموقع", "p.gs.h1d": "تنبيه قصير أعلى رأس كل الصفحات", "p.gs.msg": "النص", "p.gs.link": "الرابط إلى", "p.gs.from": "يظهر من", "p.gs.to": "حتى", "p.gs.h2": "بيانات التواصل ووسائل التواصل الاجتماعي", "p.gs.h2d": "تُستخدم في التذييل وصفحة تواصل معنا والمساعد الذكي", "p.gs.phone": "الهاتف", "p.gs.mail": "البريد الإلكتروني", "p.gs.hours": "ساعات العمل (عربي / إنجليزي)",
+  "p.gs.h3": "العناصر المشتركة", "p.gs.h3d": "تُعدَّل مرة واحدة فيظهر التعديل في كل صفحة تستخدم العنصر", "p.gs.b1": "رأس الصفحة والقائمة الرئيسية", "p.gs.b1d": "كل الصفحات · الشعار والقائمة وتبديل اللغة وتسجيل الدخول", "p.gs.b2": "التذييل", "p.gs.b2d": "كل الصفحات · الروابط وبيانات التواصل ووسائل التواصل", "p.gs.b3": "شريط «تحتاج إلى مساعدة؟»", "p.gs.b3d": "12 صفحة · زرّا المساعد الذكي وتواصل معنا", "p.gs.b4": "نافذة تسجيل الدخول", "p.gs.b4d": "هويتي الرقمية · الدخول الموحد للموظفين", "p.gs.edit": "تعديل عنصر مشترك", "p.gs.save": "إرسال الإعدادات للاعتماد",
+  "ps2.url": "عنوان الصفحة", "ps2.urld": "تغيير عنوان صفحة منشورة ينشئ إعادة توجيه 301 تلقائياً.", "ps2.title": "العنوان في نتائج البحث", "ps2.desc": "الوصف", "ps2.share": "الصورة عند المشاركة في وسائل التواصل", "ps2.rev": "تذكير بمراجعة المحتوى", "ps2.rev1": "كل 6 أشهر", "ps2.rev2": "كل 12 شهراً",
+  "ps2.s1": "الظهور في محركات البحث", "ps2.s2": "الإدراج في خريطة الموقع والبحث الداخلي", "ps2.s3": "متاحة لإجابات المساعد الذكي", "ps2.s3d": "يمكن للمساعد الاقتباس من هذه الصفحة مع رابط إليها", "ps2.ok": "حفظ الإعدادات", "ps2.ptitle": "عنوان الصفحة",
+  "vr.d": "تُحفظ كل مسودة وكل عملية نشر. يمكنك مقارنة أي إصدارين، أو استعادة إصدار سابق كمسودة جديدة.", "vr.draft": "مسودة قيد التحرير", "vr.live": "المنشور حالياً", "vr.12": "النص التمهيدي للخدمات الإلكترونية", "vr.11": "إضافة الإعفاء العلاجي إلى شريط الخدمات", "vr.10": "إعادة صياغة رحلة العينة مع حقوق الرياضي", "vr.9": "إصدار الإطلاق",
+  "np.h": "صفحة جديدة", "np.d": "اختر تخطيطاً للبداية. تُنشأ الصفحة كمسودة باللغتين ولا تُنشر إلا بعد الاعتماد.", "np.t1": "رأس الصفحة، أقسام نصية، شريط المساعدة", "np.t2": "الخطوات، الشروط، النموذج، الأسئلة", "np.t4": "صفحة حملة أو برنامج", "np.blank": "صفحة فارغة", "np.t5": "ابدأ من صفحة فارغة وأضف الأقسام", "np.menu": "موضعها في القائمة", "np.none": "خارج القائمة", "np.ok": "إنشاء الصفحة كمسودة",
+  "dr.pb.e": "تعديل الوثيقة", "dr.pdate": "تاريخ النشر", "dr.file": "الملف", "dr.cur": "الملف الحالي", "dr.ai": "استخدامها مصدراً للمساعد الذكي", "dr.aid": "تقتبس الإجابات من هذه الوثيقة مع رابط إليها", "dr.old": "الاحتفاظ بالإصدارات السابقة في الأرشيف", "dr.ver": "الإصدار الجديد", "dr.note": "ملاحظة التغيير (تظهر للجمهور)", "dr.noteph": "مثال: تصحيح الجدول 3",
+  "dr.gl.e": "تعديل الألبوم أو الفيديو", "dr.album": "ألبوم صور", "dr.g1": "فعاليات", "dr.g3": "عمليات", "dr.cover": "صورة الغلاف", "dr.photos": "الصور أو ملف الفيديو", "dr.photosd": "JPG أو PNG أو MP4 · يُعاد تحجيم الصور تلقائياً", "p.dr.r1": "الصياغة / مواءمة الترجمة", "p.dr.r2": "يلزم تصحيح معلومات", "p.dr.r3": "موافقات ناقصة (قانوني / المدير العام)", "p.dr.r4": "الصور أو حقول SEO", "p.dr.cancel": "إلغاء",
+  "ap.d": "كل ما أُرسل للاعتماد في مكان واحد: ما زال ينتظر، وما اعتُمد ونُشر، وما رُفض مع السبب.", "ap.s.wait": "بانتظار الاعتماد", "ap.s.ok": "تم الاعتماد", "ap.s.no": "مرفوض", "ap.c.wait": "تنتظر قرار المعتمِد", "ap.c.ok": "نُشرت أو جُدول نشرها", "ap.c.no": "أُعيدت إلى صاحبها مع السبب", "ap.h1": "ما أُرسل", "ap.h2": "أرسله", "ap.h3": "القرار", "ap.d0": "لم يُتخذ قرار بعد", "ap.rev": "مراجعة", "ap.withap": "عند المعتمِد", "ap.why": "السبب:", "ap.n1": "الفقرتان الأخيرتان بلا نسخة إنجليزية.", "ap.n2": "قائمة الأعضاء تحتاج تأكيد المكتب التنفيذي قبل نشرها.", "ap.fix": "تعديل وإعادة الإرسال", "ap.d.pub": "نُشر على الموقع", "ap.d.sched": "يُنشر تلقائياً في 15 · 12 · 2026", "ap.r.home": "الصفحة الرئيسية — إضافة الإعفاء العلاجي إلى شريط الخدمات", "p.ty5": "وثيقة", "ap.foot": "يصل إشعار بكل قرار إلى صاحب الطلب بالبريد الإلكتروني وفي التطبيق · وتُحفظ القرارات في سجل التدقيق", "ap.audit": "فتح سجل التدقيق", "ap.rv.h": "مراجعة قبل النشر", "ap.rv.chg": "ما الذي سيُنشر؟", "ap.rv.prev": "معاينة على الموقع", "ap.rv.c1": "النسختان العربية والإنجليزية مكتملتان", "ap.rv.c2": "تم فحص الروابط والصور", "ap.rej": "رفض", "ap.rv.why": "سبب الرفض", "ap.rv.note": "ملاحظة لصاحب الطلب (اختياري)", "ap.rv.ph": "ما الذي يجب تغييره؟", "ap.rv.send": "رفض وإعادته لصاحبه", "p.dr.r5": "إحدى اللغتين ناقصة أو غير مكتملة",
+  "p.ml.h": "إدراج من مكتبة الوسائط", "p.ml.drop": "اسحب الملفات وأفلتها هنا أو تصفّح", "p.ml.dropd": "JPG، PNG، SVG، PDF · بحد أقصى 20 ميغابايت · تُفحص ضد الفيروسات", "p.ml.insert": "إدراج المحدد"
+};
+</script>
+<script src="js/admin.js"></script>
+<script src="js/cms-home.js"></script>
+<script src="js/cms.js"></script>
+</body>
+</html>

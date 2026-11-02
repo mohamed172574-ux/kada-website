@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Accessibility — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+  <style>
+    .a11y-tools { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .a11y-tools button { display: grid; gap: 10px; justify-items: start; padding: 20px; border-radius: 14px; border: 1.5px solid var(--line-strong); background: #fff; text-align: start; font-family: var(--display); font-weight: 700; font-size: 14px; transition: border-color 0.3s, transform 0.4s var(--ease); }
+    .a11y-tools button:hover { border-color: var(--green); transform: translateY(-3px); }
+    .a11y-tools button.is-on { border-color: var(--green); background: rgba(15, 122, 74, 0.08); }
+    .a11y-tools small { font-weight: 500; color: var(--muted); font-size: 12.5px; }
+    html.big-text { font-size: 112%; }
+    html.hi-contrast body { filter: contrast(1.15); }
+    html.hi-contrast a { text-decoration: underline; }
+    html.no-motion *, html.no-motion *::before, html.no-motion *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    html.dyslexic body { letter-spacing: 0.03em; word-spacing: 0.1em; line-height: 1.8; }
+    @media (max-width: 900px) { .a11y-tools { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><span data-i18n="top.access">Accessibility</span></nav>
+        <h1 class="display" data-i18n="p.title">Accessibility statement</h1>
+        <p class="lede" data-i18n="p.lede">KADA is committed to a website and app that everyone can use — athletes, parents, officials and the public — regardless of ability, device or language. This site targets WCAG 2.2 level AA.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="form-card reveal" style="margin-top:-30px;position:relative;z-index:2">
+          <h3 data-i18n="p.t.t">Display preferences</h3>
+          <p class="hint" data-i18n="p.t.h">Try these display options on this page. Your choice is stored on this device only.</p>
+          <div class="a11y-tools" data-a11y>
+            <button type="button" data-a11y-toggle="big-text"><svg viewBox="0 0 24 24" class="ico"><path d="M4 18 10 5l6 13M6 14h8M17 11h4M19 9v4"/></svg><span data-i18n="p.t.1">Larger text</span><small data-i18n="p.t.1d">Increase base font size by 12%</small></button>
+            <button type="button" data-a11y-toggle="hi-contrast"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg><span data-i18n="p.t.2">High contrast</span><small data-i18n="p.t.2d">Stronger colours, underlined links</small></button>
+            <button type="button" data-a11y-toggle="no-motion"><svg viewBox="0 0 24 24" class="ico"><path d="M6 6h12v12H6z"/><path d="m3 3 18 18"/></svg><span data-i18n="p.t.3">Reduce motion</span><small data-i18n="p.t.3d">Stop animations and parallax</small></button>
+            <button type="button" data-a11y-toggle="dyslexic"><svg viewBox="0 0 24 24" class="ico"><path d="M4 7h16M4 12h10M4 17h14"/></svg><span data-i18n="p.t.4">Reading spacing</span><small data-i18n="p.t.4d">Wider letter and line spacing</small></button>
+          </div>
+        </div>
+
+        <div class="with-side mt-3">
+          <div class="prose reveal">
+            <h2 data-i18n="p.s1">What we have done</h2>
+            <ul>
+              <li data-i18n="p.s1a">Full Arabic (RTL) and English (LTR) versions of every page and every e-service, with a persistent language choice.</li>
+              <li data-i18n="p.s1b">Semantic HTML landmarks, a logical heading order and descriptive labels for screen-reader users.</li>
+              <li data-i18n="p.s1i">A “Skip to main content” link is the first item on every page — press Tab once to reveal it.</li>
+              <li data-i18n="p.s1c">Visible keyboard focus on every link, button, tab, accordion and form field; all menus operable with Tab, Enter and Escape.</li>
+              <li data-i18n="p.s1d">Colour contrast of at least 4.5 : 1 for text; status never conveyed by colour alone (badges include text).</li>
+              <li data-i18n="p.s1e">Animations respect the operating-system "reduce motion" setting automatically.</li>
+              <li data-i18n="p.s1f">Forms with clear labels, required-field markers, inline error messages and no time limits.</li>
+              <li data-i18n="p.s1g">The AI assistant supports voice input (speech-to-text) in Arabic and English, with read-aloud available as an option.</li>
+              <li data-i18n="p.s1h">Mobile app: dynamic type, VoiceOver / TalkBack labels and offline mode for field use.</li>
+            </ul>
+            <h2 data-i18n="p.s2">Known limitations</h2>
+            <p data-i18n="p.s2a">Some older PDF publications are scanned images and not yet tagged for screen readers. We are re-publishing them as accessible PDFs and HTML; contact us to request an accessible copy of any document.</p>
+            <h2 data-i18n="p.s3">Standards and testing</h2>
+            <p data-i18n="p.s3a">The site is designed against WCAG 2.2 AA and applicable Kuwaiti government e-service guidelines. We test with NVDA, VoiceOver and keyboard-only navigation on each release, and review accessibility periodically.</p>
+            <h2 data-i18n="p.s4">Feedback</h2>
+            <p data-i18n="p.s4a">If you encounter a barrier, email <a href="mailto:accessibility@kada.gov.kw">accessibility@kada.gov.kw</a> or use the contact form. We aim to respond within five working days.</p>
+          </div>
+          <aside class="side">
+            <div class="side-box"><h4 data-i18n="p.sb.t">Statement details</h4><a href="#"><span data-i18n="p.sb.1">Standard</span><span>WCAG 2.2 AA</span></a><a href="#"><span data-i18n="c.lastupdated">Last updated</span><span class="num">01 · 10 · 2026</span></a><a href="#"><span data-i18n="p.sb.3">Next review</span><span class="num">10 · 2027</span></a></div>
+            <div class="side-box"><h4 data-i18n="p.sb.k">Keyboard shortcuts</h4><a href="#"><span data-i18n="p.sb.k1">Open search</span><kbd class="badge plain">/</kbd></a><a href="#"><span data-i18n="p.sb.k2">Close menu / dialog</span><kbd class="badge plain">Esc</kbd></a><a href="#"><span data-i18n="p.sb.k3">Switch language</span><kbd class="badge plain">Alt + L</kbd></a><a href="#"><span data-i18n="p.sb.k4">Skip to main content</span><kbd class="badge plain">Tab</kbd></a></div>
+            <div class="side-box navy"><h4 data-i18n="p.sb.c">Need a document in another format?</h4><p data-i18n="p.sb.cd">Large print, accessible PDF or plain-language Arabic summaries on request.</p><a class="btn btn-outline" href="contact.html"><span data-i18n="c.contactus">Contact us</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "إمكانية الوصول — كادا",
+    "p.title": "بيان إمكانية الوصول", "p.lede": "تلتزم الوكالة بتوفير موقع وتطبيق يسهل على الجميع استخدامهما — الرياضيين وأولياء الأمور والمسؤولين والجمهور — بصرف النظر عن القدرات أو الجهاز أو اللغة. ويستهدف هذا الموقع المستوى AA من معايير WCAG 2.2.",
+    "p.t.t": "تفضيلات العرض", "p.t.h": "جرّب خيارات العرض هذه على هذه الصفحة. يُحفظ اختيارك على هذا الجهاز فقط.",
+    "p.t.1": "نص أكبر", "p.t.1d": "زيادة حجم الخط الأساسي 12%", "p.t.2": "تباين عالٍ", "p.t.2d": "ألوان أقوى وروابط مسطّرة", "p.t.3": "تقليل الحركة", "p.t.3d": "إيقاف الرسوم المتحركة وتأثيرات التمرير", "p.t.4": "تباعد للقراءة", "p.t.4d": "تباعد أوسع بين الحروف والأسطر",
+    "p.s1": "ما قمنا به",
+    "p.s1a": "نسخ كاملة بالعربية (من اليمين لليسار) والإنجليزية لكل صفحة وكل خدمة إلكترونية، مع حفظ اختيار اللغة.",
+    "p.s1b": "معالم HTML دلالية وترتيب منطقي للعناوين وتسميات وصفية لمستخدمي قارئات الشاشة.",
+    "p.s1i": "رابط «تخطَّ إلى المحتوى الرئيسي» هو أول عنصر في كل صفحة — اضغط Tab مرة واحدة لإظهاره.",
+    "p.s1c": "مؤشر تركيز مرئي للوحة المفاتيح على كل رابط وزر وتبويب وقائمة قابلة للطي وحقل إدخال؛ وتعمل جميع القوائم بمفاتيح Tab و Enter و Escape.",
+    "p.s1d": "تباين ألوان لا يقل عن 4.5 : 1 للنصوص، ولا يُعتمد على اللون وحده للدلالة على الحالة (تتضمن الشارات نصاً).",
+    "p.s1e": "تلتزم الرسوم المتحركة تلقائياً بإعداد «تقليل الحركة» في نظام التشغيل.",
+    "p.s1f": "نماذج بتسميات واضحة وعلامات للحقول الإلزامية ورسائل خطأ بجوار الحقول، ودون مهل زمنية.",
+    "p.s1g": "يدعم المساعد الذكي الإدخال الصوتي (تحويل الكلام إلى نص) بالعربية والإنجليزية، مع إتاحة القراءة بصوت عالٍ كخيار إضافي.",
+    "p.s1h": "تطبيق الجوال: حجم خط ديناميكي وتسميات VoiceOver / TalkBack ووضع عدم الاتصال للعمل الميداني.",
+    "p.s2": "القيود المعروفة", "p.s2a": "بعض منشورات PDF القديمة صور ممسوحة ضوئياً لم تُهيَّأ بعد لقارئات الشاشة، ونعمل على إعادة نشرها بصيغتي PDF و HTML ميسّرتين؛ تواصل معنا لطلب نسخة ميسّرة من أي وثيقة.",
+    "p.s3": "المعايير والاختبار", "p.s3a": "صُمم الموقع وفق معايير WCAG 2.2 AA والإرشادات الحكومية الكويتية المعمول بها للخدمات الإلكترونية. ونختبره باستخدام NVDA و VoiceOver والتنقل بلوحة المفاتيح فقط مع كل إصدار، ونراجع إمكانية الوصول بصفة دورية.",
+    "p.s4": "الملاحظات", "p.s4a": "إذا واجهت أي عائق فراسلنا على <a href=\"mailto:accessibility@kada.gov.kw\">accessibility@kada.gov.kw</a> أو استخدم نموذج التواصل. ونسعى إلى الرد خلال خمسة أيام عمل.",
+    "p.sb.t": "تفاصيل البيان", "p.sb.1": "المعيار", "p.sb.3": "المراجعة القادمة",
+    "p.sb.k": "اختصارات لوحة المفاتيح", "p.sb.k1": "فتح البحث", "p.sb.k2": "إغلاق القائمة / النافذة", "p.sb.k3": "تبديل اللغة", "p.sb.k4": "تخطَّ إلى المحتوى الرئيسي",
+    "p.sb.c": "هل تحتاج إلى وثيقة بصيغة أخرى؟", "p.sb.cd": "نسخ بخط كبير، أو ملفات PDF ميسّرة، أو ملخصات عربية بلغة مبسّطة عند الطلب."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  (function () {
+    var KEY = "kada4-a11y";
+    var on = {};
+    try { on = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+    var btns = document.querySelectorAll("[data-a11y-toggle]");
+    function paint() {
+      btns.forEach(function (b) {
+        var k = b.dataset.a11yToggle;
+        document.documentElement.classList.toggle(k, !!on[k]);
+        b.classList.toggle("is-on", !!on[k]);
+        b.setAttribute("aria-pressed", on[k] ? "true" : "false");
+      });
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var k = b.dataset.a11yToggle; on[k] = !on[k];
+        try { localStorage.setItem(KEY, JSON.stringify(on)); } catch (e) {}
+        paint();
+      });
+    });
+    paint();
+  })();
+  </script>
+</body>
+</html>

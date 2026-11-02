@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Data requests — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="data">
+<div data-page>
+
+  <!-- ===================== LIST ===================== -->
+  <section data-view="list">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Data requests</h1><p data-i18n="p.d">Requests from people to see, correct or delete their personal data. Verify identity, collect the data from each system and reply within 30 days.</p></div>
+      <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Register exported (CSV) — design preview" data-toast-ar="صُدّر السجل (CSV) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export register</span></button><a class="btn btn-primary sm" href="#request"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.next">Work on DAR-2026-0402</span></a></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi hot"><small data-i18n="p.k1">Due within 7 days</small><b data-count="1">1</b><em class="down" data-i18n="p.k1d">DAR-2026-0402 · 4 days left</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Open requests</small><b data-count="5">5</b><em data-i18n="p.k2d">3 access · 1 erasure · 1 rectification</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Median completion (days)</small><b data-count="12">12</b><em data-i18n="p.k3d">Statutory limit 30 days · 0 breaches in 2026</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Requests · 2026</small><b data-count="38">38</b><em data-i18n="p.k4d">Mostly athletes (71%) · via Mobile ID</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head"><div class="filters" data-filter-group="d">
+        <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All open</span><span class="cnt"></span></button>
+        <button class="chip" type="button" data-filter="acc"><span data-i18n="p.ty1">Access</span><span class="cnt"></span></button>
+        <button class="chip" type="button" data-filter="era"><span data-i18n="p.ty2">Erasure</span><span class="cnt"></span></button>
+        <button class="chip" type="button" data-filter="rec"><span data-i18n="p.ty3">Rectification</span><span class="cnt"></span></button>
+      </div></div>
+      <div class="tbl-wrap" data-filter-rows="d"><table class="tbl">
+        <thead><tr><th data-i18n="p.c1">Request</th><th data-i18n="p.c2">Requester</th><th data-i18n="p.c3">Type</th><th data-i18n="p.c4">Identity</th><th data-i18n="p.c5">Systems</th><th data-i18n="p.c6">30-day clock</th><th data-i18n="p.c7">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="acc" data-sel class="is-sel"><td><b class="num">DAR-2026-0402</b><span class="sub num">27 · 09 · 2026 · 14:02</span></td><td><b data-i18n="p.r1">Registered athlete</b><span class="sub" data-i18n="p.r1d">Athletics · adult</span></td><td data-i18n="p.ty1">Access</td><td><span class="st ok plain" data-i18n="p.idok">Mobile ID ✓</span></td><td class="num">3</td><td><div class="sla red"><div class="bar"><i style="width:87%"></i></div><small data-i18n="p.cl1">26 / 30 days · due 27 · 10</small></div></td><td><span class="st warn" id="st-dar" data-i18n="p.s1">In progress</span></td><td class="r"><a class="lnk" href="#request" data-i18n="p.open">Open</a></td></tr>
+          <tr data-f="era" data-sel><td><b class="num">DAR-2026-0418</b><span class="sub num">12 · 10 · 2026 · 09:30</span></td><td><b data-i18n="p.r2">Former course participant</b><span class="sub" data-i18n="p.r2d">Coach · Education L1 2023</span></td><td data-i18n="p.ty2">Erasure</td><td><span class="st ok plain" data-i18n="p.idok">Mobile ID ✓</span></td><td class="num">2</td><td><div class="sla"><div class="bar"><i style="width:37%"></i></div><small data-i18n="p.cl2">11 / 30 days · due 11 · 11</small></div></td><td><span class="st warn" data-i18n="p.s1">In progress</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="acc" data-sel><td><b class="num">DAR-2026-0421</b><span class="sub num">19 · 10 · 2026 · 16:45</span></td><td><b data-i18n="p.r3">Parent on behalf of minor</b><span class="sub" data-i18n="p.r3d">Swimming · U16 · guardianship doc attached</span></td><td data-i18n="p.ty1">Access</td><td><span class="st warn plain" data-i18n="p.idchk">Guardianship check</span></td><td class="num">2</td><td><div class="sla"><div class="bar"><i style="width:13%"></i></div><small data-i18n="p.cl3">4 / 30 days · due 18 · 11</small></div></td><td><span class="st info" data-i18n="p.s2">Verifying identity</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="rec" data-sel><td><b class="num">DAR-2026-0422</b><span class="sub num">21 · 10 · 2026 · 10:12</span></td><td><b data-i18n="p.r4">Supplier signatory</b><span class="sub">Al-Dhow Scientific</span></td><td data-i18n="p.ty3">Rectification</td><td><span class="st ok plain" data-i18n="p.idok">Mobile ID ✓</span></td><td class="num">1</td><td><div class="sla"><div class="bar"><i style="width:7%"></i></div><small data-i18n="p.cl4">2 / 30 days · due 20 · 11</small></div></td><td><span class="st" data-i18n="p.s3">New</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="acc" data-sel><td><b class="num">DAR-2026-0423</b><span class="sub num">22 · 10 · 2026 · 13:50</span></td><td><b data-i18n="p.r5">Website visitor</b><span class="sub" data-i18n="p.r5d">Newsletter subscriber</span></td><td data-i18n="p.ty1">Access</td><td><span class="st warn plain" data-i18n="p.idpend">Email verification sent</span></td><td class="num">1</td><td><div class="sla"><div class="bar"><i style="width:3%"></i></div><small data-i18n="p.cl5">1 / 30 days · due 21 · 11</small></div></td><td><span class="st" data-i18n="p.s3">New</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.foot">Closed in 2026: 33 · average 12 days · all responses delivered through the requester's account or by verified email</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== REQUEST ===================== -->
+  <section data-view="request">
+    <a class="pe-back mb-1" href="#list"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.back">All requests</span></a>
+    <div class="grid g-main">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2><span class="num">DAR-2026-0402</span> · <span data-i18n="p.ty1">Access</span></h2><small><span data-i18n="p.rq.sub">Received 27 · 09 · 2026 via the website (signed in with Mobile ID) · requester language Arabic</span></small></div><span class="st warn" id="st-rq" data-i18n="p.s1">In progress</span></div>
+          <div class="big-timer"><b class="red num">4</b><div><b data-i18n="p.rq.left">days left of the statutory 30</b><div class="sla red mt-1"><div class="bar"><i style="width:87%"></i></div><small data-i18n="p.rq.due">Due 27 · 10 · 2026 · extension possible once (+30 days) with written justification</small></div></div></div>
+          <div class="steps mt-2"><div class="done"><b data-i18n="p.rq.s1">Received</b><small>27 · 09</small></div><div class="done"><b data-i18n="p.rq.s2">Identity verified</b><small>27 · 09</small></div><div class="done"><b data-i18n="p.rq.s3">Scope confirmed</b><small>01 · 10</small></div><div class="cur"><b data-i18n="p.rq.s4">Collecting from systems</b><small>2 / 3</small></div><div><b data-i18n="p.rq.s5">DPO review</b><small>—</small></div><div><b data-i18n="p.rq.s6">Delivered</b><small>—</small></div></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.rq.scope">Request scope</h2></div>
+          <dl class="kv">
+            <dt data-i18n="p.rq.req">Requester</dt><dd data-i18n="p.rq.reqv">Registered athlete (Athletics) · Civil ID verified via Kuwait Mobile ID · contact through account inbox</dd>
+            <dt data-i18n="p.rq.ask">Asked for</dt><dd data-i18n="p.rq.askv">"All personal data KADA holds about me: testing history, results, TUE correspondence and course records."</dd>
+            <dt data-i18n="p.rq.basis">Legal basis</dt><dd data-i18n="p.rq.basisv">Right of access · applicable national data-protection requirements · WADA ISPPPI Art. 11</dd>
+            <dt data-i18n="p.rq.excl">Exclusions</dt><dd data-i18n="p.rq.exclv">Intelligence and investigation material (ISPPPI exemption) · third-party personal data redacted</dd>
+          </dl>
+        </div>
+        <div class="card flush">
+          <div class="card-head"><h2 data-i18n="p.rq.sys">Fulfilment by system</h2><small data-i18n="p.rq.sysd">Each owner exports from their system; the DPO assembles and redacts</small></div>
+          <div class="tbl-wrap"><table class="tbl compact">
+            <thead><tr><th data-i18n="p.rq.c1">System</th><th data-i18n="p.rq.c2">Owner</th><th data-i18n="p.rq.c3">Data categories</th><th data-i18n="p.rq.c4">Export</th><th data-i18n="p.c7">Status</th></tr></thead>
+            <tbody>
+              <tr><td><b data-i18n="p.rq.y1">Website & e-services</b><span class="sub" data-i18n="p.rq.y1d">Account, course registrations, requests</span></td><td data-i18n="p.rq.o1">IT & Digital Services</td><td data-i18n="p.rq.y1c">Profile · 3 registrations · 1 certificate</td><td class="num" data-i18n="p.rq.x1">PDF · 2 p.</td><td><span class="st ok" data-i18n="p.rq.done">Received</span></td></tr>
+              <tr><td><b data-i18n="p.rq.y2">KADA mobile app</b><span class="sub" data-i18n="p.rq.y2d">Testing history, results, TUE</span></td><td data-i18n="p.rq.o2">Results Management</td><td data-i18n="p.rq.y2c">6 tests · 6 results · 1 TUE file</td><td class="num" data-i18n="p.rq.x2">PDF · 11 p.</td><td><span class="st ok" data-i18n="p.rq.done">Received</span></td></tr>
+              <tr><td><b data-i18n="p.rq.y3">Education records</b><span class="sub" data-i18n="p.rq.y3d">Course attendance & assessments</span></td><td data-i18n="p.rq.o3">Education & Awareness</td><td data-i18n="p.rq.y3c">2 courses · scores</td><td class="muted">—</td><td><span class="st warn" id="st-y3" data-i18n="p.rq.pend">Pending · reminded 22 · 10</span></td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.rq.sysf">Owners receive tasks automatically; escalation to department head after 5 days</span><button class="btn btn-ghost xs" type="button" data-toast="Escalated to Head of Education & Awareness" data-toast-ar="صُعّد إلى رئيس إدارة التعليم والتوعية" data-set-status="#st-y3" data-st-class="red" data-st-en="Escalated" data-st-ar="مُصعَّد"><svg class="ico"><use href="#i-warn"/></svg><span data-i18n="p.rq.esc">Escalate</span></button></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.rq.resp">Response to requester</h2><span class="st plain" data-i18n="p.rq.draft">Draft</span></div>
+          <div class="split">
+            <div class="field"><label><span class="lang2"><span>AR</span></span> <span data-i18n="p.rq.letter">Cover letter</span></label><textarea dir="rtl" style="min-height:140px">تحية طيبة وبعد، نرفق لكم نسخة من بياناتكم الشخصية المحفوظة لدى الوكالة استجابةً لطلبكم رقم DAR-2026-0402، وقد حُجبت بيانات الغير ومواد التحقيق وفقاً للمعيار الدولي لحماية الخصوصية والمعلومات الشخصية.</textarea></div>
+            <div class="field"><label><span class="lang2"><span>EN</span></span> <span data-i18n="p.rq.letter">Cover letter</span></label><textarea dir="ltr" style="min-height:140px">Dear requester, please find attached a copy of the personal data held by KADA in response to your request DAR-2026-0402. Third-party data and investigation material have been redacted in line with the International Standard for the Protection of Privacy and Personal Information.</textarea></div>
+          </div>
+          <div class="row mt-2">
+            <button class="btn btn-ghost sm" type="button" data-toast="Redaction review opened — design preview" data-toast-ar="فُتحت مراجعة الحجب — معاينة تصميم"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="p.rq.redact">Review redactions</span></button>
+            <button class="btn btn-ghost sm" type="button" data-drawer="d-extend"><svg class="ico"><use href="#i-cal"/></svg><span data-i18n="p.rq.ext">Request extension</span></button>
+            <button class="btn btn-primary sm" type="button" data-toast="Response delivered to the requester's secure inbox · request closed · register updated" data-toast-ar="سُلّم الرد إلى صندوق مقدّم الطلب الآمن · أُغلق الطلب · حُدّث السجل" data-set-status="#st-rq, #st-dar" data-st-class="ok" data-st-en="Delivered · closed" data-st-ar="سُلّم · مغلق"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.rq.deliver">Deliver securely & close</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.rq.id">Identity verification</h2></div>
+          <div class="health">
+            <div><span data-i18n="p.rq.i1">Method</span><b data-i18n="p.rq.i1v">Kuwait Mobile ID</b></div>
+            <div><span data-i18n="p.rq.i2">Civil ID match</span><b class="st ok plain" data-i18n="p.rq.match">Matched · •••• 2194</b></div>
+            <div><span data-i18n="p.rq.i3">Account</span><b data-i18n="p.rq.i3v">Registered athlete · active</b></div>
+            <div><span data-i18n="p.rq.i4">Verified by</span><b>Noura Al-Hajri · <span class="num">27 · 09</span></b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.rq.log">Activity</h2></div>
+          <div class="tl">
+            <div><i class="warn"></i><div><b data-i18n="p.rq.l1">Reminder sent to Education & Awareness</b><small class="num">22 · 10 · 09:00 · <span data-i18n="p.rq.sysn">system</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.rq.l2">Export received from Results Management (app)</b><small class="num">15 · 10 · 11:20</small></div></div>
+            <div><i></i><div><b data-i18n="p.rq.l3">Export received from IT & Digital Services</b><small class="num">03 · 10 · 10:05</small></div></div>
+            <div><i></i><div><b data-i18n="p.rq.l4">Scope confirmed with requester (account message)</b><small>Noura Al-Hajri · <span class="num">01 · 10</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.rq.l5">Identity verified · clock started</b><small class="num">27 · 09 · 14:10</small></div></div>
+          </div>
+        </div>
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.rq.ai">AI · redaction assistant</span></h2>
+          <ul>
+            <li><span data-i18n="p.rq.ai1"><b>7 third-party names detected</b> in the testing history export — proposed redactions ready for your confirmation.</span></li>
+            <li><span data-i18n="p.rq.ai2"><b>1 paragraph references an open intelligence file</b> — flagged for exclusion under ISPPPI.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONSENT ===================== -->
+  <section data-view="consent">
+    <div class="page-head">
+      <div><h1 data-i18n="p.cn.title">Consent &amp; privacy notices</h1><p data-i18n="p.cn.pd">What people agreed to, which version of each privacy notice is live, and the privacy impact assessments for new systems.</p></div>
+    </div>
+    <div class="grid g2">
+      <div class="card flush">
+        <div class="card-head"><div><h2 data-i18n="p.cn.h">Consent records</h2><small data-i18n="p.cn.d">Captured at sign-up, course registration and newsletter subscription · versioned notices</small></div></div>
+        <div class="tbl-wrap"><table class="tbl compact">
+          <thead><tr><th data-i18n="p.cn.c1">Purpose</th><th data-i18n="p.cn.c2">Notice version</th><th class="r" data-i18n="p.cn.c3">Active consents</th><th class="r" data-i18n="p.cn.c4">Withdrawn · 30 d</th></tr></thead>
+          <tbody>
+            <tr><td><b data-i18n="p.cn.p1">Account & e-services</b></td><td class="num">v3.1 · 01 · 06 · 2026</td><td class="r num">8,412</td><td class="r num">12</td></tr>
+            <tr><td><b data-i18n="p.cn.p2">Training & certificates</b></td><td class="num">v2.0 · 15 · 01 · 2026</td><td class="r num">3,106</td><td class="r num">4</td></tr>
+            <tr><td><b data-i18n="p.cn.p3">Newsletter & announcements</b></td><td class="num">v1.4 · 10 · 03 · 2026</td><td class="r num">11,920</td><td class="r num">88</td></tr>
+            <tr><td><b data-i18n="p.cn.p4">Analytics cookies</b></td><td class="num">v2.2 · 01 · 09 · 2026</td><td class="r num">61% <span class="muted" data-i18n="p.cn.optin">opt-in</span></td><td class="r num">—</td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.cn.not">Privacy notices (AR + EN)</h2><button class="btn btn-ghost xs" type="button" data-toast="New notice version drafted — design preview" data-toast-ar="أُعدّت نسخة جديدة من الإشعار — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.cn.new">New version</span></button></div>
+          <div class="doc-row"><span class="ty">v3.1</span><div><b data-i18n="p.cn.n1">Website privacy policy</b><small data-i18n="p.cn.n1d">Published 01 · 06 · 2026 · re-consent not required</small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+          <div class="doc-row"><span class="ty">v2.0</span><div><b data-i18n="p.cn.n2">Athlete data notice (app)</b><small data-i18n="p.cn.n2d">Aligned with WADA ISPPPI 2021</small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+          <div class="doc-row"><span class="ty">v1.0</span><div><b data-i18n="p.cn.n3">Supplier data notice</b><small data-i18n="p.cn.n3d">Procurement portal</small></div><span class="lang2"><span>AR</span><span>EN</span></span></div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><h2 data-i18n="p.cn.dpia">DPIA register</h2></div>
+          <div class="health">
+            <div><span data-i18n="p.cn.d1">Speak Up platform</span><b class="st ok plain" data-i18n="p.cn.ok">Approved · 2026</b></div>
+            <div><span data-i18n="p.cn.d2">AI assistant (public)</span><b class="st ok plain" data-i18n="p.cn.ok">Approved · 2026</b></div>
+            <div><span data-i18n="p.cn.d3">Executive analytics · GIS</span><b class="st warn plain" data-i18n="p.cn.rev">Under review</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RETENTION ===================== -->
+  <section data-view="retention">
+    <div class="page-head">
+      <div><h1 data-i18n="p.rt.title">Retention schedule</h1><p data-i18n="p.rt.pd">How long each type of record is kept and when it is deleted automatically.</p></div>
+    </div>
+    <div class="card flush">
+      <div class="card-head"><div><h2 data-i18n="p.rt.h">Retention schedule</h2><small data-i18n="p.rt.d">Automated deletion jobs run monthly · exceptions require DPO approval and are logged</small></div><button class="btn btn-ghost xs" type="button" data-toast="Schedule exported (PDF) — design preview" data-toast-ar="صُدّر الجدول (PDF) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.rt.exp">Export</span></button></div>
+      <div class="tbl-wrap"><table class="tbl">
+        <thead><tr><th data-i18n="p.rt.c1">Record category</th><th data-i18n="p.rt.c2">System</th><th data-i18n="p.rt.c3">Retention</th><th data-i18n="p.rt.c4">Basis</th><th data-i18n="p.rt.c5">Next deletion run</th><th data-i18n="p.c7">Status</th></tr></thead>
+        <tbody>
+          <tr><td><b data-i18n="p.rt.r1">Speak Up cases (closed)</b></td><td>Speak Up</td><td data-i18n="p.rt.y10">10 years</td><td data-i18n="p.rt.b1">WADA Code · statute of limitations</td><td class="num">01 · 11 · 2026</td><td><span class="st ok" data-i18n="p.rt.auto">Automated</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r2">Course registrations & certificates</b></td><td data-i18n="p.rt.web">Website</td><td data-i18n="p.rt.y5">5 years after course</td><td data-i18n="p.rt.b2">Certification validity + audit</td><td class="num">01 · 11 · 2026</td><td><span class="st ok" data-i18n="p.rt.auto">Automated</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r3">Data access request files</b></td><td data-i18n="p.rt.web">Website</td><td data-i18n="p.rt.y3">3 years after closure</td><td data-i18n="p.rt.b3">Regulatory accountability</td><td class="num">01 · 11 · 2026</td><td><span class="st ok" data-i18n="p.rt.auto">Automated</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r4">Procurement records & K-Net receipts</b></td><td data-i18n="p.rt.proc">Procurement</td><td data-i18n="p.rt.y10">10 years</td><td data-i18n="p.rt.b4">Public finance rules</td><td class="num">01 · 11 · 2026</td><td><span class="st ok" data-i18n="p.rt.auto">Automated</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r5">Web analytics (pseudonymous)</b></td><td data-i18n="p.rt.web">Website</td><td data-i18n="p.rt.m14">14 months</td><td data-i18n="p.rt.b5">Consent · analytics</td><td class="num">01 · 11 · 2026</td><td><span class="st ok" data-i18n="p.rt.auto">Automated</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r6">Audit log</b></td><td data-i18n="p.rt.all">All modules</td><td data-i18n="p.rt.y7">7 years · immutable</td><td data-i18n="p.rt.b6">ISO/IEC 27001 · accountability</td><td class="num">—</td><td><span class="st navy" data-i18n="p.rt.lock">Write-once</span></td></tr>
+          <tr><td><b data-i18n="p.rt.r7">Inactive public accounts</b></td><td data-i18n="p.rt.web">Website</td><td data-i18n="p.rt.y2">2 years inactivity</td><td data-i18n="p.rt.b7">Data minimisation · notice sent at 22 months</td><td class="num">01 · 11 · 2026</td><td><span class="st warn" data-i18n="p.rt.rev">Review · 41 accounts</span></td></tr>
+        </tbody></table></div>
+    </div>
+  </section>
+
+  <div class="drawer" id="d-extend"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.dx.h">Extend statutory deadline</h3>
+    <p class="small muted" data-i18n="p.dx.d">One extension of up to 30 days is permitted for complex requests. The requester is informed before the original deadline with the reason.</p>
+    <div class="field"><label data-i18n="p.dx.r">Justification</label><select><option data-i18n="p.dx.r1">Complexity · data in multiple systems</option><option data-i18n="p.dx.r2">Volume of third-party redactions</option></select></div>
+    <div class="field"><label data-i18n="p.dx.n">New deadline</label><input class="num" value="26 · 11 · 2026"></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Extension recorded · requester informed in Arabic and English" data-toast-ar="سُجّل التمديد · أُبلغ مقدّم الطلب بالعربية والإنجليزية"><span data-i18n="p.dx.ok">Confirm</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.cancel">Cancel</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "طلبات البيانات — إدارة كادا",
+  "p.h": "طلبات البيانات", "p.d": "طلبات الأشخاص للاطلاع على بياناتهم الشخصية أو تصحيحها أو حذفها. تحقّق من الهوية، واجمع البيانات من كل نظام، وأرسل الرد خلال 30 يوماً.",
+  "p.export": "تصدير السجل", "p.next": "العمل على DAR-2026-0402", "p.open": "فتح", "p.cancel": "إلغاء", "p.back": "كل الطلبات", "p.cn.title": "الموافقات وإشعارات الخصوصية", "p.cn.pd": "ما وافق عليه الأشخاص، والإصدار المعمول به من كل إشعار خصوصية، وتقييمات أثر الخصوصية للأنظمة الجديدة.", "p.rt.title": "جدول الاحتفاظ بالبيانات", "p.rt.pd": "مدة الاحتفاظ بكل نوع من السجلات وموعد حذفه آلياً.",
+  "p.k1": "تستحق خلال 7 أيام", "p.k1d": "DAR-2026-0402 · تبقّت 4 أيام", "p.k2": "طلبات مفتوحة", "p.k2d": "3 وصول · 1 محو · 1 تصحيح", "p.k3": "وسيط مدة الإنجاز (بالأيام)", "p.k3d": "الحد النظامي 30 يوماً · لا تجاوزات في 2026", "p.k4": "الطلبات · 2026", "p.k4d": "معظمها من الرياضيين (71%) · عبر هويتي",
+  "p.f0": "جميع الطلبات المفتوحة", "p.ty1": "وصول", "p.ty2": "محو", "p.ty3": "تصحيح",
+  "p.c1": "الطلب", "p.c2": "مقدّم الطلب", "p.c3": "النوع", "p.c4": "الهوية", "p.c5": "الأنظمة", "p.c6": "مهلة 30 يوماً", "p.c7": "الحالة",
+  "p.r1": "رياضي مسجّل", "p.r1d": "ألعاب القوى · بالغ", "p.r2": "مشارك سابق في الدورات", "p.r2d": "مدرب · التثقيف – المستوى 1 · 2023", "p.r3": "ولي أمر عن قاصر", "p.r3d": "سباحة · تحت 16 · وثيقة الولاية مرفقة", "p.r4": "مفوَّض بالتوقيع عن مورّد", "p.r5": "زائر للموقع", "p.r5d": "مشترك في النشرة الإخبارية",
+  "p.idok": "هويتي ✓", "p.idchk": "التحقق من الولاية", "p.idpend": "أُرسل رابط التحقق بالبريد", "p.cl1": "26 / 30 يوماً · يستحق 27 · 10", "p.cl2": "11 / 30 يوماً · يستحق 11 · 11", "p.cl3": "4 / 30 يوماً · يستحق 18 · 11", "p.cl4": "2 / 30 يوماً · يستحق 20 · 11", "p.cl5": "1 / 30 يوماً · يستحق 21 · 11",
+  "p.s1": "قيد التنفيذ", "p.s2": "التحقق من الهوية", "p.s3": "جديد", "p.foot": "أُغلق في 2026: 33 · المتوسط 12 يوماً · سُلّمت جميع الردود عبر حساب مقدّم الطلب أو بريد إلكتروني موثّق",
+  "p.rq.sub": "ورد 27 · 09 · 2026 عبر الموقع (دخول بهويتي) · لغة مقدّم الطلب: العربية", "p.rq.left": "أيام متبقية من المهلة النظامية البالغة 30 يوماً", "p.rq.due": "يستحق 27 · 10 · 2026 · يجوز التمديد مرة واحدة (+30 يوماً) بمبرر مكتوب",
+  "p.rq.s1": "ورد", "p.rq.s2": "التحقق من الهوية", "p.rq.s3": "تأكيد النطاق", "p.rq.s4": "الجمع من الأنظمة", "p.rq.s5": "مراجعة مسؤول حماية البيانات", "p.rq.s6": "سُلّم",
+  "p.rq.scope": "نطاق الطلب", "p.rq.req": "مقدّم الطلب", "p.rq.reqv": "رياضي مسجّل (ألعاب القوى) · الرقم المدني موثّق عبر هويتي · التواصل عبر صندوق الحساب", "p.rq.ask": "المطلوب", "p.rq.askv": "«جميع بياناتي الشخصية لدى كادا: سجل الفحوصات ونتائجها، ومراسلات الإعفاء للاستعمال العلاجي، وسجلات الدورات.»",
+  "p.rq.basis": "الأساس القانوني", "p.rq.basisv": "حق الوصول · متطلبات حماية البيانات الوطنية المعمول بها · المادة 11 من معيار ISPPPI لوادا", "p.rq.excl": "الاستثناءات", "p.rq.exclv": "المعلومات الاستخبارية ومواد التحقيق (استثناء وفق ISPPPI) · حجب بيانات الغير",
+  "p.rq.sys": "التنفيذ حسب النظام", "p.rq.sysd": "يصدّر كل مالك البيانات من نظامه، ثم يجمعها مسؤول حماية البيانات ويحجب ما يلزم", "p.rq.c1": "النظام", "p.rq.c2": "المالك", "p.rq.c3": "فئات البيانات", "p.rq.c4": "التصدير", "p.rq.o1": "تقنية المعلومات والخدمات الرقمية", "p.rq.o3": "التعليم والتوعية", "p.rq.x1": "PDF · صفحتان", "p.rq.x2": "PDF · 11 صفحة",
+  "p.rq.y1": "الموقع والخدمات الإلكترونية", "p.rq.y1d": "الحساب وتسجيلات الدورات والطلبات", "p.rq.y1c": "الملف الشخصي · 3 تسجيلات · شهادة واحدة", "p.rq.done": "استُلم", "p.rq.y2": "تطبيق كادا للهواتف", "p.rq.y2d": "سجل الفحوصات، النتائج، الإعفاء للاستعمال العلاجي", "p.rq.o2": "إدارة النتائج", "p.rq.y2c": "6 فحوصات · 6 نتائج · ملف إعفاء واحد",
+  "p.rq.y3": "سجلات التثقيف", "p.rq.y3d": "حضور الدورات والتقييمات", "p.rq.y3c": "دورتان · الدرجات", "p.rq.pend": "معلّق · أُرسل تذكير 22 · 10", "p.rq.sysf": "يتلقى المالكون المهام تلقائياً؛ تصعيد إلى رئيس الإدارة بعد 5 أيام", "p.rq.esc": "تصعيد",
+  "p.rq.resp": "الرد على مقدّم الطلب", "p.rq.draft": "مسودة", "p.rq.letter": "الخطاب المرافق", "p.rq.redact": "مراجعة الحجب", "p.rq.ext": "طلب تمديد", "p.rq.deliver": "تسليم آمن وإغلاق",
+  "p.rq.id": "التحقق من الهوية", "p.rq.i1": "الطريقة", "p.rq.i1v": "هويتي", "p.rq.i2": "مطابقة الرقم المدني", "p.rq.match": "مطابق · •••• 2194", "p.rq.i3": "الحساب", "p.rq.i3v": "رياضي مسجّل · نشط", "p.rq.i4": "جرى التحقق بواسطة",
+  "p.rq.log": "النشاط", "p.rq.l1": "أُرسل تذكير إلى إدارة التعليم والتوعية", "p.rq.l2": "استُلم التصدير من إدارة النتائج (التطبيق)", "p.rq.l3": "استُلم التصدير من تقنية المعلومات والخدمات الرقمية", "p.rq.sysn": "النظام", "p.rq.l4": "تأكيد النطاق مع مقدّم الطلب (رسالة عبر الحساب)", "p.rq.l5": "تم التحقق من الهوية · بدأ احتساب المهلة",
+  "p.rq.ai": "الذكاء الاصطناعي · مساعد الحجب", "p.rq.ai1": "<b>رُصدت 7 أسماء لأطراف ثالثة</b> في تصدير سجل الفحوصات — الحجب المقترح جاهز لتأكيدك.", "p.rq.ai2": "<b>فقرة واحدة تشير إلى ملف استخباري مفتوح</b> — عُلّمت لاستبعادها وفق معيار ISPPPI.",
+  "p.cn.h": "سجلات الموافقة", "p.cn.d": "تُسجَّل عند إنشاء الحساب والتسجيل في الدورات والاشتراك في النشرة · إشعارات بإصدارات موثّقة", "p.cn.c1": "الغرض", "p.cn.c2": "إصدار الإشعار", "p.cn.c3": "موافقات نشطة", "p.cn.c4": "سُحبت · 30 يوماً",
+  "p.cn.p1": "الحساب والخدمات الإلكترونية", "p.cn.p2": "التدريب والشهادات", "p.cn.p3": "النشرة والإعلانات", "p.cn.p4": "ملفات تعريف الارتباط للتحليلات", "p.cn.optin": "موافقة صريحة",
+  "p.cn.not": "إشعارات الخصوصية (عربي + إنجليزي)", "p.cn.new": "إصدار جديد", "p.cn.n1": "سياسة خصوصية الموقع", "p.cn.n1d": "نُشرت 01 · 06 · 2026 · لا تتطلب إعادة موافقة", "p.cn.n2": "إشعار بيانات الرياضيين (التطبيق)", "p.cn.n2d": "متوافق مع معيار وادا ISPPPI 2021", "p.cn.n3": "إشعار بيانات المورّدين", "p.cn.n3d": "بوابة المشتريات",
+  "p.cn.dpia": "سجل تقييم أثر الخصوصية", "p.cn.d1": "منصة Speak Up", "p.cn.ok": "معتمد · 2026", "p.cn.d2": "المساعد الذكي (عام)", "p.cn.d3": "التحليلات التنفيذية · نظم المعلومات الجغرافية", "p.cn.rev": "قيد المراجعة",
+  "p.rt.h": "جدول الاحتفاظ", "p.rt.d": "تعمل مهام الحذف الآلي شهرياً · تتطلب الاستثناءات موافقة مسؤول حماية البيانات وتُسجَّل", "p.rt.exp": "تصدير", "p.rt.c1": "فئة السجل", "p.rt.c2": "النظام", "p.rt.c3": "مدة الاحتفاظ", "p.rt.c4": "الأساس", "p.rt.c5": "دورة الحذف التالية",
+  "p.rt.r1": "قضايا Speak Up (المغلقة)", "p.rt.y10": "10 سنوات", "p.rt.b1": "مدونة وادا · مدة التقادم", "p.rt.r2": "تسجيلات الدورات والشهادات", "p.rt.web": "الموقع", "p.rt.y5": "5 سنوات بعد الدورة", "p.rt.b2": "صلاحية الشهادة + التدقيق", "p.rt.r3": "ملفات طلبات البيانات", "p.rt.y3": "3 سنوات بعد الإغلاق", "p.rt.b3": "المساءلة التنظيمية",
+  "p.rt.r4": "سجلات المشتريات وإيصالات K-Net", "p.rt.proc": "المشتريات", "p.rt.b4": "قواعد المالية العامة", "p.rt.r5": "تحليلات الويب (بأسماء مستعارة)", "p.rt.m14": "14 شهراً", "p.rt.b5": "الموافقة · التحليلات", "p.rt.r6": "سجل التدقيق", "p.rt.all": "جميع الوحدات", "p.rt.y7": "7 سنوات · غير قابل للتعديل", "p.rt.b6": "ISO/IEC 27001 · المساءلة", "p.rt.lock": "كتابة لمرة واحدة",
+  "p.rt.r7": "الحسابات العامة غير النشطة", "p.rt.y2": "سنتان من عدم النشاط", "p.rt.b7": "تقليل البيانات · يُرسل إشعار عند بلوغ 22 شهراً", "p.rt.auto": "آلي", "p.rt.rev": "مراجعة · 41 حساباً",
+  "p.dx.h": "تمديد المهلة القانونية", "p.dx.d": "يُسمح بتمديد واحد لا يتجاوز 30 يوماً للطلبات المعقدة، ويُبلَّغ مقدّم الطلب بالسبب قبل انقضاء المهلة الأصلية.", "p.dx.r": "المبرر", "p.dx.r1": "التعقيد · بيانات في أنظمة متعددة", "p.dx.r2": "حجم حجب بيانات الغير", "p.dx.n": "المهلة الجديدة", "p.dx.ok": "تأكيد"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

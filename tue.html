@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Therapeutic Use Exemption (TUE) — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.s9">Therapeutic Use Exemption (TUE)</span></nav>
+        <h1 class="display" data-i18n="p.title">Need a prohibited medicine for treatment?</h1>
+        <p class="lede" data-i18n="p.lede">A Therapeutic Use Exemption (TUE) allows you to use a prohibited substance or method to treat a genuine medical condition. Apply before you use it — online with Kuwait Mobile ID or in the KADA app. KADA's TUE Committee decides, usually within 21 days of receiving a complete application.</p>
+        <div class="cta"><a class="btn btn-primary lg" href="#apply"><span data-i18n="p.c1">Apply online</span></a><a class="btn btn-outline lg" href="#track"><span data-i18n="p.c2">Track my application</span></a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="kicker" data-i18n="p.cr.k">How the decision is made</p><h2 class="display" data-i18n="p.cr.t">A TUE is granted only if all four conditions are met.</h2></div>
+        <div class="grid-2 stagger">
+          <div class="card spot"><span class="num-big">01</span><h3 data-i18n="p.cr.1t">A diagnosed condition</h3><p data-i18n="p.cr.1d">Your medical condition is diagnosed and supported by clinical evidence — examinations, laboratory results or imaging.</p></div>
+          <div class="card spot"><span class="num-big">02</span><h3 data-i18n="p.cr.2t">A necessary treatment</h3><p data-i18n="p.cr.2d">The prohibited substance or method is an indicated treatment, and there is no reasonable permitted alternative.</p></div>
+          <div class="card spot"><span class="num-big">03</span><h3 data-i18n="p.cr.3t">No extra performance</h3><p data-i18n="p.cr.3d">The treatment returns you to your normal state of health — and gives no advantage beyond it.</p></div>
+          <div class="card spot"><span class="num-big">04</span><h3 data-i18n="p.cr.4t">Not caused by doping</h3><p data-i18n="p.cr.4d">Your need for the treatment is not the result of earlier use of a prohibited substance or method without a TUE.</p></div>
+        </div>
+        <div class="notice mt-2 reveal"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span data-i18n="p.cr.who"><b>Who decides?</b> KADA's TUE Committee: at least three physicians experienced in sports medicine, chaired by a physician, each bound by a conflict-of-interest and confidentiality declaration. Neither the athlete nor their own physician decides. Source: WADA International Standard for TUEs 2027, Articles 4.2 and 5.3.</span></div>
+      </div>
+    </section>
+
+    <section class="section soft" id="apply">
+      <div class="wrap with-side">
+        <div>
+          <div class="form-card reveal" data-stepper>
+            <h3 data-i18n="p.f.t">Online TUE application</h3>
+            <p class="hint" data-i18n="p.f.h">Four steps, about 10 minutes. Have your physician's details and your medical file ready.</p>
+            <ol class="step-nav" style="--n:4"><li class="is-on" data-i18n="p.f.s1">Athlete</li><li data-i18n="p.f.s2">Treatment</li><li data-i18n="p.f.s3">Physician &amp; file</li><li data-i18n="p.f.s4">Review &amp; submit</li></ol>
+
+            <div data-step data-step-gate="signed" class="is-on">
+              <div class="notice" data-signed-only="public" hidden><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg><span><b data-i18n="p.f.signed">Identity verified with Mobile ID</b> — <span data-signed-text="name">Yousef Al-Rashidi</span>, <span class="num" data-signed-text="civil">•••• 2194</span>. <span data-i18n="p.f.signedd">The decision will reach you in your account and the KADA app.</span></span></div>
+              <div class="field" data-guest-only><label data-i18n="p.f.id">Identity verification <span class="req">*</span></label><div class="chips"><button class="btn btn-primary" type="button" data-signin-open data-signin-role="public"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg><span data-i18n="p.f.mid">Verify with Mobile ID</span></button></div><p class="hint mt-1" data-i18n="p.f.idn">Medical applications require a verified identity. Paper forms are also accepted at KADA headquarters.</p></div>
+              <div class="field mt-2"><label data-i18n="p.f.ty">Type of application <span class="req">*</span></label>
+                <div class="radio-cards">
+                  <label><input type="radio" name="tt" checked><b data-i18n="p.f.ty1">Before use</b><small data-i18n="p.f.ty1d">The standard case — apply, then wait for the decision</small></label>
+                  <label><input type="radio" name="tt"><b data-i18n="p.f.ty2">Retroactive</b><small data-i18n="p.f.ty2d">After emergency treatment or another permitted exception</small></label>
+                  <label><input type="radio" name="tt"><b data-i18n="p.f.ty3">Renewal</b><small data-i18n="p.f.ty3d">Your current TUE is about to expire</small></label>
+                </div>
+              </div>
+              <div class="form-grid mt-2">
+                <div class="field"><label data-i18n="p.f.sp">Sport <span class="req">*</span></label><select><option data-i18n="p.f.sel">Select…</option><option data-i18n="p.f.sp1">Athletics</option><option data-i18n="p.f.sp2">Football</option><option data-i18n="p.f.sp3">Swimming</option><option data-i18n="p.f.sp4">Weightlifting</option><option data-i18n="p.f.sp5">Other</option></select></div>
+                <div class="field"><label data-i18n="p.f.lv">Competition level <span class="req">*</span></label><select><option data-i18n="p.f.lv1">National-level athlete</option><option data-i18n="p.f.lv2">Other athlete under KADA's jurisdiction</option><option data-i18n="p.f.lv3">International-level athlete</option></select></div>
+                <div class="field"><label data-i18n="p.f.fed">Federation / club</label><input type="text" placeholder="e.g. Kuwait Athletics Federation" data-i18n-ph="p.f.fedph"></div>
+                <div class="field"><label><span data-i18n="p.f.ev">Next competition</span> <small data-i18n="c.optional">optional</small></label><input type="date"></div>
+              </div>
+              <div class="notice mt-2"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span data-i18n="p.f.intl">International-level athletes apply to their international federation, not to KADA. See the <a href="publications.html">definition of national-level athlete</a>.</span></div>
+              <div class="form-foot"><span style="font-size:13px;color:var(--muted)" data-step-gate-hint hidden data-i18n="p.f.gate">Verify your identity first to continue</span><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <div class="form-grid">
+                <div class="field full"><label data-i18n="p.f.dx">Diagnosis <span class="req">*</span></label><input type="text" placeholder="e.g. Type 1 diabetes" data-i18n-ph="p.f.dxph"></div>
+                <div class="field full"><label data-i18n="p.f.sub">Prohibited substance or method <span class="req">*</span></label><input type="text" placeholder="Generic name, e.g. insulin" data-i18n-ph="p.f.subph"></div>
+                <div class="field"><label data-i18n="p.f.dose">Dose</label><input type="text"></div>
+                <div class="field"><label data-i18n="p.f.route">Route</label><select><option data-i18n="p.f.rt1">Oral</option><option data-i18n="p.f.rt2">Inhaled</option><option data-i18n="p.f.rt3">Injection</option><option data-i18n="p.f.rt4">Other</option></select></div>
+                <div class="field"><label data-i18n="p.f.freq">Frequency</label><input type="text"></div>
+                <div class="field"><label data-i18n="p.f.dur">Expected duration</label><input type="text" placeholder="e.g. 12 months" data-i18n-ph="p.f.durph"></div>
+                <div class="field full"><label data-i18n="p.f.alt">Permitted alternatives considered <span class="req">*</span></label><textarea placeholder="Which permitted treatments were tried or considered, and why they are not suitable…" data-i18n-ph="p.f.altph"></textarea></div>
+              </div>
+              <div class="notice mt-2"><svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span data-i18n="p.f.chk">Not sure whether your medicine is prohibited? <a href="prohibited.html">Check it first in the medicine checker</a> — permitted medicines need no TUE.</span></div>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <div class="form-grid">
+                <div class="field"><label data-i18n="p.f.dr">Treating physician <span class="req">*</span></label><input type="text"></div>
+                <div class="field"><label data-i18n="p.f.spec">Specialty</label><input type="text"></div>
+                <div class="field"><label data-i18n="p.f.lic">Medical licence no.</label><input type="text" class="num"></div>
+                <div class="field"><label data-i18n="p.f.dre">Physician's email <span class="req">*</span></label><input type="email"></div>
+              </div>
+              <div class="upload mt-2"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.up">Upload your medical file</b><span data-i18n="p.f.upd">Diagnosis report, test results, imaging · PDF or JPG · encrypted</span></div>
+              <div class="notice mt-2"><svg viewBox="0 0 24 24" class="ico"><path d="M4 20h4l10-10-4-4L4 16z"/></svg><span data-i18n="p.f.sig">Your physician receives a secure link to review the medical sections and sign electronically. Applications without a complete medical file are returned for completion.</span></div>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+
+            <div data-step>
+              <form data-demo="#ok">
+                <label class="check"><input type="checkbox" required><span data-i18n="p.f.d1">I confirm the information is accurate and complete, and I will keep a copy of my application and medical file.</span></label>
+                <label class="check mt-1"><input type="checkbox" required><span data-i18n="p.f.d2">I consent to my medical information being shared only with KADA's TUE Committee and, where the rules require, with WADA and my international federation.</span></label>
+                <label class="check mt-1"><input type="checkbox" required><span data-i18n="p.f.d3">I understand that I must not use the substance before the TUE is granted, unless my application is retroactive.</span></label>
+                <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><span style="font-size:13px;color:var(--muted)" data-i18n="p.f.sla">Decision usually within 21 days of a complete application</span><button class="btn btn-primary lg" type="submit"><span data-i18n="p.f.submit">Submit application</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+              </form>
+            </div>
+          </div>
+          <div class="success" id="ok"><div class="tick"><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg></div><h3 data-i18n="p.ok.t">Application received</h3><p data-i18n="p.ok.d">KADA checks that your file is complete, then the TUE Committee reviews it. The decision reaches you in writing through the Results Department — in your account and the KADA app.</p><p data-i18n="p.ok.saved">Your application is saved in your account and you will be notified at every stage. Reference for correspondence with KADA:</p><div class="ref">TUE-2026-0157</div><div class="actions"><a class="btn btn-primary" href="account.html#reqs"><span data-i18n="p.ok.acc">View the application in my account</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="link-arrow" href="services.html"><span data-i18n="p.ok.srv">Back to e-services</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div>
+        </div>
+        <aside class="side">
+          <div class="side-box"><h4 data-i18n="p.sb.t">How your application is handled</h4>
+            <div class="timeline" style="margin-top:6px">
+              <div class="tl" style="padding-bottom:18px"><i>1</i><div><b data-i18n="p.sb.1">Completeness check</b><small data-i18n="p.sb.1d">KADA checks the file before referral · incomplete files are returned</small></div></div>
+              <div class="tl" style="padding-bottom:18px"><i>2</i><div><b data-i18n="p.sb.2">Committee review</b><small data-i18n="p.sb.2d">At least 3 physicians · may request more tests</small></div></div>
+              <div class="tl" style="padding-bottom:18px"><i>3</i><div><b data-i18n="p.sb.3">Written decision</b><small data-i18n="p.sb.3d">Usually within 21 days of a complete file · a refusal states the reasons and how to appeal</small></div></div>
+              <div class="tl" style="padding-bottom:0"><i>4</i><div><b data-i18n="p.sb.4">Reported to WADA</b><small data-i18n="p.sb.4d">Recorded in ADAMS within 21 days, as WADA rules require</small></div></div>
+            </div>
+            <a class="link-arrow" href="#track"><span data-i18n="p.sb.trk">After you apply, track your application by its reference</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+          <div class="side-box navy"><h4 data-i18n="p.sb.p">Your medical data</h4><p data-i18n="p.sb.pd">Only the committee physicians and authorised medical staff can open your file. It is encrypted, every access is logged, and other departments cannot see it.</p><a href="#" style="color:#fff;border:0"><span data-i18n="ft.privacy">Privacy policy</span><svg viewBox="0 0 24 24" class="ico" style="width:16px"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+          <div class="side-box"><h4 data-i18n="p.sb.f">Prefer the paper form?</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.fd">Download the form, based on WADA's template, and email it with your medical file.</p><a class="btn btn-ghost" href="#"><span data-i18n="p.c3">Download the form (PDF)</span></a><a href="mailto:tue@kada.gov.kw" class="mt-1" style="display:block">tue@kada.gov.kw</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="track">
+      <div class="wrap two-col">
+        <div class="reveal">
+          <p class="kicker" data-i18n="p.tr.k">Track my application</p>
+          <h2 class="display" data-i18n="p.tr.t">Follow every step of your application.</h2>
+          <p class="lede mt-1" data-i18n="p.tr.d">Enter your reference and verify with Mobile ID. The same status appears in the KADA app, where the Results Department sends you the decision.</p>
+          <form class="toolbar mt-2" onsubmit="return false"><div class="field grow"><input type="text" class="num" placeholder="TUE-XXXX-XXXX" aria-label="Reference" style="font-family:'Manrope',monospace;font-weight:700;letter-spacing:.08em"></div><button class="btn btn-primary" type="button" data-lookup="#trk"><span data-i18n="p.tr.btn">Verify &amp; check</span></button></form>
+        </div>
+        <div class="result-card ok" id="trk"><i></i><div>
+          <h3><span class="num">TUE-2026-0142</span><span class="badge warn" data-i18n="p.tr.s">Information requested</span></h3>
+          <div class="timeline mt-2">
+            <div class="tl done" style="padding-bottom:18px"><i>✓</i><div><b data-i18n="p.tr.1">Application received</b><small class="num">14 · 10 · 2026</small></div></div>
+            <div class="tl done" style="padding-bottom:18px"><i>✓</i><div><b data-i18n="p.tr.2">File complete — sent to the committee</b><small class="num">16 · 10 · 2026</small></div></div>
+            <div class="tl now" style="padding-bottom:18px"><i>3</i><div><b data-i18n="p.tr.3">Committee request</b><small class="num">20 · 10 · 2026</small><p data-i18n="p.tr.3d">Please upload your latest HbA1c result and your endocrinologist's report.</p><button class="btn btn-primary mt-1" type="button"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><span data-i18n="p.tr.up">Upload document</span></button></div></div>
+            <div class="tl todo" style="padding-bottom:0"><i>4</i><div><b data-i18n="p.tr.4">Decision</b><small data-i18n="p.tr.4d">Usually within 21 days of a complete file</small></div></div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="kicker" data-i18n="p.faq.k">Frequently asked</p><h2 class="display" data-i18n="p.faq.t">About TUEs</h2></div>
+        <div class="acc reveal">
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.1">Who applies to KADA, and who applies to an international federation?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.1a">National-level athletes and other athletes under KADA's jurisdiction apply to KADA. International-level athletes apply to their international federation. If you already hold a KADA TUE and become an international-level athlete, your federation must recognise it.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.2">I needed emergency treatment. What now?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.2a">Get the treatment you need first. Then apply for a retroactive TUE as soon as possible, with the emergency medical records. The same four conditions still apply.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.3">Is a KADA TUE valid abroad?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.3a">It is valid at national level, including if another country's anti-doping agency tests you. For international events it must be recognised by your international federation or the event organiser — KADA will guide you through that.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.4">What if my application is refused?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.4a">You receive a written decision that explains the reasons. You can appeal to the national appeal body set out in KADA's anti-doping rules.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.5">Who pays for the medical tests?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.5a">Under WADA rules, the costs of preparing the application — including any additional tests the committee requests — are the athlete's responsibility.</p></div></div></div>
+          <div class="acc-item"><button type="button"><span data-i18n="p.faq.6">My dose has changed. Do I need a new TUE?</span><i></i></button><div class="acc-body"><div><p data-i18n="p.faq.6a">Contact KADA before changing the dose, frequency, route or duration; KADA will tell you whether a new application is needed. To continue treatment after your TUE expires, apply well before the expiry date.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "الإعفاء للاستعمال العلاجي — كادا",
+    "p.title": "تحتاج إلى دواء محظور للعلاج؟",
+    "p.lede": "يتيح لك الإعفاء للاستعمال العلاجي استعمال مادة أو طريقة محظورة لعلاج حالة طبية حقيقية. قدّم طلبك قبل الاستعمال — إلكترونياً عبر «هويتي» أو من تطبيق كادا. وتبتّ لجنة الإعفاء للاستعمال العلاجي في الطلب عادةً خلال 21 يوماً من استلامه مكتملاً.",
+    "p.c1": "قدّم طلبك إلكترونياً", "p.c2": "تابع طلبي", "p.c3": "نزّل النموذج (PDF)",
+    "p.cr.k": "كيف يُتخذ القرار", "p.cr.t": "لا يُمنح الإعفاء إلا إذا تحققت الشروط الأربعة جميعها.",
+    "p.cr.1t": "حالة طبية مشخّصة", "p.cr.1d": "حالتك الطبية مشخّصة ومدعومة بأدلة سريرية، كالفحوصات ونتائج المختبر أو الأشعة.",
+    "p.cr.2t": "علاج ضروري", "p.cr.2d": "المادة أو الطريقة المحظورة علاج مناسب لحالتك، ولا يوجد بديل مسموح معقول.",
+    "p.cr.3t": "لا تحسين إضافي للأداء", "p.cr.3d": "يعيدك العلاج إلى حالتك الصحية الطبيعية، ولا يمنحك أي أفضلية تتجاوزها.",
+    "p.cr.4t": "ليست ناتجة عن تعاطٍ سابق", "p.cr.4d": "حاجتك إلى العلاج ليست نتيجة استعمال سابق لمادة أو طريقة محظورة دون إعفاء.",
+    "p.cr.who": "<b>من يقرّر؟</b> لجنة الإعفاء للاستعمال العلاجي في الوكالة: ثلاثة أطباء على الأقل من ذوي الخبرة في الطب الرياضي، يرأسهم طبيب، ويوقّع كلٌّ منهم إقراراً بعدم تعارض المصالح والحفاظ على السرية. فلا يقرّر الرياضي ولا طبيبه المعالج. المصدر: المعيار الدولي للإعفاءات للاستعمال العلاجي الصادر عن وادا 2027، المادتان 4.2 و5.3.",
+    "p.f.t": "طلب الإعفاء الإلكتروني", "p.f.h": "أربع خطوات، نحو 10 دقائق. جهّز بيانات طبيبك وملفك الطبي.",
+    "p.f.s1": "الرياضي", "p.f.s2": "العلاج", "p.f.s3": "الطبيب والملف", "p.f.s4": "المراجعة والإرسال",
+    "p.f.signed": "تم التحقق من الهوية عبر «هويتي»", "p.f.signedd": "سيصلك القرار في حسابك وفي تطبيق كادا.",
+    "p.f.id": "التحقق من الهوية <span class=\"req\">*</span>", "p.f.mid": "التحقق عبر «هويتي»", "p.f.gate": "تحقّق من هويتك أولاً للمتابعة", "p.f.idn": "تتطلب الطلبات الطبية التحقق من الهوية. وتُقبل النماذج الورقية أيضاً في مقر الوكالة.",
+    "p.f.ty": "نوع الطلب <span class=\"req\">*</span>", "p.f.ty1": "قبل الاستعمال", "p.f.ty1d": "الحالة المعتادة — قدّم الطلب ثم انتظر القرار", "p.f.ty2": "بأثر رجعي", "p.f.ty2d": "بعد علاج طارئ أو استثناء آخر مسموح", "p.f.ty3": "تجديد", "p.f.ty3d": "إعفاؤك الحالي على وشك الانتهاء",
+    "p.f.sp": "الرياضة <span class=\"req\">*</span>", "p.f.sel": "اختر…", "p.f.sp1": "ألعاب القوى", "p.f.sp2": "كرة القدم", "p.f.sp3": "السباحة", "p.f.sp4": "رفع الأثقال", "p.f.sp5": "أخرى",
+    "p.f.lv": "مستوى المنافسة <span class=\"req\">*</span>", "p.f.lv1": "رياضي على المستوى الوطني", "p.f.lv2": "رياضي آخر يخضع لاختصاص الوكالة", "p.f.lv3": "رياضي على المستوى الدولي",
+    "p.f.fed": "الاتحاد / النادي", "p.f.fedph": "مثلاً: الاتحاد الكويتي لألعاب القوى", "p.f.ev": "موعد المنافسة القادمة",
+    "p.f.intl": "يتقدم الرياضيون على المستوى الدولي بطلباتهم إلى اتحادهم الدولي، لا إلى الوكالة. راجع <a href=\"publications.html\">تعريف الرياضي على المستوى الوطني</a>.",
+    "p.f.dx": "التشخيص <span class=\"req\">*</span>", "p.f.dxph": "مثلاً: السكري من النوع الأول",
+    "p.f.sub": "المادة أو الطريقة المحظورة <span class=\"req\">*</span>", "p.f.subph": "الاسم العلمي، مثلاً: الإنسولين",
+    "p.f.dose": "الجرعة", "p.f.route": "طريقة الإعطاء", "p.f.rt1": "عن طريق الفم", "p.f.rt2": "استنشاق", "p.f.rt3": "حقن", "p.f.rt4": "أخرى",
+    "p.f.freq": "عدد المرات", "p.f.dur": "المدة المتوقعة", "p.f.durph": "مثلاً: 12 شهراً",
+    "p.f.alt": "البدائل المسموحة التي نُظر فيها <span class=\"req\">*</span>", "p.f.altph": "ما العلاجات المسموحة التي جُرّبت أو نُظر فيها، ولماذا لا تناسب حالتك…",
+    "p.f.chk": "لست متأكداً إن كان دواؤك محظوراً؟ <a href=\"prohibited.html\">افحصه أولاً في فاحص الأدوية</a> — فالأدوية المسموحة لا تحتاج إلى إعفاء.",
+    "p.f.dr": "الطبيب المعالج <span class=\"req\">*</span>", "p.f.spec": "التخصص", "p.f.lic": "رقم الترخيص الطبي", "p.f.dre": "البريد الإلكتروني للطبيب <span class=\"req\">*</span>",
+    "p.f.up": "ارفع ملفك الطبي", "p.f.upd": "تقرير التشخيص، نتائج الفحوصات، الأشعة · PDF أو JPG · مشفّر",
+    "p.f.sig": "يتلقى طبيبك رابطاً آمناً لمراجعة الأقسام الطبية والتوقيع إلكترونياً. وتُعاد الطلبات غير المرفقة بملف طبي مكتمل لاستكمالها.",
+    "p.f.d1": "أؤكد أن المعلومات صحيحة ومكتملة، وسأحتفظ بنسخة من طلبي وملفي الطبي.",
+    "p.f.d2": "أوافق على مشاركة معلوماتي الطبية مع لجنة الإعفاء للاستعمال العلاجي في الوكالة فقط، ومع وادا واتحادي الدولي حيثما تقتضي القواعد ذلك.",
+    "p.f.d3": "أدرك أنه لا يجوز لي استعمال المادة قبل منح الإعفاء، ما لم يكن طلبي بأثر رجعي.",
+    "p.f.sla": "القرار عادةً خلال 21 يوماً من اكتمال الطلب", "p.f.submit": "إرسال الطلب",
+    "p.ok.t": "تم استلام طلبك", "p.ok.d": "تتحقق الوكالة من اكتمال ملفك، ثم تراجعه لجنة الإعفاء للاستعمال العلاجي. ويصلك القرار كتابياً عبر إدارة النتائج — في حسابك وفي تطبيق كادا.", "p.ok.saved": "حُفظ الطلب في حسابك وستصلك إشعارات كل مرحلة. الرقم المرجعي للمراسلات مع الوكالة:", "p.ok.acc": "عرض الطلب في حسابي", "p.ok.srv": "العودة إلى الخدمات الإلكترونية",
+    "p.sb.t": "كيف يُعالَج طلبك", "p.sb.1": "التحقق من اكتمال الملف", "p.sb.1d": "تتحقق الوكالة من اكتمال الملف قبل إحالته · تُعاد الملفات غير المكتملة", "p.sb.2": "مراجعة اللجنة", "p.sb.2d": "3 أطباء على الأقل · قد تطلب فحوصات إضافية", "p.sb.3": "قرار مكتوب", "p.sb.3d": "عادةً خلال 21 يوماً من اكتمال الملف · ويتضمن الرفض أسبابه وطريقة الطعن", "p.sb.4": "الإبلاغ إلى وادا", "p.sb.4d": "يُسجَّل في نظام ADAMS خلال 21 يوماً وفق قواعد وادا", "p.sb.trk": "بعد التقديم، تابع حالة طلبك بالرقم المرجعي",
+    "p.sb.p": "بياناتك الطبية", "p.sb.pd": "لا يطّلع على ملفك إلا أطباء اللجنة والموظفون الطبيون المخوّلون. وهو مشفّر، ويُسجَّل كل وصول إليه، ولا تراه الإدارات الأخرى.",
+    "p.sb.f": "تفضّل النموذج الورقي؟", "p.sb.fd": "نزّل النموذج المعدّ وفق قالب وادا، وأرسله مع ملفك الطبي بالبريد الإلكتروني.",
+    "p.tr.k": "تابع طلبي", "p.tr.t": "تابع كل خطوة في طلبك.", "p.tr.d": "أدخل الرقم المرجعي وتحقّق عبر «هويتي». وتظهر الحالة نفسها في تطبيق كادا، حيث ترسل إليك إدارة النتائج القرار.", "p.tr.btn": "تحقّق واعرض الحالة",
+    "p.tr.s": "مطلوب معلومات إضافية", "p.tr.1": "استُلم الطلب", "p.tr.2": "الملف مكتمل — أُحيل إلى اللجنة", "p.tr.3": "طلب من اللجنة", "p.tr.3d": "يرجى رفع أحدث نتيجة لفحص السكر التراكمي (HbA1c) وتقرير طبيب الغدد الصماء.", "p.tr.up": "ارفع المستند", "p.tr.4": "القرار", "p.tr.4d": "عادةً خلال 21 يوماً من اكتمال الملف",
+    "p.faq.k": "أسئلة شائعة", "p.faq.t": "عن الإعفاء للاستعمال العلاجي",
+    "p.faq.1": "من يتقدم إلى الوكالة، ومن يتقدم إلى الاتحاد الدولي؟", "p.faq.1a": "يتقدم إلى الوكالة الرياضيون على المستوى الوطني وغيرهم من الرياضيين الخاضعين لاختصاصها، أما الرياضيون على المستوى الدولي فيتقدمون إلى اتحادهم الدولي. وإن كان لديك إعفاء من الوكالة ثم أصبحت رياضياً على المستوى الدولي، فيجب أن يعترف به اتحادك الدولي.",
+    "p.faq.2": "احتجت إلى علاج طارئ. ماذا أفعل؟", "p.faq.2a": "احصل على العلاج الذي تحتاجه أولاً، ثم تقدّم بطلب إعفاء بأثر رجعي في أقرب وقت ممكن، مرفقاً بالسجلات الطبية للحالة الطارئة. وتنطبق الشروط الأربعة نفسها.",
+    "p.faq.3": "هل الإعفاء الصادر عن الوكالة صالح خارج الكويت؟", "p.faq.3a": "هو صالح على المستوى الوطني، حتى لو أجرت لك وكالة مكافحة منشطات في بلد آخر فحصاً. أما في المنافسات الدولية فيجب أن يعترف به اتحادك الدولي أو الجهة المنظمة للحدث، وسترشدك الوكالة في ذلك.",
+    "p.faq.4": "ماذا لو رُفض طلبي؟", "p.faq.4a": "يصلك قرار مكتوب يوضح أسباب الرفض. ويحق لك الاستئناف أمام جهة الاستئناف الوطنية المحددة في قواعد الوكالة لمكافحة المنشطات.",
+    "p.faq.5": "من يتحمّل تكلفة الفحوصات الطبية؟", "p.faq.5a": "وفق قواعد وادا، يتحمّل الرياضي تكاليف إعداد الطلب، بما فيها أي فحوصات إضافية تطلبها اللجنة.",
+    "p.faq.6": "تغيّرت جرعتي. هل أحتاج إلى إعفاء جديد؟", "p.faq.6a": "تواصل مع الوكالة قبل تغيير الجرعة أو عدد المرات أو طريقة الإعطاء أو المدة، وستخبرك الوكالة إن كنت تحتاج إلى طلب جديد. ولمواصلة العلاج بعد انتهاء إعفائك، قدّم طلباً جديداً قبل تاريخ الانتهاء بوقت كافٍ."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

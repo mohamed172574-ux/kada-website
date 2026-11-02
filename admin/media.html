@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Media library — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="media">
+<div data-page>
+
+  <div class="page-head">
+    <div><h1 data-i18n="p.h">Media library</h1><p data-i18n="p.d">One library for the images, video and brand files used across the website and the app, with alt text in Arabic and English. Documents and publications are managed in the Research & publications module.</p></div>
+    <div class="acts"><button class="btn btn-ghost sm" type="button" data-drawer="d-upload"><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="p.upload">Upload</span></button></div>
+  </div>
+
+  <nav class="tabs">
+    <a href="#library"><span data-i18n="p.t1">Media library</span><span class="cnt">1,284</span></a>
+    <a href="#usage" data-perm="content" data-i18n="p.t3">Usage & storage</a>
+  </nav>
+
+  <!-- ===================== LIBRARY ===================== -->
+  <section data-view="library">
+    <div class="grid g-side">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.fold">Folders</h2></div>
+          <div class="folders">
+            <a href="#library" class="is-on"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.f1">All media</span><span class="cnt num">1,284</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.f2">News & press</span><span class="cnt num">412</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.f3">Events & education</span><span class="cnt num">368</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.f4">Leadership & HQ</span><span class="cnt num">96</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-image"/></svg><span data-i18n="p.f5">Campaign assets</span><span class="cnt num">220</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-file"/></svg><span data-i18n="p.f6">Video</span><span class="cnt num">48</span></a>
+            <a href="#library"><svg class="ico"><use href="#i-file"/></svg><span data-i18n="p.f7">Logos & brand</span><span class="cnt num">140</span></a>
+          </div>
+        </div>
+        <div class="upload" data-drawer="d-upload" style="cursor:pointer"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.drop">Drop files to upload</b><span data-i18n="p.dropd">Auto-resized · WebP generated · virus-scanned · alt text required in AR + EN</span></div>
+      </div>
+      <div class="card flush">
+        <div class="card-head">
+          <div class="filters"><button class="chip is-on" type="button" data-i18n="p.all">All</button><button class="chip" type="button" data-toast="Filter: images" data-toast-ar="تصفية: صور" data-i18n="p.img">Images</button><button class="chip" type="button" data-toast="Filter: video" data-toast-ar="تصفية: فيديو" data-i18n="p.vid">Video</button><button class="chip" type="button" data-toast="Filter: missing alt text (3)" data-toast-ar="تصفية: بلا نص بديل (3)" data-i18n="p.noalt">Missing alt text · 3</button></div>
+          <label class="tb-search" style="margin:0;height:36px"><svg class="ico"><use href="#i-search"/></svg><input type="search" placeholder="Search by name, tag or caption" data-i18n-ph="p.srch"></label>
+        </div>
+        <div class="pad">
+          <div class="media-grid">
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/news-1.jpg" alt=""><span class="tag st ok plain" data-i18n="p.inuse">In use · 3</span><figcaption><b>wada-audit-2026.jpg</b>2400×1600 · 1.2 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/news-2.jpg" alt=""><figcaption><b>conference-hall.jpg</b>2400×1600 · 1.4 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/news-3.jpg" alt=""><span class="tag st red plain" data-i18n="p.alt">No alt</span><figcaption><b>education-session-14.jpg</b>2000×1333 · 0.9 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/events.jpg" alt=""><figcaption><b>clean-sport-day.jpg</b>2400×1600 · 1.1 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/hq.jpg" alt=""><span class="tag st ok plain" data-i18n="p.inuse2">In use · 7</span><figcaption><b>kada-hq.jpg</b>2400×1600 · 1.3 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/board.jpg" alt=""><figcaption><b>board-2026.jpg</b>2400×1600 · 1.5 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/library.jpg" alt=""><figcaption><b>publications-shelf.jpg</b>2400×1600 · 1.1 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/ops.jpg" alt=""><figcaption><b>dco-field-kit.jpg</b>2000×1333 · 0.8 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/svc-training.jpg" alt=""><figcaption><b>education-l2-trainer.jpg</b>2400×1600 · 1.0 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><img src="../assets/img/about.jpg" alt=""><span class="tag st red plain" data-i18n="p.alt">No alt</span><figcaption><b>about-hero.jpg</b>2400×1600 · 1.2 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><div class="ph">MP4 · 02:14</div><figcaption><b>education-promo-2027.mp4</b>1080p · 48 MB</figcaption></figure>
+            <figure data-drawer="d-asset" style="cursor:pointer"><div class="ph">SVG</div><figcaption><b>kada-logo-primary.svg</b>vector · 12 KB</figcaption></figure>
+          </div>
+        </div>
+        <div class="foot-bar"><span data-i18n="p.foot">Showing 12 of 1,284 · sorted by upload date · CDN-cached · originals kept for 7 years</span><div class="pager"><button class="is-on">1</button><button>2</button><button>3</button><button>…</button><button>107</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== USAGE ===================== -->
+  <section data-view="usage">
+    <div class="noaccess" data-perm="media" data-no-perm="content"><svg class="ico"><use href="#i-lock"/></svg><h2 data-i18n="p.na">This section belongs to Media & Communications</h2><p class="muted" data-i18n="p.nad">Storage and usage reports are managed by the content team. You can use the media library to upload images and video for your courses and events.</p><a class="btn btn-primary sm" href="#library" data-i18n="p.na.go">Open the media library</a></div>
+    <div data-perm="content">
+    <div class="grid g3">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.u1">Storage</h2></div><div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="38,21,9,4" data-labels="Images,Video,Documents,Other" data-labels-ar="صور,فيديو,وثائق,أخرى" data-colors="green,navy,lime,grey" data-center="72 GB" data-center-label="of 500 GB" data-center-label-ar="من 500 GB"></svg><div class="legend"><span><i style="background:var(--green)"></i><span data-i18n="p.img">Images</span><b>38 GB</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.vid">Video</span><b>21 GB</b></span><span><i style="background:var(--lime)"></i><span data-i18n="p.docs">Documents</span><b>9 GB</b></span><span><i style="background:#cfd8d3"></i><span data-i18n="p.other">Other</span><b>4 GB</b></span></div></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.u2">Delivery · CDN</h2></div><div class="health"><div><span data-i18n="p.u2a">Cache hit ratio</span><b class="num">96%</b></div><div><span data-i18n="p.u2b">Bandwidth · 30 days</span><b class="num">1.9 TB</b></div><div><span data-i18n="p.u2c">Median image weight</span><b class="num">84 KB (WebP)</b></div><div><span data-i18n="p.u2d">Largest asset served</span><b class="num">48 MB (video)</b></div></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.u3">Quality checks</h2></div><div class="health"><div><span data-i18n="p.u3a">Missing alt text</span><b class="st red plain">3</b></div><div><span data-i18n="p.u3b">Unused assets (90 d)</span><b class="num">212</b></div><div><span data-i18n="p.u3c">Duplicates detected</span><b class="num">18</b></div><div><span data-i18n="p.u3d">Expired licences</span><b class="num">0</b></div></div><button class="btn btn-ghost xs mt-2" type="button" data-toast="Cleanup proposal created (212 assets) — design preview" data-toast-ar="أُعدّ مقترح التنظيف (212 عنصراً) — معاينة تصميم"><span data-i18n="p.clean">Propose cleanup</span></button></div>
+    </div>
+    </div>
+  </section>
+
+  <!-- drawers -->
+  <div class="drawer" id="d-asset"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3>wada-audit-2026.jpg</h3>
+    <img src="../assets/img/news-1.jpg" alt="" style="border-radius:12px">
+    <div class="form g2">
+      <div class="field"><label data-i18n="p.a.altar">Alt text (AR)</label><input dir="rtl" value="وفد وادا في مقر الوكالة الكويتية لمكافحة المنشطات"></div>
+      <div class="field"><label data-i18n="p.a.alten">Alt text (EN)</label><input value="WADA delegation at KADA headquarters"></div>
+      <div class="field"><label data-i18n="p.a.cred">Credit / licence</label><input value="KADA Media · internal"></div>
+      <div class="field"><label data-i18n="p.a.tags">Tags</label><input value="wada, audit, 2026, compliance"></div>
+    </div>
+    <dl class="kv"><dt data-i18n="p.a.used">Used in</dt><dd data-i18n="p.a.usedv">News: WADA 2026 compliance audit · Home slider · App feed</dd><dt data-i18n="p.a.up">Uploaded</dt><dd>Dana Al-Kandari · <span class="num">20 · 10 · 2026</span></dd><dt data-i18n="p.a.size">Renditions</dt><dd>2400 · 1600 · 800 · 400 · WebP + JPG</dd></dl>
+    <div class="row" data-perm="content"><button class="btn btn-primary sm" type="button" data-close data-toast="Asset saved" data-toast-ar="حُفظ العنصر" data-i18n="p.save">Save</button><button class="btn btn-ghost sm" type="button" data-close data-toast="Replace file — design preview" data-toast-ar="استبدال الملف — معاينة تصميم" data-i18n="p.a.replace">Replace file</button></div>
+    <p class="notice" data-perm="media" data-no-perm="content"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.a.ro">View only — this file was uploaded by Media & Communications. You can edit the files you upload to the Events & education folder.</span></p>
+  </div></div>
+  <div class="drawer" id="d-upload"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.up.h">Upload media</h3>
+    <div class="upload"><svg class="ico"><use href="#i-upload"/></svg><b data-i18n="p.drop">Drop files to upload</b><span data-i18n="p.up.types">JPG, PNG, SVG, WebP, MP4, PDF · max 200 MB</span></div>
+    <div class="field"><label data-i18n="p.up.folder">Folder</label><select data-perm="content"><option data-i18n="p.f2">News & press</option><option data-i18n="p.f3">Events & education</option><option data-i18n="p.f5">Campaign assets</option></select><select data-perm="media" data-no-perm="content" disabled><option data-i18n="p.f3">Events & education</option></select><small class="muted" data-perm="media" data-no-perm="content" data-i18n="p.up.own">Your uploads go to the Events & education folder, for use in your courses and events.</small></div>
+    <div class="switches"><div><div><b data-i18n="p.up.s1">Generate WebP & responsive sizes</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.up.s2">Strip location metadata</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.up.s3">Require alt text before use</b></div><span class="switch on"></span></div></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Upload queued — design preview" data-toast-ar="أُضيفت الملفات إلى قائمة الرفع — معاينة تصميم" data-i18n="p.upload">Upload</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "مكتبة الوسائط — إدارة كادا",
+  "p.h": "مكتبة الوسائط", "p.d": "مكتبة واحدة للصور والفيديو وملفات الهوية المستخدمة في الموقع والتطبيق، مع نص بديل بالعربية والإنجليزية. أما الوثائق والمنشورات فتُدار من وحدة «الأبحاث والمنشورات».",
+  "p.upload": "رفع", "p.t1": "مكتبة الوسائط", "p.t3": "الاستخدام والتخزين",
+  "p.fold": "المجلدات", "p.f1": "كل الوسائط", "p.f2": "الأخبار والصحافة", "p.f3": "الفعاليات والتثقيف", "p.f4": "القيادة والمقر", "p.f5": "أصول الحملات", "p.f6": "فيديو", "p.f7": "الشعارات والهوية",
+  "p.drop": "اسحب الملفات وأفلتها للرفع", "p.dropd": "تغيير الحجم تلقائياً · توليد WebP · فحص الفيروسات · النص البديل إلزامي بالعربية والإنجليزية",
+  "p.all": "الكل", "p.img": "صور", "p.vid": "فيديو", "p.noalt": "بلا نص بديل · 3", "p.srch": "ابحث بالاسم أو الوسم أو التعليق", "p.inuse": "مستخدم · 3", "p.inuse2": "مستخدم · 7", "p.alt": "بلا نص بديل",
+  "p.foot": "عرض 12 من 1,284 · مرتبة حسب تاريخ الرفع · مخزّنة مؤقتاً عبر CDN · تُحفظ الملفات الأصلية 7 سنوات",
+          "p.save": "حفظ",       "p.u1": "التخزين", "p.docs": "وثائق", "p.other": "أخرى", "p.u2": "التوزيع · CDN", "p.u2a": "نسبة الاستجابة من الذاكرة المؤقتة", "p.u2b": "النطاق الترددي · 30 يوماً", "p.u2c": "الحجم الوسيط للصورة", "p.u2d": "أكبر ملف مُقدَّم",
+  "p.u3": "فحوصات الجودة", "p.u3a": "بلا نص بديل", "p.u3b": "عناصر غير مستخدمة (90 يوماً)", "p.u3c": "ملفات مكررة مرصودة", "p.u3d": "تراخيص منتهية", "p.clean": "اقتراح تنظيف",
+  "p.a.altar": "النص البديل (عربي)", "p.a.alten": "النص البديل (إنجليزي)", "p.a.cred": "المصدر / الترخيص", "p.a.tags": "الوسوم", "p.a.used": "مستخدم في", "p.a.usedv": "خبر: تدقيق وادا للامتثال 2026 · شريط عرض الرئيسية · موجز التطبيق", "p.a.up": "رفعه", "p.a.size": "الأحجام المولّدة", "p.a.replace": "استبدال الملف",
+  "p.up.h": "رفع وسائط", "p.up.types": "JPG، PNG، SVG، WebP، MP4، PDF · بحد أقصى 200 ميغابايت", "p.up.folder": "المجلد", "p.up.s1": "توليد WebP والأحجام المتجاوبة", "p.up.s2": "إزالة بيانات الموقع الجغرافي", "p.up.s3": "اشتراط النص البديل قبل الاستخدام",
+    "p.up.own": "تُحفظ ملفاتك في مجلد «الفعاليات والتثقيف» لاستخدامها في دوراتك وفعالياتك.", "p.a.ro": "للعرض فقط — رفعت هذا الملف إدارة الإعلام والاتصال. يمكنك تعديل الملفات التي ترفعها إلى مجلد «الفعاليات والتثقيف».", "p.na": "هذا القسم من اختصاص إدارة الإعلام والاتصال", "p.nad": "يدير فريق المحتوى التخزين وتقارير الاستخدام. ويمكنك استخدام مكتبة الوسائط لرفع الصور والفيديو الخاصة بدوراتك وفعالياتك.", "p.na.go": "فتح مكتبة الوسائط"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

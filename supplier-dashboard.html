@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Supplier dashboard — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body data-require="supplier">
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain short acct-hero">
+      <div class="wrap">
+        <span class="signin-ava xl" data-signed-ava>N</span>
+        <div>
+          <p class="kicker" style="color:var(--lime)" data-i18n="p.k">Supplier dashboard · Tenders &amp; Procurement</p>
+          <h1 class="display" data-signed-text="org">Al-Saqr Medical Supplies W.L.L.</h1>
+          <div class="acct-meta">
+            <span class="badge ok" data-i18n="p.st">Approved supplier · valid until 14 · 03 · 2027</span>
+            <span><span data-i18n="p.sig">Signatory:</span> <span data-signed-text="name">Nasser Al-Saqr</span></span>
+            <span class="num">SUP-2024-0117</span>
+          </div>
+        </div>
+        <div class="acct-acts">
+          <a class="btn btn-outline" href="tenders.html"><span data-i18n="p.a1">Open tenders</span></a>
+          <a class="btn btn-primary" href="#docs"><span data-i18n="p.a2">My documents</span></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="subnav"><div class="wrap">
+      <a href="#company" class="is-on" data-i18n="p.t1">Company</a>
+      <a href="#docs" data-i18n="p.t2">Purchased documents</a>
+      <a href="#clar" data-i18n="p.t3">Clarifications &amp; addenda</a>
+      <a href="#bids" data-i18n="p.t4">My bids</a>
+      <a href="#pay" data-i18n="p.t5">Payments</a>
+    </div></div>
+
+    <section class="section tight soft">
+      <div class="wrap">
+        <div class="tiles reveal">
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><path d="M4 4h16v16H4z"/><path d="M8 12h8M8 8h8M8 16h5"/></svg><small data-i18n="p.k1">Documents purchased</small><b class="num">3</b><em data-i18n="p.k1d">1 tender still open</em></div>
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg><small data-i18n="p.k2">Bids submitted</small><b class="num">2</b><em data-i18n="p.k2d">1 under evaluation</em></div>
+          <div class="tile hot"><svg viewBox="0 0 24 24" class="ico"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4"/></svg><small data-i18n="p.k3">New addenda</small><b class="num">1</b><em class="danger" data-i18n="p.k3d">Acknowledge before bidding</em></div>
+          <div class="tile"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small data-i18n="p.k4">Next closing</small><b class="num">30 · 11</b><em data-i18n="p.k4d">KADA/T/2026/014 · 13:00</em></div>
+        </div>
+
+        <div class="with-side mt-2">
+          <div class="stack">
+            <div class="block reveal" id="company">
+              <div class="block-head"><h2 data-i18n="p.c.t">Company profile<small>Registration data reviewed by Procurement — renewal reminder 60 days before expiry</small></h2><button class="btn btn-ghost" type="button"><span data-i18n="p.c.edit">Update documents</span></button></div>
+              <div class="kv">
+                <div data-i18n="p.c.1">Company</div><div data-signed-text="org">Al-Saqr Medical Supplies W.L.L.</div>
+                <div data-i18n="p.c.2">Commercial licence</div><div><span class="num">118204</span> · <span data-i18n="p.c.2v">valid until <span class="num">14 · 03 · 2027</span></span></div>
+                <div data-i18n="p.c.3">Categories</div><div data-i18n="p.c.3v">Laboratory &amp; testing supplies · Facilities &amp; logistics</div>
+                <div data-i18n="p.c.4">Authorised signatory</div><div><span data-signed-text="name">Nasser Al-Saqr</span> · <span class="num" data-signed-text="civil">•••• 8831</span></div>
+                <div data-i18n="c.email">Email</div><div class="num" data-signed-text="email">tenders@alsaqr-med.com</div>
+                <div data-i18n="c.phone">Phone</div><div class="num" data-signed-text="phone">+965 2242 8831</div>
+                <div data-i18n="p.c.5">Documents on file</div><div class="chips" style="gap:6px"><span class="badge ok" data-i18n="p.c.d1">Commercial licence</span><span class="badge ok" data-i18n="p.c.d2">Chamber of Commerce certificate</span><span class="badge ok" data-i18n="p.c.d3">Signatory authorisation</span><span class="badge ok" data-i18n="p.c.d4">IBAN certificate</span></div>
+                <div data-i18n="c.status">Status</div><div><span class="badge ok" data-i18n="p.c.stv">Approved · 11 · 03 · 2024</span></div>
+              </div>
+            </div>
+
+            <div class="block reveal" id="docs">
+              <div class="block-head"><h2 data-i18n="p.d.t">Purchased tender documents<small>Paid via K-Net — files stay available for re-download, receipts are kept with every payment</small></h2></div>
+              <div class="table-wrap"><table class="table">
+                <thead><tr><th data-i18n="p.d.h1">Tender</th><th data-i18n="p.d.h2">Purchased</th><th data-i18n="p.d.h3">Fee</th><th data-i18n="p.d.h4">Closing</th><th data-i18n="c.status">Status</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><b class="num">KADA/T/2026/014</b><span class="sub" data-i18n="p.d.1">Supply of doping-control sample collection kits (2027–2029)</span></td><td class="num">19 · 10 · 2026</td><td class="num">150.000 KWD</td><td class="num">30 · 11 · 2026</td><td><span class="badge ok" data-i18n="c.open">Open</span></td><td><a class="row-link" href="tender.html"><span data-i18n="p.d.dl">Files &amp; receipt</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b class="num">KADA/Q/2026/033</b><span class="sub" data-i18n="p.d.2">Cold-chain transport of samples to the accredited laboratory</span></td><td class="num">21 · 09 · 2026</td><td class="num">25.000 KWD</td><td class="num">15 · 10 · 2026</td><td><span class="badge info" data-i18n="p.d.ev">Under evaluation</span></td><td><a class="row-link" href="tenders.html#list"><span data-i18n="p.d.list">Tender list</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                  <tr><td><b class="num">KADA/T/2025/009</b><span class="sub" data-i18n="p.d.3">Laboratory consumables — annual framework</span></td><td class="num">12 · 05 · 2025</td><td class="num">50.000 KWD</td><td class="num">30 · 06 · 2025</td><td><span class="badge plain" data-i18n="p.d.aw">Not awarded</span></td><td><a class="row-link" href="#"><span data-i18n="p.d.rc">Receipt</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="block reveal" id="clar">
+              <div class="block-head"><h2 data-i18n="p.q.t">Clarifications &amp; addenda<small>Questions you asked, answers published to all bidders, and addenda you must acknowledge</small></h2><button class="btn btn-ghost" type="button"><span data-i18n="p.q.ask">Ask a question</span></button></div>
+              <div class="feed">
+                <div><i class="red"></i><div><b data-i18n="p.q.1">Addendum 2 — KADA/T/2026/014: revised delivery schedule &amp; cold-chain SLA</b><small data-i18n="p.q.1d">Published 22 · 10 · 2026 to all purchasers · acknowledgement required before you can upload a bid</small></div><span><button class="badge danger" type="button" data-i18n="p.q.ack">Acknowledge</button></span></div>
+                <div><i></i><div><b data-i18n="p.q.2">Addendum 1 — KADA/T/2026/014: answers to clarifications Q-01 to Q-05</b><small data-i18n="p.q.2d">Published 12 · 10 · 2026 · acknowledged by you on 19 · 10 · 2026</small></div><span><span class="badge ok" data-i18n="p.q.acked">Acknowledged</span></span></div>
+                <div><i class="info"></i><div><b data-i18n="p.q.3">Your question Q-07 — 48-hour delivery to the Failaka Island venue (Annex B)</b><small data-i18n="p.q.3d">Submitted 21 · 10 · 2026 · awaiting answer · answers are anonymised and published to all purchasers in Addendum 3</small></div><span class="num">21 · 10</span></div>
+                <div><i class="info"></i><div><b data-i18n="p.q.4">Your question Q-06 — bid security issued by a GCC bank with a Kuwaiti correspondent</b><small data-i18n="p.q.4d">Submitted 20 · 10 · 2026 · awaiting answer · clarifications close 20 · 11 · 2026</small></div><span class="num">20 · 10</span></div>
+              </div>
+            </div>
+
+            <div class="block reveal" id="bids">
+              <div class="block-head"><h2 data-i18n="p.b.t">My bids<small>Submission receipts are generated automatically; results are sent by email and shown here</small></h2></div>
+              <div class="table-wrap"><table class="table">
+                <thead><tr><th data-i18n="p.d.h1">Tender</th><th data-i18n="p.b.h2">Submitted</th><th data-i18n="p.b.h3">Receipt</th><th data-i18n="p.b.h4">Bid bond</th><th data-i18n="c.status">Status</th></tr></thead>
+                <tbody>
+                  <tr><td><b class="num">KADA/Q/2026/033</b><span class="sub" data-i18n="p.d.2">Cold-chain transport of samples to the accredited laboratory</span></td><td class="num">14 · 10 · 2026<span class="sub">11:42</span></td><td class="num">BID-2026-00273</td><td data-i18n="p.b.na">Not required</td><td><span class="badge info" data-i18n="p.b.s1">Under evaluation</span></td></tr>
+                  <tr><td><b class="num">KADA/T/2025/009</b><span class="sub" data-i18n="p.d.3">Laboratory consumables — annual framework</span></td><td class="num">28 · 06 · 2025<span class="sub">09:10</span></td><td class="num">BID-2025-00118</td><td class="num">2 % · <span data-i18n="p.b.rel">released</span></td><td><span class="badge plain" data-i18n="p.b.s2">Not awarded</span><span class="sub"><a href="#" style="color:var(--green);font-weight:700" data-i18n="p.b.s2d">Debrief available</a></span></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="block reveal" id="pay">
+              <div class="block-head"><h2 data-i18n="p.p.t">Payments<small>K-Net transactions — every payment has a downloadable receipt</small></h2></div>
+              <div class="table-wrap"><table class="table">
+                <thead><tr><th data-i18n="c.date">Date</th><th data-i18n="p.p.h2">Description</th><th data-i18n="p.p.h3">Amount</th><th data-i18n="p.p.h4">K-Net ref.</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td class="num">19 · 10 · 2026</td><td data-i18n="p.p.1">Tender documents — KADA/T/2026/014</td><td class="num">150.000 KWD</td><td class="num">KNT-8841-2210</td><td><a class="row-link" href="#"><span data-i18n="p.d.rc">Receipt</span><svg viewBox="0 0 24 24" class="ico"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg></a></td></tr>
+                  <tr><td class="num">21 · 09 · 2026</td><td data-i18n="p.p.2">Tender documents — KADA/Q/2026/033</td><td class="num">25.000 KWD</td><td class="num">KNT-6F08-2109</td><td><a class="row-link" href="#"><span data-i18n="p.d.rc">Receipt</span><svg viewBox="0 0 24 24" class="ico"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg></a></td></tr>
+                  <tr><td class="num">12 · 05 · 2025</td><td data-i18n="p.p.3">Tender documents — KADA/T/2025/009</td><td class="num">50.000 KWD</td><td class="num">KNT-3C77-1205</td><td><a class="row-link" href="#"><span data-i18n="p.d.rc">Receipt</span><svg viewBox="0 0 24 24" class="ico"><path d="M12 4v12m-5-5 5 5 5-5M5 20h14"/></svg></a></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </div>
+
+          <aside class="side">
+            <div class="side-box navy"><h4 data-i18n="p.sb.m">Matching your categories</h4><p data-i18n="p.sb.md">Two open tenders match your registered categories.</p><a href="tender.html" style="color:#fff"><b class="num">KADA/T/2026/014</b> · <span data-i18n="p.sb.m1">sample kits</span></a><a href="tenders.html#list" style="color:#fff"><b class="num">KADA/T/2026/015</b> · <span data-i18n="p.sb.m2">laboratory analysis services</span></a><a class="btn btn-outline mt-1" href="tenders.html"><span data-i18n="p.a1">Open tenders</span></a></div>
+            <div class="side-box"><h4 data-i18n="p.sb.r">Renewal</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.rd">Your commercial licence expires on 14 · 03 · 2027. Upload the renewed licence from 14 · 01 · 2027 to keep purchasing without interruption.</p><div class="progress"><span class="bar" data-w="88%"></span></div></div>
+            <div class="side-box"><h4 data-i18n="p.sb.c">Procurement contact</h4><a href="contact.html">procurement@kada.gov.kw</a><a href="contact.html" class="num">+965 2222 0000 · ext. 140</a><a href="publications.html" data-i18n="p.sb.c1">Procurement &amp; Supplier Conduct Policy</a></div>
+            <div class="side-box"><h4 data-i18n="p.sb.s">Security</h4><p style="font-size:14px;color:var(--ink-2)" data-i18n="p.sb.sd">Signed in with the signatory's Mobile ID. Only the authorised signatory can submit bids.</p><button class="btn btn-ghost" type="button" data-signin-out><span data-i18n="auth.out">Sign out</span></button></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "لوحة المورد — كادا",
+    "p.k": "لوحة المورد · المناقصات والمشتريات", "p.st": "مورّد معتمد · ساري حتى 14 · 03 · 2027", "p.sig": "المفوض بالتوقيع:", "p.a1": "المناقصات المفتوحة", "p.a2": "وثائقي",
+    "p.t1": "الشركة", "p.t2": "الوثائق المشتراة", "p.t3": "الاستفسارات والملاحق", "p.t4": "عطاءاتي", "p.t5": "المدفوعات",
+    "p.k1": "وثائق مشتراة", "p.k1d": "مناقصة واحدة ما زالت مفتوحة", "p.k2": "عطاءات مقدَّمة", "p.k2d": "عطاء واحد قيد التقييم", "p.k3": "ملاحق جديدة", "p.k3d": "يجب الإقرار بها قبل تقديم العطاء", "p.k4": "أقرب إغلاق", "p.k4d": "KADA/T/2026/014 · 13:00",
+    "p.c.t": "ملف الشركة<small>بيانات التسجيل كما راجعتها إدارة المشتريات — تذكير بالتجديد قبل الانتهاء بـ 60 يوماً</small>", "p.c.edit": "تحديث الوثائق", "p.c.1": "الشركة", "p.c.2": "الرخصة التجارية", "p.c.2v": "سارية حتى <span class=\"num\">14 · 03 · 2027</span>", "p.c.3": "الفئات", "p.c.3v": "مستلزمات المختبر والفحص · المرافق والخدمات اللوجستية", "p.c.4": "المفوض بالتوقيع", "p.c.5": "المستندات المحفوظة", "p.c.d1": "الرخصة التجارية", "p.c.d2": "شهادة غرفة التجارة", "p.c.d3": "خطاب التفويض بالتوقيع", "p.c.d4": "شهادة IBAN", "p.c.stv": "معتمد · 11 · 03 · 2024",
+    "p.d.t": "وثائق المناقصات المشتراة<small>مدفوعة عبر كي-نت — تبقى الملفات متاحة لإعادة التنزيل، ويُحفظ إيصال لكل عملية دفع</small>", "p.d.h1": "المناقصة", "p.d.h2": "تاريخ الشراء", "p.d.h3": "الرسوم", "p.d.h4": "الإغلاق", "p.d.dl": "الملفات والإيصال", "p.d.rc": "الإيصال", "p.d.aw": "لم تتم الترسية عليكم", "p.d.ev": "قيد التقييم", "p.d.list": "قائمة المناقصات",
+    "p.d.1": "توريد أطقم جمع عينات مراقبة المنشطات (2027–2029)", "p.d.2": "نقل العينات بسلسلة التبريد إلى المختبر المعتمد", "p.d.3": "مستهلكات المختبر — اتفاقية إطارية سنوية",
+    "p.q.t": "الاستفسارات والملاحق<small>أسئلتكم، والإجابات المنشورة لجميع المتقدمين، والملاحق الواجب الإقرار بها</small>", "p.q.ask": "اطرح سؤالاً", "p.q.ack": "إقرار",
+    "p.q.1": "الملحق 2 — KADA/T/2026/014: تعديل جدول التسليم واتفاقية مستوى خدمة سلسلة التبريد", "p.q.1d": "نُشر في 22 · 10 · 2026 لجميع مشتري الوثائق · يلزم الإقرار به قبل رفع العطاء", "p.q.2": "الملحق 1 — KADA/T/2026/014: إجابات الاستفسارات س-01 إلى س-05", "p.q.2d": "نُشر في 12 · 10 · 2026 · أقررتم به في 19 · 10 · 2026", "p.q.acked": "تم الإقرار",
+    "p.q.3": "سؤالكم س-07 — التسليم خلال 48 ساعة إلى موقع جزيرة فيلكا (الملحق ب)", "p.q.3d": "قُدّم في 21 · 10 · 2026 · بانتظار الإجابة · تُنشر الإجابات دون ذكر السائل لجميع المشترين في الملحق 3", "p.q.4": "سؤالكم س-06 — إصدار الكفالة الأولية من بنك خليجي له بنك مراسل في الكويت", "p.q.4d": "قُدّم في 20 · 10 · 2026 · بانتظار الإجابة · يُغلق باب الاستفسارات في 20 · 11 · 2026",
+    "p.b.t": "عطاءاتي<small>تصدر إيصالات التقديم تلقائياً، وتُبلَّغ النتائج بالبريد الإلكتروني وفي هذه الصفحة</small>", "p.b.h2": "تاريخ التقديم", "p.b.h3": "الإيصال", "p.b.h4": "الكفالة الأولية", "p.b.na": "غير مطلوبة", "p.b.rel": "أُعيدت", "p.b.s1": "قيد التقييم", "p.b.s2": "لم تتم الترسية عليكم", "p.b.s2d": "ملخص التقييم متاح",
+    "p.p.t": "المدفوعات<small>عمليات كي-نت — لكل عملية إيصال قابل للتنزيل</small>", "p.p.h2": "البيان", "p.p.h3": "المبلغ", "p.p.h4": "مرجع كي-نت", "p.p.1": "وثائق مناقصة — KADA/T/2026/014", "p.p.2": "وثائق مناقصة — KADA/Q/2026/033", "p.p.3": "وثائق مناقصة — KADA/T/2025/009",
+    "p.sb.m": "مطابقة لفئاتكم", "p.sb.md": "مناقصتان مفتوحتان تطابقان الفئات المسجلة لشركتكم.", "p.sb.m1": "أطقم العينات", "p.sb.m2": "خدمات التحليل المخبري",
+    "p.sb.r": "التجديد", "p.sb.rd": "تنتهي رخصتكم التجارية في 14 · 03 · 2027. ارفعوا الرخصة المجددة ابتداءً من 14 · 01 · 2027 لمواصلة الشراء دون انقطاع.",
+    "p.sb.c": "التواصل مع إدارة المشتريات", "p.sb.c1": "سياسة المشتريات وقواعد سلوك الموردين",
+    "p.sb.s": "الأمان", "p.sb.sd": "تم تسجيل الدخول عبر هويتي للمفوض بالتوقيع. لا يحق تقديم العطاءات إلا للمفوض بالتوقيع."
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

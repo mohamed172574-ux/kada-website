@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">KADA AI Assistant</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero tall">
+      <img src="assets/img/svc-ai.jpg" alt="">
+      <div class="wrap split">
+        <div>
+          <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="services.html" data-i18n="nav.services">E-Services</a><i></i><span data-i18n="nav.s8">KADA AI Assistant</span></nav>
+          <h1 class="display" data-i18n="p.title">Ask KADA. Any time, in your language.</h1>
+          <p class="lede" data-i18n="p.lede">A bilingual assistant grounded only in approved agency documents: the Code, national rules, the Prohibited List, guidance notes and service pages. Every answer shows its sources. It advises — it never decides.</p>
+          <div class="cta">
+            <p style="font-size:13px;color:rgba(255,255,255,.7);margin-bottom:10px" data-i18n="p.try">Try a scenario:</p>
+            <div class="chips"><button class="chip is-on" type="button" data-scenario="public" data-i18n="p.m1">Athletes &amp; public</button><button class="chip" type="button" data-scenario="nav" data-i18n="p.m2">Website navigation</button><button class="chip" type="button" data-scenario="compliance" data-i18n="p.m3">Compliance &amp; forms</button></div>
+            <p style="font-size:13px;color:rgba(255,255,255,.7);margin-top:12px" data-i18n="p.tryd">Or just type your question — one chat window, the assistant picks the right specialism automatically.</p>
+          </div>
+        </div>
+        <div class="hero-side reveal in">
+          <div class="chat" data-chat id="chat" style="min-height:560px">
+            <div class="chat-head"><span class="ai"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/></svg></span><div><b data-i18n="p.c.name">KADA Assistant</b><small><span data-chat-role>Athletes &amp; public</span> <span data-i18n="p.c.status">· online · Arabic / English · voice</span></small></div><button class="search-btn" type="button" style="margin-inline-start:auto;border-color:rgba(255,255,255,.3);color:#fff" aria-label="Voice"><svg viewBox="0 0 24 24" class="ico"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button></div>
+            <div class="chat-log"></div>
+            <div class="chat-input"><input type="text" placeholder="Type or hold the mic to speak…" data-i18n-ph="p.c.ph"><button class="btn btn-primary" type="button" aria-label="Send"><svg viewBox="0 0 24 24" class="ico"><path d="M4 12 20 4l-4 16-4-7z"/></svg></button></div>
+            <div class="chat-disclaimer"><span data-i18n="p.c.disc">AI answers are advisory and cite their sources. Legal, medical and disciplinary decisions are made only by KADA's departments and committees.</span><span style="display:inline-flex;gap:14px;align-items:center;margin-top:8px;justify-content:center;width:100%"><span data-i18n="p.c.fb">Was this helpful?</span><button type="button" class="chip" style="padding:4px 10px;font-size:12px" aria-label="Helpful">👍</button><button type="button" class="chip" style="padding:4px 10px;font-size:12px" aria-label="Not helpful">👎</button><button type="button" class="chip" style="padding:4px 10px;font-size:12px"><span data-i18n="p.c.tts">🔊 Read aloud</span></button></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="kicker" data-i18n="p.q.k">Try asking</p><h2 class="display" data-i18n="p.q.t">Common questions, instant answers</h2></div>
+        <div class="grid-3 stagger">
+          <a class="card spot link" href="#chat" data-scenario="public"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.1k">Medicines</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.1">"Is ibuprofen allowed before a match?"</h3></a>
+          <a class="card spot link" href="#chat" data-scenario="public"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.2k">Supplements</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.2">"The label says 'WADA approved' — is it safe?"</h3></a>
+          <a class="card spot link" href="#chat" data-scenario="nav"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.3k">Services</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.3">"How do I buy tender documents?"</h3></a>
+          <a class="card spot link" href="#chat" data-scenario="public"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.4k">Rights</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.4">"Can I request my B-sample analysis?"</h3></a>
+          <a class="card spot link" href="#chat" data-scenario="public"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.5k">WADA ID</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.5">"How do I get my WADA ID and ADEL certificate?"</h3></a>
+          <a class="card spot link" href="#chat" data-scenario="compliance"><p class="kicker" style="margin-bottom:8px" data-i18n="p.q.6k">Reporting &amp; privacy</p><h3 style="margin:0;font-size:1.05rem" data-i18n="p.q.6">"I want to report doping without revealing my name."</h3></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <div class="sec-head reveal"><p class="kicker" data-i18n="p.f.k">Three assistants for the public</p><h2 class="display" data-i18n="p.f.t">Each audience gets the assistant it needs.</h2><p class="lede" data-i18n="p.f.d">All three are available on this website, in Arabic and English, and every answer shows its source.</p></div>
+        <div class="grid-4 stagger">
+          <div class="card"><div class="icon-box"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h3 data-i18n="p.f.1t">Athlete &amp; Public Assistant</h3><p data-i18n="p.f.1d">Rules, prohibited substances, medicines and supplements, TUEs, education and FAQs — with links to the relevant page or document.</p><span class="badge ok plain mt-1" data-i18n="p.f.web">On the website</span></div>
+          <div class="card"><div class="icon-box"><svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3 data-i18n="p.f.2t">Website Navigation Assistant</h3><p data-i18n="p.f.2d">Semantic search across pages and documents; recommends services and guides you to tenders, sanctions and WADA resources.</p><span class="badge ok plain mt-1" data-i18n="p.f.web">On the website</span></div>
+          <div class="card"><div class="icon-box"><svg viewBox="0 0 24 24" class="ico"><path d="M4 4h16v16H4z"/><path d="M8 12h8M8 8h8M8 16h5"/></svg></div><h3 data-i18n="p.f.3t">Public Compliance Assistant</h3><p data-i18n="p.f.3d">Guides you through Speak Up, Data Access Requests and complaints; validates forms and explains tracking status.</p><span class="badge ok plain mt-1" data-i18n="p.f.web">On the website</span></div>
+          <div class="card" style="background:var(--navy);color:#fff;border-color:var(--navy)"><div class="icon-box" style="background:rgba(78,227,154,.15);color:var(--lime)"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 data-i18n="p.f.6t">Responsible AI</h3><p style="color:rgba(255,255,255,.78)" data-i18n="p.f.6d">Answers drawn only from an approved knowledge base. Advisory only, with human review for sensitive cases. No training on personal data. Clear "AI-generated" labelling.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap two-col">
+        <div class="reveal">
+          <p class="kicker" data-i18n="p.h.k">How it works</p>
+          <h2 class="display" data-i18n="p.h.t">Grounded answers, not guesses.</h2>
+          <p class="lede mt-1" data-i18n="p.h.d">Your question is matched against indexed agency documents. Only the retrieved passages are given to the model, which writes the answer and cites them. Nothing outside the knowledge base is used.</p>
+        </div>
+        <div class="flow cols-4 reveal">
+          <div class="flow-step"><b data-i18n="p.h.1">Ask</b><small data-i18n="p.h.1d">Text or voice, Arabic or English</small></div>
+          <div class="flow-step"><b data-i18n="p.h.2">Retrieve</b><small data-i18n="p.h.2d">Relevant passages from approved documents</small></div>
+          <div class="flow-step"><b data-i18n="p.h.3">Answer</b><small data-i18n="p.h.3d">Generated with citations and confidence</small></div>
+          <div class="flow-step hi"><b data-i18n="p.h.4">Escalate</b><small data-i18n="p.h.4d">Hand-off to KADA staff when the question needs a decision</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "مساعد كادا الذكي",
+    "p.title": "اسأل كادا. في أي وقت، وبلغتك.", "p.lede": "مساعد ثنائي اللغة يستند حصراً إلى وثائق الوكالة المعتمدة: المدونة والقواعد الوطنية وقائمة المحظورات والأدلة الإرشادية وصفحات الخدمات. تعرض كل إجابة مصادرها. يقدّم الإرشاد — ولا يتخذ أي قرار.",
+    "p.m1": "الرياضيون والجمهور", "p.m2": "التنقل في الموقع", "p.m3": "الامتثال والنماذج",
+    "p.try": "جرّب سيناريو:", "p.tryd": "أو اكتب سؤالك مباشرة — في نافذة محادثة واحدة، ويختار المساعد التخصص المناسب تلقائياً.",
+    "p.c.name": "مساعد كادا", "p.c.status": "· متصل · عربي / إنجليزي · إدخال صوتي", "p.c.ph": "اكتب سؤالك أو اضغط مطولاً على الميكروفون للتحدث…",
+    "p.c.disc": "إجابات الذكاء الاصطناعي استرشادية وتذكر مصادرها، أما القرارات القانونية والطبية والتأديبية فتتخذها إدارات الوكالة ولجانها المختصة حصراً.",
+    "p.q.k": "جرّب أن تسأل", "p.q.t": "أسئلة شائعة، إجابات فورية",
+    "p.q.1k": "الأدوية", "p.q.1": "«هل الإيبوبروفين مسموح قبل المباراة؟»", "p.q.2k": "المكملات الغذائية", "p.q.2": "«مكتوب على العبوة أنه معتمد من وادا — هل هو آمن؟»", "p.q.3k": "الخدمات", "p.q.3": "«كيف أشتري وثائق المناقصة؟»", "p.q.4k": "الحقوق", "p.q.4": "«هل يمكنني طلب تحليل العينة B؟»", "p.q.5k": "WADA ID", "p.q.5": "«كيف أحصل على WADA ID وشهادة ADEL؟»", "p.q.6k": "الإبلاغ والخصوصية", "p.q.6": "«أريد الإبلاغ عن حالة تعاطٍ للمنشطات دون الكشف عن اسمي.»",
+    "p.c.fb": "هل كانت الإجابة مفيدة؟", "p.c.tts": "🔊 قراءة بصوت عالٍ",
+    "p.f.k": "ثلاثة مساعدين للجمهور", "p.f.t": "لكل فئة المساعد الذي تحتاج إليه.", "p.f.d": "الثلاثة متاحون على هذا الموقع بالعربية والإنجليزية، وكل إجابة تُظهر مصدرها.",
+    "p.f.1t": "مساعد الرياضيين والجمهور", "p.f.1d": "القواعد والمواد المحظورة والأدوية والمكملات الغذائية والإعفاء للاستعمال العلاجي والتوعية والأسئلة الشائعة — مع روابط للصفحة أو الوثيقة المعنية.", "p.f.web": "على الموقع",
+    "p.f.2t": "مساعد التنقل في الموقع", "p.f.2d": "بحث دلالي في الصفحات والوثائق؛ يرشّح الخدمات ويرشدك إلى المناقصات وسجل العقوبات وموارد وادا.",
+    "p.f.3t": "مساعد الامتثال العام", "p.f.3d": "يرشدك في Speak Up وطلبات الوصول إلى البيانات والشكاوى، ويتحقق من صحة النماذج ويوضّح حالة الطلب.",
+    "p.f.6t": "ذكاء اصطناعي مسؤول", "p.f.6d": "إجابات مستمدة من قاعدة معرفة معتمدة فقط. دور استرشادي فقط مع مراجعة بشرية للحالات الحساسة. لا تدريب على البيانات الشخصية. وسم واضح «مولَّد بالذكاء الاصطناعي».",
+    "p.h.k": "كيف يعمل", "p.h.t": "إجابات مستندة إلى مصادر، لا تخمينات.", "p.h.d": "يُطابَق سؤالك مع وثائق الوكالة المفهرسة، ولا يُمرَّر إلى النموذج سوى المقاطع المسترجعة، فيكتب الإجابة ويستشهد بها. ولا يُستخدم أي محتوى من خارج قاعدة المعرفة.",
+    "p.h.1": "اسأل", "p.h.1d": "نصاً أو صوتاً، بالعربية أو الإنجليزية", "p.h.2": "استرجاع", "p.h.2d": "مقاطع ذات صلة من الوثائق المعتمدة", "p.h.3": "إجابة", "p.h.3d": "مولَّدة مع الاستشهادات ودرجة الثقة", "p.h.4": "تصعيد", "p.h.4d": "الإحالة إلى موظف مختص عندما يتطلب السؤال قراراً"
+  };
+  // One chat window, three specialisms behind it. Each key is a demo scenario; the assistant routes automatically in the real system.
+  window.KADA_CHAT_DEFAULT = "public";
+  window.KADA_CHAT = {
+    en: {
+      public: [
+        { role: "user", text: "My supplement says \"WADA approved\" on the label. Is it safe?" },
+        { role: "ai", text: "No — WADA does not approve or certify any supplement, so that claim is a warning sign. Some supplements contain prohibited substances not listed on the label, and under strict liability you are responsible for anything found in your sample. Ask a doctor or sports nutritionist whether you need it at all; if you do, prefer batch-tested products and keep the receipt and batch number. Would you like the KADA supplements guide?", sources: ["Code Art. 2.1.1", "KADA supplements guide"] },
+        { role: "user", text: "Yes please. Also, where do I find my past test results?" },
+        { role: "ai", text: "The KADA supplements guide is in Publications, and the Supplements clinic covers it in person. I can only guide you — I don't approve products or decide cases. Your testing history and laboratory results are in the KADA app under Profile → Testing history; each result links to its Doping Control Form.", sources: ["Results management procedure", "App guide"] }
+      ],
+      nav: [
+        { role: "user", text: "Where do I register for the next education course?" },
+        { role: "ai", text: "The next one is Anti-Doping Essentials for athletes, on 18 Nov 2026 at KADA HQ, Hall A — 11 of 40 seats left. Registration takes two minutes with Kuwait Mobile ID. I've put the direct link below.", sources: ["Training portal → course.html", "Events calendar"] },
+        { role: "user", text: "Great. And how do I buy tender documents?" },
+        { role: "ai", text: "Three steps: 1) register your company once in Supplier Registration, 2) open the tender (e.g. KADA/T/2026/014) and pay the document fee with K-Net, 3) the documents unlock instantly and a receipt is stored in your account. Would you like the open-tenders list?", sources: ["Tenders & Procurement", "Supplier Registration", "K-Net payment guide"] }
+      ],
+      compliance: [
+        { role: "user", text: "I want to report doping, but I'm afraid my name will be known." },
+        { role: "ai", text: "Speak Up is fully anonymous: no account, no email, no IP address is stored. When you submit, you receive an encrypted tracking code so you can follow the case and answer investigators' questions without revealing who you are. Shall I guide you through the four steps?", sources: ["Speak Up policy §3", "Whistleblower Protection Policy"] },
+        { role: "user", text: "Yes. Separately — what do I need to request a copy of my personal data?" },
+        { role: "ai", text: "A Data Access Request needs only your Civil ID verification and the type of request (access, correction or deletion). The Data Protection Officer acknowledges within 2 working days and responds within 30 days, in line with KADA's privacy policy. I can open the form for you.", sources: ["Data Access Request", "Privacy Policy", "DAR procedure"] }
+      ]
+    },
+    ar: {
+      public: [
+        { role: "user", text: "مكتوب على عبوة المكمّل أنه «معتمد من وادا». هل هو آمن؟" },
+        { role: "ai", text: "لا — وادا لا تعتمد أي مكمّل غذائي ولا تمنحه شهادة، لذا فهذه العبارة علامة تحذير. بعض المكملات تحتوي على مواد محظورة غير مذكورة على الملصق، وبموجب مبدأ المسؤولية الصارمة أنت مسؤول عن أي مادة تُكتشف في عينتك. اسأل طبيباً أو أخصائي تغذية رياضية أولاً إن كنت تحتاجه أصلاً، وإن احتجته ففضّل المنتجات المفحوصة دفعةً بدفعة واحتفظ بالفاتورة ورقم الدفعة. هل تريد دليل الوكالة للمكملات الغذائية؟", sources: ["المدونة، المادة 2.1.1", "دليل الوكالة للمكملات الغذائية"] },
+        { role: "user", text: "نعم من فضلك. وأين أجد نتائج فحوصاتي السابقة؟" },
+        { role: "ai", text: "دليل الوكالة للمكملات الغذائية متاح في صفحة المنشورات، وتتناوله عيادة المكملات الغذائية حضورياً. دوري يقتصر على الإرشاد — فلا أعتمد المنتجات ولا أبتّ في القضايا. تجد سجل فحوصاتك ونتائج المختبر في تطبيق كادا ضمن الملف الشخصي ← سجل الفحوصات، وكل نتيجة مرتبطة بنموذج مراقبة المنشطات الخاص بها.", sources: ["إجراءات إدارة النتائج", "دليل التطبيق"] }
+      ],
+      nav: [
+        { role: "user", text: "أين أسجل في دورة التثقيف القادمة؟" },
+        { role: "ai", text: "الدورة القادمة هي «أساسيات مكافحة المنشطات للرياضيين» يوم 18 نوفمبر 2026 في مقر الوكالة، القاعة A — بقي 11 مقعداً من 40. ويستغرق التسجيل دقيقتين عبر هويتي. وضعت لك الرابط المباشر أدناه.", sources: ["بوابة التدريب ← course.html", "تقويم الفعاليات"] },
+        { role: "user", text: "ممتاز. وكيف أشتري وثائق المناقصة؟" },
+        { role: "ai", text: "ثلاث خطوات: 1) سجّل شركتك مرة واحدة في خدمة تسجيل الموردين، 2) افتح المناقصة (مثلاً KADA/T/2026/014) وادفع رسوم الوثائق عبر كي-نت، 3) تُتاح الوثائق فوراً ويُحفظ الإيصال في حسابك. هل تريد قائمة المناقصات المفتوحة؟", sources: ["المناقصات والمشتريات", "تسجيل الموردين", "دليل الدفع عبر كي-نت"] }
+      ],
+      compliance: [
+        { role: "user", text: "أريد الإبلاغ عن حالة تعاطٍ للمنشطات، لكنني أخشى أن يُعرف اسمي." },
+        { role: "ai", text: "نظام Speak Up مجهول الهوية بالكامل: لا حساب ولا بريد إلكتروني، ولا يُحفظ عنوان IP. وعند الإرسال تحصل على رمز تتبع مشفّر لمتابعة البلاغ والرد على أسئلة المحققين دون الكشف عن هويتك. هل أرشدك خلال الخطوات الأربع؟", sources: ["سياسة Speak Up §3", "سياسة حماية المبلّغين"] },
+        { role: "user", text: "نعم. وبشكل منفصل — ماذا أحتاج لطلب نسخة من بياناتي الشخصية؟" },
+        { role: "ai", text: "لا يتطلب طلب الوصول إلى البيانات سوى التحقق من هويتك عبر الهوية المدنية وتحديد نوع الطلب (اطّلاع أو تصحيح أو حذف). ويُشعرك مسؤول حماية البيانات بالاستلام خلال يومي عمل، ويرد خلال 30 يوماً وفق سياسة الخصوصية للوكالة. يمكنني فتح النموذج لك.", sources: ["طلب الوصول إلى البيانات", "سياسة الخصوصية", "إجراء طلب البيانات"] }
+      ]
+    }
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

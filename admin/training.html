@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Training & events — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="training">
+<div data-page>
+
+  <!-- ===================== COURSES ===================== -->
+  <section data-view="courses">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Courses & training</h1><p data-i18n="p.d">Create courses, open registration on the website, track attendance and quizzes, and issue certificates — for athletes, support personnel, clubs and schools.</p></div>
+      <div class="acts"><a class="btn btn-ghost sm" href="../training.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.site">View on the website</span></a><a class="btn btn-primary sm" href="#course"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.newc">New course</span></a></div>
+    </div>
+    <nav class="tabs">
+      <a href="#courses"><span data-i18n="p.t1">Courses</span><span class="cnt">9</span></a>
+      <a href="#certs" data-i18n="p.t4">Certificates</a>
+    </nav>
+    <div class="kpis">
+      <div class="kpi hot"><small data-i18n="p.k1">Trained this year</small><b data-count="3106">3,106</b><em data-i18n="p.k1d">141% of the 2,200 target</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Seats booked · open courses</small><b data-count="106">106</b><em data-i18n="p.k2d">Of 170 seats across 4 courses</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Waiting list</small><b data-count="12">12</b><em class="warn" data-i18n="p.k3d">DCO accreditation · 20 / 20 seats</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Average satisfaction</small><b data-count="4.7">4.7</b><em data-i18n="p.k4d">/ 5 · 1,920 evaluations</em></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="c">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.all">All</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="open"><span data-i18n="p.f.open">Registration open</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="full"><span data-i18n="p.f.full">Full · waiting list</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="done"><span data-i18n="p.f.done">Completed</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="draft"><span data-i18n="p.f.draft">Draft</span><span class="cnt"></span></button>
+        </div>
+        <button class="btn btn-ghost xs" type="button" data-toast="Export CSV — design preview" data-toast-ar="تصدير CSV — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Export</span></button>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="c"><table class="tbl">
+        <thead><tr><th data-i18n="p.c.c1">Course</th><th data-i18n="p.c.c2">Audience</th><th data-i18n="p.c.c3">Next session</th><th data-i18n="p.c.c4">Registered / seats</th><th data-i18n="p.c.c5">Completion</th><th data-i18n="p.c.c6">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="open" data-sel><td><b data-i18n="p.c1">Anti-Doping Essentials for athletes</b><span class="sub">ESS · <span data-i18n="p.du.3h">3 hours</span> · <span data-i18n="p.cls">In person</span> · <span data-i18n="p.se.free">Free</span></span></td><td data-i18n="p.au1">Athletes</td><td class="num">18 · 11 · 2026</td><td><div class="sla"><div class="bar"><i style="width:72%"></i></div><small class="num">29 / 40</small></div></td><td class="num">—</td><td><span class="st ok" data-i18n="p.f.open">Registration open</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td><b data-i18n="p.c2">Coaching Clean — Support personnel responsibilities</b><span class="sub">CCL · <span data-i18n="p.du.1d">1 day</span> · <span data-i18n="p.cls">In person</span> · <span data-i18n="p.kwd25">25 KWD</span></span></td><td data-i18n="p.au2">Coaches</td><td class="num">25 · 11 · 2026</td><td><div class="sla"><div class="bar"><i style="width:40%"></i></div><small class="num">12 / 30</small></div></td><td class="num">—</td><td><span class="st ok" data-i18n="p.f.open">Registration open</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td><b data-i18n="p.c3">TUE & Prescribing for Athletes — for physicians</b><span class="sub">TUE · <span data-i18n="p.du.4h">4 hours</span> · <span data-i18n="p.online">Online live</span> · <span data-i18n="p.kwd40">40 KWD</span></span></td><td data-i18n="p.au3">Medical staff</td><td class="num">02 · 12 · 2026</td><td><div class="sla warn"><div class="bar"><i style="width:95%"></i></div><small class="num">57 / 60</small></div></td><td class="num">—</td><td><span class="st warn" data-i18n="p.f.almost">Almost full</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td><b data-i18n="p.c4">Clean Sport Day — School outreach programme</b><span class="sub">SCH · <span data-i18n="p.du.half">Half day</span> · <span data-i18n="p.cls">In person</span> · <span data-i18n="p.se.free">Free</span></span></td><td data-i18n="p.au4">Schools</td><td class="num">09 · 12 · 2026</td><td><div class="sla"><div class="bar"><i style="width:20%"></i></div><small class="num">8 / 40</small></div></td><td class="num">—</td><td><span class="st ok" data-i18n="p.f.open">Registration open</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="full" data-sel><td><b data-i18n="p.c5">Doping Control Officer — accreditation course</b><span class="sub">DCO · <span data-i18n="p.du.5d">5 days</span> · <span data-i18n="p.cls">In person</span> · <span data-i18n="p.kwd120">120 KWD</span></span></td><td data-i18n="p.au5">KADA DCO candidates</td><td class="num">11–15 · 01 · 2027</td><td><div class="sla red"><div class="bar"><i style="width:100%"></i></div><small class="num">20 / 20 · +12 <span data-i18n="p.wait">waiting</span></small></div></td><td class="num">—</td><td><span class="st red" data-i18n="p.f.full">Full · waiting list</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+          <tr data-f="open" data-sel><td><b data-i18n="p.c6">ADEL by WADA — recognised e-learning</b><span class="sub">ADEL · <span data-i18n="p.du.self">Self-paced</span> · <span data-i18n="p.web">Online</span> · <span data-i18n="p.se.free">Free</span></span></td><td data-i18n="p.au6">Everyone</td><td data-i18n="p.cont">Anytime</td><td><small data-i18n="p.adel.n">Unlimited · 7 certificates to recognise</small></td><td class="num">—</td><td><span class="st ok" data-i18n="p.f.always">Always open</span></td><td class="r"><a class="lnk" href="#certs" data-i18n="p.review">Review</a></td></tr>
+          <tr data-f="done" data-sel><td><b data-i18n="p.c7">Anti-Doping Essentials — October session</b><span class="sub">ESS · <span data-i18n="p.du.3h">3 hours</span> · <span data-i18n="p.cls">In person</span></span></td><td data-i18n="p.au1">Athletes</td><td class="num">14 · 10 · 2026</td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small class="num">40 / 40</small></div></td><td class="num">93%</td><td><span class="st plain" data-i18n="p.f.done">Completed</span></td><td class="r"><a class="lnk" href="#certs" data-i18n="p.certs">Certificates</a></td></tr>
+          <tr data-f="done" data-sel><td><b data-i18n="p.c8">Coaching Clean — September session</b><span class="sub">CCL · <span data-i18n="p.du.1d">1 day</span> · <span data-i18n="p.cls">In person</span></span></td><td data-i18n="p.au2">Coaches</td><td class="num">23 · 09 · 2026</td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small class="num">30 / 30</small></div></td><td class="num">90%</td><td><span class="st plain" data-i18n="p.f.done">Completed</span></td><td class="r"><a class="lnk" href="#certs" data-i18n="p.certs">Certificates</a></td></tr>
+          <tr data-f="draft" data-sel><td><b data-i18n="p.c9">Anti-Doping Essentials — January session</b><span class="sub">ESS · <span data-i18n="p.du.3h">3 hours</span> · <span data-i18n="p.cls">In person</span> · <span data-i18n="p.se.free">Free</span></span></td><td data-i18n="p.au1">Athletes</td><td class="num">20 · 01 · 2027</td><td><div class="sla"><div class="bar"><i style="width:0"></i></div><small class="num">0 / 40</small></div></td><td class="num">—</td><td><span class="st warn" data-i18n="p.f.draft">Draft</span></td><td class="r"><a class="lnk" href="#course" data-i18n="p.manage">Manage</a></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.c.foot">9 sessions · 6 courses on the website · a course appears on the website Training page once approved in the approval queue and registration is open</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== COURSE DETAIL ===================== -->
+  <section data-view="course">
+    <a class="pe-back mb-1" href="#courses"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.t1">Courses</span></a>
+    <div class="card navy">
+      <div class="row between">
+        <div><small data-i18n="p.cd.code">ESS · in person · KADA HQ, Hall A · Arabic (EN slides)</small><h2 style="margin:4px 0 8px" data-i18n="p.c1">Anti-Doping Essentials for athletes</h2><div class="row"><span class="st ok" data-i18n="p.f.open">Registration open</span><span class="st plain num">18 · 11 · 2026 · 17:00 – 20:00</span><span class="st plain" data-i18n="p.cd.seat">40 seats · 29 booked</span><span class="st info" data-i18n="p.cd.wl">11 seats left</span></div></div>
+        <div class="row"><button class="btn btn-outline sm" type="button" data-toast="Extra session proposed: 23 · 11 · 2026 · Hall A · pending educator confirmation" data-toast-ar="اقتُرحت جلسة إضافية: 23 · 11 · 2026 · القاعة A · بانتظار تأكيد المحاضِرة"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.cd.addsess">Add session</span></button><a class="btn btn-primary sm" href="../course.html?id=essentials" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.cd.public">Public page</span></a></div>
+      </div>
+    </div>
+    <div class="tabs pills mt-2" data-tabs="cd">
+      <button class="is-on" type="button" data-tab="reg"><span data-i18n="p.cd.t1">Registrations</span><span class="cnt">29</span></button>
+      <button type="button" data-tab="att" data-i18n="p.cd.t2">Attendance & quiz</button>
+      <button type="button" data-tab="set" data-i18n="p.cd.t3">Course settings</button>
+      <button type="button" data-tab="eval" data-i18n="p.cd.t4">Evaluation</button>
+    </div>
+    <div>
+      <div data-pane-group="cd" data-pane="reg" class="grid g-main">
+        <div class="card flush">
+          <div class="card-head"><h2 data-i18n="p.rg.h">Registrations · 28 confirmed · 1 pending</h2><div class="row"><button class="btn btn-ghost xs" type="button" data-toast="Reminder sent to 28 confirmed participants (SMS + email)" data-toast-ar="أُرسل تذكير إلى 28 مشاركاً مؤكداً (رسالة نصية + بريد إلكتروني)"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.rg.remind">Send reminder</span></button><button class="btn btn-ghost xs" type="button" data-toast="Attendance sheet (PDF) generated" data-toast-ar="أُنشئت ورقة الحضور (PDF)"><svg class="ico"><use href="#i-print"/></svg><span data-i18n="p.rg.sheet">Attendance sheet</span></button></div></div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th>#</th><th data-i18n="p.rg.c1">Participant</th><th data-i18n="p.rg.c2">Role · organisation</th><th data-i18n="p.rg.c3">Registered</th><th data-i18n="p.rg.c4">Source</th><th data-i18n="p.rg.c5">Status</th><th></th></tr></thead>
+            <tbody>
+              <tr data-sel><td class="num">1</td><td><b>Sara Al-Rashidi</b><span class="sub">sara.r@…</span></td><td data-i18n="p.rg.r1">Athlete · Swimming federation</td><td class="num">12 · 10 · 2026</td><td data-i18n="p.src.web">Website</td><td><span class="st ok" data-i18n="p.rg.conf">Confirmed</span></td><td class="r"><button class="lnk" type="button" data-toast="Participant record — design preview" data-toast-ar="سجل المشارك — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+              <tr data-sel><td class="num">2</td><td><b>Yousef Al-Mutairi</b><span class="sub">y.mutairi@…</span></td><td data-i18n="p.rg.r2">Athlete · Football · Al-Qadsia Club</td><td class="num">12 · 10 · 2026</td><td data-i18n="p.src.app">KADA app</td><td><span class="st ok" data-i18n="p.rg.conf">Confirmed</span></td><td class="r"><button class="lnk" type="button" data-toast="Participant record — design preview" data-toast-ar="سجل المشارك — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+              <tr data-sel><td class="num">3</td><td><b>Fatima Al-Enezi</b><span class="sub">f.enezi@…</span></td><td data-i18n="p.rg.r3">Athlete · Fencing federation</td><td class="num">13 · 10 · 2026</td><td data-i18n="p.src.web">Website</td><td><span class="st ok" data-i18n="p.rg.conf">Confirmed</span></td><td class="r"><button class="lnk" type="button" data-toast="Participant record — design preview" data-toast-ar="سجل المشارك — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+              <tr data-sel><td class="num">4</td><td><b>Mohammed Al-Sabah</b><span class="sub">m.sabah@…</span></td><td data-i18n="p.rg.r4">Athlete · Athletics</td><td class="num">14 · 10 · 2026</td><td data-i18n="p.src.app">KADA app</td><td><span class="st warn" data-i18n="p.rg.unpaid">Awaiting confirmation</span></td><td class="r"><button class="lnk" type="button" data-toast="Confirmed · seat 29/40" data-toast-ar="تم التأكيد · المقعد 29/40" data-hide-after data-i18n="p.rg.confirm">Confirm</button></td></tr>
+              <tr data-sel><td class="num">28</td><td><b>Noor Al-Dhafiri</b><span class="sub">n.dhafiri@…</span></td><td data-i18n="p.rg.r5">Athlete · Shooting federation</td><td class="num">29 · 10 · 2026</td><td data-i18n="p.src.man">Manual</td><td><span class="st ok" data-i18n="p.rg.conf">Confirmed</span></td><td class="r"><button class="lnk" type="button" data-toast="Participant record — design preview" data-toast-ar="سجل المشارك — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+              <tr data-sel><td class="num">29</td><td><b>Ahmad Al-Failakawi</b><span class="sub">a.failakawi@…</span></td><td data-i18n="p.rg.r6">Athlete · Handball</td><td class="num">31 · 10 · 2026</td><td data-i18n="p.src.app">KADA app</td><td><span class="st ok" data-i18n="p.rg.conf">Confirmed</span></td><td class="r"><button class="lnk" type="button" data-toast="Participant record — design preview" data-toast-ar="سجل المشارك — معاينة تصميم" data-i18n="p.view">View</button></td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.rg.foot">6 of 29 shown · registrations from the website and the app land in one list · duplicates merged by civil ID</span></div>
+        </div>
+        <div class="stack">
+          <div class="card"><div class="card-head"><h2 data-i18n="p.rg.mix">Registration sources</h2></div><div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="16,10,3" data-labels="Website,KADA app,Manual" data-labels-ar="الموقع,تطبيق كادا,يدوي" data-colors="green,navy,lime" data-center="29" data-center-label="registered" data-center-label-ar="مسجّل"></svg><div class="legend"><span><i style="background:var(--green)"></i><span data-i18n="p.src.web">Website</span><b>16</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.src.app">KADA app</span><b>10</b></span><span><i style="background:var(--lime)"></i><span data-i18n="p.src.man">Manual</span><b>3</b></span></div></div></div>
+          <div class="ai"><h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ai.h">AI assistant</span></h2><ul><li data-i18n="p.ai.1">11 seats left, 16 days before the session — 9 federations have not registered any athlete yet; a reminder to them could fill the room.</li><li data-i18n="p.ai.2">7 registrants are from the Swimming federation; a session hosted at the federation could reach more of its athletes.</li></ul><div class="acts"><button class="btn btn-outline xs" type="button" data-toast="Reminder sent to 9 federations" data-toast-ar="أُرسل تذكير إلى 9 اتحادات" data-i18n="p.ai.act">Remind the federations</button></div></div>
+          <div class="card soft"><div class="card-head"><h2 data-i18n="p.rg.sess">Sessions</h2></div><div class="tl"><div><i></i><div><b class="num">18 · 11 · 2026 · 17:00 – 20:00</b><small data-i18n="p.ss1">Hall A · KADA HQ · Dr. Dalal Al-Sabah</small></div></div><div><i class="grey"></i><div><b data-i18n="p.ss3">Quiz · online · within 48 h of the session</b><small data-i18n="p.ss3d">Pass mark 70% · 2 attempts</small></div></div><div><i class="grey"></i><div><b data-i18n="p.ss2">Certificate · 3 CPD hours</b><small data-i18n="p.ss2d">Issued on pass — to the athlete's account and federation</small></div></div></div></div>
+        </div>
+      </div>
+
+      <div data-pane-group="cd" data-pane="att" class="grid g-main" hidden>
+        <div class="card flush">
+          <div class="card-head"><h2 data-i18n="p.at.h">Attendance · October session (completed)</h2><div class="row"><button class="btn btn-ghost xs" type="button" data-toast="QR check-in codes regenerated" data-toast-ar="أُعيد توليد رموز QR للحضور"><svg class="ico"><use href="#i-refresh"/></svg><span data-i18n="p.at.qr">QR check-in</span></button></div></div>
+          <div class="tbl-wrap"><table class="tbl">
+            <thead><tr><th data-i18n="p.rg.c1">Participant</th><th data-i18n="p.at.d1">Attended</th><th data-i18n="p.at.q">Quiz</th><th data-i18n="p.at.res">Result</th><th data-i18n="p.at.cert">Certificate</th></tr></thead>
+            <tbody>
+              <tr><td><b>Maryam Al-Kharafi</b></td><td><span class="tick ok"></span></td><td class="num">92%</td><td><span class="st ok" data-i18n="p.at.pass">Passed</span></td><td><span class="st ok plain">ESS-2026-0611</span></td></tr>
+              <tr><td><b>Bader Al-Duwaisan</b></td><td><span class="tick ok"></span></td><td class="num">84%</td><td><span class="st ok" data-i18n="p.at.pass">Passed</span></td><td><span class="st ok plain">ESS-2026-0612</span></td></tr>
+              <tr><td><b>Hessa Al-Marzouq</b></td><td><span class="tick no"></span></td><td class="num">—</td><td><span class="st warn" data-i18n="p.at.inc">Absent</span></td><td><button class="lnk" type="button" data-toast="Invited to the 18 Nov session" data-toast-ar="دُعيت إلى جلسة 18 نوفمبر" data-i18n="p.at.makeup">Invite to next session</button></td></tr>
+              <tr><td><b>Talal Al-Sharhan</b></td><td><span class="tick ok"></span></td><td class="num">64%</td><td><span class="st red" data-i18n="p.at.fail">Below pass mark</span></td><td><button class="lnk" type="button" data-toast="Second attempt opened (valid 7 days)" data-toast-ar="فُتحت المحاولة الثانية (صالحة 7 أيام)" data-i18n="p.at.retry">Open 2nd attempt</button></td></tr>
+              <tr><td><b>Reem Al-Bahar</b></td><td><span class="tick ok"></span></td><td class="num">78%</td><td><span class="st ok" data-i18n="p.at.pass">Passed</span></td><td><span class="st ok plain">ESS-2026-0615</span></td></tr>
+            </tbody></table></div>
+          <div class="foot-bar"><span data-i18n="p.at.foot">5 of 40 shown · 37 passed · 2 absent · 1 below pass mark · certificates issue automatically on pass</span></div>
+        </div>
+        <div class="stack">
+          <div class="card"><div class="card-head"><h2 data-i18n="p.at.dist">Quiz score distribution</h2></div><svg class="chart" data-chart="bars" data-values="0,1,6,12,14,5" data-labels="<60,60s,70s,80s,90s,100" data-labels-ar="<60,60–69,70–79,80–89,90–99,100" data-colors="green" data-h="160"></svg></div>
+          <div class="kpis auto"><div class="kpi"><small data-i18n="p.at.k1">Attendance rate</small><b data-count="95" data-suffix="%">95%</b></div><div class="kpi"><small data-i18n="p.at.k2">Pass rate</small><b data-count="97" data-suffix="%">97%</b></div></div>
+        </div>
+      </div>
+
+      <div data-pane-group="cd" data-pane="set" hidden>
+        <div class="grid g-main">
+          <div class="card">
+            <div class="card-head"><h2 data-i18n="p.se.h">Course settings</h2></div>
+            <div class="form g2">
+              <div class="field"><label data-i18n="p.se.tar">Title (AR)</label><input dir="rtl" value="أساسيات مكافحة المنشطات للرياضيين"></div>
+              <div class="field"><label data-i18n="p.se.ten">Title (EN)</label><input value="Anti-Doping Essentials for athletes"></div>
+              <div class="field"><label data-i18n="p.se.aud">Audience</label><select><option data-i18n="p.au1">Athletes</option><option data-i18n="p.au2">Coaches</option><option data-i18n="p.au3">Medical staff</option><option data-i18n="p.au4">Schools</option><option data-i18n="p.au6">Everyone</option></select></div>
+              <div class="field"><label data-i18n="p.se.mode">Delivery</label><select><option data-i18n="p.cls">In person</option><option data-i18n="p.online">Online live</option><option data-i18n="p.du.self">Self-paced</option></select></div>
+              <div class="field"><label data-i18n="p.se.seats">Seats</label><input type="number" value="40"></div>
+              <div class="field"><label data-i18n="p.se.wl">Waiting list</label><select><option data-i18n="p.se.wl1">Enabled · auto-promote</option><option data-i18n="p.se.wl2">Disabled</option></select></div>
+              <div class="field"><label data-i18n="p.se.pre">Prerequisite</label><select><option data-i18n="p.se.none">None</option><option data-i18n="p.c6">ADEL by WADA — recognised e-learning</option></select></div>
+              <div class="field"><label data-i18n="p.se.fee">Fee</label><select><option data-i18n="p.se.free">Free</option><option data-i18n="p.se.paid">Paid via K-Net</option></select></div>
+              <div class="field" style="grid-column:1/-1"><label data-i18n="p.se.desc">Description (AR / EN)</label><textarea dir="rtl" style="min-height:70px">كل ما يجب أن يعرفه الرياضي على المستوى الوطني قبل الموسم: قائمة المحظورات، وإجراءات الفحص، والإعفاء للاستعمال العلاجي، وحقوقك ومسؤولياتك.</textarea><textarea style="min-height:70px">Everything a national-level athlete must know before the season: the Prohibited List, the testing procedure, TUEs, your rights and responsibilities.</textarea></div>
+            </div>
+            <div class="switches mt-2"><div><div><b data-i18n="p.se.s1">Show on website Training page</b><small data-i18n="p.se.s1d">Appears with the registration form once approved and registration is open.</small></div><span class="switch on"></span></div><div><div><b data-i18n="p.se.s2">Push to KADA app</b><small data-i18n="p.se.s2d">Course card and in-app registration.</small></div><span class="switch on"></span></div><div><div><b data-i18n="p.se.s3">Certificate on completion</b><small data-i18n="p.se.s3d">Template: Anti-Doping Essentials · 3 CPD hours · bilingual · QR-verifiable.</small></div><span class="switch on"></span></div><div><div><b data-i18n="p.se.s4">Evaluation survey 24 h after</b></div><span class="switch on"></span></div></div>
+            <div class="row mt-2"><button class="btn btn-primary sm" type="button" data-toast="Course settings saved" data-toast-ar="حُفظت إعدادات الدورة" data-i18n="p.save">Save</button><button class="btn btn-ghost sm" type="button" data-toast="Sent to the approval queue — the Head of Communications reviews it before it appears on the website" data-toast-ar="أُرسلت إلى قائمة الاعتماد — يراجعها رئيس الاتصال قبل ظهورها على الموقع" data-i18n="p.de.send">Send for approval</button><button class="btn btn-ghost sm" type="button" data-toast="Course duplicated as draft" data-toast-ar="نُسخت الدورة كمسودة" data-i18n="p.se.dup">Duplicate</button></div>
+          </div>
+          <div class="stack">
+            <div class="card soft"><div class="card-head"><h2 data-i18n="p.se.form">Registration form fields</h2></div><div class="check-list"><label><input type="checkbox" checked><span data-i18n="p.se.f1">Full name (AR + EN)</span></label><label><input type="checkbox" checked><span data-i18n="p.se.f2">Civil ID (verified)</span></label><label><input type="checkbox" checked><span data-i18n="p.se.f3">Mobile · email</span></label><label><input type="checkbox" checked><span data-i18n="p.se.f4">Role · sport · club</span></label><label><input type="checkbox"><span data-i18n="p.se.f5">Dietary requirements</span></label><label><input type="checkbox"><span data-i18n="p.se.f6">Accessibility needs</span></label></div></div>
+            <div class="card soft"><div class="card-head"><h2 data-i18n="p.se.tr">Educator & coordination</h2></div><dl class="kv"><dt data-i18n="p.se.lead">Lead educator</dt><dd data-i18n="p.se.leadv">Dr. Dalal Al-Sabah — Head of Education</dd><dt data-i18n="p.se.coord">Coordinator</dt><dd data-acct-name="training">Faisal Al-Anzi</dd><dt data-i18n="p.se.room">Room</dt><dd data-i18n="p.se.roomv">Hall A · KADA HQ · 40 seats</dd><dt data-i18n="p.se.lang">Language</dt><dd data-i18n="p.se.langv">Arabic (EN slides)</dd></dl></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-pane-group="cd" data-pane="eval" hidden>
+        <div class="grid g3">
+          <div class="card"><div class="card-head"><h2 data-i18n="p.ev.h1">Satisfaction · October session</h2></div><div class="bars-h"><div><span data-i18n="p.ev.q1">Content relevance</span><div class="bar"><i style="width:96%"></i></div><b>4.8</b></div><div><span data-i18n="p.ev.q2">Trainer</span><div class="bar"><i style="width:98%"></i></div><b>4.9</b></div><div><span data-i18n="p.ev.q3">Materials</span><div class="bar"><i style="width:88%"></i></div><b>4.4</b></div><div><span data-i18n="p.ev.q4">Venue & logistics</span><div class="bar"><i class="navy" style="width:84%"></i></div><b>4.2</b></div><div><span data-i18n="p.ev.q5">Would recommend</span><div class="bar"><i style="width:94%"></i></div><b>94%</b></div></div></div>
+          <div class="card"><div class="card-head"><h2 data-i18n="p.ev.h2">Trend · Anti-Doping Essentials sessions 2026</h2></div><svg class="chart" data-chart="line" data-values="4.2,4.3,4.5,4.4,4.6,4.7,4.7" data-labels="Apr,May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر" data-colors="green" data-h="180"></svg></div>
+          <div class="ai"><h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.ev.ai">AI summary of 31 comments</span></h2><ul><li data-i18n="p.ev.a1">Most-praised: the doping-control demonstration with real equipment, and the case studies.</li><li data-i18n="p.ev.a2">Most-requested: a printed Arabic athlete guide and more time on supplements.</li><li data-i18n="p.ev.a3">Timing: the evening start suits athletes in training — mentioned 9 times.</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTS ===================== -->
+  <section data-view="events">
+    <div class="page-head">
+      <div><h1 data-i18n="p.evh">Events</h1><p data-i18n="p.evd">Workshops, seminars, conferences and international days. Each event is sent for approval, then appears on the website Events page, the home-page strip and the app calendar.</p></div>
+      <div class="acts"><a class="btn btn-ghost sm" href="../events.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.site">View on the website</span></a><button class="btn btn-primary sm" type="button" data-drawer="d-event"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.newev">New event</span></button></div>
+    </div>
+    <div class="grid g-main">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.evn.h">Upcoming events</h2><div class="row"><button class="chip is-on" type="button" data-i18n="p.evn.list">List</button><button class="chip" type="button" data-toast="Calendar view — design preview" data-toast-ar="عرض التقويم — معاينة تصميم" data-i18n="p.evn.cal">Calendar</button></div></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.evn.c1">Event</th><th data-i18n="p.evn.c2">Date</th><th data-i18n="p.evn.c3">Type</th><th data-i18n="p.evn.c4">Registration</th><th data-i18n="p.evn.c5">Website</th><th></th></tr></thead>
+          <tbody>
+            <tr data-sel><td><b data-i18n="p.e1">Education workshop — national teams</b><span class="sub" data-i18n="p.e1d">Half-day workshop for Olympic-cycle athletes and their coaches · Olympic Committee Hall</span></td><td class="num">04 · 11 · 2026</td><td data-i18n="p.ty.tr">Training</td><td data-i18n="p.evn.inv">By invitation</td><td><span class="st ok" data-i18n="p.pub">Published</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-event" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.e2">Pharmacists seminar — Medicines & the Prohibited List</b><span class="sub" data-i18n="p.e2d">For community pharmacists · online · 18:00 – 20:00</span></td><td class="num">12 · 11 · 2026</td><td data-i18n="p.ty.sem">Seminar</td><td><span class="num">64</span> <span data-i18n="p.evn.reg">registered</span></td><td><span class="st ok" data-i18n="p.pub">Published</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-event" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.e3">Registration closes — National Clean Sport Conference 2026</b><span class="sub" data-i18n="p.e3d">Last day to register for the conference on 14 December</span></td><td class="num">30 · 11 · 2026</td><td data-i18n="p.ty.dl">Deadline</td><td>—</td><td><span class="st ok" data-i18n="p.pub">Published</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-event" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.e4">National Clean Sport Conference 2026</b><span class="sub" data-i18n="p.e4d">JW Marriott, Kuwait City · 12 speakers · registration announcement sent for approval</span></td><td class="num">14 · 12 · 2026</td><td data-i18n="p.ty.conf">Conference</td><td><span class="num">212 / 300</span></td><td><span class="st warn" data-i18n="p.awa">Awaiting approval</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-event" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.e5">Play True Day — nationwide activities</b><span class="sub" data-i18n="p.e5d">International day · nationwide</span></td><td class="num">10 · 04 · 2027</td><td data-i18n="p.ty.int">International day</td><td>—</td><td><span class="st ok" data-i18n="p.pub">Published</span></td><td class="r"><button class="lnk" type="button" data-drawer="d-event" data-i18n="p.edit">Edit</button></td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.evn.foot">5 events · courses are added to the calendar automatically from the Courses tab · published events feed the website Events page, the home-page strip and the app calendar</span></div>
+      </div>
+      <div class="stack">
+        <div class="card navy"><div class="card-head"><h2 data-i18n="p.evn.next">Coming up · in 42 days</h2></div><b style="font-size:18px" data-i18n="p.e4">National Clean Sport Conference 2026</b><div class="health inv mt-1"><div><span data-i18n="p.evn.n1">Programme</span><b data-i18n="p.evn.n1v">Final · AR/EN</b></div><div><span data-i18n="p.evn.n2">Speakers</span><b data-i18n="p.evn.n2v">12 confirmed</b></div><div><span data-i18n="p.evn.n3">Delegates</span><b class="num">212 / 300</b></div><div><span data-i18n="p.evn.n4">Website announcement</span><b data-i18n="p.evn.n4v">Awaiting approval</b></div></div></div>
+        <div class="card"><div class="card-head"><h2 data-i18n="p.evn.chk">Publishing checklist</h2></div><div class="check-list"><label><input type="checkbox" checked><span data-i18n="p.ck1">Bilingual title & description</span></label><label><input type="checkbox" checked><span data-i18n="p.ck2">Date, venue, map link</span></label><label><input type="checkbox" checked><span data-i18n="p.ck3">Hero image with alt text</span></label><label><input type="checkbox"><span data-i18n="p.ck4">Accessibility info (parking, access)</span></label><label><input type="checkbox"><span data-i18n="p.ck5">Post-event gallery folder created</span></label></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATES ===================== -->
+  <section data-view="certs">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Courses & training</h1><p data-i18n="p.d">Create courses, open registration on the website, track attendance and quizzes, and issue certificates — for athletes, support personnel, clubs and schools.</p></div>
+      <div class="acts"><a class="btn btn-ghost sm" href="../training.html" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ext"/></svg><span data-i18n="p.site">View on the website</span></a><a class="btn btn-primary sm" href="#course"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.newc">New course</span></a></div>
+    </div>
+    <nav class="tabs">
+      <a href="#courses"><span data-i18n="p.t1">Courses</span><span class="cnt">9</span></a>
+      <a href="#certs" data-i18n="p.t4">Certificates</a>
+    </nav>
+    <div class="kpis">
+      <div class="kpi"><small data-i18n="p.ce.k1">Certificates issued · 2026</small><b data-count="2874">2,874</b><em data-i18n="p.ce.k1d">Auto-issued on pass · QR-verifiable</em></div>
+      <div class="kpi"><small data-i18n="p.ce.k2">Verifications · 30 days</small><b data-count="318">318</b><em data-i18n="p.ce.k2d">Clubs and federations scanning QR</em></div>
+      <div class="kpi"><small data-i18n="p.ce.k3">Pending</small><b data-count="11">11</b><em class="warn" data-i18n="p.ce.k3d">7 ADEL certificates to recognise · 4 name corrections</em></div>
+      <div class="kpi"><small data-i18n="p.ce.k4">Expiring in 90 days</small><b data-count="212">212</b><em data-i18n="p.ce.k4d">Anti-Doping Essentials · 2-year validity · reminders scheduled</em></div>
+    </div>
+    <div class="grid g-main mt-2">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.ce.h">Recent certificates</h2><label class="tb-search" style="margin:0;height:36px"><svg class="ico"><use href="#i-search"/></svg><input type="search" placeholder="Search by name or certificate number" data-i18n-ph="p.ce.srch"></label></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.ce.c1">Number</th><th data-i18n="p.ce.c2">Holder</th><th data-i18n="p.ce.c3">Course</th><th data-i18n="p.ce.c4">Issued</th><th data-i18n="p.ce.c5">Valid to</th><th data-i18n="p.ce.c6">Status</th><th></th></tr></thead>
+          <tbody>
+            <tr data-sel><td class="num">ADEL-2026-0044</td><td>Lulwa Al-Qattan</td><td data-i18n="p.ce.adel">ADEL (WADA) · uploaded certificate</td><td class="num">30 · 10 · 2026</td><td class="num">—</td><td><span class="st warn" id="st-adel" data-i18n="p.ce.torec">To recognise</span></td><td class="r"><button class="lnk" type="button" data-toast="ADEL certificate recognised · added to the athlete's KADA record" data-toast-ar="اعتُمدت شهادة ADEL · أُضيفت إلى سجل الرياضي لدى الوكالة" data-set-status="#st-adel" data-st-en="Recognised" data-st-ar="معتمدة" data-hide-after data-i18n="p.recog">Recognise</button></td></tr>
+            <tr data-sel><td class="num">ESS-2026-0615</td><td>Reem Al-Bahar</td><td data-i18n="p.ce.cl2">Anti-Doping Essentials · Oct 2026</td><td class="num">16 · 10 · 2026</td><td class="num">16 · 10 · 2028</td><td><span class="st ok" data-i18n="p.ce.valid">Valid</span></td><td class="r"><button class="lnk" type="button" data-toast="PDF regenerated (AR/EN)" data-toast-ar="أُعيد توليد ملف PDF (عربي/إنجليزي)" data-i18n="p.ce.pdf">PDF</button></td></tr>
+            <tr data-sel><td class="num">ESS-2026-0612</td><td>Bader Al-Duwaisan</td><td data-i18n="p.ce.cl2">Anti-Doping Essentials · Oct 2026</td><td class="num">16 · 10 · 2026</td><td class="num">16 · 10 · 2028</td><td><span class="st ok" data-i18n="p.ce.valid">Valid</span></td><td class="r"><button class="lnk" type="button" data-toast="PDF regenerated (AR/EN)" data-toast-ar="أُعيد توليد ملف PDF (عربي/إنجليزي)" data-i18n="p.ce.pdf">PDF</button></td></tr>
+            <tr data-sel><td class="num">ESS-2026-0611</td><td>Maryam Al-Kharafi</td><td data-i18n="p.ce.cl2">Anti-Doping Essentials · Oct 2026</td><td class="num">16 · 10 · 2026</td><td class="num">16 · 10 · 2028</td><td><span class="st warn" id="st-ce" data-i18n="p.ce.corr">Name correction</span></td><td class="r"><button class="lnk" type="button" data-toast="Corrected and re-issued · old number revoked" data-toast-ar="صُحّحت وأُعيد إصدارها · أُلغي الرقم القديم" data-set-status="#st-ce" data-st-en="Valid" data-st-ar="سارية" data-i18n="p.ce.fix">Re-issue</button></td></tr>
+            <tr data-sel><td class="num">ESS-2024-1188</td><td>Hamad Al-Azmi</td><td data-i18n="p.ce.cl1">Anti-Doping Essentials · Dec 2024</td><td class="num">02 · 12 · 2024</td><td class="num">02 · 12 · 2026</td><td><span class="st info" data-i18n="p.ce.exp">Expiring · 30 d</span></td><td class="r"><button class="lnk" type="button" data-toast="Renewal reminder sent" data-toast-ar="أُرسل تذكير التجديد" data-i18n="p.ce.remind">Remind</button></td></tr>
+            <tr data-sel><td class="num">CCL-2026-0007</td><td>Khalid Al-Rashed</td><td data-i18n="p.ce.dco">Coaching Clean · Sep 2026</td><td class="num">25 · 09 · 2026</td><td class="num">25 · 09 · 2028</td><td><span class="st red" data-i18n="p.ce.rev">Revoked</span></td><td class="r"><button class="lnk" type="button" data-toast="Revocation reason: issued in error — audit entry linked" data-toast-ar="سبب الإلغاء: صدرت عن طريق الخطأ — مرتبط بقيد في سجل التدقيق" data-i18n="p.ce.why">Reason</button></td></tr>
+          </tbody></table></div>
+        <div class="foot-bar"><span data-i18n="p.ce.foot">Public verification page: kada.gov.kw/verify/‹number› · also inside the app</span></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.ce.tpl">Certificate template · Anti-Doping Essentials</h2></div>
+          <div class="seo-prev" style="aspect-ratio:1.414;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#f6f9f7,#e9f3ee)"><div><img src="../assets/logo-dark.png" alt="" style="height:26px;margin-bottom:10px"><div style="font-weight:800;color:var(--navy)" data-i18n="p.ce.tp1">Certificate of Completion · شهادة إتمام</div><div style="font-size:12px;color:#5f6b66;margin-top:6px" data-i18n="p.ce.tp2">Anti-Doping Essentials for athletes · 3 CPD hours</div><div style="font-size:11px;color:#5f6b66;margin-top:14px" data-i18n="p.ce.tp3">Signed by the Director General · QR verification · bilingual</div></div></div>
+          <div class="row mt-2"><button class="btn btn-ghost xs" type="button" data-toast="Template editor — design preview" data-toast-ar="محرر القالب — معاينة تصميم" data-i18n="p.edit">Edit</button><button class="btn btn-ghost xs" type="button" data-toast="Sample PDF generated" data-toast-ar="أُنشئ PDF تجريبي" data-i18n="p.ce.sample">Sample PDF</button></div>
+        </div>
+        <div class="card soft"><div class="card-head"><h2 data-i18n="p.ce.bulk">Bulk actions</h2></div><div class="row wrap"><button class="btn btn-ghost xs" type="button" data-toast="212 renewal reminders scheduled (30 · 14 · 1 days before)" data-toast-ar="جُدول 212 تذكيراً بالتجديد (قبل 30 · 14 · 1 يوماً)" data-i18n="p.ce.b1">Schedule renewal reminders</button><button class="btn btn-ghost xs" type="button" data-toast="Registry export (XLSX) ready" data-toast-ar="تصدير السجل (XLSX) جاهز" data-i18n="p.ce.b2">Export registry</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMMS ===================== -->
+  <section data-view="comms">
+    <div class="grid g-main">
+      <div class="card flush">
+        <div class="card-head"><h2 data-i18n="p.cm.h">Message templates</h2><button class="btn btn-ghost xs" type="button" data-toast="New template — design preview" data-toast-ar="قالب جديد — معاينة تصميم"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.cm.new">New template</span></button></div>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th data-i18n="p.cm.c1">Template</th><th data-i18n="p.cm.c2">Trigger</th><th data-i18n="p.cm.c3">Channels</th><th data-i18n="p.cm.c4">Languages</th><th data-i18n="p.cm.c5">Sent · 30 d</th><th></th></tr></thead>
+          <tbody>
+            <tr data-sel><td><b data-i18n="p.m1">Registration confirmed</b></td><td data-i18n="p.m1t">On confirmation</td><td data-i18n="p.ch.esa">Email · SMS · App</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">486</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.m2">Session reminder</b></td><td data-i18n="p.m2t">48 h and 3 h before</td><td data-i18n="p.ch.sa">SMS · App</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">912</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.m3">Waiting-list seat available</b></td><td data-i18n="p.m3t">On seat release · 24 h to accept</td><td data-i18n="p.ch.se">SMS · Email</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">14</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.m4">Certificate issued</b></td><td data-i18n="p.m4t">On quiz pass</td><td data-i18n="p.ch.ea">Email · App</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">268</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.m5">Evaluation survey</b></td><td data-i18n="p.m5t">24 h after last session</td><td data-i18n="p.ch.ea">Email · App</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">302</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+            <tr data-sel><td><b data-i18n="p.m6">Certificate renewal</b></td><td data-i18n="p.m6t">30 · 14 · 1 days before expiry</td><td data-i18n="p.ch.es">Email · SMS</td><td><span class="lang2"><span>AR</span><span>EN</span></span></td><td class="num">120</td><td class="r"><button class="lnk" type="button" data-drawer="d-tpl" data-i18n="p.edit">Edit</button></td></tr>
+          </tbody></table></div>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="card-head"><h2 data-i18n="p.cm.del">Delivery · 30 days</h2></div><svg class="chart" data-chart="stacked" data-values="420,380,460,510|390,350,420,470|310,300,340,380" data-labels="W1,W2,W3,W4" data-labels-ar="أ1,أ2,أ3,أ4" data-colors="green,navy,lime" data-h="170"></svg><div class="legend"><span><i style="background:var(--green)"></i><span data-i18n="p.ch.e">Email</span></span><span><i style="background:var(--navy)"></i><span data-i18n="p.ch.s">SMS</span></span><span><i style="background:var(--lime)"></i><span data-i18n="p.cm.app">App push</span></span></div></div>
+        <div class="card soft"><div class="health"><div><span data-i18n="p.cm.d1">Email delivered</span><b class="num">99.1%</b></div><div><span data-i18n="p.cm.d2">SMS delivered</span><b class="num">98.4%</b></div><div><span data-i18n="p.cm.d3">Opt-outs</span><b class="num">0.3%</b></div><div><span data-i18n="p.cm.d4">Quiet hours</span><b data-i18n="p.cm.d4v">22:00–08:00 respected</b></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- drawers -->
+  <div class="drawer" id="d-event"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.de.h">Event</h3>
+    <div class="form">
+      <div class="field"><label data-i18n="p.de.t">Title (AR / EN)</label><input dir="rtl" value="المؤتمر الوطني للرياضة النظيفة 2026"><input value="National Clean Sport Conference 2026"></div>
+      <div class="form g2"><div class="field"><label data-i18n="p.de.date">Date</label><input type="date" value="2026-12-14"></div><div class="field"><label data-i18n="p.de.type">Type</label><select><option data-i18n="p.ty.conf">Conference</option><option data-i18n="p.ty.tr">Training</option><option data-i18n="p.ty.sem">Seminar</option><option data-i18n="p.ty.dl">Deadline</option><option data-i18n="p.ty.int">International day</option></select></div></div>
+      <div class="field"><label data-i18n="p.de.venue">Venue · map link</label><input value="JW Marriott, Kuwait City · maps.app/…"></div>
+      <div class="field"><label data-i18n="p.de.reg">Registration</label><select><option data-i18n="p.de.r2">Seats with confirmation</option><option data-i18n="p.de.r1">Interest only (no seats)</option><option data-i18n="p.de.r3">Closed group</option></select></div>
+      <div class="switches"><div><div><b data-i18n="p.de.s1">Publish on website & app</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.de.s2">Add to home-page strip</b></div><span class="switch on"></span></div><div><div><b data-i18n="p.de.s3">Press accreditation form</b></div><span class="switch"></span></div></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Event saved" data-toast-ar="حُفظت الفعالية" data-i18n="p.save">Save</button><button class="btn btn-ghost sm" type="button" data-close data-toast="Sent to the approval queue — the Head of Communications reviews it before it appears on the website" data-toast-ar="أُرسلت إلى قائمة الاعتماد — يراجعها رئيس الاتصال قبل ظهورها على الموقع" data-i18n="p.de.send">Send for approval</button></div>
+  </div></div>
+  <div class="drawer" id="d-tpl"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3 data-i18n="p.m2">Session reminder</h3>
+    <div class="form">
+      <div class="field"><label data-i18n="p.tp.ar">Arabic</label><textarea dir="rtl" style="min-height:90px">مرحباً {name}، نذكّرك بموعد جلسة «{course}» غداً {date} الساعة {time} في {venue}. يُرجى إحضار البطاقة المدنية. — كادا</textarea></div>
+      <div class="field"><label data-i18n="p.tp.en">English</label><textarea style="min-height:90px">Hi {name}, a reminder of your “{course}” session tomorrow {date} at {time}, {venue}. Please bring your civil ID. — KADA</textarea></div>
+      <div class="field"><label data-i18n="p.tp.vars">Variables</label><div class="row wrap"><span class="chip">{name}</span><span class="chip">{course}</span><span class="chip">{date}</span><span class="chip">{time}</span><span class="chip">{venue}</span><span class="chip">{qr}</span></div></div>
+    </div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Template saved · test message sent to you" data-toast-ar="حُفظ القالب · أُرسلت رسالة تجريبية إليك" data-i18n="p.save">Save</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "التدريب والفعاليات — إدارة كادا",
+  "p.h": "الدورات والتدريب", "p.d": "أنشئ الدورات، وافتح التسجيل على الموقع، وتابع الحضور والاختبارات، وأصدر الشهادات — للرياضيين وأفراد الدعم والأندية والمدارس.",
+  "p.newev": "فعالية جديدة", "p.newc": "دورة جديدة", "p.t1": "الدورات", "p.t4": "الشهادات",
+  "p.k1": "المتدربون هذا العام", "p.k1d": "141% من هدف 2,200", "p.k2": "المقاعد المحجوزة · الدورات المفتوحة", "p.k2d": "من أصل 170 مقعداً في 4 دورات", "p.k3": "قائمة الانتظار", "p.k3d": "اعتماد مسؤولي مراقبة المنشطات · 20 / 20 مقعداً", "p.k4": "متوسط الرضا", "p.k4d": "/ 5 · 1,920 تقييماً",
+  "p.all": "الكل", "p.f.open": "التسجيل مفتوح", "p.f.done": "مكتملة", "p.f.draft": "مسودة", "p.export": "تصدير",
+  "p.c.c1": "الدورة", "p.c.c2": "الفئة المستهدفة", "p.c.c3": "الجلسة القادمة", "p.c.c4": "المسجلون / المقاعد", "p.c.c5": "نسبة الإتمام", "p.c.c6": "الحالة",
+  "p.c1": "أساسيات مكافحة المنشطات للرياضيين", "p.cls": "حضوري", "p.online": "مباشر عبر الإنترنت", "p.au1": "الرياضيون", "p.au2": "المدربون", "p.au3": "الطواقم الطبية", "p.au4": "المدارس", "p.au5": "مرشّحو الوكالة لمهام مسؤول مراقبة المنشطات", "p.au6": "الجميع",
+  "p.wait": "في الانتظار", "p.manage": "إدارة", "p.c2": "التدريب النظيف — مسؤوليات أفراد دعم الرياضيين", "p.c3": "الإعفاء للاستعمال العلاجي ووصف الأدوية للرياضيين — للأطباء", "p.cont": "في أي وقت", "p.c4": "يوم الرياضة النظيفة — برنامج التوعية المدرسية", "p.c5": "مسؤول مراقبة المنشطات — دورة الاعتماد", "p.c6": "برنامج ADEL من وادا — تعلّم إلكتروني معتمد", "p.certs": "الشهادات", "p.c7": "أساسيات مكافحة المنشطات — جلسة أكتوبر", "p.c8": "التدريب النظيف — جلسة سبتمبر",
+   "p.du.1d": "يوم واحد", "p.du.self": "تعلّم ذاتي",
+  "p.c.foot": "9 جلسات · 6 دورات معروضة على الموقع · تظهر الدورة في صفحة التدريب على الموقع بعد اعتمادها في قائمة الاعتماد وفتح التسجيل",
+  "p.cd.code": "ESS · حضوري · مقر الوكالة، القاعة A · العربية (عرض تقديمي بالإنجليزية)", "p.cd.seat": "40 مقعداً · 29 محجوزاً", "p.cd.wl": "بقي 11 مقعداً", "p.cd.addsess": "إضافة جلسة", "p.cd.public": "الصفحة العامة",
+  "p.cd.t1": "التسجيلات", "p.cd.t2": "الحضور والاختبار", "p.cd.t3": "إعدادات الدورة", "p.cd.t4": "التقييم",
+  "p.rg.h": "التسجيلات · 28 مؤكداً · 1 بانتظار التأكيد", "p.rg.remind": "إرسال تذكير", "p.rg.sheet": "ورقة الحضور", "p.rg.c1": "المشارك", "p.rg.c2": "الدور · الجهة", "p.rg.c3": "تاريخ التسجيل", "p.rg.c4": "المصدر", "p.rg.c5": "الحالة",
+  "p.rg.r1": "رياضية · اتحاد السباحة", "p.rg.r2": "رياضي · كرة القدم · نادي القادسية", "p.rg.r3": "رياضية · اتحاد المبارزة", "p.rg.r4": "رياضي · ألعاب القوى", "p.rg.r5": "رياضية · اتحاد الرماية", "p.rg.r6": "رياضي · كرة اليد",
+  "p.src.web": "الموقع", "p.src.app": "تطبيق كادا", "p.src.man": "يدوي", "p.rg.conf": "مؤكد", "p.rg.unpaid": "بانتظار التأكيد", "p.rg.confirm": "تأكيد", "p.view": "عرض",
+  "p.rg.foot": "عرض 6 من 29 · تُجمع تسجيلات الموقع والتطبيق في قائمة واحدة · تُدمج التسجيلات المكررة بالرقم المدني", "p.rg.mix": "مصادر التسجيل",
+  "p.ai.h": "المساعد الذكي", "p.ai.1": "بقي 11 مقعداً قبل 16 يوماً من الجلسة — 9 اتحادات لم تسجّل أي رياضي بعد؛ تذكيرها قد يملأ القاعة.", "p.ai.2": "7 من المسجلين من اتحاد السباحة؛ قد تصل جلسة تُعقد في مقر الاتحاد إلى عدد أكبر من رياضييه.", "p.ai.act": "تذكير الاتحادات",
+  "p.rg.sess": "الجلسات", "p.ss1": "القاعة A · مقر الوكالة · د. دلال الصباح", "p.ss2": "الشهادة · 3 ساعات تطوير مهني", "p.ss3": "الاختبار · إلكتروني · خلال 48 ساعة من الجلسة", "p.ss3d": "درجة النجاح 70% · محاولتان",
+  "p.at.h": "الحضور · جلسة أكتوبر (مكتملة)", "p.at.qr": "تسجيل الحضور بـ QR", "p.at.d1": "الحضور", "p.at.q": "الاختبار", "p.at.res": "النتيجة", "p.at.cert": "الشهادة", "p.at.pass": "ناجح", "p.at.inc": "غياب", "p.at.makeup": "دعوة للجلسة القادمة", "p.at.fail": "دون درجة النجاح", "p.at.retry": "فتح محاولة ثانية",
+  "p.at.foot": "عرض 5 من 40 · نجح 37 · غياب 2 · دون درجة النجاح 1 · تصدر الشهادات تلقائياً عند النجاح", "p.at.dist": "توزيع درجات الاختبار", "p.at.k1": "نسبة الحضور", "p.at.k2": "نسبة النجاح",
+  "p.se.h": "إعدادات الدورة", "p.se.tar": "العنوان (عربي)", "p.se.ten": "العنوان (إنجليزي)", "p.se.aud": "الفئة المستهدفة", "p.se.mode": "طريقة التقديم", "p.se.seats": "المقاعد", "p.se.wl": "قائمة الانتظار", "p.se.wl1": "مفعّلة · ترقية تلقائية", "p.se.wl2": "معطّلة", "p.se.pre": "المتطلب السابق", "p.se.none": "لا يوجد", "p.se.fee": "الرسوم", "p.se.free": "مجاني", "p.se.paid": "مدفوع عبر كي-نت", "p.se.desc": "الوصف (عربي / إنجليزي)",
+  "p.se.s1": "الإظهار في صفحة التدريب على الموقع", "p.se.s1d": "تظهر مع نموذج التسجيل بعد اعتمادها وفتح التسجيل.", "p.se.s2": "النشر في تطبيق كادا", "p.se.s2d": "بطاقة الدورة والتسجيل داخل التطبيق.", "p.se.s3": "شهادة عند الإتمام", "p.se.s3d": "القالب: أساسيات مكافحة المنشطات · 3 ساعات تطوير مهني · ثنائي اللغة · قابل للتحقق بـ QR.", "p.se.s4": "استبيان تقييم بعد 24 ساعة", "p.save": "حفظ", "p.se.dup": "نسخ",
+  "p.se.form": "حقول نموذج التسجيل", "p.se.f1": "الاسم الكامل (عربي + إنجليزي)", "p.se.f2": "الرقم المدني (موثّق)", "p.se.f3": "الجوال · البريد", "p.se.f4": "الدور · الرياضة · النادي", "p.se.f5": "متطلبات غذائية", "p.se.f6": "احتياجات إمكانية الوصول", "p.se.tr": "المحاضِرة والتنسيق", "p.se.lead": "المحاضِرة الرئيسية", "p.se.room": "القاعة", "p.se.roomv": "القاعة A · مقر الوكالة · 40 مقعداً",
+  "p.ev.h1": "الرضا · جلسة أكتوبر", "p.ev.q1": "ملاءمة المحتوى", "p.ev.q2": "المدرب", "p.ev.q3": "المواد", "p.ev.q4": "المكان والترتيبات", "p.ev.q5": "يوصون بالدورة", "p.ev.h2": "الاتجاه · جلسات أساسيات مكافحة المنشطات 2026", "p.ev.ai": "ملخص ذكي لـ 31 تعليقاً", "p.ev.a1": "الأكثر إشادة: العرض العملي لمراقبة المنشطات بمعدات حقيقية، ودراسات الحالة.", "p.ev.a2": "الأكثر طلباً: دليل الرياضي مطبوعاً بالعربية، ووقت أطول لموضوع المكملات الغذائية.", "p.ev.a3": "التوقيت: بدء الجلسة مساءً يناسب الرياضيين في فترة التدريب — ذُكر 9 مرات.",
+  "p.evn.h": "الفعاليات القادمة", "p.evn.list": "قائمة", "p.evn.cal": "تقويم", "p.evn.c1": "الفعالية", "p.evn.c2": "التاريخ", "p.evn.c3": "النوع", "p.evn.c4": "التسجيل", "p.evn.c5": "الموقع", "p.pub": "منشور", "p.edit": "تعديل",
+  "p.e1": "ورشة توعوية — المنتخبات الوطنية", "p.e1d": "ورشة لمدة نصف يوم لرياضيي الدورة الأولمبية ومدربيهم · قاعة اللجنة الأولمبية", "p.e2": "ندوة الصيادلة — الأدوية وقائمة المحظورات", "p.e2d": "لصيادلة الصيدليات الأهلية · عبر الإنترنت · 18:00 – 20:00", "p.ty.conf": "مؤتمر", "p.e3": "إغلاق التسجيل — المؤتمر الوطني للرياضة النظيفة 2026", "p.e3d": "آخر يوم للتسجيل في المؤتمر المقرر في 14 ديسمبر", "p.e4": "المؤتمر الوطني للرياضة النظيفة 2026", "p.e4d": "فندق جي دبليو ماريوت، مدينة الكويت · 12 متحدثاً · أُرسل إعلان التسجيل للاعتماد", "p.e5": "يوم اللعب النظيف — أنشطة في جميع أنحاء البلاد", "p.e5d": "يوم دولي · في جميع أنحاء البلاد",
+  "p.evn.foot": "5 فعاليات · تُضاف الدورات إلى التقويم تلقائياً من تبويب الدورات · الفعاليات المنشورة تغذّي صفحة الفعاليات والشريط في الرئيسية وتقويم التطبيق", "p.evn.next": "قادم · بعد 42 يوماً", "p.evn.n1": "البرنامج", "p.evn.n1v": "نهائي · عربي/إنجليزي", "p.evn.n2": "المتحدثون", "p.evn.n2v": "12 مؤكداً", "p.evn.n3": "المشاركون", "p.evn.n4": "إعلان الموقع", "p.evn.n4v": "بانتظار الاعتماد",
+  "p.evn.chk": "قائمة التحقق قبل النشر", "p.ck1": "عنوان ووصف باللغتين", "p.ck2": "التاريخ والمكان ورابط الخريطة", "p.ck3": "صورة رئيسية بنص بديل", "p.ck4": "معلومات إمكانية الوصول (المواقف، المداخل)", "p.ck5": "إنشاء مجلد معرض ما بعد الفعالية",
+  "p.ce.k1": "شهادات صادرة · 2026", "p.ce.k1d": "تصدر تلقائياً عند النجاح · قابلة للتحقق بـ QR", "p.ce.k2": "عمليات التحقق · 30 يوماً", "p.ce.k2d": "أندية واتحادات تمسح رمز QR", "p.ce.k3": "بانتظار الإجراء", "p.ce.k3d": "7 شهادات ADEL بانتظار الاعتماد · 4 تصحيحات أسماء", "p.ce.k4": "تنتهي خلال 90 يوماً", "p.ce.k4d": "أساسيات مكافحة المنشطات · صلاحية سنتان · التذكيرات مجدولة",
+  "p.ce.h": "أحدث الشهادات", "p.ce.srch": "ابحث بالاسم أو رقم الشهادة", "p.ce.c1": "الرقم", "p.ce.c2": "حامل الشهادة", "p.ce.c3": "الدورة", "p.ce.c4": "تاريخ الإصدار", "p.ce.c5": "صالحة حتى", "p.ce.c6": "الحالة", "p.ce.valid": "سارية", "p.ce.cl2": "أساسيات مكافحة المنشطات · أكتوبر 2026", "p.ce.cl1": "أساسيات مكافحة المنشطات · ديسمبر 2024", "p.ce.dco": "التدريب النظيف · سبتمبر 2026", "p.ce.pdf": "PDF", "p.ce.corr": "تصحيح اسم", "p.ce.fix": "إعادة إصدار", "p.ce.exp": "تنتهي · 30 يوماً", "p.ce.remind": "تذكير", "p.ce.rev": "ملغاة", "p.ce.why": "السبب",
+  "p.ce.foot": "صفحة التحقق العامة: kada.gov.kw/verify/‹الرقم› · ومتاحة داخل التطبيق", "p.ce.tpl": "قالب الشهادة · أساسيات مكافحة المنشطات", "p.ce.tp1": "شهادة إتمام · Certificate of Completion", "p.ce.tp2": "أساسيات مكافحة المنشطات للرياضيين · 3 ساعات تطوير مهني", "p.ce.tp3": "موقّعة من المدير العام · تحقق بـ QR · ثنائية اللغة", "p.ce.sample": "PDF تجريبي", "p.ce.bulk": "إجراءات جماعية", "p.ce.b1": "جدولة تذكيرات التجديد", "p.ce.b2": "تصدير السجل",
+  "p.cm.h": "قوالب الرسائل", "p.cm.new": "قالب جديد", "p.cm.c1": "القالب", "p.cm.c2": "حدث الإرسال", "p.cm.c3": "القنوات", "p.cm.c4": "اللغات", "p.cm.c5": "أُرسلت · 30 يوماً",
+  "p.m1": "تأكيد التسجيل", "p.m1t": "عند التأكيد", "p.m2": "تذكير بالجلسة", "p.m2t": "قبل 48 ساعة و3 ساعات", "p.m3": "توفر مقعد من قائمة الانتظار", "p.m3t": "عند تحرر مقعد · 24 ساعة للقبول", "p.m4": "إصدار الشهادة", "p.m4t": "عند اجتياز الاختبار", "p.m5": "استبيان التقييم", "p.m5t": "بعد 24 ساعة من آخر جلسة", "p.m6": "تجديد الشهادة", "p.m6t": "قبل 30 · 14 · 1 يوماً من الانتهاء",
+  "p.ch.esa": "البريد الإلكتروني · رسالة نصية · التطبيق", "p.ch.sa": "رسالة نصية · التطبيق", "p.ch.se": "رسالة نصية · البريد الإلكتروني", "p.ch.ea": "البريد الإلكتروني · التطبيق", "p.ch.es": "البريد الإلكتروني · رسالة نصية", "p.ch.e": "البريد الإلكتروني", "p.ch.s": "رسالة نصية",
+  "p.cm.del": "التسليم · 30 يوماً", "p.cm.app": "إشعار التطبيق", "p.cm.d1": "البريد المُسلَّم", "p.cm.d2": "الرسائل النصية المُسلَّمة", "p.cm.d3": "إلغاء الاشتراك", "p.cm.d4": "ساعات الهدوء", "p.cm.d4v": "22:00–08:00 مُطبّقة",
+  "p.de.h": "فعالية", "p.de.t": "العنوان (عربي / إنجليزي)", "p.de.date": "التاريخ", "p.de.type": "النوع", "p.de.venue": "المكان · رابط الخريطة", "p.de.reg": "التسجيل", "p.de.r1": "اهتمام فقط (بلا مقاعد)", "p.de.r2": "مقاعد مع تأكيد", "p.de.r3": "مجموعة مغلقة", "p.de.s1": "نشر على الموقع والتطبيق", "p.de.s2": "إضافة إلى شريط الرئيسية", "p.de.s3": "نموذج الاعتماد الصحفي", "p.de.send": "إرسال للاعتماد",
+  "p.tp.ar": "العربية", "p.tp.en": "الإنجليزية", "p.tp.vars": "المتغيرات",
+  "p.f.full": "مكتملة · قائمة انتظار", "p.f.almost": "شبه مكتملة", "p.f.always": "متاحة دائماً", "p.c9": "أساسيات مكافحة المنشطات — جلسة يناير", "p.du.3h": "3 ساعات", "p.du.4h": "4 ساعات", "p.du.half": "نصف يوم", "p.du.5d": "5 أيام", "p.web": "عبر الإنترنت", "p.kwd25": "25 د.ك", "p.kwd40": "40 د.ك", "p.kwd120": "120 د.ك", "p.adel.n": "غير محدودة · 7 شهادات بانتظار الاعتماد", "p.review": "مراجعة", "p.ss2d": "تصدر عند النجاح — إلى حساب الرياضي واتحاده", "p.se.leadv": "د. دلال الصباح — رئيسة إدارة التوعية", "p.se.coord": "المنسّق", "p.se.lang": "اللغة", "p.se.langv": "العربية (عرض تقديمي بالإنجليزية)", "p.ty.tr": "تدريب", "p.ty.sem": "ندوة", "p.ty.dl": "موعد نهائي", "p.ty.int": "يوم دولي", "p.evn.inv": "بدعوة", "p.evn.reg": "مسجّلاً", "p.awa": "بانتظار الاعتماد", "p.ce.adel": "ADEL (وادا) · شهادة مرفوعة", "p.ce.torec": "بانتظار الاعتماد", "p.recog": "اعتماد",
+  "p.site": "عرض على الموقع", "p.evh": "الفعاليات", "p.evd": "ورش عمل وندوات ومؤتمرات وأيام دولية. تُرسل كل فعالية للاعتماد، ثم تظهر في صفحة الفعاليات على الموقع وفي شريط الصفحة الرئيسية وتقويم التطبيق."
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Speak Up cases — KADA Admin</title>
+  <link rel="icon" href="../assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="../js/boot.js"></script>
+</head>
+<body data-module="speakup">
+<div data-page>
+
+  <!-- ===================== INBOX ===================== -->
+  <section data-view="inbox">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Speak Up reports</h1><p data-i18n="p.d">Anonymous reports from the website and the app. Assess each report within 48 hours, ask the reporter questions through the case key, and open an investigation when there is reasonable cause.</p></div>
+      <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Monthly report exported (PDF) — design preview" data-toast-ar="صُدّر التقرير الشهري (PDF) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Monthly report</span></button><a class="btn btn-primary sm" href="#case"><svg class="ico"><use href="#i-shield"/></svg><span data-i18n="p.triage">Triage next report</span></a></div>
+    </div>
+    <nav class="tabs">
+      <a href="#inbox"><span data-i18n="p.t1">Reports</span><span class="cnt">11</span></a>
+      <a href="#stats"><span data-i18n="p.t3">Statistics</span></a>
+    </nav>
+    <div class="restricted"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.restr">Restricted module. Access is limited to the Intelligence & Investigations unit; the system administrator manages accounts but cannot view case content. Every view of a case is logged. Reporter identity is never collected; reporters communicate through their case key.</span></div>
+    <div class="kpis mt-2">
+      <div class="kpi hot"><small data-i18n="p.k1">New · to assess</small><b data-count="2">2</b><em class="down" data-i18n="p.k1d">Oldest: 20 h left · SLA 48 h</em></div>
+      <div class="kpi"><small data-i18n="p.k2">Open cases</small><b data-count="11">11</b><em data-i18n="p.k2d">4 in investigation · 2 referred to Results Management</em></div>
+      <div class="kpi"><small data-i18n="p.k3">Median triage time (hours)</small><b data-count="14">14</b><em data-i18n="p.k3d">Target ≤ 48 h · 100% met this quarter</em></div>
+      <div class="kpi"><small data-i18n="p.k4">Reports · 2026</small><b data-count="47">47</b><em data-i18n="p.k4d">37 in scope · 10 out of scope</em><svg class="spark" data-chart="spark" data-values="3,4,2,6,5,4,7,3,5,8" data-colors="red"></svg></div>
+    </div>
+    <div class="card flush mt-2">
+      <div class="card-head">
+        <div class="filters" data-filter-group="s">
+          <button class="chip is-on" type="button" data-filter="all"><span data-i18n="p.f0">All open</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="new"><span data-i18n="p.f1">New</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="tri"><span data-i18n="p.f2">Triage</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="inv"><span data-i18n="p.f3">Investigation</span><span class="cnt"></span></button>
+          <button class="chip" type="button" data-filter="rm"><span data-i18n="p.f4">Referred to Results Management</span><span class="cnt"></span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-filter-rows="s"><table class="tbl">
+        <thead><tr><th data-i18n="p.c1">Case</th><th data-i18n="p.c2">Category</th><th data-i18n="p.c3">Received</th><th data-i18n="p.c4">Risk</th><th data-i18n="p.c6">SLA</th><th data-i18n="p.c7">Status</th><th></th></tr></thead>
+        <tbody>
+          <tr data-f="new" data-sel class="is-sel"><td class="nw"><b class="num">SU-2026-0191</b><span class="sub" data-i18n="p.r1">Web form · 2 attachments · AR</span></td><td data-i18n="p.cat1">Trafficking / supply</td><td class="num nw">22 · 10 · 09:40</td><td><span class="st red" data-i18n="p.high">High</span></td><td><div class="sla red"><div class="bar"><i style="width:58%"></i></div><small data-i18n="p.sla1">20 h left</small></div></td><td><span class="st red" id="st-0191" data-i18n="p.s1">New</span></td><td class="r"><a class="lnk" href="#case" data-i18n="p.open">Open</a></td></tr>
+          <tr data-f="new" data-sel><td class="nw"><b class="num">SU-2026-0190</b><span class="sub" data-i18n="p.r2">Mobile app · no attachments · EN</span></td><td data-i18n="p.cat2">Evasion / tampering</td><td class="num nw">22 · 10 · 18:15</td><td><span class="st warn" data-i18n="p.med">Medium</span></td><td><div class="sla warn"><div class="bar"><i style="width:40%"></i></div><small data-i18n="p.sla2">29 h left</small></div></td><td><span class="st red" data-i18n="p.s1">New</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="tri" data-sel><td class="nw"><b class="num">SU-2026-0189</b><span class="sub" data-i18n="p.r3">Web form · 1 attachment · AR</span></td><td data-i18n="p.cat3">Complicity / assistance</td><td class="num nw">20 · 10 · 11:02</td><td><span class="st warn" data-i18n="p.med">Medium</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st warn" data-i18n="p.s6">Awaiting reporter's reply</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="tri" data-sel><td class="nw"><b class="num">SU-2026-0188</b><span class="sub" data-i18n="p.r4">Hotline transcript · EN</span></td><td data-i18n="p.cat4">Prohibited association</td><td class="num nw">19 · 10 · 16:30</td><td><span class="st" data-i18n="p.low">Low</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st warn" data-i18n="p.s2">Triage</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="tri" data-sel><td class="nw"><b class="num">SU-2026-0186</b><span class="sub" data-i18n="p.r2">Mobile app · no attachments · EN</span></td><td data-i18n="p.cat5">Out of scope (HR matter)</td><td class="num nw">17 · 10 · 08:10</td><td><span class="st" data-i18n="p.low">Low</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st warn" data-i18n="p.s5">Closing · referral</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="inv" data-sel><td class="nw"><b class="num">SU-2026-0187</b><span class="sub" data-i18n="p.r5">Web form · 5 attachments · AR</span></td><td data-i18n="p.cat1">Trafficking / supply</td><td class="num nw">18 · 10 · 14:22</td><td><span class="st red" data-i18n="p.high">High</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st ok" data-i18n="p.s3">Investigation</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="inv" data-sel><td class="nw"><b class="num">SU-2026-0181</b><span class="sub" data-i18n="p.r3">Web form · 1 attachment · AR</span></td><td data-i18n="p.cat2">Evasion / tampering</td><td class="num nw">02 · 10 · 10:05</td><td><span class="st warn" data-i18n="p.med">Medium</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st ok" id="st-0181" data-i18n="p.s3">Investigation</span></td><td class="r"><a class="lnk" href="#investigation" data-i18n="p.iv.open">Open investigation</a></td></tr>
+          <tr data-f="inv" data-sel><td class="nw"><b class="num">SU-2026-0178</b><span class="sub" data-i18n="p.r4">Hotline transcript · EN</span></td><td data-i18n="p.cat6">Use / possession</td><td class="num nw">25 · 09 · 13:40</td><td><span class="st warn" data-i18n="p.med">Medium</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st ok" data-i18n="p.s3">Investigation</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="inv" data-sel><td class="nw"><b class="num">SU-2026-0176</b><span class="sub" data-i18n="p.r1">Web form · 2 attachments · AR</span></td><td data-i18n="p.cat3">Complicity / assistance</td><td class="num nw">20 · 09 · 09:12</td><td><span class="st" data-i18n="p.low">Low</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st ok" data-i18n="p.s3">Investigation</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="rm" data-sel><td class="nw"><b class="num">SU-2026-0174</b><span class="sub" data-i18n="p.r5">Web form · 5 attachments · AR</span></td><td data-i18n="p.cat6">Use / possession</td><td class="num nw">12 · 09 · 15:00</td><td><span class="st red" data-i18n="p.high">High</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st info" data-i18n="p.s4">Referred to Results Management</span><span class="sub" data-i18n="p.s4d">After investigation</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+          <tr data-f="rm" data-sel><td class="nw"><b class="num">SU-2026-0169</b><span class="sub" data-i18n="p.r3">Web form · 1 attachment · AR</span></td><td data-i18n="p.cat2">Evasion / tampering</td><td class="num nw">30 · 08 · 11:48</td><td><span class="st warn" data-i18n="p.med">Medium</span></td><td><div class="sla"><div class="bar"><i style="width:100%"></i></div><small data-i18n="p.sladone">Triaged</small></div></td><td><span class="st info" data-i18n="p.s4">Referred to Results Management</span><span class="sub" data-i18n="p.s4d">After investigation</span></td><td class="r"><button class="lnk" type="button" data-toast="Loaded — design preview" data-toast-ar="حُمّل — معاينة تصميم" data-i18n="p.open">Open</button></td></tr>
+        </tbody></table></div>
+      <div class="foot-bar"><span data-i18n="p.foot">Closed cases are archived for 10 years per the retention schedule and are searchable by case key only</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== CASE (triage) ===================== -->
+  <section data-view="case">
+    <a class="pe-back mb-1" href="#inbox"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.back">All reports</span></a>
+    <div class="restricted"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.cs.restr">Confidential · your access to this case is being logged (view, download, message). Do not export evidence outside the platform.</span></div>
+    <div class="grid g-main mt-2">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2><span class="num">SU-2026-0191</span> · <span data-i18n="p.cat1">Trafficking / supply</span></h2><small><span data-i18n="p.cs.rec">Received</span> <span class="num">22 · 10 · 2026 · 09:40</span> · <span data-i18n="p.cs.via">via website form (Arabic)</span></small></div><div class="row"><span class="st red" data-i18n="p.high">High risk</span><span class="st red" id="st-case" data-i18n="p.s1">New</span></div></div>
+          <dl class="kv">
+            <dt data-i18n="p.cs.what">What happened</dt><dd data-i18n="p.cs.whatv">Reporter states that a person connected to a club's weightlifting section is supplying prohibited substances to junior athletes before regional competitions, and names a storage location at the training facility.</dd>
+            <dt data-i18n="p.cs.who">Persons mentioned</dt><dd data-i18n="p.cs.whov">1 athlete support person (not named) · 2 athletes described by age group · identities withheld pending triage</dd>
+            <dt data-i18n="p.cs.when">When / where</dt><dd data-i18n="p.cs.whenv">September – October 2026 · club training facility (Hawalli governorate)</dd>
+            <dt data-i18n="p.cs.rep">Reporter</dt><dd data-i18n="p.cs.repv">Anonymous · willing to answer follow-up questions through the case key · reporting language Arabic</dd>
+            <dt data-i18n="p.cs.ai">AI pre-assessment (advisory)</dt><dd><span data-i18n="p.cs.aiv">Priority: high — specificity 0.82 · matches open case SU-2026-0187 (same federation & window)</span></dd>
+          </dl>
+          <div class="card-head mt-2"><h3 data-i18n="p.cs.t5">Possibly related</h3></div>
+          <div class="doc-row"><span class="ty">SU</span><div><b class="num">SU-2026-0187 · <span data-i18n="p.cat1">Trafficking / supply</span></b><small data-i18n="p.cs.rel1">Same federation and period · in investigation · 5 attachments</small></div><button class="btn btn-soft xs" type="button" data-toast="Cases linked · investigator notified" data-toast-ar="رُبطت القضيتان · أُخطر المحقق" data-i18n="p.cs.link">Link cases</button></div>
+          <div class="doc-row"><span class="ty">SU</span><div><b class="num">SU-2026-0174 · <span data-i18n="p.cat6">Use / possession</span></b><small data-i18n="p.cs.rel2">Same club · referred to Results Management after investigation</small></div><button class="btn btn-ghost xs" type="button" data-toast="Opened — design preview" data-toast-ar="فُتح — معاينة تصميم" data-i18n="p.open">Open</button></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div><h2 data-i18n="p.cs.t3">Messages with the reporter</h2><small data-i18n="p.cs.m0">The reporter reads your messages by entering the case key on the public Speak Up page — no account, no email.</small></div><span class="st warn" data-i18n="p.cs.mnew">1 unread</span></div>
+          <div class="thread">
+            <div class="m"><span data-i18n="p.cs.m1">I can share more details about the dates if that helps. I don't want to be contacted by anyone from the club.</span><small><span data-i18n="p.iv.mrep">Reporter</span> · <span class="num">22 · 10 · 21:05</span></small></div>
+            <div class="m me"><span data-i18n="p.cs.m2">Thank you. Your identity is not collected. Could you indicate which competition dates the deliveries happened before, and whether the packaging had any label?</span><small><span data-i18n="p.cs.kada">KADA</span> · <span class="num">23 · 10 · 08:30</span> · <span data-i18n="p.mt.q">Question</span></small></div>
+            <div class="m"><span data-i18n="p.cs.m3">Before the regional youth championship in October. The box had no label, only handwriting.</span><small><span data-i18n="p.iv.mrep">Reporter</span> · <span class="num">23 · 10 · 11:52</span></small></div>
+            <span class="sys" id="cs-sent" hidden data-i18n="p.mt.sent">Message sent · the reporter will see it the next time they enter the case key</span>
+          </div>
+          <div class="form mt-2">
+            <div class="field"><label data-i18n="p.mt.type">Message type</label><select><option data-i18n="p.mt.q1">Question — the reporter is asked to reply</option><option data-i18n="p.mt.n1">Note — information for the reporter, no reply needed</option></select></div>
+            <div class="field"><textarea data-i18n-ph="p.cs.mph" placeholder="Write to the reporter… e.g. Do you have a photo of the storage location?"></textarea></div>
+          </div>
+          <div class="row between mt-1"><small class="muted" data-i18n="p.mt.warn">Never ask for the reporter's name, phone number or other identifying details.</small><button class="btn btn-primary sm" type="button" data-toast="Sent to the reporter through the case key · identity stays hidden" data-toast-ar="أُرسلت إلى المبلّغ عبر مفتاح القضية · تبقى هويته مخفية" data-show-after="#cs-sent"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.mt.send">Send to reporter</span></button></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2><span data-i18n="p.cs.t2">Evidence from the reporter</span> <span class="pill-num">2</span></h2></div>
+          <div class="evid">
+            <div><span class="ty">JPG</span><b>IMG_4471.jpg</b><small data-i18n="p.cs.e1">Photo of packaging · EXIF stripped · 2.1 MB · scanned clean</small></div>
+            <div><span class="ty">PDF</span><b>schedule.pdf</b><small data-i18n="p.cs.e2">Training schedule · 1 page · scanned clean</small></div>
+          </div>
+          <p class="small muted mt-1" data-i18n="p.cs.chain">Every open and download is recorded with user, time and file hash. Originals cannot be changed.</p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.cs.dec">Triage decision</h2><span class="st red" data-i18n="p.sla1">20 h left</span></div>
+          <p class="small muted" data-i18n="p.cs.decd">Assess how relevant and reliable the report is, then choose one outcome. The reporter receives a general update through the case key.</p>
+          <div class="form mt-1">
+            <div class="field"><label data-i18n="p.cs.cat">Confirm category</label><select><option data-i18n="p.cat1">Trafficking / supply</option><option data-i18n="p.cat3">Complicity / assistance</option><option data-i18n="p.cat6">Use / possession</option><option data-i18n="p.cat5">Out of scope</option></select></div>
+            <div class="field"><label data-i18n="p.cs.note">Triage note (internal)</label><textarea data-i18n-ph="p.cs.noteph" placeholder="Reasoning for the decision…"></textarea></div>
+          </div>
+          <div class="stack mt-2" style="gap:8px">
+            <button class="btn btn-primary" type="button" data-toast="Investigation opened · reporter informed via case key" data-toast-ar="فُتح تحقيق · أُبلغ المبلّغ عبر مفتاح القضية" data-set-status="#st-case, #st-0191" data-st-class="ok" data-st-en="Investigation" data-st-ar="تحقيق"><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.cs.accept">Open an investigation</span></button>
+            <button class="btn btn-ghost sm" type="button" data-toast="Kept as intelligence · Testing & Operations informed to plan target testing" data-toast-ar="حُفظ كمعلومة استخباراتية · أُبلغ الفحص والعمليات لتخطيط فحص موجّه" data-set-status="#st-case, #st-0191" data-st-class="info" data-st-en="Intelligence · target testing" data-st-ar="معلومة استخباراتية · فحص موجّه"><svg class="ico"><use href="#i-eye"/></svg><span data-i18n="p.cs.intel">Keep as intelligence · target testing</span></button>
+            <button class="btn btn-ghost sm" type="button" data-toast="Shared securely with the competent authority · record kept" data-toast-ar="شوركت بأمان مع الجهة المختصة · حُفظ سجل المشاركة" data-set-status="#st-case, #st-0191" data-st-class="info" data-st-en="Shared with competent authority" data-st-ar="مُشارك مع جهة مختصة"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.cs.ext">Share with a competent authority</span></button>
+            <button class="btn btn-ghost sm" type="button" data-toast="Closed as out of scope · reporter informed" data-toast-ar="أُغلق لكونه خارج النطاق · أُبلغ المبلّغ" data-set-status="#st-case, #st-0191" data-st-class="" data-st-en="Closed · out of scope" data-st-ar="مغلق · خارج النطاق"><svg class="ico"><use href="#i-x"/></svg><span data-i18n="p.cs.close">Close · out of scope</span></button>
+          </div>
+          <div class="notice mt-2"><svg class="ico"><use href="#i-shield"/></svg><span data-i18n="p.cs.rmnote">A new report is not sent to Results Management. It goes there only after an investigation finds grounds for a potential anti-doping rule violation (WADA International Standard for Intelligence and Investigations 2027, Art. 5.5).</span></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.cs.t4">Case history</h2></div>
+          <div class="tl">
+            <div><i class="red"></i><div><b data-i18n="p.cs.tl1">Report received · case key generated · AI pre-assessment: high</b><small class="num">22 · 10 · 09:40 · <span data-i18n="p.cs.sys">system</span></small></div></div>
+            <div><i class="warn"></i><div><b data-i18n="p.cs.tl2">Notified: investigations officer (SMS + email)</b><small class="num">22 · 10 · 09:41 · <span data-i18n="p.cs.sys">system</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.cs.tl3">Reporter message received</b><small class="num">22 · 10 · 21:05</small></div></div>
+            <div><i></i><div><b data-i18n="p.cs.tl5">Question sent to the reporter</b><small>Khalid Al-Shammari · <span class="num">23 · 10 · 08:30</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.cs.tl7">Reporter replied</b><small class="num">23 · 10 · 11:52</small></div></div>
+            <div><i class="grey"></i><div><b data-i18n="p.cs.tl6">Triage decision due</b><small class="num">24 · 10 · 09:40</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INVESTIGATION ===================== -->
+  <section data-view="investigation">
+    <a class="pe-back mb-1" href="#inbox"><svg class="ico"><use href="#i-back"/></svg><span data-i18n="p.back">All reports</span></a>
+    <div class="restricted"><svg class="ico"><use href="#i-lock"/></svg><span data-i18n="p.iv.restr">Investigation file · restricted to the assigned investigators and the Head of Intelligence &amp; Investigations. Every view, download and message is logged. System administrators cannot view case content.</span></div>
+    <div class="grid g-main mt-2">
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><div><h2><span class="num">SU-2026-0181</span> · <span data-i18n="p.cat2">Evasion / tampering</span></h2><small><span data-i18n="p.iv.opened">Investigation opened</span> <span class="num">04 · 10 · 2026</span> · <span data-i18n="p.iv.from">report received</span> <span class="num">02 · 10 · 2026 · 10:05</span> · <span data-i18n="p.cs.via">via website form (Arabic)</span></small></div><div class="row"><span class="st warn" data-i18n="p.iv.medr">Medium risk</span><span class="st ok" id="st-inv" data-i18n="p.s3">Investigation</span></div></div>
+          <dl class="kv">
+            <dt data-i18n="p.iv.lead">Lead investigator</dt><dd>Khalid Al-Shammari · <span data-i18n="p.iv.unit">Intelligence &amp; Investigations unit</span></dd>
+            <dt data-i18n="p.iv.over">Oversight</dt><dd data-i18n="p.iv.head">Head of Intelligence &amp; Investigations</dd>
+            <dt data-i18n="p.cs.rep">Reporter</dt><dd><span data-i18n="p.iv.repv">Anonymous · contact only through tracking code</span> <span class="num">KW-7F3Q-9A</span></dd>
+            <dt data-i18n="p.iv.due">Findings due</dt><dd class="num">06 · 11 · 2026</dd>
+          </dl>
+          <div class="steps mt-2">
+            <div class="done"><b data-i18n="p.iv.s1">Triage</b><small class="num">04 · 10</small></div>
+            <div class="done"><b data-i18n="p.iv.s2">Investigation plan</b><small class="num">06 · 10</small></div>
+            <div class="done"><b data-i18n="p.iv.s3">Evidence gathering</b><small class="num">20 · 10</small></div>
+            <div class="cur"><b data-i18n="p.iv.s4">Interviews</b><small data-i18n="p.iv.s4d">2 of 3 held</small></div>
+            <div><b data-i18n="p.iv.s5">Findings</b><small class="num">06 · 11</small></div>
+            <div><b data-i18n="p.iv.s6">Outcome</b><small>—</small></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tabs pills" data-tabs="iv">
+            <button type="button" class="is-on" data-tab="plan" data-i18n="p.iv.t1">Plan &amp; tasks</button>
+            <button type="button" data-tab="evd"><span data-i18n="p.iv.t2">Evidence</span> <span class="pill-num">6</span></button>
+            <button type="button" data-tab="int"><span data-i18n="p.iv.t3">Interviews</span> <span class="pill-num">3</span></button>
+            <button type="button" data-tab="sec" data-i18n="p.cs.t3">Messages with the reporter</button>
+            <button type="button" data-tab="fnd" data-i18n="p.iv.t5">Findings</button>
+          </div>
+
+          <div data-pane-group="iv" data-pane="plan">
+            <dl class="kv">
+              <dt data-i18n="p.iv.obj">Objectives</dt><dd data-i18n="p.iv.objv">Establish whether a staff member at a private gym sells masking products marketed as “cutting tabs” to registered athletes and advises them on avoiding testing; preserve evidence to a standard suitable for referral.</dd>
+              <dt data-i18n="p.iv.scope">Scope</dt><dd data-i18n="p.iv.scopev">One private gym (Farwaniya governorate) · June – October 2026 · athletes registered with national federations · commercial licensing and HR matters excluded (referred externally if confirmed)</dd>
+              <dt data-i18n="p.iv.appr">Plan approved</dt><dd><span data-i18n="p.iv.head">Head of Intelligence &amp; Investigations</span> · <span class="num">06 · 10 · 2026</span></dd>
+            </dl>
+            <div class="card-head mt-2"><h3 data-i18n="p.iv.tasks">Tasks</h3><button class="btn btn-soft xs" type="button" data-toast="Task added to SU-2026-0181 · assignee notified" data-toast-ar="أُضيفت مهمة إلى SU-2026-0181 · أُخطر المسند إليه"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="p.iv.addt">Add task</span></button></div>
+            <div class="tbl-wrap"><table class="tbl compact">
+              <thead><tr><th data-i18n="p.iv.tc1">Task</th><th data-i18n="p.iv.tc2">Assignee</th><th data-i18n="p.iv.tc3">Due</th><th data-i18n="p.c7">Status</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p.iv.k1">Preserve the gym's social-media adverts (open source)</td><td class="nw">Khalid Al-Shammari</td><td class="num">07 · 10</td><td><span class="st ok" data-i18n="p.iv.done">Done</span></td></tr>
+                <tr><td data-i18n="p.iv.k2">Test purchase of the product at the gym counter</td><td class="nw">Khalid Al-Shammari</td><td class="num">09 · 10</td><td><span class="st ok" data-i18n="p.iv.done">Done</span></td></tr>
+                <tr><td data-i18n="p.iv.k3">Request testing history extract from Results Management</td><td class="nw">Khalid Al-Shammari</td><td class="num">13 · 10</td><td><span class="st ok" data-i18n="p.iv.done">Done</span></td></tr>
+                <tr><td data-i18n="p.iv.k4">Witness interviews W1 and W2</td><td class="nw">Khalid Al-Shammari</td><td class="num">19 · 10</td><td><span class="st ok" data-i18n="p.iv.done">Done</span></td></tr>
+                <tr><td data-i18n="p.iv.k5">Product analysis by an external laboratory</td><td class="nw" data-i18n="p.iv.pool">Investigations pool</td><td class="num">20 · 10</td><td><span class="st ok" data-i18n="p.iv.done">Done</span></td></tr>
+                <tr><td data-i18n="p.iv.k6">Complete the chain-of-custody signature for EV-03</td><td class="nw" data-i18n="p.iv.pool">Investigations pool</td><td class="num">24 · 10</td><td><span class="st warn" data-i18n="p.iv.opn">Open</span></td></tr>
+                <tr><td data-i18n="p.iv.k7">Subject interview S1</td><td class="nw">Khalid Al-Shammari</td><td class="num">27 · 10</td><td><span class="st info" data-i18n="p.iv.sched">Scheduled</span></td></tr>
+                <tr><td data-i18n="p.iv.k8">Draft findings report</td><td class="nw">Khalid Al-Shammari</td><td class="num">06 · 11</td><td><span class="st" data-i18n="p.iv.ns">Not started</span></td></tr>
+              </tbody></table></div>
+          </div>
+
+          <div data-pane-group="iv" data-pane="evd" hidden>
+            <div class="card-head"><h3 data-i18n="p.iv.t2">Evidence</h3><button class="btn btn-soft xs" type="button" data-toast="Evidence item EV-07 logged · SHA-256 recorded · custody entry created" data-toast-ar="سُجّل الدليل EV-07 · حُفظت بصمة SHA-256 · أُنشئ قيد في سلسلة الحيازة"><svg class="ico"><use href="#i-upload"/></svg><span data-i18n="p.iv.loge">Log evidence</span></button></div>
+            <div class="tbl-wrap"><table class="tbl compact">
+              <thead><tr><th data-i18n="p.iv.ec1">Item</th><th data-i18n="p.iv.ec2">Type</th><th data-i18n="p.iv.ec3">Source</th><th data-i18n="p.iv.ec4">Received</th><th data-i18n="p.iv.ec5">Chain of custody</th></tr></thead>
+              <tbody>
+                <tr><td><b class="num">EV-01</b><span class="sub" data-i18n="p.iv.e1">Photo of product label</span></td><td data-i18n="p.iv.ty1">Image</td><td data-i18n="p.iv.src1">Reporter (via tracking code)</td><td class="num">02 · 10</td><td><span class="st ok" data-i18n="p.iv.signed">Signed</span><span class="sub" data-i18n="p.iv.cc1">System intake · metadata stripped · sealed</span></td></tr>
+                <tr><td><b class="num">EV-02</b><span class="sub" data-i18n="p.iv.e2">Gym social-media adverts (3 screenshots)</span></td><td data-i18n="p.iv.ty1">Image</td><td data-i18n="p.iv.src2">Open source · investigator</td><td class="num">07 · 10</td><td><span class="st ok" data-i18n="p.iv.signed">Signed</span><span class="sub" data-i18n="p.iv.cc2">Captured and signed by the lead investigator</span></td></tr>
+                <tr><td><b class="num">EV-03</b><span class="sub" data-i18n="p.iv.e3">Product sample · sealed bag KADA-EV-0181-03</span></td><td data-i18n="p.iv.ty2">Physical item</td><td data-i18n="p.iv.src3">Test purchase</td><td class="num">09 · 10</td><td><span class="st warn" data-i18n="p.iv.unsigned">Signature missing</span><span class="sub" data-i18n="p.iv.cc3">Handed to laboratory courier 14 · 10 · no receiving signature</span></td></tr>
+                <tr><td><b class="num">EV-04</b><span class="sub" data-i18n="p.iv.e4">Testing history extract</span></td><td data-i18n="p.iv.ty3">Document (PDF)</td><td data-i18n="p.iv.src4">Results Management (KADA app)</td><td class="num">13 · 10</td><td><span class="st ok" data-i18n="p.iv.signed">Signed</span><span class="sub" data-i18n="p.iv.cc4">Provided on request · hand-over record</span></td></tr>
+                <tr><td><b class="num">EV-05</b><span class="sub" data-i18n="p.iv.e5">Witness interview W1 · audio</span></td><td data-i18n="p.iv.ty4">Audio</td><td data-i18n="p.iv.src5">Interview W1</td><td class="num">15 · 10</td><td><span class="st ok" data-i18n="p.iv.signed">Signed</span><span class="sub" data-i18n="p.iv.cc5">Recorded in the interview room · stored encrypted</span></td></tr>
+                <tr><td><b class="num">EV-06</b><span class="sub" data-i18n="p.iv.e6">Laboratory analysis report (product)</span></td><td data-i18n="p.iv.ty3">Document (PDF)</td><td data-i18n="p.iv.src6">External laboratory</td><td class="num">20 · 10</td><td><span class="st ok" data-i18n="p.iv.signed">Signed</span><span class="sub" data-i18n="p.iv.cc6">Received via secure upload</span></td></tr>
+              </tbody></table></div>
+            <p class="small muted mt-1" data-i18n="p.iv.evr">Originals cannot be changed and are fingerprinted on receipt (SHA-256). Every open or download is recorded in the chain of custody.</p>
+          </div>
+
+          <div data-pane-group="iv" data-pane="int" hidden>
+            <div class="card-head"><h3 data-i18n="p.iv.ilog">Interview log</h3><button class="btn btn-soft xs" type="button" data-toast="Interview scheduled · invitation sent · interview room booked" data-toast-ar="جُدولت المقابلة · أُرسلت الدعوة · حُجزت غرفة المقابلات"><svg class="ico"><use href="#i-cal"/></svg><span data-i18n="p.iv.schi">Schedule interview</span></button></div>
+            <div class="tbl-wrap"><table class="tbl compact">
+              <thead><tr><th data-i18n="p.iv.ic1">Ref · role</th><th data-i18n="p.iv.ic2">Date</th><th data-i18n="p.iv.ic3">Recorded</th><th data-i18n="p.iv.ic4">Summary signed</th><th data-i18n="p.iv.ic5">Summary</th></tr></thead>
+              <tbody>
+                <tr><td class="nw"><b class="num">W1</b><span class="sub" data-i18n="p.iv.i1r">Witness · gym member</span></td><td class="num">15 · 10 · 2026</td><td><span class="st ok" data-i18n="p.iv.yes">Yes</span></td><td><span class="st ok" data-i18n="p.iv.yes">Yes</span></td><td data-i18n="p.iv.i1s">Saw staff sell “cutting tabs” at the counter to athletes preparing for competitions.</td></tr>
+                <tr><td class="nw"><b class="num">W2</b><span class="sub" data-i18n="p.iv.i2r">Witness · former gym employee</span></td><td class="num">19 · 10 · 2026</td><td><span class="st" data-i18n="p.iv.no">No</span><span class="sub" data-i18n="p.iv.i2n">Written notes at the witness's request</span></td><td><span class="st ok" data-i18n="p.iv.yes">Yes</span></td><td data-i18n="p.iv.i2s">Describes advice given to athletes on timing use before competitions and on avoiding tests.</td></tr>
+                <tr><td class="nw"><b class="num">S1</b><span class="sub" data-i18n="p.iv.i3r">Subject · athlete support person (gym staff)</span></td><td class="num">27 · 10 · 2026 · 10:00</td><td><span class="st info" data-i18n="p.iv.i3c">Planned · with consent</span></td><td class="muted">—</td><td data-i18n="p.iv.i3s">Invitation sent · right to be accompanied explained.</td></tr>
+              </tbody></table></div>
+            <p class="small muted mt-1" data-i18n="p.iv.inote">The anonymous reporter is never interviewed or identified. Interviewees are coded (W1, W2, S1) and the identity key is stored separately.</p>
+          </div>
+
+          <div data-pane-group="iv" data-pane="sec" hidden>
+            <p class="small muted" data-i18n="p.iv.m0">Channel bound to tracking code KW-7F3Q-9A · the reporter's identity is never revealed to investigators</p>
+            <div class="thread mt-1">
+              <div class="m"><span data-i18n="p.iv.m1">I added one photo of the product. Will the gym find out who sent this report?</span><small><span data-i18n="p.iv.mrep">Reporter</span> · <span class="num">03 · 10 · 22:10</span></small></div>
+              <div class="m me"><span data-i18n="p.iv.m2">Your identity is not collected and will never be shared with the gym or anyone else. Your report has been accepted for assessment.</span><small><span data-i18n="p.iv.mk">KADA investigations</span> · <span class="num">04 · 10 · 09:30</span> · <span data-i18n="p.mt.n">Note</span></small></div>
+              <div class="m me"><span data-i18n="p.iv.m3">Can you tell us whether the supplements were sold inside the gym or ordered online?</span><small><span data-i18n="p.iv.mk">KADA investigations</span> · <span class="num">11 · 10 · 09:15</span> · <span data-i18n="p.mt.q">Question</span></small></div>
+              <span class="sys" data-i18n="p.iv.m4">Awaiting reply from the reporter</span>
+              <span class="sys" id="iv-sent" hidden data-i18n="p.mt.sent">Message sent · the reporter will see it the next time they enter the case key</span>
+            </div>
+            <div class="form mt-2">
+              <div class="field"><label data-i18n="p.mt.type">Message type</label><select><option data-i18n="p.mt.q1">Question — the reporter is asked to reply</option><option data-i18n="p.mt.n1">Note — information for the reporter, no reply needed</option></select></div>
+              <div class="field"><textarea data-i18n-ph="p.iv.mph" placeholder="Write to the reporter through tracking code KW-7F3Q-9A…"></textarea></div>
+            </div>
+            <div class="row between mt-1"><small class="muted" data-i18n="p.mt.warn">Never ask for the reporter's name, phone number or other identifying details.</small><button class="btn btn-primary sm" type="button" data-toast="Message posted to the tracking-code channel · reporter identity stays hidden" data-toast-ar="نُشرت الرسالة في قناة رمز المتابعة · تبقى هوية المبلّغ مخفية" data-show-after="#iv-sent"><svg class="ico"><use href="#i-send"/></svg><span data-i18n="p.mt.send">Send to reporter</span></button></div>
+          </div>
+
+          <div data-pane-group="iv" data-pane="fnd" hidden>
+            <div class="notice warn"><svg class="ico"><use href="#i-warn"/></svg><span data-i18n="p.iv.fdraft">Draft findings — to be completed after the subject interview. Investigators record findings and an outcome; whether an anti-doping rule violation is asserted is decided by Results Management.</span></div>
+            <dl class="kv mt-2">
+              <dt data-i18n="p.iv.fsum">Findings summary</dt><dd data-i18n="p.iv.fsumv">Product bought at the gym counter; the laboratory report indicates a diuretic (masking-agent class); two witnesses describe sales to athletes before competitions and advice on avoiding tests. Subject's account pending (27 · 10).</dd>
+              <dt data-i18n="p.iv.fper">Persons of interest</dt><dd data-i18n="p.iv.fperv">1 athlete support person (S1) · athletes not yet identified by name</dd>
+            </dl>
+            <div class="row mt-2"><button class="btn btn-ghost sm" type="button" data-toast="Closure report (PDF) drafted · watermarked · access logged" data-toast-ar="أُعدّت مسودة تقرير الإغلاق (PDF) · بعلامة مائية · سُجّل الوصول"><svg class="ico"><use href="#i-doc"/></svg><span data-i18n="p.iv.rep">Closure report</span></button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2 data-i18n="p.iv.act">Next step</h2></div>
+          <p class="small" data-i18n="p.iv.nxt"><b>Subject interview S1 on 27 · 10</b>, then the findings are due on 06 · 11.</p>
+          <div class="stack mt-2" style="gap:8px">
+            <button class="btn btn-primary" type="button" data-drawer="d-close-inv"><svg class="ico"><use href="#i-check"/></svg><span data-i18n="p.iv.close">Finish investigation</span></button>
+          </div>
+          <p class="small muted mt-2" data-i18n="p.iv.actn">When you finish, you choose the outcome. If there are grounds for a potential anti-doping rule violation, the file goes to Results Management, which notifies the athlete.</p>
+        </div>
+        <div class="ai">
+          <h2><svg class="ico"><use href="#i-spark"/></svg><span data-i18n="p.iv.ai">AI assistant · advisory</span></h2>
+          <p data-i18n="p.iv.aip">Suggestions to support the investigator. AI never makes a finding or determination.</p>
+          <ul>
+            <li><span data-i18n="p.iv.ai1"><b>Possible linked reports:</b> SU-2026-0190 (mentions “cutting tabs”, 22 · 10) and SU-2026-0169 (same area, August 2026). Review before linking.</span></li>
+            <li><span data-i18n="p.iv.ai2"><b>Chain-of-custody signature missing</b> for EV-03 — the hand-over to the laboratory courier on 14 · 10 has no receiving signature.</span></li>
+            <li><span data-i18n="p.iv.ai3"><b>3 of 8 tasks are still open</b> with findings due 06 · 11; the subject interview on 27 · 10 is on the critical path.</span></li>
+          </ul>
+          <div class="acts"><button class="btn btn-outline xs" type="button" data-toast="Suggested links opened for review — nothing is linked automatically" data-toast-ar="فُتحت الروابط المقترحة للمراجعة — لا يُربط شيء تلقائياً" data-i18n="p.iv.aia1">Review suggested links</button><button class="btn btn-outline xs" type="button" data-toast="Signature request sent to the custody record for EV-03" data-toast-ar="أُرسل طلب التوقيع إلى سجل الحيازة للدليل EV-03" data-i18n="p.iv.aia2">Request signature</button></div>
+        </div>
+        <div class="card soft">
+          <div class="card-head"><h2 data-i18n="p.iv.aud">Who opened this file</h2></div>
+          <div class="tl">
+            <div><i></i><div><b data-i18n="p.iv.l1">Case file viewed</b><small>Khalid Al-Shammari · <span class="num">23 · 10 · 08:05</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.iv.l2">Laboratory report EV-06 opened</b><small>Khalid Al-Shammari · <span class="num">22 · 10 · 14:20</span></small></div></div>
+            <div><i></i><div><b data-i18n="p.iv.l3">Plan and evidence register reviewed</b><small><span data-i18n="p.iv.head">Head of Intelligence &amp; Investigations</span> · <span class="num">21 · 10 · 16:40</span></small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section data-view="stats">
+    <div class="page-head">
+      <div><h1 data-i18n="p.h">Speak Up reports</h1><p data-i18n="p.d">Anonymous reports from the website and the app. Assess each report within 48 hours, ask the reporter questions through the case key, and open an investigation when there is reasonable cause.</p></div>
+      <div class="acts"><button class="btn btn-ghost sm" type="button" data-toast="Monthly report exported (PDF) — design preview" data-toast-ar="صُدّر التقرير الشهري (PDF) — معاينة تصميم"><svg class="ico"><use href="#i-down"/></svg><span data-i18n="p.export">Monthly report</span></button></div>
+    </div>
+    <nav class="tabs">
+      <a href="#inbox"><span data-i18n="p.t1">Reports</span><span class="cnt">11</span></a>
+      <a href="#stats"><span data-i18n="p.t3">Statistics</span></a>
+    </nav>
+    <div class="grid g2">
+      <div class="card"><div class="card-head"><h2 data-i18n="p.st.h1">Reports per month · 2026</h2></div><svg class="chart" data-chart="bars" data-h="190" data-values="3,4,2,6,5,4,7,3,5,8" data-labels="Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct" data-labels-ar="ينا,فبر,مار,أبر,ماي,يون,يول,أغس,سبت,أكت" data-colors="red"></svg></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.st.h2">By category</h2></div><div class="donut-wrap"><svg class="chart" data-chart="donut" data-values="14,9,8,6,10" data-labels="Trafficking,Evasion,Complicity,Association,Out of scope" data-labels-ar="اتجار,تهرب,تواطؤ,ارتباط,خارج النطاق" data-colors="red,amber,green,navy,grey" data-center="47" data-center-label="reports" data-center-label-ar="بلاغاً"></svg><div class="legend"><span><i style="background:var(--red)"></i><span data-i18n="p.cat1">Trafficking / supply</span><b>14</b></span><span><i style="background:var(--amber)"></i><span data-i18n="p.cat2">Evasion / tampering</span><b>9</b></span><span><i style="background:var(--green)"></i><span data-i18n="p.cat3">Complicity / assistance</span><b>8</b></span><span><i style="background:var(--navy)"></i><span data-i18n="p.cat4">Prohibited association</span><b>6</b></span><span><i style="background:#cfd8d3"></i><span data-i18n="p.cat5">Out of scope</span><b>10</b></span></div></div></div>
+      <div class="card"><div class="card-head"><h2 data-i18n="p.st.h3">Channel & language</h2></div><div class="bars-h"><div><span data-i18n="p.st.c1">Website form</span><div class="bar"><i style="width:68%"></i></div><b>32</b></div><div><span data-i18n="p.st.c2">Mobile app</span><div class="bar"><i class="navy" style="width:23%"></i></div><b>11</b></div><div><span data-i18n="p.st.c3">Hotline</span><div class="bar"><i class="lime" style="width:9%"></i></div><b>4</b></div><div><span data-i18n="p.st.c4">Arabic</span><div class="bar"><i style="width:77%"></i></div><b>36</b></div><div><span data-i18n="p.st.c5">English</span><div class="bar"><i class="navy" style="width:23%"></i></div><b>11</b></div></div></div>
+      <div class="card"><div class="card-head"><div><h2 data-i18n="p.st.h4">Outcomes · closed cases</h2><small data-i18n="p.st.h4d">36 closed + 11 open = 47 reports in 2026</small></div></div><div class="bars-h"><div><span data-i18n="p.st.o1">Anti-doping rule violation asserted by Results Management</span><div class="bar"><i class="red" style="width:28%"></i></div><b>7</b></div><div><span data-i18n="p.st.o2">Referred to Results Management after investigation</span><div class="bar"><i style="width:36%"></i></div><b>9</b></div><div><span data-i18n="p.st.o3">Kept as intelligence · target testing</span><div class="bar"><i class="navy" style="width:20%"></i></div><b>5</b></div><div><span data-i18n="p.st.o4">Out of scope / referred externally</span><div class="bar"><i class="amber" style="width:36%"></i></div><b>9</b></div><div><span data-i18n="p.st.o5">No case to answer / insufficient evidence</span><div class="bar"><i class="navy" style="width:24%"></i></div><b>6</b></div></div><p class="small muted mt-2" data-i18n="p.st.note">Aggregated figures only. No case-level data leaves this module; the executive dashboard receives counts and SLA metrics.</p></div>
+    </div>
+  </section>
+
+  <div class="drawer" id="d-close-inv"><div class="bg"></div><div class="pane">
+    <button class="close" type="button" data-close><svg class="ico"><use href="#i-x"/></svg></button>
+    <h3><span data-i18n="p.iv.dh">Finish investigation</span> <span class="num">SU-2026-0181</span></h3>
+    <p class="small muted" data-i18n="p.iv.dd">Choose the outcome. Finishing locks the investigation file; the closure report and the audit trail are archived for 10 years.</p>
+    <div class="form">
+      <div class="field"><label data-i18n="p.iv.dout">Outcome</label><select><option data-i18n="p.iv.o2">Refer to Results Management — potential anti-doping rule violation</option><option data-i18n="p.iv.o3">Refer to the relevant external authority</option><option data-i18n="p.iv.o4">Insufficient evidence</option><option data-i18n="p.iv.o1">No case to answer</option></select></div>
+      <div class="field"><label data-i18n="p.iv.dnote">Closure note (internal)</label><textarea data-i18n-ph="p.iv.dnoteph" placeholder="Reasons for the outcome…"></textarea></div>
+    </div>
+    <div class="switches"><div><div><b data-i18n="p.iv.dsw1">Post a general outcome message to the reporter</b><small data-i18n="p.iv.dsw1d">No case details are disclosed to the reporter</small></div><span class="switch on"></span></div><div><div><b data-i18n="p.iv.dsw3">Keep the information to guide testing</b><small data-i18n="p.iv.dsw3d">Shared with Testing &amp; Operations for target testing</small></div><span class="switch on"></span></div><div><div><b data-i18n="p.iv.dsw2">File the closure report with the case</b></div><span class="switch on"></span></div></div>
+    <div class="notice"><svg class="ico"><use href="#i-shield"/></svg><div><p data-i18n="p.iv.dn">Investigators never notify the athlete directly; on referral, Results Management issues any official notification. If no proceedings are brought, WADA and the athlete's International Federation are informed of the decision with reasons.</p></div></div>
+    <div class="row"><button class="btn btn-primary sm" type="button" data-close data-toast="Investigation SU-2026-0181 finished · outcome recorded · file locked" data-toast-ar="أُنهي التحقيق SU-2026-0181 · سُجّلت النتيجة · أُقفل الملف" data-set-status="#st-inv, #st-0181" data-st-class="info" data-st-en="Finished · outcome recorded" data-st-ar="منتهٍ · سُجّلت النتيجة"><span data-i18n="p.iv.dok">Confirm</span></button><button class="btn btn-ghost sm" type="button" data-close data-i18n="p.iv.cancel">Cancel</button></div>
+  </div></div>
+
+</div>
+
+<script>
+window.KADA_AR_PAGE = {
+  "meta.title": "بلاغات Speak Up — إدارة كادا",
+  "p.h": "بلاغات Speak Up", "p.d": "بلاغات مجهولة الهوية من الموقع والتطبيق. قيّم كل بلاغ خلال 48 ساعة، واسأل المبلّغ عبر مفتاح القضية، وافتح تحقيقاً عند وجود سبب معقول.",
+  "p.export": "التقرير الشهري", "p.triage": "فرز البلاغ التالي", "p.open": "فتح", "p.t1": "البلاغات", "p.t3": "الإحصاءات", "p.back": "كل البلاغات",
+  "p.restr": "وحدة مقيّدة. الوصول محصور بوحدة الاستخبارات والتحقيقات؛ ويدير مدير النظام الحسابات دون أن يطّلع على محتوى القضايا. تُسجَّل كل مشاهدة لقضية. لا تُجمع هوية المبلّغ أبداً؛ ويتواصل المبلّغون عبر مفتاح القضية.",
+  "p.k1": "جديدة · بانتظار التقييم", "p.k1d": "الأقدم: باقٍ 20 ساعة · المهلة 48 ساعة", "p.k2": "قضايا مفتوحة", "p.k2d": "4 قيد التحقيق · 2 مُحالة إلى إدارة النتائج", "p.k3": "الوسيط لزمن الفرز (ساعة)", "p.k3d": "المستهدف ≤ 48 ساعة · تحقّق بنسبة 100% هذا الربع", "p.k4": "البلاغات · 2026", "p.k4d": "37 ضمن النطاق · 10 خارج النطاق",
+  "p.f0": "كل المفتوحة", "p.f1": "جديد", "p.f2": "فرز", "p.f3": "تحقيق", "p.f4": "مُحال إلى إدارة النتائج",
+  "p.c1": "القضية", "p.c2": "التصنيف", "p.c3": "تاريخ الورود", "p.c4": "الخطورة", "p.c6": "المهلة", "p.c7": "الحالة",
+  "p.r1": "نموذج الموقع · مرفقان · عربي", "p.r2": "تطبيق الجوال · بلا مرفقات · إنجليزي", "p.r3": "نموذج الموقع · مرفق واحد · عربي", "p.r4": "نص مكالمة الخط الساخن · إنجليزي", "p.r5": "نموذج الموقع · 5 مرفقات · عربي",
+  "p.cat1": "اتجار / توريد", "p.cat2": "تهرّب / تلاعب", "p.cat3": "تواطؤ / مساعدة", "p.cat4": "ارتباط محظور", "p.cat5": "خارج النطاق (شأن يخص الموارد البشرية)", "p.cat6": "استعمال / حيازة",
+  "p.high": "مرتفعة", "p.med": "متوسطة", "p.low": "منخفضة", "p.sla1": "باقٍ 20 ساعة", "p.sla2": "باقٍ 29 ساعة", "p.sladone": "تم الفرز", "p.s1": "جديد", "p.s2": "فرز", "p.s3": "تحقيق", "p.s4": "مُحال إلى إدارة النتائج", "p.s4d": "بعد التحقيق", "p.s5": "قيد الإغلاق · إحالة", "p.s6": "بانتظار ردّ المبلّغ",
+  "p.foot": "تُؤرشف القضايا المغلقة 10 سنوات وفق جدول الاحتفاظ ولا يُبحث فيها إلا بمفتاح القضية",
+  "p.cs.restr": "سرّي · يُسجَّل وصولك إلى هذه القضية (مشاهدة، تنزيل، مراسلة). لا تُصدّر الأدلة خارج المنصة.", "p.cs.rec": "ورد", "p.cs.via": "عبر نموذج الموقع (عربي)",
+  "p.cs.kada": "كادا", "p.cs.sys": "النظام", "p.cs.t2": "أدلة أرفقها المبلّغ", "p.cs.t3": "المراسلة مع المبلّغ", "p.cs.t4": "سجل البلاغ", "p.cs.t5": "قضايا قد تكون مرتبطة",
+  "p.cs.what": "ما حدث", "p.cs.whatv": "يفيد المبلّغ بأن شخصاً مرتبطاً بقسم رفع الأثقال في أحد الأندية يزوّد رياضيين ناشئين بمواد محظورة قبل البطولات الإقليمية، ويحدد موقع تخزين في منشأة التدريب.",
+  "p.cs.who": "الأشخاص المذكورون", "p.cs.whov": "شخص واحد من أفراد طاقم دعم الرياضيين (غير مسمّى) · رياضيان موصوفان بفئتهما العمرية · الهويات محجوبة حتى الفرز", "p.cs.when": "متى / أين", "p.cs.whenv": "سبتمبر – أكتوبر 2026 · منشأة تدريب النادي (محافظة حولي)",
+  "p.cs.rep": "المبلّغ", "p.cs.repv": "مجهول · مستعد للإجابة عن أسئلة المتابعة عبر مفتاح القضية · لغة البلاغ العربية", "p.cs.ai": "تقييم AI الأولي (استرشادي)", "p.cs.aiv": "الأولوية: مرتفعة — التحديد 0.82 · يطابق القضية المفتوحة SU-2026-0187 (الاتحاد والفترة نفسهما)",
+  "p.cs.e1": "صورة للعبوة · حُذفت بيانات EXIF · 2.1 ميغابايت · خالٍ من البرمجيات الضارة", "p.cs.e2": "جدول تدريب · صفحة واحدة · خالٍ من البرمجيات الضارة", "p.cs.chain": "يُسجَّل كل فتح وتنزيل بالمستخدم والوقت وبصمة الملف. لا يمكن تعديل الملفات الأصلية.",
+  "p.cs.m0": "يقرأ المبلّغ رسائلك بإدخال مفتاح القضية في صفحة Speak Up العامة — دون حساب ودون بريد إلكتروني.", "p.cs.mnew": "1 غير مقروءة", "p.cs.m1": "أستطيع مشاركة تفاصيل أكثر عن التواريخ إن كان ذلك مفيداً. لا أريد أن يتواصل معي أحد من النادي.", "p.cs.m2": "شكراً لك. لا نجمع أي بيانات عن هويتك. هل يمكنك تحديد تواريخ المنافسات التي سبقتها عمليات التسليم، وما إذا كانت العبوة تحمل أي ملصق؟", "p.cs.m3": "قبل البطولة الإقليمية للناشئين في أكتوبر. العلبة لم يكن عليها ملصق، فقط كتابة بخط اليد.", "p.cs.mph": "اكتب للمبلّغ… مثال: هل لديك صورة لمكان التخزين؟",
+  "p.mt.type": "نوع الرسالة", "p.mt.q1": "سؤال — يُطلب من المبلّغ الرد", "p.mt.n1": "ملاحظة — للعلم فقط، لا تحتاج رداً", "p.mt.q": "سؤال", "p.mt.n": "ملاحظة", "p.mt.send": "إرسال إلى المبلّغ", "p.mt.warn": "لا تطلب أبداً اسم المبلّغ أو رقم هاتفه أو أي بيانات تكشف هويته.", "p.mt.sent": "أُرسلت الرسالة · سيراها المبلّغ عند إدخاله مفتاح القضية",
+  "p.cs.tl1": "ورد البلاغ · وُلّد مفتاح القضية · تقييم AI الأولي: مرتفع", "p.cs.tl2": "أُخطر: مسؤول التحقيقات (رسالة نصية + بريد إلكتروني)", "p.cs.tl3": "وردت رسالة من المبلّغ", "p.cs.tl5": "أُرسل سؤال إلى المبلّغ", "p.cs.tl7": "ردّ المبلّغ", "p.cs.tl6": "موعد قرار الفرز",
+  "p.cs.rel1": "الاتحاد والفترة نفسهما · قيد التحقيق · 5 مرفقات", "p.cs.link": "ربط القضيتين", "p.cs.rel2": "النادي نفسه · أُحيلت إلى إدارة النتائج بعد التحقيق",
+  "p.cs.dec": "قرار الفرز", "p.cs.decd": "قيّم مدى صلة البلاغ وموثوقيته، ثم اختر نتيجة واحدة. يتلقى المبلّغ تحديثاً عاماً عبر مفتاح القضية.", "p.cs.cat": "تأكيد التصنيف", "p.cs.note": "ملاحظة الفرز (داخلية)", "p.cs.noteph": "مبررات القرار…",
+  "p.cs.accept": "فتح تحقيق", "p.cs.intel": "حفظ كمعلومة استخباراتية · فحص موجّه", "p.cs.ext": "مشاركة مع جهة مختصة", "p.cs.close": "إغلاق · خارج النطاق",
+  "p.cs.rmnote": "البلاغ الجديد لا يُحال إلى إدارة النتائج. يُحال إليها فقط بعد تحقيق يثبت وجود أسباب لانتهاك محتمل لقواعد مكافحة المنشطات (المعيار الدولي للاستخبارات والتحقيقات 2027، المادة 5.5).",
+  "p.st.h1": "البلاغات شهرياً · 2026", "p.st.h2": "حسب التصنيف", "p.st.h3": "القناة واللغة", "p.st.c1": "نموذج الموقع", "p.st.c2": "تطبيق الجوال", "p.st.c3": "الخط الساخن", "p.st.c4": "العربية", "p.st.c5": "الإنجليزية",
+  "p.st.h4": "النتائج · القضايا المغلقة", "p.st.h4d": "36 مغلقة + 11 مفتوحة = 47 بلاغاً في 2026", "p.st.o1": "توجيه تهمة انتهاك قواعد مكافحة المنشطات من إدارة النتائج", "p.st.o2": "إحالة إلى إدارة النتائج بعد التحقيق", "p.st.o3": "حُفظت كمعلومة استخباراتية · فحص موجّه", "p.st.o4": "خارج النطاق / إحالة خارجية", "p.st.o5": "لا توجد قضية للمساءلة / أدلة غير كافية", "p.st.note": "أرقام مجمّعة فقط. لا تخرج بيانات أي قضية بعينها من هذه الوحدة؛ إذ تتلقى اللوحة التنفيذية الأعداد ومؤشرات المهل فقط.",
+  "p.iv.open": "فتح التحقيق", "p.iv.restr": "ملف تحقيق · مقيّد بالمحققين المكلّفين ورئيس الاستخبارات والتحقيقات. تُسجَّل كل مشاهدة وتنزيل ورسالة. لا يستطيع مديرو النظام الاطلاع على محتوى القضية.",
+  "p.iv.opened": "فُتح التحقيق", "p.iv.from": "ورد البلاغ", "p.iv.medr": "خطورة متوسطة", "p.iv.lead": "مسؤول التحقيقات", "p.iv.unit": "وحدة الاستخبارات والتحقيقات", "p.iv.over": "الإشراف", "p.iv.head": "رئيس الاستخبارات والتحقيقات", "p.iv.repv": "مجهول · التواصل فقط عبر رمز المتابعة", "p.iv.due": "موعد استكمال الاستنتاجات",
+  "p.iv.s1": "الفرز", "p.iv.s2": "خطة التحقيق", "p.iv.s3": "جمع الأدلة", "p.iv.s4": "المقابلات", "p.iv.s4d": "عُقدت 2 من 3", "p.iv.s5": "الاستنتاجات", "p.iv.s6": "النتيجة",
+  "p.iv.t1": "الخطة والمهام", "p.iv.t2": "الأدلة", "p.iv.t3": "المقابلات", "p.iv.t5": "الاستنتاجات",
+  "p.iv.obj": "الأهداف", "p.iv.objv": "التحقق مما إذا كان أحد العاملين في صالة رياضية خاصة يبيع منتجات حاجبة تُسوَّق باسم «أقراص التنشيف» لرياضيين مسجّلين ويرشدهم إلى تجنّب الفحص؛ وحفظ الأدلة بمستوى يصلح للإحالة.",
+  "p.iv.scope": "النطاق", "p.iv.scopev": "صالة رياضية خاصة واحدة (محافظة الفروانية) · يونيو – أكتوبر 2026 · الرياضيون المسجّلون لدى الاتحادات الوطنية · تُستثنى مسائل الترخيص التجاري والموارد البشرية (تُحال خارجياً إذا ثبتت)",
+  "p.iv.appr": "اعتماد الخطة", "p.iv.tasks": "المهام", "p.iv.addt": "إضافة مهمة", "p.iv.tc1": "المهمة", "p.iv.tc2": "المسند إليه", "p.iv.tc3": "الاستحقاق",
+  "p.iv.k1": "حفظ إعلانات الصالة على وسائل التواصل الاجتماعي (مصادر مفتوحة)", "p.iv.k2": "شراء اختباري للمنتج من منضدة الصالة", "p.iv.k3": "طلب مستخرج سجل الفحوصات من إدارة النتائج", "p.iv.k4": "مقابلتا الشاهدين W1 و W2", "p.iv.k5": "تحليل المنتج لدى مختبر خارجي", "p.iv.k6": "استكمال توقيع سلسلة الحيازة للدليل EV-03", "p.iv.k7": "مقابلة الشخص المعني S1", "p.iv.k8": "إعداد مسودة تقرير الاستنتاجات",
+  "p.iv.done": "منجزة", "p.iv.pool": "مجموعة المحققين", "p.iv.opn": "مفتوحة", "p.iv.sched": "مجدولة", "p.iv.ns": "لم تبدأ",
+  "p.iv.evr": "لا يمكن تعديل الملفات الأصلية وتُحسب بصمتها عند الاستلام (SHA-256). يُسجَّل كل فتح أو تنزيل في سلسلة الحيازة.",
+  "p.iv.loge": "تسجيل دليل", "p.iv.ec1": "الدليل", "p.iv.ec2": "النوع", "p.iv.ec3": "المصدر", "p.iv.ec4": "الاستلام", "p.iv.ec5": "سلسلة الحيازة",
+  "p.iv.e1": "صورة لملصق المنتج", "p.iv.e2": "إعلانات الصالة على وسائل التواصل (3 لقطات شاشة)", "p.iv.e3": "عيّنة من المنتج · كيس مختوم KADA-EV-0181-03", "p.iv.e4": "مستخرج سجل الفحوصات", "p.iv.e5": "مقابلة الشاهد W1 · تسجيل صوتي", "p.iv.e6": "تقرير تحليل المختبر (المنتج)",
+  "p.iv.ty1": "صورة", "p.iv.ty2": "مادة عينية", "p.iv.ty3": "مستند (PDF)", "p.iv.ty4": "تسجيل صوتي",
+  "p.iv.src1": "المبلّغ (عبر رمز المتابعة)", "p.iv.src2": "مصادر مفتوحة · المحقق", "p.iv.src3": "شراء اختباري", "p.iv.src4": "إدارة النتائج (تطبيق كادا)", "p.iv.src5": "المقابلة W1", "p.iv.src6": "مختبر خارجي",
+  "p.iv.signed": "موقّع", "p.iv.unsigned": "التوقيع ناقص",
+  "p.iv.cc1": "استلام النظام · جُرّدت البيانات الوصفية · مختوم", "p.iv.cc2": "التقطه ووقّعه مسؤول التحقيقات", "p.iv.cc3": "سُلّم إلى ناقل المختبر في 14 · 10 · دون توقيع استلام", "p.iv.cc4": "قُدّم بناءً على طلب · سجل تسليم", "p.iv.cc5": "سُجّل في غرفة المقابلات · محفوظ مشفّراً", "p.iv.cc6": "استُلم عبر رفع آمن",
+  "p.iv.ilog": "سجل المقابلات", "p.iv.schi": "جدولة مقابلة", "p.iv.ic1": "الرمز · الصفة", "p.iv.ic2": "التاريخ", "p.iv.ic3": "مسجّلة", "p.iv.ic4": "الملخص موقّع", "p.iv.ic5": "الملخص",
+  "p.iv.i1r": "شاهد · عضو في الصالة", "p.iv.yes": "نعم", "p.iv.no": "لا", "p.iv.i1s": "شاهد العاملين يبيعون «أقراص التنشيف» عند المنضدة لرياضيين يستعدون للمنافسات.",
+  "p.iv.i2r": "شاهد · موظف سابق في الصالة", "p.iv.i2n": "ملاحظات مكتوبة بطلب من الشاهد", "p.iv.i2s": "يصف إرشادات قُدّمت للرياضيين بشأن توقيت الاستعمال قبل المنافسات وتجنّب الفحوصات.",
+  "p.iv.i3r": "شخص معني · من أفراد طاقم دعم الرياضيين (موظف في الصالة)", "p.iv.i3c": "مخطط لها · بموافقة", "p.iv.i3s": "أُرسلت الدعوة · شُرح الحق في اصطحاب مرافق.",
+  "p.iv.inote": "لا تُجرى مقابلة مع المبلّغ المجهول ولا تُكشف هويته. يُرمَّز من تُجرى معهم المقابلات (W1، W2، S1) ويُحفظ مفتاح الهويات منفصلاً.",
+  "p.iv.m0": "قناة مرتبطة برمز المتابعة KW-7F3Q-9A · لا تُكشف هوية المبلّغ للمحققين أبداً", "p.iv.m1": "أضفت صورة واحدة للمنتج. هل ستعرف الصالة من أرسل هذا البلاغ؟", "p.iv.mrep": "المبلّغ",
+  "p.iv.m2": "لا نجمع أي بيانات عن هويتك ولن نشاركها مع الصالة أو مع أي جهة أخرى. قُبل بلاغك للتقييم.", "p.iv.mk": "تحقيقات كادا",
+  "p.iv.m3": "هل يمكنك إخبارنا إن كانت المكملات تُباع داخل الصالة الرياضية أم تُطلب عبر الإنترنت؟", "p.iv.m4": "بانتظار رد المبلّغ", "p.iv.mph": "اكتب إلى المبلّغ عبر رمز المتابعة KW-7F3Q-9A…",
+  "p.iv.fdraft": "مسودة استنتاجات — تُستكمل بعد مقابلة الشخص المعني. يسجّل المحققون الاستنتاجات والنتيجة؛ أما توجيه تهمة انتهاك قواعد مكافحة المنشطات من عدمه فتقرره إدارة النتائج.",
+  "p.iv.fsum": "ملخص الاستنتاجات", "p.iv.fsumv": "اشتُري المنتج من منضدة الصالة؛ ويشير تقرير المختبر إلى مادة مدرّة للبول (من فئة العوامل الحاجبة)؛ ويصف شاهدان عمليات بيع لرياضيين قبل المنافسات وإرشادات لتجنّب الفحوصات. إفادة الشخص المعني معلّقة (27 · 10).",
+  "p.iv.fper": "الأشخاص محل الاهتمام", "p.iv.fperv": "شخص واحد من أفراد طاقم دعم الرياضيين (S1) · لم يُحدَّد الرياضيون بالاسم بعد",
+  "p.iv.o1": "لا توجد قضية للمساءلة", "p.iv.o2": "إحالة إلى إدارة النتائج — انتهاك محتمل لقواعد مكافحة المنشطات", "p.iv.o3": "إحالة إلى الجهة الخارجية المختصة", "p.iv.o4": "أدلة غير كافية",
+  "p.iv.rep": "تقرير الإغلاق", "p.iv.close": "إنهاء التحقيق", "p.iv.act": "الخطوة التالية", "p.iv.nxt": "<b>مقابلة الشخص المعني S1 في 27 · 10</b>، ثم موعد الاستنتاجات 06 · 11.", "p.iv.actn": "عند الإنهاء تختار النتيجة. إذا توفرت أسباب لانتهاك محتمل لقواعد مكافحة المنشطات يُحال الملف إلى إدارة النتائج، وهي التي تُخطر الرياضي.",
+  "p.iv.ai": "مساعد AI · استرشادي", "p.iv.aip": "اقتراحات لدعم المحقق. لا يصدر AI أي استنتاج أو قرار.",
+  "p.iv.ai1": "<b>بلاغات قد تكون مرتبطة:</b> SU-2026-0190 (يذكر «أقراص التنشيف»، 22 · 10) و SU-2026-0169 (المنطقة نفسها، أغسطس 2026). راجعها قبل الربط.",
+  "p.iv.ai2": "<b>توقيع سلسلة الحيازة ناقص</b> للدليل EV-03 — لا يوجد توقيع استلام لتسليمه إلى ناقل المختبر في 14 · 10.",
+  "p.iv.ai3": "<b>3 من 8 مهام لا تزال مفتوحة</b> وموعد الاستنتاجات 06 · 11؛ ومقابلة الشخص المعني في 27 · 10 على المسار الحرج.",
+  "p.iv.aia1": "مراجعة الروابط المقترحة", "p.iv.aia2": "طلب التوقيع",
+  "p.iv.aud": "من فتح هذا الملف", "p.iv.l1": "شوهد ملف القضية", "p.iv.l2": "فُتح تقرير المختبر EV-06", "p.iv.l3": "رُوجعت الخطة وسجل الأدلة",
+  "p.iv.dh": "إنهاء التحقيق", "p.iv.dd": "اختر النتيجة. يُقفل الإنهاء ملف التحقيق، ويُؤرشف تقرير الإغلاق وسجل التدقيق 10 سنوات.", "p.iv.dout": "النتيجة", "p.iv.dnote": "ملاحظة الإغلاق (داخلية)", "p.iv.dnoteph": "مبررات النتيجة…",
+  "p.iv.dsw1": "إرسال رسالة عامة بالنتيجة إلى المبلّغ", "p.iv.dsw1d": "لا تُكشف أي تفاصيل عن القضية للمبلّغ", "p.iv.dsw3": "الاحتفاظ بالمعلومات لتوجيه الفحوصات", "p.iv.dsw3d": "تُشارك مع الفحص والعمليات لتخطيط فحص موجّه", "p.iv.dsw2": "حفظ تقرير الإغلاق في ملف القضية",
+  "p.iv.dn": "لا يُخطر المحققون الرياضي مباشرةً أبداً؛ فعند الإحالة تصدر إدارة النتائج أي إخطار رسمي. وإذا تقرر عدم اتخاذ إجراءات، تُبلَّغ وادا والاتحاد الدولي للرياضي بالقرار وأسبابه.", "p.iv.dok": "تأكيد", "p.iv.cancel": "إلغاء"
+};
+</script>
+<script src="js/admin.js"></script>
+</body>
+</html>

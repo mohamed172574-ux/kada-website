@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">Supplier Registration — KADA</title>
+  <link rel="icon" href="assets/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/boot.js"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-bar"><i></i></div></div>
+  <div data-chrome-header></div>
+
+  <main>
+    <section class="page-hero plain short">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html" data-i18n="c.home">Home</a><i></i><a href="tenders.html" data-i18n="nav.s6">Tenders &amp; Procurement</a><i></i><span data-i18n="nav.s7">Supplier Registration</span></nav>
+        <h1 class="display" data-i18n="p.title">Supplier registration</h1>
+        <p class="lede" data-i18n="p.lede">Register once to purchase tender documents, submit bids and receive notifications for your categories. Approval within three working days.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap with-side">
+        <div>
+          <div class="form-card reveal" data-stepper>
+            <h3 data-i18n="p.f.t">New supplier account</h3>
+            <p class="hint" data-i18n="p.f.h">The authorised signatory verifies with Kuwait Mobile ID at the last step.</p>
+            <ol class="step-nav" style="--n:4"><li class="is-on" data-i18n="p.f.s1">Company</li><li data-i18n="p.f.s2">Categories</li><li data-i18n="p.f.s3">Documents</li><li data-i18n="p.f.s4">Signatory &amp; verify</li></ol>
+            <div data-step class="is-on">
+              <div class="form-grid">
+                <div class="field"><label data-i18n="p.f.c1">Company name (Arabic) <span class="req">*</span></label><input type="text" dir="rtl"></div>
+                <div class="field"><label data-i18n="p.f.c2">Company name (English) <span class="req">*</span></label><input type="text"></div>
+                <div class="field"><label data-i18n="p.f.c3">Commercial licence no. <span class="req">*</span></label><input type="text" class="num"></div>
+                <div class="field"><label data-i18n="p.f.c4">Licence expiry <span class="req">*</span></label><input type="date"></div>
+                <div class="field"><label data-i18n="p.f.c5">Country</label><select><option data-i18n="p.f.kw">Kuwait</option><option data-i18n="p.f.gcc">Other GCC country</option><option data-i18n="p.f.other">Other (via local agent)</option></select></div>
+                <div class="field"><label data-i18n="p.f.c6">Company type</label><select><option data-i18n="p.f.wll">W.L.L. (limited liability company)</option><option data-i18n="p.f.ksc">K.S.C. (Kuwaiti shareholding company)</option><option data-i18n="p.f.sole">Sole proprietorship</option><option data-i18n="p.f.branch">Foreign branch</option></select></div>
+                <div class="field"><label data-i18n="c.email">Email <span class="req">*</span></label><input type="email"></div>
+                <div class="field"><label data-i18n="c.phone">Phone <span class="req">*</span></label><input type="tel"></div>
+                <div class="field full"><label data-i18n="p.f.c7">Registered address</label><input type="text"></div>
+              </div>
+              <div class="form-foot"><span></span><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+            <div data-step>
+              <div class="field"><label data-i18n="p.f.q2">Which categories do you supply? <small data-i18n="p.f.q2s">select all that apply</small></label>
+                <div class="radio-cards">
+                  <label><input type="checkbox" checked><b data-i18n="p.cat1">Laboratory &amp; testing supplies</b></label>
+                  <label><input type="checkbox"><b data-i18n="p.cat2">IT &amp; software</b></label>
+                  <label><input type="checkbox"><b data-i18n="p.cat3">Events &amp; media</b></label>
+                  <label><input type="checkbox"><b data-i18n="p.cat4">Consultancy &amp; training</b></label>
+                  <label><input type="checkbox"><b data-i18n="p.cat5">Facilities &amp; logistics</b></label>
+                  <label><input type="checkbox"><b data-i18n="p.cat6">Printing &amp; promotional</b></label>
+                </div>
+              </div>
+              <label class="check mt-2"><input type="checkbox" checked><span data-i18n="p.f.notify">Notify me by email and SMS when a tender is published in my categories.</span></label>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+            <div data-step>
+              <div class="grid-2">
+                <div class="upload"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.d1">Commercial licence</b><span>PDF · JPG</span></div>
+                <div class="upload"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.d2">Chamber of Commerce &amp; Industry certificate</b><span>PDF · JPG</span></div>
+                <div class="upload"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.d3">Authorised signatory letter</b><span>PDF</span></div>
+                <div class="upload"><svg viewBox="0 0 24 24" class="ico"><path d="M12 16V4m-5 5 5-5 5 5M5 20h14"/></svg><b data-i18n="p.f.d4">Bank letter (IBAN)</b><span>PDF</span></div>
+              </div>
+              <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary" type="button" data-step-next><span data-i18n="c.next">Next</span><svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            </div>
+            <div data-step>
+              <form data-demo="#ok">
+                <div class="form-grid">
+                  <div class="field"><label data-i18n="p.f.s5">Signatory full name <span class="req">*</span></label><input type="text" required></div>
+                  <div class="field"><label data-i18n="p.f.s6">Civil ID <span class="req">*</span></label><input type="text" class="num" required></div>
+                  <div class="field"><label data-i18n="p.f.s7">Position</label><input type="text"></div>
+                  <div class="field"><label data-i18n="p.f.s8">Mobile (Mobile ID) <span class="req">*</span></label><input type="tel" required></div>
+                </div>
+                <label class="check mt-2"><input type="checkbox" required><span data-i18n="p.f.terms">I confirm the information is accurate and accept the KADA Supplier Code of Conduct, including anti-corruption and conflict-of-interest declarations.</span></label>
+                <div class="form-foot"><button class="btn btn-ghost" type="button" data-step-prev><span data-i18n="c.back">Back</span></button><button class="btn btn-primary lg" type="submit"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg><span data-i18n="p.f.verify">Verify with Mobile ID &amp; submit</span></button></div>
+              </form>
+            </div>
+          </div>
+          <div class="success" id="ok"><div class="tick"><svg viewBox="0 0 24 24" class="ico"><path d="m5 13 4 4L19 7"/></svg></div><h3 data-i18n="p.ok.t">Application submitted</h3><p data-i18n="p.ok.d">The Procurement department will review your documents within three working days. You can already browse tenders; purchasing unlocks on approval.</p><div class="ref">SUP-2026-0419</div><p><a class="btn btn-primary" href="tenders.html"><span data-i18n="p.ok.b">Browse tenders</span></a></p></div>
+        </div>
+        <aside class="side">
+          <div class="side-box"><h4 data-i18n="p.sb.t">You will need</h4><ul class="checks" style="margin:0"><li data-i18n="p.f.d1">Commercial licence</li><li data-i18n="p.f.d2">Chamber of Commerce &amp; Industry certificate</li><li data-i18n="p.f.d3">Authorised signatory letter</li><li data-i18n="p.f.d4">Bank letter (IBAN)</li><li data-i18n="p.sb.mid">Signatory's Kuwait Mobile ID</li></ul></div>
+          <div class="side-box navy" data-guest-only><h4 data-i18n="p.sb.a">Already registered?</h4><p data-i18n="p.sb.ad">Sign in to your supplier dashboard to see purchases, clarifications and bid receipts.</p><button class="btn btn-outline" type="button" data-signin-open data-signin-role="supplier"><span data-i18n="p.sb.login">Supplier sign-in</span></button></div>
+          <div class="side-box navy" data-signed-only="supplier" hidden><h4 data-signed-text="org">Al-Saqr Medical Supplies W.L.L.</h4><p data-i18n="p.sb.sd">You are already registered and approved. Purchases, clarifications and bid receipts are in your dashboard.</p><a class="btn btn-outline" href="supplier-dashboard.html"><span data-i18n="p.sb.sb">Open supplier dashboard</span></a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-chrome-footer></div>
+  <div class="demo-note" data-i18n="c.demo">Presentation mock-up — data is fictitious</div>
+  <script>
+  window.KADA_AR_PAGE = {
+    "meta.title": "تسجيل الموردين — كادا",
+    "p.title": "تسجيل الموردين", "p.lede": "سجّل مرة واحدة لشراء وثائق المناقصات وتقديم العطاءات وتلقّي إشعارات المناقصات ضمن فئاتك. يُبتّ في الطلب خلال ثلاثة أيام عمل.",
+    "p.f.t": "حساب مورد جديد", "p.f.h": "يتحقق المفوض بالتوقيع من هويته عبر هويتي في الخطوة الأخيرة.",
+    "p.f.s1": "الشركة", "p.f.s2": "الفئات", "p.f.s3": "المستندات", "p.f.s4": "المفوض والتحقق",
+    "p.f.c1": "اسم الشركة (عربي) <span class=\"req\">*</span>", "p.f.c2": "اسم الشركة (إنجليزي) <span class=\"req\">*</span>", "p.f.c3": "رقم الرخصة التجارية <span class=\"req\">*</span>", "p.f.c4": "تاريخ انتهاء الرخصة <span class=\"req\">*</span>", "p.f.c5": "الدولة", "p.f.kw": "الكويت", "p.f.gcc": "دولة خليجية أخرى", "p.f.other": "أخرى (عبر وكيل محلي)", "p.f.c6": "نوع الشركة", "p.f.wll": "ذ.م.م (شركة ذات مسؤولية محدودة)", "p.f.ksc": "ش.م.ك (شركة مساهمة كويتية)", "p.f.sole": "مؤسسة فردية", "p.f.branch": "فرع أجنبي", "p.f.c7": "العنوان المسجل",
+    "p.f.q2": "ما الفئات التي تورّدها شركتكم؟", "p.f.q2s": "اختر كل ما ينطبق",
+    "p.cat1": "مستلزمات المختبر والفحص", "p.cat2": "تقنية المعلومات والبرمجيات", "p.cat3": "الفعاليات والإعلام", "p.cat4": "الاستشارات والتدريب", "p.cat5": "المرافق والخدمات اللوجستية", "p.cat6": "الطباعة والمواد الترويجية",
+    "p.f.notify": "أبلغوني بالبريد الإلكتروني والرسائل النصية عند نشر مناقصة ضمن فئاتي.",
+    "p.f.d1": "الرخصة التجارية", "p.f.d2": "شهادة غرفة التجارة والصناعة", "p.f.d3": "كتاب تفويض المفوض بالتوقيع", "p.f.d4": "كتاب من البنك (IBAN)",
+    "p.f.s5": "الاسم الكامل للمفوض <span class=\"req\">*</span>", "p.f.s6": "الرقم المدني <span class=\"req\">*</span>", "p.f.s7": "المسمى الوظيفي", "p.f.s8": "رقم الجوال (المرتبط بهويتي) <span class=\"req\">*</span>",
+    "p.f.terms": "أؤكد صحة المعلومات وأقبل مدونة سلوك موردي الوكالة، بما في ذلك إقرارات مكافحة الفساد وعدم تضارب المصالح.", "p.f.verify": "التحقق عبر هويتي والإرسال",
+    "p.ok.t": "تم تقديم الطلب", "p.ok.d": "ستراجع إدارة المشتريات مستنداتكم خلال ثلاثة أيام عمل. يمكنكم تصفح المناقصات الآن، ويُفعَّل الشراء بعد الاعتماد.", "p.ok.b": "تصفح المناقصات",
+    "p.sb.t": "ستحتاج إلى", "p.sb.mid": "حساب هويتي للمفوض بالتوقيع", "p.sb.a": "مسجل بالفعل؟", "p.sb.ad": "سجّل الدخول إلى لوحة المورد للاطلاع على المشتريات والاستفسارات وإيصالات العطاءات.", "p.sb.login": "دخول الموردين", "p.sb.sd": "شركتكم مسجّلة ومعتمدة بالفعل. المشتريات والاستفسارات وإيصالات العطاءات في لوحتكم.", "p.sb.sb": "فتح لوحة المورد"
+  };
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
